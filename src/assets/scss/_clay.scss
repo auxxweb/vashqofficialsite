@@ -1,0 +1,200 @@
+// Claymorphism design layer (lightweight overrides)
+
+:root {
+  /* Match Vashq app clay/neumorphism (neutral grey surfaces) */
+  --clay-bg-0: #eeeeee;
+  --clay-bg-1: #e9e9e9;
+  --clay-surface: #f2f2f2;
+  --clay-surface-strong: #f7f7f7;
+  --clay-stroke: rgba(17, 24, 39, 0.06);
+
+  /* Soft, diffused depth like screenshot */
+  --clay-shadow-outer: 10px 10px 24px rgba(0, 0, 0, 0.12), -10px -10px 24px rgba(255, 255, 255, 0.92);
+  --clay-shadow-outer-sm: 7px 7px 16px rgba(0, 0, 0, 0.10), -7px -7px 16px rgba(255, 255, 255, 0.9);
+  --clay-shadow-inner: inset 7px 7px 14px rgba(0, 0, 0, 0.10), inset -7px -7px 14px rgba(255, 255, 255, 0.9);
+  --clay-shadow-inner-sm: inset 5px 5px 10px rgba(0, 0, 0, 0.10), inset -5px -5px 10px rgba(255, 255, 255, 0.88);
+
+  --clay-radius: 22px;
+  --clay-radius-lg: 28px;
+  --clay-transition: 240ms ease;
+}
+
+html,
+body {
+  background: linear-gradient(180deg, var(--clay-bg-0) 0%, var(--clay-bg-1) 100%);
+}
+
+/* Sticky navbar: glass + clay hybrid */
+.navbar {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background: rgba(238, 238, 238, 0.72) !important;
+  border-bottom: 1px solid rgba(17, 24, 39, 0.04);
+}
+
+.navbar .container {
+  background: var(--clay-surface);
+  border: 1px solid rgba(17, 24, 39, 0.04);
+  border-radius: 999px;
+  padding: 0.75rem 1rem;
+  box-shadow: var(--clay-shadow-outer-sm), var(--clay-shadow-inner-sm);
+}
+
+.navbar .navbar-brand {
+  padding-left: 0.25rem;
+}
+
+.navbar .nav-link {
+  border-radius: 999px;
+  transition: transform var(--clay-transition), box-shadow var(--clay-transition), background-color var(--clay-transition);
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+  background-color: rgba(76, 148, 224, 0.08);
+  box-shadow: var(--clay-shadow-inner-sm);
+}
+
+.navbar .nav-link.active,
+.navbar .nav-link[aria-current="page"] {
+  background-color: rgba(76, 148, 224, 0.14);
+  box-shadow: var(--clay-shadow-inner);
+  font-weight: 600;
+}
+
+/* Sections: keep spacing, soften contrast */
+section {
+  scroll-margin-top: 110px;
+}
+
+.circle-bg {
+  opacity: 0.12;
+  filter: blur(0.1px);
+}
+
+/* Cards */
+.card {
+  border: 1px solid var(--clay-stroke) !important;
+  background: var(--clay-surface);
+  border-radius: var(--clay-radius) !important;
+  box-shadow: var(--clay-shadow-outer), var(--clay-shadow-inner);
+}
+
+.card.rounded-5,
+.rounded-5 {
+  border-radius: var(--clay-radius-lg) !important;
+}
+
+.card.shadow-sm,
+.shadow-sm {
+  box-shadow: var(--clay-shadow-outer-sm), var(--clay-shadow-inner-sm) !important;
+}
+
+.card-lift,
+.card.card-lift,
+.card-lift:hover {
+  transition: transform var(--clay-transition), box-shadow var(--clay-transition);
+}
+
+.card-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 14px 14px 28px rgba(0, 0, 0, 0.13), -14px -14px 28px rgba(255, 255, 255, 0.92),
+    var(--clay-shadow-inner-sm) !important;
+}
+
+/* Buttons: soft, pill, 3D press */
+.btn {
+  border-radius: 999px !important;
+  transition: transform var(--clay-transition), box-shadow var(--clay-transition), filter var(--clay-transition);
+}
+
+.btn-primary {
+  box-shadow: 10px 10px 22px rgba(0, 0, 0, 0.14), -10px -10px 22px rgba(255, 255, 255, 0.85),
+    inset 8px 8px 14px rgba(255, 255, 255, 0.16) !important;
+}
+
+.btn-light,
+.btn-outline-dark,
+.btn-dark {
+  box-shadow: var(--clay-shadow-outer-sm), var(--clay-shadow-inner-sm) !important;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  filter: saturate(1.02);
+}
+
+.btn:active {
+  transform: translateY(0px);
+  box-shadow: var(--clay-shadow-inner) !important;
+}
+
+/* Inputs: clay fields */
+.form-control,
+.form-select,
+textarea.form-control {
+  border: 1px solid var(--clay-stroke) !important;
+  background: var(--clay-surface-strong) !important;
+  border-radius: 999px;
+  box-shadow: var(--clay-shadow-inner-sm);
+  transition: box-shadow var(--clay-transition), background-color var(--clay-transition);
+}
+
+textarea.form-control {
+  border-radius: var(--clay-radius) !important;
+}
+
+.form-control:focus,
+.form-select:focus {
+  background: var(--clay-surface-strong) !important;
+  box-shadow: 0 0 0 0.25rem rgba(76, 148, 224, 0.16), var(--clay-shadow-inner-sm) !important;
+}
+
+/* Badges & icon pills */
+.badge {
+  border-radius: 999px !important;
+}
+
+.icon-shape {
+  border: 1px solid var(--clay-stroke);
+  box-shadow: var(--clay-shadow-inner-sm);
+}
+
+/* Accordion: clay */
+.accordion-item {
+  border-radius: var(--clay-radius) !important;
+  border: 1px solid var(--clay-stroke) !important;
+  background: var(--clay-surface) !important;
+  box-shadow: var(--clay-shadow-outer-sm), var(--clay-shadow-inner-sm);
+}
+
+.accordion-button {
+  border-radius: var(--clay-radius) !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.accordion-button:not(.collapsed) {
+  color: inherit;
+  background: rgba(76, 148, 224, 0.08) !important;
+  box-shadow: var(--clay-shadow-inner-sm) !important;
+}
+
+/* Modal */
+.modal-content {
+  border-radius: var(--clay-radius-lg) !important;
+  border: 1px solid var(--clay-stroke) !important;
+  background: rgba(242, 242, 242, 0.92) !important;
+  box-shadow: 18px 18px 44px rgba(0, 0, 0, 0.18), -18px -18px 44px rgba(255, 255, 255, 0.92),
+    var(--clay-shadow-inner) !important;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .btn,
+  .card-lift,
+  .nav-link {
+    transition: none !important;
+  }
+}
+

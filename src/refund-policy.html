@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Refund Policy — Vashq</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Vashq refund policy (placeholder content)." />
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon_io/favicon-16x16.png">
+  <link rel="manifest" href="./assets/images/favicon_io/site.webmanifest">
+  <link rel="stylesheet" href="/assets/scss/style.scss">
+  <style>
+    #page-loader {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #e9e9e9;
+      z-index: 2000;
+      transition: opacity 220ms ease;
+    }
+
+    #page-loader .loader-card {
+      width: min(420px, 88vw);
+      padding: 18px 20px;
+      border-radius: 28px;
+      background: #f2f2f2;
+      box-shadow: 10px 10px 24px rgba(0, 0, 0, 0.12), -10px -10px 24px rgba(255, 255, 255, 0.92),
+        inset 5px 5px 10px rgba(0, 0, 0, 0.08), inset -5px -5px 10px rgba(255, 255, 255, 0.88);
+    }
+
+    #page-loader .shimmer {
+      height: 12px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #e8e8e8, #f7f7f7, #e8e8e8);
+      background-size: 200% 100%;
+      animation: shimmer 1.1s linear infinite;
+    }
+
+    #page-loader .shimmer.sm {
+      height: 10px;
+      opacity: 0.85;
+    }
+
+    #page-loader .stack {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    @keyframes shimmer {
+      0% {
+        background-position: 200% 0
+      }
+
+      100% {
+        background-position: -200% 0
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="page-loader" aria-hidden="true">
+    <div class="loader-card">
+      <div class="stack">
+        <div class="shimmer" style="width: 55%;"></div>
+        <div class="shimmer sm" style="width: 85%;"></div>
+        <div class="shimmer sm" style="width: 72%;"></div>
+      </div>
+    </div>
+  </div>
+  <script>
+    (() => {
+      const hide = () => {
+        const el = document.getElementById('page-loader');
+        if (!el) return;
+        el.style.opacity = '0';
+        el.style.pointerEvents = 'none';
+        window.setTimeout(() => el.remove(), 240);
+      };
+      window.addEventListener('load', hide, { once: true });
+      window.addEventListener('pageshow', (e) => { if (e.persisted) hide(); });
+    })();
+  </script>
+  <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-inline-flex gap-2 align-items-center lh-1" href="index.html">
+        <span class="text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-book">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
+            <path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
+            <path d="M3 6l0 13" />
+            <path d="M12 6l0 13" />
+            <path d="M21 6l0 13" />
+          </svg></span>
+        <span class="fw-bold">Vashq</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="features.html" class="nav-link">Features</a></li>
+          <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
+          <li class="nav-item"><a href="use-cases.html" class="nav-link">Use Cases</a></li>
+          <li class="nav-item"><a href="demo.html" class="nav-link">Demo</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="py-lg-13 py-8 bg-white" id="refund-policy">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-9">
+          <span class="text-primary text-uppercase small fw-semibold" style="letter-spacing: .125rem;">Legal</span>
+          <h1 class="fw-bold mt-4 mb-4">Refund Policy</h1>
+          <p class="small text-muted">Placeholder content. Replace with your official policy.</p>
+
+          <div class="card rounded-5 shadow-sm border">
+            <div class="card-body p-6">
+              <h2 class="h5 fw-bold mb-3">1. Refund eligibility</h2>
+              <p>Describe which plans are eligible, refund window, and how to request a refund.</p>
+
+              <h2 class="h5 fw-bold mt-6 mb-3">2. How to request</h2>
+              <p>Contact us at <span class="fw-bold">hello@vashq.com</span> with your account and billing details.</p>
+
+              <h2 class="h5 fw-bold mt-6 mb-3">3. Processing time</h2>
+              <p>Refunds are processed within a reasonable timeframe depending on payment method.</p>
+
+              <h2 class="h5 fw-bold mt-6 mb-3">4. Exceptions</h2>
+              <p>List exceptions such as abuse, chargebacks, or policy violations.</p>
+            </div>
+          </div>
+
+          <div class="mt-8 d-flex gap-3">
+            <a href="privacy-policy.html" class="btn btn-light">Privacy Policy</a>
+            <a href="terms-and-conditions.html" class="btn btn-light">Terms &amp; Conditions</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="pt-lg-13 bg-light py-8">
+    <div class="container">
+      <div class="border-top pt-6 row small">
+        <div class="col-12 d-flex flex-column flex-md-row justify-content-between">
+          <div>
+            <p>© 2026 Vashq. All rights reserved.</p>
+          </div>
+          <div class="d-flex gap-3">
+            <a href="privacy-policy.html" class="link-primary">Privacy Policy</a>
+            <a href="terms-and-conditions.html" class="link-primary">Terms &amp; Conditions</a>
+            <a href="refund-policy.html" class="link-primary">Refund Policy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./assets/js/main.js" type="module"></script>
+</body>
+
+</html>
