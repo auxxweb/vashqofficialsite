@@ -7,9 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description"
     content="Watch Vashq tutorials: create an account, add services, add employees, manage jobs, billing, and WhatsApp automation." />
-  <link rel="apple-touch-icon" sizes="180x180" href="/vashqofficialsite/assets/images/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/vashqofficialsite/assets/images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/vashqofficialsite/assets/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/vashqofficialsite/assets/images/logo-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/vashqofficialsite/assets/images/logo-icon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/vashqofficialsite/assets/images/logo-icon.png">
   <link rel="manifest" href="/vashqofficialsite/assets/site.webmanifest">
   <style>
     #page-loader {
@@ -69,9 +69,11 @@
   <div id="page-loader" aria-hidden="true">
     <div class="loader-card">
       <div class="stack">
-        <div class="shimmer" style="width: 55%;"></div>
-        <div class="shimmer sm" style="width: 85%;"></div>
-        <div class="shimmer sm" style="width: 72%;"></div>
+        <div class="d-flex justify-content-center">
+          <img src="/vashqofficialsite/assets/images/logo-icon.png" width="64" height="64" alt="Vashq"
+            style="object-fit: contain;" />
+        </div>
+        <div class="shimmer" style="width: 62%; margin: 6px auto 0;"></div>
       </div>
     </div>
   </div>
@@ -91,18 +93,9 @@
 
   <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
     <div class="container">
-      <a class="navbar-brand d-inline-flex gap-2 align-items-center lh-1" href="index.html">
-        <span class="text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
-            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-            class="icon icon-tabler icons-tabler-outline icon-tabler-book">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
-            <path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
-            <path d="M3 6l0 13" />
-            <path d="M12 6l0 13" />
-            <path d="M21 6l0 13" />
-          </svg></span>
-        <span class="fw-bold">Vashq</span>
+      <a class="navbar-brand d-inline-flex align-items-center lh-1" href="index.html">
+        <img src="/vashqofficialsite/assets/images/logo-full.png" alt="Vashq" height="32" loading="eager"
+          style="object-fit: contain;" />
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNav"
         aria-controls="mobileNav" aria-label="Toggle navigation">
@@ -196,9 +189,8 @@
         <div class="col-lg-4 col-md-6 tutorial-card" data-title="Create an account" data-tags="signup account setup invite team">
           <div class="card shadow-sm h-100 rounded-5 card-lift animate">
             <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
-              <iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/CivuutI6lXY"
-                title="Create an account — Vashq tutorial" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen></iframe>
+              <button type="button" class="tutorial-video" data-youtube-id="CivuutI6lXY"
+                aria-label="Play: Create an account — Vashq tutorial"></button>
             </div>
             <div class="card-body p-6">
               <h3 class="mb-1 fs-6">How to create an account</h3>
@@ -210,9 +202,8 @@
         <div class="col-lg-4 col-md-6 tutorial-card" data-title="Add services" data-tags="services price time estimates packages add service list">
           <div class="card shadow-sm h-100 rounded-5 card-lift animate">
             <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
-              <iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/CivuutI6lXY"
-                title="Add services — Vashq tutorial" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen></iframe>
+              <button type="button" class="tutorial-video" data-youtube-id="CivuutI6lXY"
+                aria-label="Play: Add services — Vashq tutorial"></button>
             </div>
             <div class="card-body p-6">
               <h3 class="mb-1 fs-6">How to add services</h3>
@@ -224,9 +215,8 @@
         <div class="col-lg-4 col-md-6 tutorial-card" data-title="Add employees" data-tags="employees staff login roles add employee performance">
           <div class="card shadow-sm h-100 rounded-5 card-lift animate">
             <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
-              <iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/CivuutI6lXY"
-                title="Add employees — Vashq tutorial" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen></iframe>
+              <button type="button" class="tutorial-video" data-youtube-id="CivuutI6lXY"
+                aria-label="Play: Add employees — Vashq tutorial"></button>
             </div>
             <div class="card-body p-6">
               <h3 class="mb-1 fs-6">How to add employees</h3>
@@ -238,9 +228,8 @@
         <div class="col-lg-4 col-md-6 tutorial-card" data-title="Create a job" data-tags="jobs intake vehicle customer assign before after photos">
           <div class="card shadow-sm h-100 rounded-5 card-lift animate">
             <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
-              <iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/CivuutI6lXY"
-                title="Create a job — Vashq tutorial" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen></iframe>
+              <button type="button" class="tutorial-video" data-youtube-id="CivuutI6lXY"
+                aria-label="Play: Create a job — Vashq tutorial"></button>
             </div>
             <div class="card-body p-6">
               <h3 class="mb-1 fs-6">How to create a job</h3>
@@ -252,9 +241,8 @@
         <div class="col-lg-4 col-md-6 tutorial-card" data-title="Billing and payments" data-tags="invoice billing payments discounts expense reports">
           <div class="card shadow-sm h-100 rounded-5 card-lift animate">
             <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
-              <iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/CivuutI6lXY"
-                title="Billing and payments — Vashq tutorial" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen></iframe>
+              <button type="button" class="tutorial-video" data-youtube-id="CivuutI6lXY"
+                aria-label="Play: Billing and payments — Vashq tutorial"></button>
             </div>
             <div class="card-body p-6">
               <h3 class="mb-1 fs-6">Billing &amp; payments walkthrough</h3>
@@ -266,9 +254,8 @@
         <div class="col-lg-4 col-md-6 tutorial-card" data-title="WhatsApp automation" data-tags="whatsapp templates notifications status updates">
           <div class="card shadow-sm h-100 rounded-5 card-lift animate">
             <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
-              <iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/CivuutI6lXY"
-                title="WhatsApp automation — Vashq tutorial" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen></iframe>
+              <button type="button" class="tutorial-video" data-youtube-id="CivuutI6lXY"
+                aria-label="Play: WhatsApp automation — Vashq tutorial"></button>
             </div>
             <div class="card-body p-6">
               <h3 class="mb-1 fs-6">WhatsApp automation setup</h3>
@@ -308,12 +295,12 @@
 
   <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content rounded-5">
         <div class="modal-body p-6">
-          <div class="d-flex justify-content-between mb-3">
-            <h1 class="card-title mb-5 h5">Start your free trial</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="modal-x" data-bs-dismiss="modal" aria-label="Close">X</button>
+          <div class="mb-3">
+            <h1 class="card-title mb-5 h5" id="exampleModalLabel">Start your free trial</h1>
           </div>
           <form class="mt-3">
             <div class="mb-3">
@@ -323,6 +310,10 @@
             <div class="mb-3">
               <label for="email" class="form-label">Work email</label>
               <input id="email" type="email" class="form-control" placeholder="name@example.com" required>
+            </div>
+            <div class="mb-3">
+              <label for="trialPhone" class="form-label">Phone</label>
+              <input id="trialPhone" type="tel" class="form-control" placeholder="9072509994" required>
             </div>
             <div class="mb-3">
               <label for="password" class="form-label">Create password</label>

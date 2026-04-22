@@ -7,9 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description"
     content="Run your entire car wash business from one dashboard. Manage jobs, staff, customers, invoices, payments, expenses, and WhatsApp notifications." />
-  <link rel="apple-touch-icon" sizes="180x180" href="/vashqofficialsite/assets/images/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/vashqofficialsite/assets/images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/vashqofficialsite/assets/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/vashqofficialsite/assets/images/logo-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/vashqofficialsite/assets/images/logo-icon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/vashqofficialsite/assets/images/logo-icon.png">
   <link rel="manifest" href="/vashqofficialsite/assets/site.webmanifest">
   <style>
     #page-loader {
@@ -70,9 +70,11 @@
   <div id="page-loader" aria-hidden="true">
     <div class="loader-card">
       <div class="stack">
-        <div class="shimmer" style="width: 55%;"></div>
-        <div class="shimmer sm" style="width: 85%;"></div>
-        <div class="shimmer sm" style="width: 72%;"></div>
+        <div class="d-flex justify-content-center">
+          <img src="/vashqofficialsite/assets/images/logo-icon.png" width="64" height="64" alt="Vashq"
+            style="object-fit: contain;" />
+        </div>
+        <div class="shimmer" style="width: 62%; margin: 6px auto 0;"></div>
       </div>
     </div>
   </div>
@@ -92,18 +94,9 @@
   <!-- Navbar Start -->
   <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
     <div class="container">
-      <a class="navbar-brand d-inline-flex gap-2 align-items-center lh-1" href="index.html">
-        <span class="text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
-            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-            class="icon icon-tabler icons-tabler-outline icon-tabler-book">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
-            <path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
-            <path d="M3 6l0 13" />
-            <path d="M12 6l0 13" />
-            <path d="M21 6l0 13" />
-          </svg></span>
-        <span class="fw-bold">Vashq</span>
+      <a class="navbar-brand d-inline-flex align-items-center lh-1" href="index.html">
+        <img src="/vashqofficialsite/assets/images/logo-full.png" alt="Vashq" height="32" loading="eager"
+          style="object-fit: contain;" />
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNav"
         aria-controls="mobileNav" aria-label="Toggle navigation">
@@ -161,13 +154,15 @@
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <path d="M7 3.34a10 10 0 1 1 -4.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 4.995 -8.336z" />
               </svg></span>
-            <span class="ms-1">No technical skills required</span></span>
+            <span class="ms-1">One platform. Complete control.</span></span>
           <h1 class="display-4 fw-bold  mt-4">
-            Run Your Entire Car Wash Business from One Dashboard
+            Smart Software for Smart Car Wash &amp; Detailing Businesses
           </h1>
 
           <p class="my-6 lead fw-normal">
-            Manage jobs, staff, customers, payments, and WhatsApp communication — all in one place.
+            Vashq brings your entire car wash operation into one powerful system. Manage staff, track performance,
+            monitor customers, handle billing, and stay connected through WhatsApp — all from a single dashboard designed
+            for real business growth.
           </p>
           <div class="d-flex flex-md-row flex-column justify-content-start   gap-3">
             <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -261,21 +256,6 @@
                   </svg>
                 </a>
 
-                <div class="position-absolute top-0 end-0  me-n8 mt-n4">
-                  <div class="bg-white shadow-sm rounded-pill d-flex align-items-center gap-3 px-3 py-2  mb-4 border"
-                    style="width: 180px;">
-                    <div class="avatar-group">
-                      <img src="/vashqofficialsite/assets/images/avatar-1.jpg" alt="" class="avatar avatar-sm rounded-circle">
-                      <img src="/vashqofficialsite/assets/images/avatar-2.jpg" alt="" class="avatar avatar-sm rounded-circle">
-                      <img src="/vashqofficialsite/assets/images/avatar-3.jpg" alt="" class="avatar avatar-sm rounded-circle">
-                    </div>
-                    <div class="d-flex flex-column text-xs lh-sm">
-                      <span class="fw-bold">Run faster</span>
-                      <span>every day</span>
-                    </div>
-
-                  </div>
-                </div>
                 <div class="position-absolute bottom-0 start-0  ms-n8 mb-n8">
                   <div class="bg-white shadow-sm rounded-pill d-flex align-items-center gap-2 px-3 py-2  mb-4 border"
                     style="width: 170px;">
@@ -312,94 +292,245 @@
         <div class="col-lg-6 mx-auto">
           <div class="mb-10">
             <span class="text-primary text-uppercase small fw-semibold" style="letter-spacing: .125rem;">Problem</span>
-            <h2 class="fw-bold mt-4 mb-4">Car wash operations get messy <span class="text-primary">fast</span></h2>
-            <p class="mb-0">If your work runs on calls, WhatsApp chats, and notebooks, small mistakes turn into lost time
-              and lost money.</p>
+            <h2 class="fw-bold mt-4 mb-4">Running a Car Wash Business Shouldn’t Feel This <span
+                class="text-primary">Messy</span></h2>
+            <p class="mb-0">Managing a car wash or detailing center with manual systems, scattered tools, and no clear
+              visibility leads to confusion, delays, and lost revenue. These everyday problems silently slow down your
+              business growth.</p>
           </div>
         </div>
       </div>
       <div>
         <!-- Problem Cards Start -->
-        <div class="row g-4">
-          <!-- Problem Card 1 -->
-          <div class="col-lg-3 col-md-6">
-
-            <div class="card  shadow-sm h-100 rounded-5 card-lift">
-              <div class="position-relative overflow-hidden">
-                <img src="/vashqofficialsite/assets/images/course-img-1.jpg" class="rounded-top-5 card-img-top"
-                  alt="Manual job tracking problem illustration">
-                <div class="position-absolute top-0 start-0 p-3">
-                  <span class="badge bg-warning  rounded-pill fw-normal text-xs">Pain point</span>
+        <div class="problem-marquee" aria-label="Real problems owners face">
+          <div class="problem-marquee__track">
+            <div class="problem-marquee__item">
+              <div class="card shadow-sm h-100 rounded-5 card-lift">
+                <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
+                  <img src="/vashqofficialsite/assets/images/course-img-1.jpg" alt="Manual job tracking problem illustration"
+                    class="w-100 h-100" style="object-fit: cover;" loading="lazy" />
                 </div>
-              </div>
-              <div class="card-body p-6">
-
-                <h3 class="mb-1 fs-6">
-                  Manual job tracking</h3>
-                <p class="mb-0 small mt-4">Jobs get missed or duplicated when everything lives in chats and paper.</p>
-              </div>
-
-            </div>
-          </div>
-          <!-- Problem Card 2 -->
-          <div class="col-lg-3 col-md-6">
-            <div class="card  shadow-sm h-100 rounded-5 card-lift">
-              <div class="position-relative overflow-hidden">
-                <img src="/vashqofficialsite/assets/images/course-img-2.jpg" class="rounded-top-5 card-img-top"
-                  alt="Billing confusion problem illustration">
-                <div class="position-absolute top-0 start-0 p-3">
-                  <span class="badge bg-danger rounded-pill fw-normal text-xs">Pain point</span>
+                <div class="card-body p-6">
+                  <h3 class="mb-1 fs-6">Manual Job Tracking</h3>
+                  <p class="mb-0 small mt-4">Jobs get missed or duplicated when everything lives in chats, calls, or paper
+                    notes.</p>
                 </div>
-
-              </div>
-              <div class="card-body p-6">
-
-                <h3 class="mb-1 fs-6">
-                  Billing confusion</h3>
-                <p class="mb-0 small mt-4">Invoices, payments, and expenses don’t match at day-end — and nobody knows
-                  why.</p>
               </div>
             </div>
-          </div>
-          <!-- Problem Card 3 -->
-          <div class="col-lg-3 col-md-6">
-            <div class="card  shadow-sm h-100 rounded-5 card-lift">
-              <div class="position-relative overflow-hidden">
-                <img src="/vashqofficialsite/assets/images/course-img-3.jpg" class="rounded-top-5 card-img-top"
-                  alt="Staff mismanagement problem illustration">
-                <div class="position-absolute top-0 start-0 p-3">
-                  <span class="badge bg-info rounded-pill fw-normal text-xs">Pain point</span>
-                </div>
-              </div>
-              <div class="card-body p-6">
 
-                <h3 class="mb-1 fs-6">
-                  Staff mismanagement</h3>
-                <p class="mb-0 small mt-4">Without clear assignments and updates, work slows down and accountability is
-                  unclear.</p>
+            <div class="problem-marquee__item">
+              <div class="card shadow-sm h-100 rounded-5 card-lift">
+                <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
+                  <img src="/vashqofficialsite/assets/images/course-img-2.jpg" alt="Billing confusion problem illustration"
+                    class="w-100 h-100" style="object-fit: cover;" loading="lazy" />
+                </div>
+                <div class="card-body p-6">
+                  <h3 class="mb-1 fs-6">Billing Confusion</h3>
+                  <p class="mb-0 small mt-4">Invoices, payments, and expenses don’t match at the end of the day — and no
+                    one knows where the gap is.</p>
+                </div>
               </div>
             </div>
-          </div>
-          <!-- Problem Card 4 -->
-          <div class="col-lg-3 col-md-6">
-            <div class="card  shadow-sm h-100 rounded-5 card-lift">
-              <div class="position-relative overflow-hidden">
-                <img src="/vashqofficialsite/assets/images/course-img-4.jpg" class="rounded-top-5 card-img-top"
-                  alt="No customer follow-up problem illustration">
-                <div class="position-absolute top-0 start-0 p-3">
-                  <span class="badge bg-success rounded-pill fw-normal text-xs">Pain point</span>
+
+            <div class="problem-marquee__item">
+              <div class="card shadow-sm h-100 rounded-5 card-lift">
+                <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
+                  <img src="/vashqofficialsite/assets/images/course-img-3.jpg" alt="Staff mismanagement problem illustration"
+                    class="w-100 h-100" style="object-fit: cover;" loading="lazy" />
+                </div>
+                <div class="card-body p-6">
+                  <h3 class="mb-1 fs-6">Staff Mismanagement</h3>
+                  <p class="mb-0 small mt-4">Without clear job assignments and updates, work slows down and accountability
+                    becomes unclear.</p>
                 </div>
               </div>
-              <div class="card-body p-6">
+            </div>
 
-                <h3 class="mb-1 fs-6">
-                  No customer follow-up</h3>
-                <p class="mb-0 small mt-4">Customers don’t get updates, so trust drops and repeat visits become harder to
-                  win.</p>
+            <div class="problem-marquee__item">
+              <div class="card shadow-sm h-100 rounded-5 card-lift">
+                <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
+                  <img src="/vashqofficialsite/assets/images/course-img-4.jpg" alt="No customer follow-up problem illustration"
+                    class="w-100 h-100" style="object-fit: cover;" loading="lazy" />
+                </div>
+                <div class="card-body p-6">
+                  <h3 class="mb-1 fs-6">No Customer Follow-up</h3>
+                  <p class="mb-0 small mt-4">Customers don’t get updates or reminders, so trust drops and repeat visits
+                    become harder to win.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="problem-marquee__item">
+              <div class="card shadow-sm h-100 rounded-5 card-lift">
+                <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
+                  <img src="/vashqofficialsite/assets/images/course-img-1.jpg" alt="No job status visibility problem illustration"
+                    class="w-100 h-100" style="object-fit: cover;" loading="lazy" />
+                </div>
+                <div class="card-body p-6">
+                  <h3 class="mb-1 fs-6">No Job Status Visibility</h3>
+                  <p class="mb-0 small mt-4">You don’t know which jobs are pending, in progress, or completed — leading to
+                    delays and confusion.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="problem-marquee__item">
+              <div class="card shadow-sm h-100 rounded-5 card-lift">
+                <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
+                  <img src="/vashqofficialsite/assets/images/course-img-2.jpg" alt="No business insights problem illustration"
+                    class="w-100 h-100" style="object-fit: cover;" loading="lazy" />
+                </div>
+                <div class="card-body p-6">
+                  <h3 class="mb-1 fs-6">No Business Insights</h3>
+                  <p class="mb-0 small mt-4">You can’t clearly see daily sales, performance, or growth trends — decisions
+                    are based on guesswork.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="problem-marquee__item">
+              <div class="card shadow-sm h-100 rounded-5 card-lift">
+                <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
+                  <img src="/vashqofficialsite/assets/images/course-img-3.jpg" alt="Customer data is scattered problem illustration"
+                    class="w-100 h-100" style="object-fit: cover;" loading="lazy" />
+                </div>
+                <div class="card-body p-6">
+                  <h3 class="mb-1 fs-6">Customer Data is Scattered</h3>
+                  <p class="mb-0 small mt-4">Customer and vehicle details are not stored properly, making it hard to track
+                    history or offer better service.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="problem-marquee__item">
+              <div class="card shadow-sm h-100 rounded-5 card-lift">
+                <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
+                  <img src="/vashqofficialsite/assets/images/course-img-4.jpg" alt="No proper customer communication problem illustration"
+                    class="w-100 h-100" style="object-fit: cover;" loading="lazy" />
+                </div>
+                <div class="card-body p-6">
+                  <h3 class="mb-1 fs-6">No Proper Customer Communication</h3>
+                  <p class="mb-0 small mt-4">Manually updating every customer takes time, so communication becomes
+                    inconsistent or ignored.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- duplicate for seamless loop -->
+            <div class="problem-marquee__item" aria-hidden="true">
+              <div class="card shadow-sm h-100 rounded-5 card-lift">
+                <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
+                  <img src="/vashqofficialsite/assets/images/course-img-1.jpg" alt=""
+                    class="w-100 h-100" style="object-fit: cover;" loading="lazy" />
+                </div>
+                <div class="card-body p-6">
+                  <h3 class="mb-1 fs-6">Manual Job Tracking</h3>
+                  <p class="mb-0 small mt-4">Jobs get missed or duplicated when everything lives in chats, calls, or paper
+                    notes.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="problem-marquee__item" aria-hidden="true">
+              <div class="card shadow-sm h-100 rounded-5 card-lift">
+                <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
+                  <img src="/vashqofficialsite/assets/images/course-img-2.jpg" alt=""
+                    class="w-100 h-100" style="object-fit: cover;" loading="lazy" />
+                </div>
+                <div class="card-body p-6">
+                  <h3 class="mb-1 fs-6">Billing Confusion</h3>
+                  <p class="mb-0 small mt-4">Invoices, payments, and expenses don’t match at the end of the day — and no
+                    one knows where the gap is.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="problem-marquee__item" aria-hidden="true">
+              <div class="card shadow-sm h-100 rounded-5 card-lift">
+                <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
+                  <img src="/vashqofficialsite/assets/images/course-img-3.jpg" alt=""
+                    class="w-100 h-100" style="object-fit: cover;" loading="lazy" />
+                </div>
+                <div class="card-body p-6">
+                  <h3 class="mb-1 fs-6">Staff Mismanagement</h3>
+                  <p class="mb-0 small mt-4">Without clear job assignments and updates, work slows down and accountability
+                    becomes unclear.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="problem-marquee__item" aria-hidden="true">
+              <div class="card shadow-sm h-100 rounded-5 card-lift">
+                <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
+                  <img src="/vashqofficialsite/assets/images/course-img-4.jpg" alt=""
+                    class="w-100 h-100" style="object-fit: cover;" loading="lazy" />
+                </div>
+                <div class="card-body p-6">
+                  <h3 class="mb-1 fs-6">No Customer Follow-up</h3>
+                  <p class="mb-0 small mt-4">Customers don’t get updates or reminders, so trust drops and repeat visits
+                    become harder to win.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="problem-marquee__item" aria-hidden="true">
+              <div class="card shadow-sm h-100 rounded-5 card-lift">
+                <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
+                  <img src="/vashqofficialsite/assets/images/course-img-1.jpg" alt=""
+                    class="w-100 h-100" style="object-fit: cover;" loading="lazy" />
+                </div>
+                <div class="card-body p-6">
+                  <h3 class="mb-1 fs-6">No Job Status Visibility</h3>
+                  <p class="mb-0 small mt-4">You don’t know which jobs are pending, in progress, or completed — leading to
+                    delays and confusion.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="problem-marquee__item" aria-hidden="true">
+              <div class="card shadow-sm h-100 rounded-5 card-lift">
+                <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
+                  <img src="/vashqofficialsite/assets/images/course-img-2.jpg" alt=""
+                    class="w-100 h-100" style="object-fit: cover;" loading="lazy" />
+                </div>
+                <div class="card-body p-6">
+                  <h3 class="mb-1 fs-6">No Business Insights</h3>
+                  <p class="mb-0 small mt-4">You can’t clearly see daily sales, performance, or growth trends — decisions
+                    are based on guesswork.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="problem-marquee__item" aria-hidden="true">
+              <div class="card shadow-sm h-100 rounded-5 card-lift">
+                <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
+                  <img src="/vashqofficialsite/assets/images/course-img-3.jpg" alt=""
+                    class="w-100 h-100" style="object-fit: cover;" loading="lazy" />
+                </div>
+                <div class="card-body p-6">
+                  <h3 class="mb-1 fs-6">Customer Data is Scattered</h3>
+                  <p class="mb-0 small mt-4">Customer and vehicle details are not stored properly, making it hard to track
+                    history or offer better service.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="problem-marquee__item" aria-hidden="true">
+              <div class="card shadow-sm h-100 rounded-5 card-lift">
+                <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
+                  <img src="/vashqofficialsite/assets/images/course-img-4.jpg" alt=""
+                    class="w-100 h-100" style="object-fit: cover;" loading="lazy" />
+                </div>
+                <div class="card-body p-6">
+                  <h3 class="mb-1 fs-6">No Proper Customer Communication</h3>
+                  <p class="mb-0 small mt-4">Manually updating every customer takes time, so communication becomes
+                    inconsistent or ignored.</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
+
         <div class="row">
           <div class="col-12 text-center mt-10">
             <a href="#" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal"> <span>
@@ -434,154 +565,173 @@
         <div class="col-lg-7 mx-auto">
           <div class="mb-10">
             <span class="text-primary text-uppercase small fw-semibold" style="letter-spacing: .125rem;">Features</span>
-            <h2 class="fw-bold mt-4 mb-4">Everything you need to run a <span class="text-primary">car wash</span></h2>
-            <p class="mb-0">Vashq keeps operations simple, scannable, and tracked — from job creation to payment to
-              WhatsApp follow-ups.</p>
+            <h2 class="fw-bold mt-4 mb-4">Everything You Need to Run Your Car Wash — <span class="text-primary">In One
+                Place</span></h2>
+            <p class="mb-4">Vashq replaces manual tracking, scattered tools, and daily confusion with one powerful system
+              built specifically for car wash and detailing businesses. From managing jobs and staff to tracking
+              customers, payments, and performance — everything works together in one simple, connected platform.</p>
+
           </div>
         </div>
       </div>
 
       <div class="row g-4 animate-stagger">
-        <!-- Feature Card A -->
         <div class="col-lg-4 col-md-6 mb-4">
-          <div class="card  shadow-sm h-100 rounded-5 text-center p-6 card-lift animate">
+          <div class="card shadow-sm h-100 rounded-5 text-center p-6 card-lift animate">
             <div class="mb-4 d-flex justify-content-center">
-              <div
-                class="icon-shape icon-lg bg-primary bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center">
-                <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='64'%20height='64'%20viewBox='0%200%2064%2064'%20fill='none'%3e%3crect%20x='12'%20y='14'%20width='40'%20height='36'%20rx='10'%20stroke='%234C94E0'%20stroke-width='3'/%3e%3cpath%20d='M12%2028H52'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'/%3e%3cpath%20d='M22%2022H24'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'/%3e%3cpath%20d='M30%2022H32'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'/%3e%3cpath%20d='M38%2022H40'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'/%3e%3cpath%20d='M22%2040L28%2034L34%2040L42%2032'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" class="feature-card-icon" alt="Dashboard"
-                  loading="lazy" />
-              </div>
+              <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='64'%20height='64'%20viewBox='0%200%2064%2064'%20fill='none'%3e%3crect%20x='12'%20y='14'%20width='40'%20height='36'%20rx='10'%20stroke='%234C94E0'%20stroke-width='3'/%3e%3cpath%20d='M12%2028H52'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'/%3e%3cpath%20d='M22%2022H24'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'/%3e%3cpath%20d='M30%2022H32'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'/%3e%3cpath%20d='M38%2022H40'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'/%3e%3cpath%20d='M22%2040L28%2034L34%2040L42%2032'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" class="feature-card-icon" alt="Smart business dashboard"
+                loading="lazy" />
             </div>
-            <h3 class="h6 fw-bold mb-1">Dashboard</h3>
-            <span class="text-muted mb-3 d-block text-xs">One-scroll overview</span>
+            <h3 class="h6 fw-bold mb-1">Smart Business Dashboard</h3>
+            <span class="text-muted mb-3 d-block text-xs">Know exactly what’s happening</span>
             <ul class="list-unstyled lh-lg small mb-0">
-              <li>Real-time business insights</li>
-              <li>One-scroll overview</li>
-              <li>Performance leaderboard</li>
+              <li>One-scroll overview of your entire business</li>
+              <li>Real-time analytics and insights</li>
+              <li>Employee leaderboard</li>
             </ul>
-
-          </div>
-
-        </div>
-        <!-- Feature Card B -->
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="card  shadow-sm h-100 rounded-5 text-center p-6 card-lift animate">
-            <div class="mb-4 d-flex justify-content-center">
-              <div
-                class="icon-shape icon-lg bg-primary bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center">
-                <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='64'%20height='64'%20viewBox='0%200%2064%2064'%20fill='none'%3e%3cpath%20d='M22%2016H40'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'/%3e%3cpath%20d='M26%2014V20'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'/%3e%3cpath%20d='M38%2014V20'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'/%3e%3crect%20x='14'%20y='18'%20width='36'%20height='34'%20rx='10'%20stroke='%234C94E0'%20stroke-width='3'/%3e%3cpath%20d='M20%2030H44'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'/%3e%3cpath%20d='M20%2038H36'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'/%3e%3cpath%20d='M22%2046L26%2050L34%2042'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" class="feature-card-icon" alt="Job management"
-                  loading="lazy" />
-              </div>
-            </div>
-            <h3 class="h6 fw-bold mb-1">Job Management</h3>
-            <span class="text-muted mb-3 d-block text-xs">From creation to completion</span>
-            <ul class="list-unstyled lh-lg small mb-0">
-              <li>Create jobs in seconds</li>
-              <li>Before/after photos</li>
-              <li>Assign and track work</li>
-            </ul>
-
           </div>
         </div>
-        <!-- Feature Card C -->
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="card  shadow-sm h-100 rounded-5 text-center p-6 card-lift animate">
-            <div class="mb-4 d-flex justify-content-center">
-              <div
-                class="icon-shape icon-lg bg-primary bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center">
-                <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='64'%20height='64'%20viewBox='0%200%2064%2064'%20fill='none'%3e%3ccircle%20cx='26'%20cy='26'%20r='8'%20stroke='%234C94E0'%20stroke-width='3'/%3e%3cpath%20d='M12%2050C14.5%2041.5%2019.5%2038%2026%2038C32.5%2038%2037.5%2041.5%2040%2050'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'/%3e%3ccircle%20cx='44'%20cy='28'%20r='6'%20stroke='%234C94E0'%20stroke-width='3'/%3e%3cpath%20d='M38%2048C39.8%2042.3%2042.4%2040%2046%2040C49.6%2040%2052.2%2042.3%2054%2048'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'/%3e%3c/svg%3e" class="feature-card-icon" alt="Employee system"
-                  loading="lazy" />
-              </div>
-            </div>
-            <h3 class="h6 fw-bold mb-1">Employee System</h3>
-            <span class="text-muted mb-3 d-block text-xs">Separate login portal</span>
-            <ul class="list-unstyled lh-lg small mb-0">
-              <li>Separate employee login</li>
-              <li>Job updates</li>
-              <li>Performance tracking</li>
-            </ul>
 
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card shadow-sm h-100 rounded-5 text-center p-6 card-lift animate">
+            <div class="mb-4 d-flex justify-content-center">
+              <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='64'%20height='64'%20viewBox='0%200%2064%2064'%20fill='none'%3e%3cpath%20d='M22%2016H40'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'/%3e%3cpath%20d='M26%2014V20'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'/%3e%3cpath%20d='M38%2014V20'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'/%3e%3crect%20x='14'%20y='18'%20width='36'%20height='34'%20rx='10'%20stroke='%234C94E0'%20stroke-width='3'/%3e%3cpath%20d='M20%2030H44'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'/%3e%3cpath%20d='M20%2038H36'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'/%3e%3cpath%20d='M22%2046L26%2050L34%2042'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" class="feature-card-icon"
+                alt="Job creation and tracking" loading="lazy" />
+            </div>
+            <h3 class="h6 fw-bold mb-1">Job Creation &amp; Tracking</h3>
+            <span class="text-muted mb-3 d-block text-xs">No missed or duplicate jobs</span>
+            <ul class="list-unstyled lh-lg small mb-0">
+              <li>Create jobs with before &amp; after photos</li>
+              <li>Assign work to employees</li>
+              <li>Track status (pending / in progress / completed)</li>
+            </ul>
           </div>
         </div>
-        <!-- Feature Card D -->
+
         <div class="col-lg-4 col-md-6 mb-4">
-          <div class="card  shadow-sm h-100 rounded-5 text-center p-6 card-lift animate">
+          <div class="card shadow-sm h-100 rounded-5 text-center p-6 card-lift animate">
             <div class="mb-4 d-flex justify-content-center">
-              <div
-                class="icon-shape icon-lg bg-primary bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center">
-                <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='64'%20height='64'%20viewBox='0%200%2064%2064'%20fill='none'%3e%3crect%20x='14'%20y='16'%20width='24'%20height='32'%20rx='10'%20stroke='%234C94E0'%20stroke-width='3'/%3e%3cpath%20d='M20%2030H32'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'/%3e%3cpath%20d='M20%2038H30'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'/%3e%3cpath%20d='M40%2040L44%2030H54L58%2040'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M42%2040H56'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'/%3e%3ccircle%20cx='46'%20cy='44'%20r='3'%20stroke='%234C94E0'%20stroke-width='3'/%3e%3ccircle%20cx='54'%20cy='44'%20r='3'%20stroke='%234C94E0'%20stroke-width='3'/%3e%3c/svg%3e" class="feature-card-icon"
-                  alt="Customer and vehicle management" loading="lazy" />
-              </div>
+              <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='64'%20height='64'%20viewBox='0%200%2064%2064'%20fill='none'%3e%3ccircle%20cx='26'%20cy='26'%20r='8'%20stroke='%234C94E0'%20stroke-width='3'/%3e%3cpath%20d='M12%2050C14.5%2041.5%2019.5%2038%2026%2038C32.5%2038%2037.5%2041.5%2040%2050'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'/%3e%3ccircle%20cx='44'%20cy='28'%20r='6'%20stroke='%234C94E0'%20stroke-width='3'/%3e%3cpath%20d='M38%2048C39.8%2042.3%2042.4%2040%2046%2040C49.6%2040%2052.2%2042.3%2054%2048'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'/%3e%3c/svg%3e" class="feature-card-icon"
+                alt="Employee management system" loading="lazy" />
+            </div>
+            <h3 class="h6 fw-bold mb-1">Employee Management System</h3>
+            <span class="text-muted mb-3 d-block text-xs">Full control and accountability</span>
+            <ul class="list-unstyled lh-lg small mb-0">
+              <li>Separate login for employees</li>
+              <li>Clear job assignments and updates</li>
+              <li>Performance tracking and leaderboard</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card shadow-sm h-100 rounded-5 text-center p-6 card-lift animate">
+            <div class="mb-4 d-flex justify-content-center">
+              <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='64'%20height='64'%20viewBox='0%200%2064%2064'%20fill='none'%3e%3crect%20x='14'%20y='16'%20width='24'%20height='32'%20rx='10'%20stroke='%234C94E0'%20stroke-width='3'/%3e%3cpath%20d='M20%2030H32'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'/%3e%3cpath%20d='M20%2038H30'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'/%3e%3cpath%20d='M40%2040L44%2030H54L58%2040'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M42%2040H56'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'/%3e%3ccircle%20cx='46'%20cy='44'%20r='3'%20stroke='%234C94E0'%20stroke-width='3'/%3e%3ccircle%20cx='54'%20cy='44'%20r='3'%20stroke='%234C94E0'%20stroke-width='3'/%3e%3c/svg%3e" class="feature-card-icon"
+                alt="Customer and vehicle management" loading="lazy" />
             </div>
             <h3 class="h6 fw-bold mb-1">Customer &amp; Vehicle Management</h3>
-            <span class="text-muted mb-3 d-block text-xs">History you can trust</span>
+            <span class="text-muted mb-3 d-block text-xs">Build retention with history</span>
             <ul class="list-unstyled lh-lg small mb-0">
-              <li>Customer database</li>
-              <li>Vehicle data management</li>
-              <li>Vehicle history tracking</li>
+              <li>Store complete customer data</li>
+              <li>Track vehicle history and visits</li>
+              <li>Identify repeat customers</li>
             </ul>
-
           </div>
-
-
-
-
-
         </div>
-        <!-- Feature Card E -->
+
         <div class="col-lg-4 col-md-6 mb-4">
-          <div class="card  shadow-sm h-100 rounded-5 text-center p-6 card-lift animate">
+          <div class="card shadow-sm h-100 rounded-5 text-center p-6 card-lift animate">
             <div class="mb-4 d-flex justify-content-center">
-              <div
-                class="icon-shape icon-lg bg-primary bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center">
-                <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='64'%20height='64'%20viewBox='0%200%2064%2064'%20fill='none'%3e%3crect%20x='14'%20y='18'%20width='36'%20height='28'%20rx='10'%20stroke='%234C94E0'%20stroke-width='3'/%3e%3cpath%20d='M14%2028H50'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'/%3e%3cpath%20d='M22%2036H34'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'/%3e%3cpath%20d='M38%2042C38%2046.4%2034.4%2050%2030%2050C25.6%2050%2022%2046.4%2022%2042'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'/%3e%3cpath%20d='M30%2050V56'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'/%3e%3cpath%20d='M26%2056H34'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'/%3e%3c/svg%3e" class="feature-card-icon"
-                  alt="Billing and payments" loading="lazy" />
-              </div>
+              <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='64'%20height='64'%20viewBox='0%200%2064%2064'%20fill='none'%3e%3cpath%20d='M32%2052C44.1503%2052%2054%2042.1503%2054%2030C54%2017.8497%2044.1503%208%2032%208C19.8497%208%2010%2017.8497%2010%2030C10%2034.2%2011.2%2038.1%2013.3%2041.4L12%2056L26.2%2052.8C28.1%2053.6%2030%2054%2032%2054'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M26%2024C27%2022%2028.5%2021.5%2030%2022.5L32%2024.5C33%2025.5%2033%2026.5%2032.2%2027.4L31.4%2028.2C33.2%2031.4%2036%2033.8%2039.6%2035.4L40.4%2034.6C41.3%2033.8%2042.3%2033.8%2043.3%2034.6L45.5%2036.6C46.6%2037.6%2046.4%2039.3%2045.1%2040.3C43.4%2041.6%2041.2%2042.2%2039%2041.8C31.5%2040.4%2023.6%2033.1%2022.2%2025.4C21.8%2023.2%2022.4%2021%2023.7%2019.3'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" class="feature-card-icon"
+                alt="WhatsApp communication and automation" loading="lazy" />
             </div>
-            <h3 class="h6 fw-bold mb-1">Billing &amp; Payments</h3>
-            <span class="text-muted mb-3 d-block text-xs">Clear billing, faster collections</span>
+            <h3 class="h6 fw-bold mb-1">WhatsApp Communication &amp; Automation</h3>
+            <span class="text-muted mb-3 d-block text-xs">Stay connected without manual effort</span>
             <ul class="list-unstyled lh-lg small mb-0">
-              <li>Invoice generation</li>
-              <li>Payment tracking</li>
-              <li>Expense management</li>
+              <li>Send automatic updates to customers</li>
+              <li>Booking notifications and reminders</li>
+              <li>Custom WhatsApp message templates</li>
             </ul>
           </div>
         </div>
-        <!-- Feature Card F -->
+
         <div class="col-lg-4 col-md-6 mb-4">
-          <div class="card  shadow-sm h-100 rounded-5 text-center p-6 card-lift animate">
+          <div class="card shadow-sm h-100 rounded-5 text-center p-6 card-lift animate">
             <div class="mb-4 d-flex justify-content-center">
-              <div
-                class="icon-shape icon-lg bg-primary bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center">
-                <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='64'%20height='64'%20viewBox='0%200%2064%2064'%20fill='none'%3e%3cpath%20d='M16%2048V28'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'/%3e%3cpath%20d='M26%2048V22'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'/%3e%3cpath%20d='M36%2048V32'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'/%3e%3cpath%20d='M46%2048V18'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'/%3e%3cpath%20d='M14%2050H50'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'/%3e%3cpath%20d='M18%2026L26%2020L36%2028L48%2016'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3ccircle%20cx='48'%20cy='16'%20r='3'%20fill='%234C94E0'/%3e%3c/svg%3e" class="feature-card-icon"
-                  alt="Reports and analytics" loading="lazy" />
-              </div>
+              <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='64'%20height='64'%20viewBox='0%200%2064%2064'%20fill='none'%3e%3crect%20x='14'%20y='18'%20width='36'%20height='28'%20rx='10'%20stroke='%234C94E0'%20stroke-width='3'/%3e%3cpath%20d='M14%2028H50'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'/%3e%3cpath%20d='M22%2036H34'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'/%3e%3cpath%20d='M38%2042C38%2046.4%2034.4%2050%2030%2050C25.6%2050%2022%2046.4%2022%2042'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'/%3e%3cpath%20d='M30%2050V56'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'/%3e%3cpath%20d='M26%2056H34'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'/%3e%3c/svg%3e" class="feature-card-icon"
+                alt="Billing and invoice generation" loading="lazy" />
+            </div>
+            <h3 class="h6 fw-bold mb-1">Billing &amp; Invoice Generation</h3>
+            <span class="text-muted mb-3 d-block text-xs">No more billing confusion</span>
+            <ul class="list-unstyled lh-lg small mb-0">
+              <li>Create invoices instantly</li>
+              <li>Automatic invoice generation</li>
+              <li>Clean and structured billing</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card shadow-sm h-100 rounded-5 text-center p-6 card-lift animate">
+            <div class="mb-4 d-flex justify-content-center">
+              <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='64'%20height='64'%20viewBox='0%200%2064%2064'%20fill='none'%3e%3crect%20x='14'%20y='18'%20width='36'%20height='28'%20rx='10'%20stroke='%234C94E0'%20stroke-width='3'/%3e%3cpath%20d='M14%2028H50'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'/%3e%3cpath%20d='M22%2036H30'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'/%3e%3cpath%20d='M36%2036H42'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'/%3e%3cpath%20d='M30%2046C32.2%2048.2%2035.8%2048.2%2038%2046C40.2%2043.8%2040.2%2040.2%2038%2038'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'/%3e%3cpath%20d='M28%2040C25.8%2037.8%2025.8%2034.2%2028%2032C30.2%2029.8%2033.8%2029.8%2036%2032'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'/%3e%3c/svg%3e" class="feature-card-icon" alt="Payment tracking"
+                loading="lazy" />
+            </div>
+            <h3 class="h6 fw-bold mb-1">Payment Tracking</h3>
+            <span class="text-muted mb-3 d-block text-xs">Know exactly where your money is</span>
+            <ul class="list-unstyled lh-lg small mb-0">
+              <li>Track all incoming payments</li>
+              <li>Monitor pending dues</li>
+              <li>Clear financial visibility</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card shadow-sm h-100 rounded-5 text-center p-6 card-lift animate">
+            <div class="mb-4 d-flex justify-content-center">
+              <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='64'%20height='64'%20viewBox='0%200%2064%2064'%20fill='none'%3e%3crect%20x='16'%20y='14'%20width='32'%20height='40'%20rx='10'%20stroke='%234C94E0'%20stroke-width='3'/%3e%3cpath%20d='M22%2026H42'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'/%3e%3cpath%20d='M22%2034H38'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'/%3e%3cpath%20d='M22%2042H34'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'/%3e%3cpath%20d='M40%2046C44.4183%2046%2048%2042.4183%2048%2038C48%2033.5817%2044.4183%2030%2040%2030C35.5817%2030%2032%2033.5817%2032%2038C32%2042.4183%2035.5817%2046%2040%2046Z'%20stroke='%234C94E0'%20stroke-width='3'/%3e%3cpath%20d='M40%2034V38L42.5%2040.5'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" class="feature-card-icon"
+                alt="Expense management" loading="lazy" />
+            </div>
+            <h3 class="h6 fw-bold mb-1">Expense Management</h3>
+            <span class="text-muted mb-3 d-block text-xs">Stop money leakage</span>
+            <ul class="list-unstyled lh-lg small mb-0">
+              <li>Record and track expenses</li>
+              <li>Understand daily costs</li>
+              <li>Improve profit control</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card shadow-sm h-100 rounded-5 text-center p-6 card-lift animate">
+            <div class="mb-4 d-flex justify-content-center">
+              <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='64'%20height='64'%20viewBox='0%200%2064%2064'%20fill='none'%3e%3cpath%20d='M16%2048V28'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'/%3e%3cpath%20d='M26%2048V22'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'/%3e%3cpath%20d='M36%2048V32'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'/%3e%3cpath%20d='M46%2048V18'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'/%3e%3cpath%20d='M14%2050H50'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'/%3e%3cpath%20d='M18%2026L26%2020L36%2028L48%2016'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3ccircle%20cx='48'%20cy='16'%20r='3'%20fill='%234C94E0'/%3e%3c/svg%3e" class="feature-card-icon"
+                alt="Reports and analytics" loading="lazy" />
             </div>
             <h3 class="h6 fw-bold mb-1">Reports &amp; Analytics</h3>
-            <span class="text-muted mb-3 d-block text-xs">See what’s working</span>
+            <span class="text-muted mb-3 d-block text-xs">Make smarter business decisions</span>
             <ul class="list-unstyled lh-lg small mb-0">
-              <li>Revenue insights</li>
-              <li>Performance tracking</li>
-              <li>Reports and analytics</li>
+              <li>Sales tracking</li>
+              <li>Business performance insights</li>
+              <li>Staff performance reports</li>
             </ul>
           </div>
         </div>
-        <!-- Feature Card G -->
+
         <div class="col-lg-4 col-md-6 mb-4">
-          <div class="card  shadow-sm h-100 rounded-5 text-center p-6 card-lift animate">
+          <div class="card shadow-sm h-100 rounded-5 text-center p-6 card-lift animate">
             <div class="mb-4 d-flex justify-content-center">
-              <div
-                class="icon-shape icon-lg bg-primary bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center">
-                <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='64'%20height='64'%20viewBox='0%200%2064%2064'%20fill='none'%3e%3cpath%20d='M32%2052C44.1503%2052%2054%2042.1503%2054%2030C54%2017.8497%2044.1503%208%2032%208C19.8497%208%2010%2017.8497%2010%2030C10%2034.2%2011.2%2038.1%2013.3%2041.4L12%2056L26.2%2052.8C28.1%2053.6%2030%2054%2032%2054'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M26%2024C27%2022%2028.5%2021.5%2030%2022.5L32%2024.5C33%2025.5%2033%2026.5%2032.2%2027.4L31.4%2028.2C33.2%2031.4%2036%2033.8%2039.6%2035.4L40.4%2034.6C41.3%2033.8%2042.3%2033.8%2043.3%2034.6L45.5%2036.6C46.6%2037.6%2046.4%2039.3%2045.1%2040.3C43.4%2041.6%2041.2%2042.2%2039%2041.8C31.5%2040.4%2023.6%2033.1%2022.2%2025.4C21.8%2023.2%2022.4%2021%2023.7%2019.3'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" class="feature-card-icon"
-                  alt="WhatsApp automation" loading="lazy" />
-              </div>
+              <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='64'%20height='64'%20viewBox='0%200%2064%2064'%20fill='none'%3e%3cpath%20d='M22%2020H42'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'/%3e%3cpath%20d='M20%2028H44'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'/%3e%3cpath%20d='M18%2036H40'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'/%3e%3cpath%20d='M22%2044H34'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'/%3e%3cpath%20d='M44%2044C44%2048.4183%2040.4183%2052%2036%2052C31.5817%2052%2028%2048.4183%2028%2044C28%2039.5817%2031.5817%2036%2036%2036C40.4183%2036%2044%2039.5817%2044%2044Z'%20stroke='%234C94E0'%20stroke-width='3'/%3e%3cpath%20d='M36%2040V48'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'/%3e%3cpath%20d='M33.5%2042.5C33.5%2041.1193%2034.6193%2040%2036%2040C37.3807%2040%2038.5%2041.1193%2038.5%2042.5C38.5%2043.8807%2037.3807%2045%2036%2045C34.6193%2045%2033.5%2046.1193%2033.5%2047.5'%20stroke='%234C94E0'%20stroke-width='3'%20stroke-linecap='round'/%3e%3c/svg%3e" class="feature-card-icon"
+                alt="Service and pricing management" loading="lazy" />
             </div>
-            <h3 class="h6 fw-bold mb-1">WhatsApp Automation</h3>
-            <span class="text-muted mb-3 d-block text-xs">Your key differentiator</span>
+            <h3 class="h6 fw-bold mb-1">Service &amp; Pricing Management</h3>
+            <span class="text-muted mb-3 d-block text-xs">Deliver consistent service quality</span>
             <ul class="list-unstyled lh-lg small mb-0">
-              <li>WhatsApp notifications to customers</li>
-              <li>WhatsApp message template editing</li>
-              <li>Keep customers updated automatically</li>
+              <li>Create service listings</li>
+              <li>Set pricing and estimated time</li>
+              <li>Standardize your operations</li>
             </ul>
           </div>
         </div>
@@ -596,10 +746,9 @@
           <div class="mb-10 pe-lg-12">
             <span class="text-primary text-uppercase small fw-semibold"
               style="letter-spacing: .125rem;">How it works</span>
-            <h2 class="fw-bold mt-4 mb-4">Set up Vashq in minutes — then <span class="text-primary">run everything</span>
-            </h2>
-            <p class="mb-0">No complicated setup. Just sign up, add your services, and start managing jobs and payments
-              from one dashboard.</p>
+            <h2 class="fw-bold mt-4 mb-4">Get Started with Vashq in <span class="text-primary">Minutes</span></h2>
+            <p class="mb-0">No complicated setup. No technical knowledge needed. Just set up your business, add your
+              team, and start managing everything from one dashboard.</p>
           </div>
           <div class="row">
             <div class="col-md-6">
@@ -616,8 +765,8 @@
                   </svg>
                 </div>
                 <div>
-                  <h4 class="h6">1) Sign up</h4>
-                  <p class="mb-0 small">Create your Vashq account and invite your team.</p>
+                  <h4 class="h6">1) Set up your business</h4>
+                  <p class="mb-0 small">Create your Vashq account, then add services, pricing, and estimated time.</p>
                 </div>
 
               </div>
@@ -636,8 +785,8 @@
                   </svg>
                 </div>
                 <div>
-                  <h4 class="h6">2) Set up</h4>
-                  <p class="mb-0 small">Add services, prices, and estimated time.</p>
+                  <h4 class="h6">2) Add your team</h4>
+                  <p class="mb-0 small">Invite employees, assign roles, and give each person their own login.</p>
                 </div>
 
               </div>
@@ -659,8 +808,8 @@
                   </svg>
                 </div>
                 <div>
-                  <h4 class="h6">3) Manage</h4>
-                  <p class="mb-0 small">Create jobs, assign staff, add before/after photos.</p>
+                  <h4 class="h6">3) Start managing jobs</h4>
+                  <p class="mb-0 small">Create job cards, assign staff, upload before/after photos, and track status.</p>
                 </div>
               </div>
             </div>
@@ -678,159 +827,104 @@
                   </svg>
                 </div>
                 <div>
-                  <h4 class="h6">4) Track</h4>
-                  <p class="mb-0 small">Monitor revenue, performance, and send WhatsApp updates.</p>
+                  <h4 class="h6">4) Track, communicate &amp; grow</h4>
+                  <p class="mb-0 small">Monitor revenue and staff performance, and send WhatsApp updates to customers.</p>
                 </div>
               </div>
-            </div>
-
-            <div class="col-md-6 mt-6">
-              <div class="d-flex gap-4">
-                <div class="icon-shape icon-md bg-primary bg-opacity-10 rounded-circle text-primary flex-shrink-0">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="icon icon-tabler icons-tabler-world">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <circle cx="12" cy="12" r="9" />
-                    <line x1="3.6" y1="9" x2="20.4" y2="9" />
-                    <line x1="3.6" y1="15" x2="20.4" y2="15" />
-                    <path d="M12 3a17.3 17.3 0 0 0 0 18" />
-                    <path d="M12 3a17.3 17.3 0 0 1 0 18" />
-                  </svg>
-                </div>
-                <div>
-                  <h4 class="h6">Multi-location ready</h4>
-                  <p class="mb-0 small">Run one wash or multiple branches with consistent tracking.</p>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="col-md-6 mt-6">
-              <div class="d-flex gap-4">
-                <div class="icon-shape icon-md bg-primary bg-opacity-10 rounded-circle text-primary flex-shrink-0">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="icon icon-tabler icons-tabler-outline icon-tabler-heart-handshake">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
-                    <path
-                      d="M12 6l-3.293 3.293a1 1 0 0 0 0 1.414l.543 .543c.69 .69 1.81 .69 2.5 0l1 -1a3.182 3.182 0 0 1 4.5 0l2.25 2.25" />
-                    <path d="M12.5 15.5l2 2" />
-                    <path d="M15 13l2 2" />
-                  </svg>
-                </div>
-                <div>
-                  <h4 class="h6">Team accountability</h4>
-                  <p class="mb-0 small">Assign jobs, capture updates, and track performance per employee.</p>
-                </div>
-              </div>
-            </div>
-
-          </div>
-          <div class="row mt-10">
-            <div class="col-lg-12">
-              <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Start Free
-                Trial</a>
             </div>
 
           </div>
         </div>
         <div class="col-xl-6">
-          <div class="card shadow-lg rounded-5">
-            <div class="card-body p-8 py-8">
-
-              <div class="row mb-4 justify-content-center gx-2 text-center ">
-                <div class="col-lg-4 col-md-4 ">
-                  <img src="/vashqofficialsite/assets/images/avatar-1.jpg" alt="Avatar 1"
-                    class="rounded-circle avatar avatar-xxxl border border-3 border-primary border-opacity-25" />
-                </div>
-                <div class="col-lg-4 col-md-4 ">
-                  <img src="/vashqofficialsite/assets/images/avatar-2.jpg" alt="Avatar 2"
-                    class="rounded-circle avatar avatar-xxxl border border-3  border-warning border-opacity-25" />
-                </div>
-                <div class="col-lg-4 col-md-4 ">
-                  <img src="/vashqofficialsite/assets/images/avatar-3.jpg" alt="Avatar 3"
-                    class="rounded-circle avatar avatar-xxxl border border-3 border-danger border-opacity-25" />
-                </div>
-              </div>
-              <div class="row mb-4 justify-content-center gx-2 text-center ">
-                <div class="col-lg-4 col-md-4 ">
-                  <img src="/vashqofficialsite/assets/images/avatar-3.jpg" alt="Avatar 1"
-                    class="rounded-circle avatar avatar-xxxl border border-3 border-primary border-opacity-25" />
-                </div>
-                <div class="col-lg-4 col-md-4 ">
-                  <img src="/vashqofficialsite/assets/images/avatar-4.jpg" alt="Avatar 2"
-                    class="rounded-circle avatar avatar-xxxl border border-3  border-warning border-opacity-25" />
-                </div>
-                <div class="col-lg-4 col-md-4 ">
-                  <img src="/vashqofficialsite/assets/images/avatar-5.jpg" alt="Avatar 3"
-                    class="rounded-circle avatar avatar-xxxl border border-3 border-danger border-opacity-25" />
-                </div>
-              </div>
-              <div class="row mb-4 justify-content-center gx-2 text-center ">
-                <div class="col-lg-4 col-md-4 ">
-                  <img src="/vashqofficialsite/assets/images/avatar-2.jpg" alt="Avatar 1"
-                    class="rounded-circle avatar avatar-xxxl border border-3 border-primary border-opacity-25" />
-                </div>
-                <div class="col-lg-4 col-md-4 ">
-                  <img src="/vashqofficialsite/assets/images/avatar-1.jpg" alt="Avatar 2"
-                    class="rounded-circle avatar avatar-xxxl border border-3  border-warning border-opacity-25" />
-                </div>
-                <div class="col-lg-4 col-md-4 ">
-                  <img src="/vashqofficialsite/assets/images/avatar-3.jpg" alt="Avatar 3"
-                    class="rounded-circle avatar avatar-xxxl border border-3 border-danger border-opacity-25" />
-                </div>
-              </div>
-            </div>
-            <div class="position-absolute top-0 end-0  me-lg-n8 mt-n4">
-              <div class="bg-white shadow-sm rounded-pill d-flex align-items-center gap-3 px-3 py-3  mb-4 border"
-                style="width: 200px;">
-                <div class="icon-shape icon-md rounded-circle bg-primary bg-opacity-10 text-primary ">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="icon icon-tabler icons-tabler-outline icon-tabler-message-circle">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <path
-                      d="M3 20l1.3 -3.9c-2.324 -3.437 -1.426 -7.872 2.1 -10.374c3.526 -2.501 8.59 -2.296 11.845 .48c3.255 2.777 3.695 7.266 1.029 10.501c-2.666 3.235 -7.615 4.215 -11.574 2.293l-4.7 1" />
-                  </svg>
-                </div>
-                <div class="d-flex flex-column">
-                  <span class="fw-bold">24/7 Support</span>
-                  <small>Always here</small>
-                </div>
-
-              </div>
-            </div>
-            <div class="position-absolute bottom-0 start-0  ms-md-n8 mb-n8">
-
-              <div class="bg-white shadow-sm rounded-pill d-flex align-items-center gap-3 px-3 py-3  mb-4 border"
-                style="width: 200px;">
-                <div class="icon-shape icon-md rounded-circle bg-primary bg-opacity-10 text-primary ">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="icon icon-tabler icons-tabler-outline icon-tabler-world">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
-                    <path d="M3.6 9h16.8" />
-                    <path d="M3.6 15h16.8" />
-                    <path d="M11.5 3a17 17 0 0 0 0 18" />
-                    <path d="M12.5 3a17 17 0 0 1 0 18" />
-                  </svg>
-                </div>
-                <div class="d-flex flex-column">
-                  <span class="fw-bold">150+ Countries</span>
-                  <small>Worldwide reach</small>
-                </div>
-
+          <div class="card shadow-lg rounded-5 overflow-hidden h-100">
+            <div id="howItWorksCarousel" class="carousel slide h-100" data-bs-ride="carousel" data-bs-interval="4500"
+              data-bs-pause="hover">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#howItWorksCarousel" data-bs-slide-to="0" class="active"
+                  aria-current="true" aria-label="Step 1"></button>
+                <button type="button" data-bs-target="#howItWorksCarousel" data-bs-slide-to="1"
+                  aria-label="Step 2"></button>
+                <button type="button" data-bs-target="#howItWorksCarousel" data-bs-slide-to="2"
+                  aria-label="Step 3"></button>
+                <button type="button" data-bs-target="#howItWorksCarousel" data-bs-slide-to="3"
+                  aria-label="Step 4"></button>
               </div>
 
+              <div class="carousel-inner h-100">
+                <div class="carousel-item active">
+                  <img src="/vashqofficialsite/assets/images/course-img-1.jpg" class="d-block w-100 how-it-works-carousel__img"
+                    alt="Step 1: Set up your business in Vashq" loading="lazy" />
+                  <div class="carousel-caption d-none d-md-block text-start">
+                    <div class="bg-white bg-opacity-75 rounded-5 p-4 shadow-sm">
+                      <h3 class="h6 fw-bold mb-1">Step 1: Set up your business</h3>
+                      <p class="mb-0 small">Create your account and add services, pricing, and estimated time.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="carousel-item">
+                  <img src="/vashqofficialsite/assets/images/course-img-2.jpg" class="d-block w-100 how-it-works-carousel__img"
+                    alt="Step 2: Add your team in Vashq" loading="lazy" />
+                  <div class="carousel-caption d-none d-md-block text-start">
+                    <div class="bg-white bg-opacity-75 rounded-5 p-4 shadow-sm">
+                      <h3 class="h6 fw-bold mb-1">Step 2: Add your team</h3>
+                      <p class="mb-0 small">Invite employees, assign roles, and give each person their own login.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="carousel-item">
+                  <img src="/vashqofficialsite/assets/images/course-img-3.jpg" class="d-block w-100 how-it-works-carousel__img"
+                    alt="Step 3: Start managing jobs in Vashq" loading="lazy" />
+                  <div class="carousel-caption d-none d-md-block text-start">
+                    <div class="bg-white bg-opacity-75 rounded-5 p-4 shadow-sm">
+                      <h3 class="h6 fw-bold mb-1">Step 3: Start managing jobs</h3>
+                      <p class="mb-0 small">Create jobs, assign staff, upload photos, and track status.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="carousel-item">
+                  <img src="/vashqofficialsite/assets/images/course-img-4.jpg" class="d-block w-100 how-it-works-carousel__img"
+                    alt="Step 4: Track, communicate, and grow with Vashq" loading="lazy" />
+                  <div class="carousel-caption d-none d-md-block text-start">
+                    <div class="bg-white bg-opacity-75 rounded-5 p-4 shadow-sm">
+                      <h3 class="h6 fw-bold mb-1">Step 4: Track, communicate, and grow</h3>
+                      <p class="mb-0 small">Monitor revenue and performance, and send WhatsApp updates to customers.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <button class="carousel-control-prev" type="button" data-bs-target="#howItWorksCarousel" data-bs-slide="prev"
+                aria-label="Previous">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#howItWorksCarousel" data-bs-slide="next"
+                aria-label="Next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              </button>
             </div>
           </div>
-
         </div>
       </div>
   </section>
+
+  <section class="py-8 bg-white" id="free-trial">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-9">
+          <div class="card rounded-5 shadow-sm border">
+            <div class="card-body p-6 text-center">
+              <h3 class="h5 fw-bold mb-3">Start with a 14-day free trial.</h3>
+              <p class="mb-0">Experience full control of your business — then upgrade to a paid plan when you're ready.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="py-lg-13 py-8 bg-light bg-opacity-50" id="target-users">
 
     <div class="container">
@@ -850,6 +944,12 @@
       <div class="row gx-4 gy-6 animate-stagger">
         <div class="col-lg-4 col-12">
           <div class="card rounded-5 shadow-sm h-100 border animate">
+            <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
+              <img
+                src="https://source.unsplash.com/G1WBNNhsn20/1200x675"
+                alt="Car wash center" class="w-100 h-100" style="object-fit: cover;" loading="lazy"
+                referrerpolicy="no-referrer" />
+            </div>
             <div class="card-body p-6">
               <div class="mt-4 mb-2">
                 <span>
@@ -875,6 +975,12 @@
         </div>
         <div class="col-lg-4 col-12">
           <div class="card rounded-5 shadow-sm h-100 border animate">
+            <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
+              <img
+                src="https://source.unsplash.com/phP5Qa0CauQ/1200x675"
+                alt="Car detailing studio" class="w-100 h-100" style="object-fit: cover;" loading="lazy"
+                referrerpolicy="no-referrer" />
+            </div>
             <div class="card-body p-6">
               <div class="mt-4 mb-2">
                 <span>
@@ -900,6 +1006,12 @@
         </div>
         <div class="col-lg-4 col-12">
           <div class="card rounded-5 shadow-sm h-100 border animate">
+            <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
+              <img
+                src="https://source.unsplash.com/6IRVjnAYz70/1200x675"
+                alt="Bike wash shop" class="w-100 h-100" style="object-fit: cover;" loading="lazy"
+                referrerpolicy="no-referrer" />
+            </div>
             <div class="card-body p-6">
               <div class="mt-4 mb-2">
                 <span>
@@ -1002,9 +1114,10 @@
               </div>
               <div class="mt-7 pt-5 border-top">
                 <div class="d-flex gap-3 align-items-center">
-                  <img src="/vashqofficialsite/assets/images/avatar-4.jpg" alt="Customer avatar" class="avatar avatar-md rounded-circle">
+                  <img src="https://source.unsplash.com/ngelE2r5aOg/128x128" alt="Customer avatar"
+                    class="avatar avatar-md rounded-circle" loading="lazy" referrerpolicy="no-referrer">
                   <div>
-                    <h6 class="mb-0">Ayesha Khan
+                    <h6 class="mb-0">Anjali Nair
                     </h6>
                     <small>Owner, Car Wash Center</small>
                   </div>
@@ -1075,9 +1188,10 @@
               </div>
               <div class="mt-7 pt-5 border-top">
                 <div class="d-flex gap-3 align-items-center">
-                  <img src="/vashqofficialsite/assets/images/avatar-5.jpg" alt="Customer avatar" class="avatar avatar-md rounded-circle">
+                  <img src="https://source.unsplash.com/k9ytLZ6nfRs/128x128" alt="Customer avatar"
+                    class="avatar avatar-md rounded-circle" loading="lazy" referrerpolicy="no-referrer">
                   <div>
-                    <h6 class="mb-0">Rohan Mehta
+                    <h6 class="mb-0">Arjun Menon
                     </h6>
                     <small>Manager, Detailing Studio</small>
                   </div>
@@ -1148,9 +1262,10 @@
               </div>
               <div class="mt-7 pt-5 border-top">
                 <div class="d-flex gap-3 align-items-center">
-                  <img src="/vashqofficialsite/assets/images/avatar-6.jpg" alt="Customer avatar" class="avatar avatar-md rounded-circle">
+                  <img src="https://source.unsplash.com/w-0-sQ_kLHo/128x128" alt="Customer avatar"
+                    class="avatar avatar-md rounded-circle" loading="lazy" referrerpolicy="no-referrer">
                   <div>
-                    <h6 class="mb-0">Imran Ali
+                    <h6 class="mb-0">Fahad K.
                     </h6>
                     <small>Supervisor, Multi-bay Wash</small>
                   </div>
@@ -1176,8 +1291,9 @@
         <div class="col-12">
           <div class="text-center mb-10">
             <span class="text-primary text-uppercase small fw-semibold" style="letter-spacing: .125rem;">Pricing</span>
-            <h2 class="fw-bold mt-4 mb-4">Simple, transparent <span class="text-primary">pricing</span></h2>
-            <p>One plan built for car wash operations — jobs, staff, billing, and WhatsApp automation included.</p>
+            <h2 class="fw-bold mt-4 mb-4">Simple Pricing. <span class="text-primary">No Confusion.</span></h2>
+            <p>Start using Vashq with full access to all features. No limitations, no hidden charges — just choose a plan that
+              fits your business.</p>
           </div>
 
         </div>
@@ -1186,12 +1302,10 @@
       <div class="row g-4 mx-xxl-13">
         <div class="col-lg-4">
           <div class="card shadow-sm rounded-5 h-100">
-            <div class="card-body p-6">
-              <div class="text-center mt-5 mb-9">
-                <span class="text-dark fs-5 fw-bold">What’s included</span>
-                <p class="mt-1">Core operations, in one dashboard</p>
-
-                <h3 class="fw-bold h2">All features</h3>
+            <div class="card-body p-6 d-flex flex-column">
+              <div class="text-center mt-5 mb-7">
+                <span class="text-dark fs-5 fw-bold">14-Day Free Trial</span>
+                <p class="mt-1 mb-0">Full access to all features</p>
               </div>
               <div class="mb-4">
                 <ul class="list-unstyled mb-0 d-flex flex-column gap-2 small">
@@ -1204,7 +1318,7 @@
                         <path d="M5 12l5 5l10 -10" />
                       </svg>
                     </span>
-                    <span>Job creation + before/after photos</span>
+                    <span>Full access to all features</span>
                   </li>
                   <li class="d-flex gap-3">
                     <span class="icon-shape icon-xs bg-primary bg-opacity-10 text-primary rounded-circle">
@@ -1215,7 +1329,7 @@
                         <path d="M5 12l5 5l10 -10" />
                       </svg>
                     </span>
-                    <span>Employee login + job assignment</span>
+                    <span>No credit card required</span>
                   </li>
                   <li class="d-flex gap-3">
                     <span class="icon-shape icon-xs bg-primary bg-opacity-10 text-primary rounded-circle">
@@ -1226,57 +1340,30 @@
                         <path d="M5 12l5 5l10 -10" />
                       </svg>
                     </span>
-                    <span>Customer + vehicle data management</span>
-                  </li>
-                  <li class="d-flex gap-3">
-                    <span class="icon-shape icon-xs bg-primary bg-opacity-10 text-primary rounded-circle">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="icon icon-tabler icons-tabler-outline icon-tabler-check">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <path d="M5 12l5 5l10 -10" />
-                      </svg>
-                    </span>
-                    <span>Invoices + payment tracking</span>
-                  </li>
-                  <li class="d-flex gap-3">
-                    <span class="icon-shape icon-xs bg-primary bg-opacity-10 text-primary rounded-circle">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="icon icon-tabler icons-tabler-outline icon-tabler-check">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <path d="M5 12l5 5l10 -10" />
-                      </svg>
-                    </span>
-                    <span>WhatsApp notifications + template editing</span>
+                    <span>Set up and start managing immediately</span>
                   </li>
                 </ul>
               </div>
-              <div class="d-grid">
-                <a href="#final-cta" class="btn btn-light">
-                  Book Demo
-                </a>
+              <div class="mt-auto">
+                <p class="mb-4 small text-muted">Perfect to experience Vashq risk-free.</p>
+                <div class="d-grid">
+                  <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Start Free Trial
+                  </a>
+                </div>
               </div>
-
-
-
-
-
             </div>
-
           </div>
-
         </div>
+
         <div class="col-lg-4">
-          <div class="card shadow-sm rounded-5 h-100 border-primary">
-            <div class="card-body p-6">
-              <div class="text-center mt-5 mb-9">
-                <span class="text-dark fs-5 fw-bold">Vashq Plan</span>
-                <p class="mt-1">Everything to run your wash business</p>
-                <div class="d-flex gap-0 justify-content-center align-items-end">
-                  <h3 class="fw-bold h2 mb-0">$49
-                  </h3>
-                  <span>/month</span>
+          <div class="card shadow-sm rounded-5 h-100 border-primary position-relative">
+            <div class="card-body p-6 d-flex flex-column">
+              <div class="text-center mt-5 mb-7">
+                <span class="text-dark fs-5 fw-bold">Monthly Plan</span>
+                <div class="d-flex gap-0 justify-content-center align-items-end mt-3">
+                  <h3 class="fw-bold h2 mb-0">₹999</h3>
+                  <span class="ms-1">/ month</span>
                 </div>
               </div>
               <div class="mb-4">
@@ -1290,8 +1377,7 @@
                         <path d="M5 12l5 5l10 -10" />
                       </svg>
                     </span>
-                    <span>One-scroll dashboard + leaderboard</span>
-
+                    <span>All features included</span>
                   </li>
                   <li class="d-flex gap-3">
                     <span class="icon-shape icon-xs bg-primary bg-opacity-10 text-primary rounded-circle">
@@ -1302,7 +1388,7 @@
                         <path d="M5 12l5 5l10 -10" />
                       </svg>
                     </span>
-                    <span>Jobs, staff, customers, vehicles</span>
+                    <span>Unlimited usage</span>
                   </li>
                   <li class="d-flex gap-3">
                     <span class="icon-shape icon-xs bg-primary bg-opacity-10 text-primary rounded-circle">
@@ -1313,7 +1399,7 @@
                         <path d="M5 12l5 5l10 -10" />
                       </svg>
                     </span>
-                    <span>Billing: invoices, payments, expenses</span>
+                    <span>WhatsApp communication</span>
                   </li>
                   <li class="d-flex gap-3">
                     <span class="icon-shape icon-xs bg-primary bg-opacity-10 text-primary rounded-circle">
@@ -1324,74 +1410,37 @@
                         <path d="M5 12l5 5l10 -10" />
                       </svg>
                     </span>
-                    <span>Reports + analytics</span>
+                    <span>Dashboard, jobs, staff, billing &amp; reports</span>
                   </li>
-                  <li class="d-flex gap-3">
-                    <span class="icon-shape icon-xs bg-primary bg-opacity-10 text-primary rounded-circle">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="icon icon-tabler icons-tabler-outline icon-tabler-check">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <path d="M5 12l5 5l10 -10" />
-                      </svg>
-                    </span>
-                    <span>WhatsApp automation + templates</span>
-                  </li>
-                  <li class="d-flex gap-3">
-                    <span class="icon-shape icon-xs bg-primary bg-opacity-10 text-primary rounded-circle">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="icon icon-tabler icons-tabler-outline icon-tabler-check">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <path d="M5 12l5 5l10 -10" />
-                      </svg>
-                    </span>
-                    <span>Payment tracking</span>
-                  </li>
-                  <li class="d-flex gap-3">
-                    <span class="icon-shape icon-xs bg-primary bg-opacity-10 text-primary rounded-circle">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="icon icon-tabler icons-tabler-outline icon-tabler-check">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <path d="M5 12l5 5l10 -10" />
-                      </svg>
-                    </span>
-                    <span>No technical skills required</span>
-                  </li>
-
-
-
                 </ul>
               </div>
-              <div class="d-grid">
-                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                  Start Free Trial
-                </a>
+              <div class="mt-auto">
+                <p class="mb-4 small text-muted">Best for getting started with flexibility.</p>
+                <div class="d-grid">
+                  <a href="#final-cta" class="btn btn-light">
+                    Get Started
+                  </a>
+                </div>
               </div>
-
-
-
-
-
             </div>
             <div>
               <span
                 class="badge bg-primary position-absolute top-0 start-50 translate-middle-x mt-n3 rounded-pill text-xs">
-                Best Value
+                Popular
               </span>
             </div>
-
           </div>
-
         </div>
+
         <div class="col-lg-4">
           <div class="card shadow-sm rounded-5 h-100">
-            <div class="card-body p-6">
-              <div class="text-center mt-5 mb-9">
-                <span class="text-dark fs-5 fw-bold">Need help deciding?</span>
-                <p class="mt-1">We’ll recommend the best setup</p>
-                <h3 class="fw-bold h2 mb-0">Book a demo</h3>
+            <div class="card-body p-6 d-flex flex-column">
+              <div class="text-center mt-5 mb-7">
+                <span class="text-dark fs-5 fw-bold">Annual Plan <span class="text-primary">(Best Value)</span></span>
+                <div class="d-flex gap-0 justify-content-center align-items-end mt-3">
+                  <h3 class="fw-bold h2 mb-0">₹9,999</h3>
+                  <span class="ms-1">/ year</span>
+                </div>
               </div>
               <div class="mb-4">
                 <ul class="list-unstyled mb-0 d-flex flex-column gap-2 small">
@@ -1404,8 +1453,7 @@
                         <path d="M5 12l5 5l10 -10" />
                       </svg>
                     </span>
-                    <span>Walkthrough for your workflow</span>
-
+                    <span>All features included</span>
                   </li>
                   <li class="d-flex gap-3">
                     <span class="icon-shape icon-xs bg-primary bg-opacity-10 text-primary rounded-circle">
@@ -1416,7 +1464,7 @@
                         <path d="M5 12l5 5l10 -10" />
                       </svg>
                     </span>
-                    <span>WhatsApp setup guidance</span>
+                    <span>Everything in monthly plan</span>
                   </li>
                   <li class="d-flex gap-3">
                     <span class="icon-shape icon-xs bg-primary bg-opacity-10 text-primary rounded-circle">
@@ -1427,80 +1475,26 @@
                         <path d="M5 12l5 5l10 -10" />
                       </svg>
                     </span>
-                    <span>Service & pricing setup</span>
+                    <span>Save more compared to monthly billing</span>
                   </li>
-                  <li class="d-flex gap-3">
-                    <span class="icon-shape icon-xs bg-primary bg-opacity-10 text-primary rounded-circle">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="icon icon-tabler icons-tabler-outline icon-tabler-check">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <path d="M5 12l5 5l10 -10" />
-                      </svg>
-                    </span>
-                    <span>Employee roles and logins</span>
-                  </li>
-                  <li class="d-flex gap-3">
-                    <span class="icon-shape icon-xs bg-primary bg-opacity-10 text-primary rounded-circle">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="icon icon-tabler icons-tabler-outline icon-tabler-check">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <path d="M5 12l5 5l10 -10" />
-                      </svg>
-                    </span>
-                    <span>Answer questions live</span>
-                  </li>
-                  <li class="d-flex gap-3">
-                    <span class="icon-shape icon-xs bg-primary bg-opacity-10 text-primary rounded-circle">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="icon icon-tabler icons-tabler-outline icon-tabler-check">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <path d="M5 12l5 5l10 -10" />
-                      </svg>
-                    </span>
-                    <span>No pressure — just clarity</span>
-                  </li>
-                  <li class="d-flex gap-3">
-                    <span class="icon-shape icon-xs bg-primary bg-opacity-10 text-primary rounded-circle">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="icon icon-tabler icons-tabler-outline icon-tabler-check">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <path d="M5 12l5 5l10 -10" />
-                      </svg>
-                    </span>
-                    <span>Start your free trial anytime</span>
-                  </li>
-
-
-
                 </ul>
               </div>
-              <div class="d-grid">
-                <a href="#final-cta" class="btn btn-light">
-                  Contact Us
-                </a>
+              <div class="mt-auto">
+                <p class="mb-4 small text-muted">Best for long-term growth and savings.</p>
+                <div class="d-grid">
+                  <a href="#final-cta" class="btn btn-light">
+                    Choose Annual Plan
+                  </a>
+                </div>
               </div>
-
-
-
-
-
             </div>
-
           </div>
-
         </div>
-
 
       </div>
       <div class="row mt-8">
         <div class="col-12 text-center">
-
-
-          <p class="mb-0 small">Start free, set up in minutes, and run your wash business from one dashboard.</p>
+          <p class="mb-0 small"><strong>All plans include the same features.</strong> No restrictions. No upgrades needed.</p>
         </div>
       </div>
     </div>
@@ -1629,18 +1623,9 @@
       <div class="row gy-8">
         <div class="col-md-4">
           <div class="">
-            <a class="d-inline-flex gap-2 align-items-center lh-1" href="index.html">
-              <span class="text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
-                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-book">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
-                  <path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
-                  <path d="M3 6l0 13" />
-                  <path d="M12 6l0 13" />
-                  <path d="M21 6l0 13" />
-                </svg></span>
-              <span class="fw-bold">Vashq</span>
+            <a class="d-inline-flex align-items-center lh-1" href="index.html">
+              <img src="/vashqofficialsite/assets/images/logo-full.png" alt="Vashq" height="32" loading="lazy"
+                style="object-fit: contain;" />
             </a>
             <p class="mt-4 mb-6">Run your entire car wash business from one dashboard. Jobs, staff, customers, billing,
               and WhatsApp — all in one place.</p>
@@ -1656,7 +1641,7 @@
                   </svg>
 
                 </span>
-                <span>hello@vashq.com</span>
+                <a class="text-decoration-none" href="mailto:vashq12@gmail.com">vashq12@gmail.com</a>
 
               </span>
               <span class="d-flex align-items-center gap-2">
@@ -1670,7 +1655,7 @@
                   </svg>
 
                 </span>
-                <span>+91 00000 00000</span>
+                <a class="text-decoration-none" href="tel:9072509994">9072509994</a>
               </span>
               <span class="d-flex align-items-center gap-2">
                 <span class="text-primary">
@@ -1772,40 +1757,38 @@
           <div>
             <div class="">
 
-              <a href="#" class="btn rounded-circle btn-light btn-icon btn-xs">
+              <a href="https://www.instagram.com/vashqofficial/?hl=en" class="btn rounded-circle btn-light btn-icon btn-xs"
+                target="_blank" rel="noopener noreferrer" aria-label="Vashq on Instagram">
                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-x">
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram">
                   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                  <path d="M4 4l11.733 16h4.267l-11.733 -16z"></path>
-                  <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path>
+                  <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z"></path>
+                  <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+                  <path d="M16.5 7.5l0 .01"></path>
                 </svg>
-
               </a>
-              <a href="#" class="btn rounded-circle btn-light btn-icon btn-xs">
+              <a href="https://www.instagram.com/vashqofficial/?hl=en" class="btn rounded-circle btn-light btn-icon btn-xs"
+                target="_blank" rel="noopener noreferrer" aria-label="Vashq on Instagram">
                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-linkedin ">
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram">
                   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                  <path d="M8 11v5"></path>
-                  <path d="M8 8v.01"></path>
-                  <path d="M12 16v-5"></path>
-                  <path d="M16 16v-3a2 2 0 1 0 -4 0"></path>
-                  <path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z"></path>
+                  <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z"></path>
+                  <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+                  <path d="M16.5 7.5l0 .01"></path>
                 </svg>
-
               </a>
-              <a href="#" class="btn rounded-circle btn-light btn-icon btn-xs">
-
+              <a href="https://www.instagram.com/vashqofficial/?hl=en" class="btn rounded-circle btn-light btn-icon btn-xs"
+                target="_blank" rel="noopener noreferrer" aria-label="Vashq on Instagram">
                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="icon icon-tabler icons-tabler-brand-github ">
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram">
                   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                  <path
-                    d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12 12 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5">
-                  </path>
+                  <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z"></path>
+                  <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+                  <path d="M16.5 7.5l0 .01"></path>
                 </svg>
-
               </a>
             </div>
           </div>
@@ -1825,15 +1808,14 @@
 
   <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content rounded-5">
 
         <div class="modal-body p-6">
+          <button type="button" class="modal-x" data-bs-dismiss="modal" aria-label="Close">X</button>
           <div class=" mb-3">
-
             <div class="d-flex justify-content-between">
-              <h1 class="card-title mb-5 h5">Start your free trial</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <h1 class="card-title mb-5 h5" id="exampleModalLabel">Start your free trial</h1>
             </div>
           </div>
 
@@ -1848,6 +1830,12 @@
               <label for="email" class="form-label">Work email</label>
               <input id="email" type="email" class="form-control" placeholder="name@example.com" required>
               <div class="invalid-feedback">Please enter a valid email.</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="trialPhone" class="form-label">Phone</label>
+              <input id="trialPhone" type="tel" class="form-control" placeholder="9072509994" required>
+              <div class="invalid-feedback">Please enter a valid phone number.</div>
             </div>
 
             <div class="mb-3">
