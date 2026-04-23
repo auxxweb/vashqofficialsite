@@ -7,9 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description"
     content="Simple Vashq pricing for car wash centers, detailing studios, and bike wash shops. One plan with all features included." />
-  <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/favicon_io/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon_io/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon_io/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/brand/logo-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/brand/logo-icon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/brand/logo-icon.png">
   <link rel="manifest" href="./assets/images/favicon_io/site.webmanifest">
   <link rel="stylesheet" href="/assets/scss/style.scss">
   <style>
@@ -68,9 +68,11 @@
   <div id="page-loader" aria-hidden="true">
     <div class="loader-card">
       <div class="stack">
-        <div class="shimmer" style="width: 55%;"></div>
-        <div class="shimmer sm" style="width: 85%;"></div>
-        <div class="shimmer sm" style="width: 72%;"></div>
+        <div class="d-flex justify-content-center">
+          <img src="./assets/images/brand/logo-icon.png" width="64" height="64" alt="Vashq"
+            style="object-fit: contain;" />
+        </div>
+        <div class="shimmer" style="width: 62%; margin: 6px auto 0;"></div>
       </div>
     </div>
   </div>
@@ -90,29 +92,21 @@
   <!-- Navbar Start -->
   <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
     <div class="container">
-      <a class="navbar-brand d-inline-flex gap-2 align-items-center lh-1" href="index.html">
-        <span class="text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
-            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-            class="icon icon-tabler icons-tabler-outline icon-tabler-book">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
-            <path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
-            <path d="M3 6l0 13" />
-            <path d="M12 6l0 13" />
-            <path d="M21 6l0 13" />
-          </svg></span>
-        <span class="fw-bold">Vashq</span>
+      <a class="navbar-brand d-inline-flex align-items-center lh-1" href="index.html">
+        <img src="./assets/images/brand/logo-full.png" alt="Vashq" height="32" loading="eager"
+          style="object-fit: contain;" />
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNav"
+        aria-controls="mobileNav" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="d-none d-lg-flex flex-grow-1 align-items-center">
         <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
           <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
           <li class="nav-item"><a href="features.html" class="nav-link">Features</a></li>
           <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
           <li class="nav-item"><a href="use-cases.html" class="nav-link">Use Cases</a></li>
+          <li class="nav-item"><a href="tutorials.html" class="nav-link">Tutorials</a></li>
           <li class="nav-item"><a href="demo.html" class="nav-link">Demo</a></li>
           <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
@@ -122,6 +116,29 @@
       </div>
     </div>
   </nav>
+
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileNav" aria-labelledby="mobileNavLabel">
+    <div class="offcanvas-header">
+      <h2 class="offcanvas-title h5 mb-0" id="mobileNavLabel">Menu</h2>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav mb-4">
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="features.html" class="nav-link">Features</a></li>
+        <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
+        <li class="nav-item"><a href="use-cases.html" class="nav-link">Use Cases</a></li>
+        <li class="nav-item"><a href="tutorials.html" class="nav-link">Tutorials</a></li>
+        <li class="nav-item"><a href="demo.html" class="nav-link">Demo</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="d-grid gap-2">
+        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+          data-bs-dismiss="offcanvas">Start Free Trial</a>
+        <a href="demo.html" class="btn btn-light">Book Demo</a>
+      </div>
+    </div>
+  </div>
 
   <section class="py-lg-13 py-8 bg-white position-relative" id="pricing-hero">
     <div class="circle-bg d-none d-lg-block"></div>
@@ -154,23 +171,79 @@
       <div class="row">
         <div class="col-12">
           <div class="text-center mb-10">
-            <span class="text-primary text-uppercase small fw-semibold" style="letter-spacing: .125rem;">Plan</span>
-            <h2 class="fw-bold mt-4 mb-4">One plan with all features included</h2>
-            <p>Use placeholder pricing today. Adjust when you’re ready.</p>
+            <span class="text-primary text-uppercase small fw-semibold" style="letter-spacing: .125rem;">Pricing</span>
+            <h2 class="fw-bold mt-4 mb-4">Simple Pricing. <span class="text-primary">No Confusion.</span></h2>
+            <p>Start using Vashq with full access to all features. No limitations, no hidden charges — just choose a plan that
+              fits your business.</p>
           </div>
         </div>
       </div>
 
-      <div class="row g-4 mx-xxl-13 justify-content-center">
-        <div class="col-lg-5">
-          <div class="card shadow-sm rounded-5 h-100 border-primary">
-            <div class="card-body p-6">
-              <div class="text-center mt-5 mb-9">
-                <span class="text-dark fs-5 fw-bold">Vashq Plan</span>
-                <p class="mt-1">Everything to run your wash business</p>
-                <div class="d-flex gap-0 justify-content-center align-items-end">
-                  <h3 class="fw-bold h2 mb-0">$49</h3>
-                  <span>/month</span>
+      <div class="row g-4 mx-xxl-13">
+        <div class="col-lg-4">
+          <div class="card shadow-sm rounded-5 h-100">
+            <div class="card-body p-6 d-flex flex-column">
+              <div class="text-center mt-5 mb-7">
+                <span class="text-dark fs-5 fw-bold">14-Day Free Trial</span>
+                <p class="mt-1 mb-0">Full access to all features</p>
+              </div>
+              <div class="mb-4">
+                <ul class="list-unstyled mb-0 d-flex flex-column gap-2 small">
+                  <li class="d-flex gap-3">
+                    <span class="icon-shape icon-xs bg-primary bg-opacity-10 text-primary rounded-circle">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-check">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M5 12l5 5l10 -10" />
+                      </svg>
+                    </span>
+                    <span>Full access to all features</span>
+                  </li>
+                  <li class="d-flex gap-3">
+                    <span class="icon-shape icon-xs bg-primary bg-opacity-10 text-primary rounded-circle">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-check">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M5 12l5 5l10 -10" />
+                      </svg>
+                    </span>
+                    <span>No credit card required</span>
+                  </li>
+                  <li class="d-flex gap-3">
+                    <span class="icon-shape icon-xs bg-primary bg-opacity-10 text-primary rounded-circle">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-check">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M5 12l5 5l10 -10" />
+                      </svg>
+                    </span>
+                    <span>Set up and start managing immediately</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="mt-auto">
+                <p class="mb-4 small text-muted">Perfect to experience Vashq risk-free.</p>
+                <div class="d-grid">
+                  <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Start Free Trial
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="card shadow-sm rounded-5 h-100 border-primary position-relative">
+            <div class="card-body p-6 d-flex flex-column">
+              <div class="text-center mt-5 mb-7">
+                <span class="text-dark fs-5 fw-bold">Monthly Plan</span>
+                <div class="d-flex gap-0 justify-content-center align-items-end mt-3">
+                  <h3 class="fw-bold h2 mb-0">₹999</h3>
+                  <span class="ms-1">/ month</span>
                 </div>
               </div>
               <div class="mb-4">
@@ -184,7 +257,7 @@
                         <path d="M5 12l5 5l10 -10" />
                       </svg>
                     </span>
-                    <span>One-scroll dashboard + leaderboard</span>
+                    <span>All features included</span>
                   </li>
                   <li class="d-flex gap-3">
                     <span class="icon-shape icon-xs bg-primary bg-opacity-10 text-primary rounded-circle">
@@ -195,7 +268,7 @@
                         <path d="M5 12l5 5l10 -10" />
                       </svg>
                     </span>
-                    <span>Job creation + before/after photos</span>
+                    <span>Unlimited usage</span>
                   </li>
                   <li class="d-flex gap-3">
                     <span class="icon-shape icon-xs bg-primary bg-opacity-10 text-primary rounded-circle">
@@ -206,7 +279,7 @@
                         <path d="M5 12l5 5l10 -10" />
                       </svg>
                     </span>
-                    <span>Employee login + performance tracking</span>
+                    <span>WhatsApp communication</span>
                   </li>
                   <li class="d-flex gap-3">
                     <span class="icon-shape icon-xs bg-primary bg-opacity-10 text-primary rounded-circle">
@@ -217,61 +290,92 @@
                         <path d="M5 12l5 5l10 -10" />
                       </svg>
                     </span>
-                    <span>Customers + vehicles + history</span>
-                  </li>
-                  <li class="d-flex gap-3">
-                    <span class="icon-shape icon-xs bg-primary bg-opacity-10 text-primary rounded-circle">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="icon icon-tabler icons-tabler-outline icon-tabler-check">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <path d="M5 12l5 5l10 -10" />
-                      </svg>
-                    </span>
-                    <span>Invoices + payments + expenses</span>
-                  </li>
-                  <li class="d-flex gap-3">
-                    <span class="icon-shape icon-xs bg-primary bg-opacity-10 text-primary rounded-circle">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="icon icon-tabler icons-tabler-outline icon-tabler-check">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <path d="M5 12l5 5l10 -10" />
-                      </svg>
-                    </span>
-                    <span>Reports + analytics</span>
-                  </li>
-                  <li class="d-flex gap-3">
-                    <span class="icon-shape icon-xs bg-primary bg-opacity-10 text-primary rounded-circle">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="icon icon-tabler icons-tabler-outline icon-tabler-check">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <path d="M5 12l5 5l10 -10" />
-                      </svg>
-                    </span>
-                    <span>WhatsApp automation + templates</span>
+                    <span>Dashboard, jobs, staff, billing &amp; reports</span>
                   </li>
                 </ul>
               </div>
-              <div class="d-grid">
-                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Start Free
-                  Trial</a>
+              <div class="mt-auto">
+                <p class="mb-4 small text-muted">Best for getting started with flexibility.</p>
+                <div class="d-grid">
+                  <a href="#final-cta" class="btn btn-light">
+                    Get Started
+                  </a>
+                </div>
               </div>
             </div>
             <div>
               <span
                 class="badge bg-primary position-absolute top-0 start-50 translate-middle-x mt-n3 rounded-pill text-xs">
-                Best Value
+                Popular
               </span>
             </div>
           </div>
         </div>
+
+        <div class="col-lg-4">
+          <div class="card shadow-sm rounded-5 h-100">
+            <div class="card-body p-6 d-flex flex-column">
+              <div class="text-center mt-5 mb-7">
+                <span class="text-dark fs-5 fw-bold">Annual Plan <span class="text-primary">(Best Value)</span></span>
+                <div class="d-flex gap-0 justify-content-center align-items-end mt-3">
+                  <h3 class="fw-bold h2 mb-0">₹9,999</h3>
+                  <span class="ms-1">/ year</span>
+                </div>
+              </div>
+              <div class="mb-4">
+                <ul class="list-unstyled mb-0 d-flex flex-column gap-2 small">
+                  <li class="d-flex gap-3">
+                    <span class="icon-shape icon-xs bg-primary bg-opacity-10 text-primary rounded-circle">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-check">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M5 12l5 5l10 -10" />
+                      </svg>
+                    </span>
+                    <span>All features included</span>
+                  </li>
+                  <li class="d-flex gap-3">
+                    <span class="icon-shape icon-xs bg-primary bg-opacity-10 text-primary rounded-circle">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-check">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M5 12l5 5l10 -10" />
+                      </svg>
+                    </span>
+                    <span>Everything in monthly plan</span>
+                  </li>
+                  <li class="d-flex gap-3">
+                    <span class="icon-shape icon-xs bg-primary bg-opacity-10 text-primary rounded-circle">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-check">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M5 12l5 5l10 -10" />
+                      </svg>
+                    </span>
+                    <span>Save more compared to monthly billing</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="mt-auto">
+                <p class="mb-4 small text-muted">Best for long-term growth and savings.</p>
+                <div class="d-grid">
+                  <a href="#final-cta" class="btn btn-light">
+                    Choose Annual Plan
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
 
       <div class="row mt-8">
         <div class="col-12 text-center">
-          <p class="mb-0 small">Start free, set up in minutes, and run your wash business from one dashboard.</p>
+          <p class="mb-0 small"><strong>All plans include the same features.</strong> No restrictions. No upgrades needed.</p>
         </div>
       </div>
     </div>
@@ -282,18 +386,9 @@
       <div class="row gy-8">
         <div class="col-md-4">
           <div class="">
-            <a class="d-inline-flex gap-2 align-items-center lh-1" href="index.html">
-              <span class="text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
-                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-book">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
-                  <path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
-                  <path d="M3 6l0 13" />
-                  <path d="M12 6l0 13" />
-                  <path d="M21 6l0 13" />
-                </svg></span>
-              <span class="fw-bold">Vashq</span>
+            <a class="d-inline-flex align-items-center lh-1" href="index.html">
+              <img src="./assets/images/brand/logo-full.png" alt="Vashq" height="32" loading="lazy"
+                style="object-fit: contain;" />
             </a>
             <p class="mt-4 mb-6">Run your entire car wash business from one dashboard. Jobs, staff, customers, billing,
               and WhatsApp — all in one place.</p>
@@ -338,13 +433,13 @@
 
   <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content rounded-5">
         <div class="modal-body p-6">
+          <button type="button" class="modal-x" data-bs-dismiss="modal" aria-label="Close">X</button>
           <div class=" mb-3">
             <div class="d-flex justify-content-between">
-              <h1 class="card-title mb-5 h5">Start your free trial</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <h1 class="card-title mb-5 h5" id="exampleModalLabel">Start your free trial</h1>
             </div>
           </div>
           <form class="mt-3">
@@ -355,6 +450,10 @@
             <div class="mb-3">
               <label for="email" class="form-label">Work email</label>
               <input id="email" type="email" class="form-control" placeholder="name@example.com" required>
+            </div>
+            <div class="mb-3">
+              <label for="trialPhone" class="form-label">Phone</label>
+              <input id="trialPhone" type="tel" class="form-control" placeholder="9072509994" required>
             </div>
             <div class="mb-3">
               <label for="password" class="form-label">Create password</label>
