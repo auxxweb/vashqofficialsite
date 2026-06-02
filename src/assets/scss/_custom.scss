@@ -9,6 +9,7 @@
 }
 
 .tutorial-video {
+  display: block;
   position: relative;
   width: 100%;
   height: 100%;
@@ -19,6 +20,12 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-color: $gray-200;
+}
+
+// Ensure the thumbnail covers the entire 16:9 ratio area
+.ratio > .tutorial-video {
+  position: absolute;
+  inset: 0;
 }
 
 .tutorial-video::before {

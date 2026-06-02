@@ -60,7 +60,10 @@ import "./glight.js"
     const id = (btn.getAttribute("data-youtube-id") || "").trim();
     if (!id) return;
 
-    btn.style.backgroundImage = `url(https://i.ytimg.com/vi/${id}/hqdefault.jpg)`;
+    const localThumb = (btn.getAttribute("data-thumb") || "").trim();
+    btn.style.backgroundImage = localThumb
+      ? `url(${localThumb})`
+      : `url(https://i.ytimg.com/vi/${id}/hqdefault.jpg)`;
 
     btn.addEventListener(
       "click",

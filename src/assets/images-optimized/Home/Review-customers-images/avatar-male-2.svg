@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="Cartoon male avatar">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff2e5"/>
+      <stop offset="1" stop-color="#e8f2ff"/>
+    </linearGradient>
+  </defs>
+
+  <!-- background -->
+  <circle cx="32" cy="32" r="31" fill="url(#bg)"/>
+
+  <!-- shoulders -->
+  <path d="M14 56c3.5-10 13-14 18-14s14.5 4 18 14" fill="#10b981" opacity="0.85"/>
+
+  <!-- hair -->
+  <path d="M18 33c0-11 7-19 16-19 9 0 14 7 14 16 0 3-1 5.5-2.5 7.5-1-3-4-5-8-4-4 1-8 0-11-2-4-3-7-2-8.5 1.5z" fill="#111827"/>
+
+  <!-- face -->
+  <circle cx="32" cy="30" r="12" fill="#ffd6b3"/>
+
+  <!-- eyes -->
+  <circle cx="27.5" cy="30.5" r="1.4" fill="#111827"/>
+  <circle cx="36.5" cy="30.5" r="1.4" fill="#111827"/>
+
+  <!-- beard -->
+  <path d="M23.5 34c1.2 6 5.2 9 8.5 9s7.3-3 8.5-9c-1.8 1.2-4.5 2-8.5 2s-6.7-.8-8.5-2z" fill="#111827" opacity="0.22"/>
+
+  <!-- smile -->
+  <path d="M28 36.2c2.2 2 5.8 2 8 0" fill="none" stroke="#111827" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- subtle border -->
+  <circle cx="32" cy="32" r="31" fill="none" stroke="#0f172a" opacity="0.08"/>
+</svg>

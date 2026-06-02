@@ -6,7 +6,10 @@ const htmlFiles = glob.sync('./src/**/*.html')
 
 
 export default defineConfig({
-   base: '/vashqofficialsite/',
+   // Use relative base so the same build works on:
+   // - GitHub Pages project URL: https://auxxweb.github.io/vashqofficialsite/
+   // - Custom domain root: https://home.vashq.com/
+   base: './',
    root: resolve(__dirname, 'src'),   // ✅ keeps dev server working
    server: {
     host: true,

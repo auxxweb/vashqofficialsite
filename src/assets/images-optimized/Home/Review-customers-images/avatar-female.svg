@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="Cartoon female avatar">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e8f2ff"/>
+      <stop offset="1" stop-color="#f7e9ff"/>
+    </linearGradient>
+  </defs>
+
+  <!-- background -->
+  <circle cx="32" cy="32" r="31" fill="url(#bg)"/>
+
+  <!-- shoulders -->
+  <path d="M14 56c3.5-10 13-14 18-14s14.5 4 18 14" fill="#2b59ff" opacity="0.85"/>
+
+  <!-- hair back -->
+  <path d="M18 33c0-12 7-19 14-19s14 7 14 19c0 8-4 12-4 12H22s-4-4-4-12z" fill="#2b2a33"/>
+
+  <!-- face -->
+  <circle cx="32" cy="30" r="12" fill="#ffd6b3"/>
+
+  <!-- hair front -->
+  <path d="M20 28c2-9 8-14 16-14 7 0 12 4 14 11-3-2-6-3-10-2-3 1-6 0-9-2-4-2-8-1-11 7z" fill="#2b2a33"/>
+
+  <!-- eyes -->
+  <circle cx="27.5" cy="30.5" r="1.4" fill="#1b1b1f"/>
+  <circle cx="36.5" cy="30.5" r="1.4" fill="#1b1b1f"/>
+
+  <!-- smile -->
+  <path d="M28 36c2.2 2 5.8 2 8 0" fill="none" stroke="#1b1b1f" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- cheeks -->
+  <circle cx="23.5" cy="34.5" r="2" fill="#ff7aa8" opacity="0.35"/>
+  <circle cx="40.5" cy="34.5" r="2" fill="#ff7aa8" opacity="0.35"/>
+
+  <!-- subtle border to match UI -->
+  <circle cx="32" cy="32" r="31" fill="none" stroke="#0f172a" opacity="0.08"/>
+</svg>

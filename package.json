@@ -8,7 +8,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "predeploy": "npm run build",
+    "optimize:images": "node ./scripts/optimize-images.mjs",
+    "predeploy": "npm run optimize:images && npm run build",
     "deploy": "gh-pages -d dist"
   },
   "keywords": [],
@@ -27,6 +28,7 @@
   },
   "devDependencies": {
     "fast-glob": "^3.3.3",
-    "gh-pages": "^6.3.0"
+    "gh-pages": "^6.3.0",
+    "sharp": "^0.34.5"
   }
 }
