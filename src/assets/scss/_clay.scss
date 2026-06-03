@@ -45,17 +45,23 @@ body {
 }
 
 .navbar .navbar-brand img {
-  height: 42px;
-  max-height: 42px;
+  height: 24px;
+  max-height: 24px;
   width: auto;
   display: block;
   object-fit: contain;
 }
 
 footer a img {
-  height: 40px;
-  max-height: 40px;
+  height: 28px;
+  max-height: 28px;
   width: auto;
+  object-fit: contain;
+}
+
+#page-loader img {
+  width: 80px;
+  height: 80px;
   object-fit: contain;
 }
 
@@ -99,13 +105,13 @@ footer a img {
 
 .navbar .nav-link:hover,
 .navbar .nav-link:focus {
-  background-color: rgba(76, 148, 224, 0.08);
+  background-color: rgba($primary, 0.08);
   box-shadow: var(--clay-shadow-inner-sm);
 }
 
 .navbar .nav-link.active,
 .navbar .nav-link[aria-current="page"] {
-  background-color: rgba(76, 148, 224, 0.14);
+  background-color: rgba($primary, 0.14);
   box-shadow: var(--clay-shadow-inner);
   font-weight: 600;
 }
@@ -118,8 +124,8 @@ footer a img {
   }
 
   .navbar .navbar-brand img {
-    height: 38px;
-    max-height: 38px;
+    height: 22px;
+    max-height: 22px;
   }
 }
 
@@ -226,7 +232,7 @@ textarea.form-control {
 .form-control:focus,
 .form-select:focus {
   background: var(--clay-surface-strong) !important;
-  box-shadow: 0 0 0 0.25rem rgba(76, 148, 224, 0.16), var(--clay-shadow-inner-sm) !important;
+  box-shadow: 0 0 0 0.25rem rgba($primary, 0.16), var(--clay-shadow-inner-sm) !important;
 }
 
 /* Badges & icon pills */
@@ -255,7 +261,7 @@ textarea.form-control {
 
 .accordion-button:not(.collapsed) {
   color: inherit;
-  background: rgba(76, 148, 224, 0.08) !important;
+  background: rgba($primary, 0.08) !important;
   box-shadow: var(--clay-shadow-inner-sm) !important;
 }
 
