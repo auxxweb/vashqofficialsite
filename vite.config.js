@@ -11,6 +11,7 @@ export default defineConfig({
    // - Custom domain root: https://home.vashq.com/
    base: './',
    root: resolve(__dirname, 'src'),   // ✅ keeps dev server working
+   publicDir: resolve(__dirname, 'public'),
    server: {
     host: true,
     port: 3000,

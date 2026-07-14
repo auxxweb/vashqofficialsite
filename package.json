@@ -1,8 +1,8 @@
 {
-  "name": "learnhub",
+  "name": "vashq-official-website",
   "version": "1.0.0",
-  "description": "learnhub Educaiton Website",
-  "homepage": "https://auxxweb.github.io/vashqofficialsite",
+  "description": "Vashq — Car Wash Management App marketing website",
+  "homepage": "https://home.vashq.com",
   "main": "vite.config.js",
   "scripts": {
     "dev": "vite",

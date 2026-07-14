@@ -1,41 +1,30 @@
-# LearnHub- Free eLearning Bootstrap Educational Website Template
+# Vashq Official Website
 
-#### Preview
+Marketing site for [Vashq](https://home.vashq.com) — car wash management software.
 
- - [Demo](https://themewagon.github.io/learnhub/)
-
-#### Download
- - [Download from ThemeWagon](https://themewagon.com/themes/learnhub/)
-
-## Getting Started
-
-1. Clone Repository
-```
-git clone https://github.com/themewagon/learnhub.git
-```
-2. Install Dependencies
-```
-npm i
-```
-3. Run the development server:
+## Local development
 
 ```bash
+npm i
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-## Author 
-```
-Design and code is completely written by CodesCandy and development team. 
+Open http://localhost:3000
+
+## Build
+
+```bash
+npm run build
 ```
 
-## License
+Output goes to `dist/`.
 
- - Design and Code is Copyright &copy; <a href="https://codescandy.com/" target="_blank">CodesCandy</a>
- - Licensed cover under [MIT]
- - Distributed by <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
+## Deploy
+
+Pushes to `main` build and deploy automatically via GitHub Actions (`.github/workflows/deploy.yml`).
+
+Manual deploy (optional):
+
+```bash
+npm run deploy
+```

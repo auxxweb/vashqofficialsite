@@ -171,16 +171,16 @@ document.querySelectorAll('.nav-link[href^="#"]').forEach(link => {
   if (!links.length) return;
 
   const rawPath = window.location.pathname || "";
-  const current = rawPath.split("/").pop() || "index.html";
-  const currentNormalized = current === "" ? "index.html" : current;
+  const current = rawPath.split("/").pop() || "";
+  const isHomePath = current === "" || current === "index.html";
+  const currentNormalized = isHomePath ? "index.html" : current;
 
   links.forEach(a => {
     const href = (a.getAttribute("href") || "").trim();
     if (!href || href.startsWith("#") || href.startsWith("http")) return;
 
-    const hrefFile = href.split("/").pop();
-    const isIndex = (currentNormalized === "index.html" || currentNormalized === "/");
-    const matches = (hrefFile === currentNormalized) || (isIndex && hrefFile === "index.html");
+    const hrefFile = href === "/" ? "index.html" : href.split("/").pop();
+    const matches = hrefFile === currentNormalized || (isHomePath && (href === "/" || hrefFile === "index.html"));
 
     if (matches) {
       a.classList.add("active");
