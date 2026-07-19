@@ -3,24 +3,119 @@
 
 <head>
   <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "VASHQ",
-  "url": "https://home.vashq.com/",
-  "logo": "https://home.vashq.com/assets/images/brand/logo-icon.png"
-}
-</script>
+    {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://home.vashq.com/#organization",
+        "name": "Vashq",
+        "url": "https://home.vashq.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://home.vashq.com/assets/images/brand/logo-icon.png"
+        },
+        "email": "vashqofficial@gmail.com",
+        "telephone": "+917994466421",
+        "sameAs": [
+          "https://www.instagram.com/vashqofficial"
+        ],
+        "description": "Cloud-based car wash management software for jobs, staff, customers, billing, expenses, and WhatsApp notifications."
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://home.vashq.com/#website",
+        "url": "https://home.vashq.com/",
+        "name": "Vashq",
+        "publisher": {
+          "@id": "https://home.vashq.com/#organization"
+        },
+        "inLanguage": "en"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://home.vashq.com/#software",
+        "name": "Vashq",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web, iOS, Android",
+        "url": "https://home.vashq.com/",
+        "description": "Car wash management app to manage jobs, staff, customers, invoices, payments, expenses, and WhatsApp notifications from one dashboard.",
+        "offers": {
+          "@type": "Offer",
+          "price": "9999",
+          "priceCurrency": "INR",
+          "description": "Annual plan with full access to all features"
+        },
+        "publisher": {
+          "@id": "https://home.vashq.com/#organization"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://home.vashq.com/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How is Vashq different from generic billing or business management software?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Most generic software focuses on invoicing and accounting. Vashq is built exclusively for the car care industry, helping you manage the entire operation—from job tracking and customer communication to employee performance, vehicle condition reports, expenses, inventory, and business insights—all from one platform."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "We already use another software. Why should we switch to Vashq?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Many businesses switch to Vashq because they outgrow generic software. As operations become more complex, owners need better visibility, industry-specific workflows, multi-branch management, and responsive technical support. Vashq is designed to solve these operational challenges while making the transition smooth with data migration and onboarding assistance."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Will you migrate my existing customer and vehicle data?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Our technical team helps migrate your customer records, vehicle history, services, and other important business data from your existing software or spreadsheets. We also assist with onboarding so your team can transition with minimal disruption."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does it take to start using Vashq?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Most businesses can get started within a few days, depending on the amount of data to be migrated. Our team handles setup, onboarding, and staff training to ensure your operations continue smoothly."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What if my employees are not comfortable using software?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Vashq is designed to be simple and easy to learn. During onboarding, we train your staff and provide ongoing support whenever they need assistance. Most teams become comfortable using the platform within a short time."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
   <meta charset="UTF-8" />
   <title>Vashq — Car Wash Management App</title>
    <link rel="canonical" href="https://home.vashq.com/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#007bff">
   <meta name="description" content="Run your entire car wash business from one dashboard. Manage jobs, staff, customers, invoices, payments, expenses, and WhatsApp notifications." />
-  <meta property="og:title" content="VASHQ - Car Wash Management Software">
-<meta property="og:description" content="Cloud-based car wash management software.">
-<meta property="og:image" content="https://home.vashq.com/og-image.webp">
-<meta property="og:url" content="https://home.vashq.com/">
-<meta property="og:type" content="website">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Vashq — Car Wash Management Software">
+  <meta property="og:description" content="Run your entire car wash business from one dashboard. Jobs, staff, customers, billing, and WhatsApp — all in one place.">
+  <meta property="og:image" content="https://home.vashq.com/og-image.webp">
+  <meta property="og:url" content="https://home.vashq.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Vashq">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Vashq — Car Wash Management Software">
+  <meta name="twitter:description" content="Run your entire car wash business from one dashboard. Jobs, staff, customers, billing, and WhatsApp — all in one place.">
+  <meta name="twitter:image" content="https://home.vashq.com/og-image.webp">
   <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/brand/logo-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/brand/logo-icon.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/brand/logo-icon.png">
@@ -119,14 +214,11 @@
         <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
           <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
           <li class="nav-item"><a href="features.html" class="nav-link">Features</a></li>
-          <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
           <li class="nav-item"><a href="use-cases.html" class="nav-link">Use Cases</a></li>
-          <li class="nav-item"><a href="tutorials.html" class="nav-link">Tutorials</a></li>
-          <li class="nav-item"><a href="demo.html" class="nav-link">Demo</a></li>
           <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
         <div class="d-flex gap-3 align-items-center">
-          <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Start Free Trial</a>
+          <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookDemoModal">Book Demo</a>
         </div>
       </div>
     </div>
@@ -141,16 +233,12 @@
       <ul class="navbar-nav mb-4">
         <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
         <li class="nav-item"><a href="features.html" class="nav-link">Features</a></li>
-        <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
         <li class="nav-item"><a href="use-cases.html" class="nav-link">Use Cases</a></li>
-        <li class="nav-item"><a href="tutorials.html" class="nav-link">Tutorials</a></li>
-        <li class="nav-item"><a href="demo.html" class="nav-link">Demo</a></li>
         <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
       </ul>
       <div class="d-grid gap-2">
-        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
-          data-bs-dismiss="offcanvas">Start Free Trial</a>
-        <a href="demo.html" class="btn btn-light">Book Demo</a>
+        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookDemoModal"
+          data-bs-dismiss="offcanvas">Book Demo</a>
       </div>
     </div>
   </div>
@@ -158,29 +246,32 @@
   <section class="py-lg-13 py-8 bg-white position-relative" id="hero">
     <div class="circle-bg d-none d-lg-block"></div>
     <div class="container ">
-      <div class="row align-items-center gy-8">
-        <div class="col-lg-6 order-2 order-lg-1 animate">
+      <div class="row align-items-stretch gy-8">
+        <div class="col-lg-6 order-2 order-lg-1 animate d-flex flex-column justify-content-center">
           <span
-            class="badge bg-primary bg-opacity-10 text-primary px-4 py-3 fw-normal border border-primary rounded-pill">
-            <span><svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24" fill="currentColor"
+            class="badge hero-eyebrow bg-primary bg-opacity-10 text-primary px-3 px-md-4 py-2 py-md-3 fw-normal border border-primary rounded-pill">
+            <span class="hero-eyebrow__dot" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24" fill="currentColor"
                 class="icon icon-tabler icons-tabler-filled icon-tabler-circle">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <path d="M7 3.34a10 10 0 1 1 -4.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 4.995 -8.336z" />
               </svg></span>
-            <span class="ms-1">One platform. Complete control.</span></span>
-          <h1 class="display-4 fw-bold  mt-4">
-            Smart Software for Smart Car Wash &amp; Detailing Businesses
+            <span class="hero-eyebrow__text">Built Exclusively for Car Wash &amp; Detailing Businesses</span>
+          </span>
+          <h1 class="hero-title fw-bold mt-4 mb-0">
+            AI-Powered Car Wash &amp; Auto Detailing Management Software for Complete Operational Visibility
           </h1>
 
-          <p class="my-6 lead fw-normal">
-            Vashq brings your entire car wash operation into one powerful system. Manage staff, track performance,
-            monitor customers, handle billing, and stay connected through WhatsApp — all from a single dashboard designed
-            for real business growth.
+          <p class="hero-hook mt-5 mb-3">
+            Stop managing your business through WhatsApp, spreadsheets, and guesswork.
           </p>
-          <div class="d-flex flex-md-row flex-column justify-content-start   gap-3">
-            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-
-              <span>Start Free Trial</span>
+          <p class="hero-desc mb-6">
+            From job creation to final billing, Vashq helps you manage every aspect of your car wash and detailing
+            business in one AI-powered platform. Track operations in real time, reduce owner dependency, improve
+            customer experience, and make smarter decisions with complete operational visibility.
+          </p>
+          <div class="d-flex flex-md-row flex-column justify-content-start gap-3">
+            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookDemoModal">
+              <span>Book Demo</span>
               <span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -191,19 +282,8 @@
                 </svg>
               </span>
             </a>
-            <a href="#final-cta" class="btn btn-light">
-              <span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="icon icon-tabler icons-tabler-brand-youtube text-danger">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <rect x="3" y="5" width="18" height="14" rx="4" />
-                  <path d="M10 9l5 3l-5 3z" />
-                </svg>
-              </span>
-              <span class="ms-1">Book Demo</span></a>
           </div>
-          <div class="d-flex gap-6 mt-8">
+          <div class="d-flex flex-wrap gap-4 gap-lg-5 mt-8">
             <div class="d-flex align-items-center gap-2">
               <span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
@@ -230,7 +310,6 @@
                   <path d="M12 6l0 13" />
                   <path d="M21 6l0 13" />
                 </svg>
-
               </span>
               <small class="mb-0"><span class="fw-bold">Jobs</span> with before/after photos</small>
             </div>
@@ -238,64 +317,80 @@
               <span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="icon icon-tabler icons-tabler-outline icon-tabler-award text-primary">
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-whatsapp text-primary">
                   <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <path d="M12 9m-6 0a6 6 0 1 0 12 0a6 6 0 1 0 -12 0" />
-                  <path d="M12 15l3.4 5.89l1.598 -3.233l3.598 .232l-3.4 -5.889" />
-                  <path d="M6.802 12l-3.4 5.89l3.598 -.233l1.598 3.232l3.4 -5.889" />
+                  <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
+                  <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
                 </svg>
-
               </span>
               <small class="mb-0"><span class="fw-bold">WhatsApp</span> notifications</small>
             </div>
-
-
-
+            <div class="d-flex align-items-center gap-2">
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-brain text-primary">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M15.5 13a3.5 3.5 0 0 0 -3.5 3.5v1a3.5 3.5 0 0 0 7 0v-1.8" />
+                  <path d="M8.5 13a3.5 3.5 0 0 1 3.5 3.5v1a3.5 3.5 0 0 1 -7 0v-1.8" />
+                  <path d="M17.5 16a3.5 3.5 0 0 0 0 -7h-.5" />
+                  <path d="M19 9.3v-2.8a3.5 3.5 0 0 0 -7 0" />
+                  <path d="M6.5 16a3.5 3.5 0 0 1 0 -7h.5" />
+                  <path d="M5 9.3v-2.8a3.5 3.5 0 0 1 7 0v10" />
+                </svg>
+              </span>
+              <small class="mb-0"><span class="fw-bold">AI-powered</span> report analysis</small>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-building-community text-primary">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M8 9l5 5v7h-5v-4m0 4h-5v-7l5 -5m1 1v-6a1 1 0 0 1 1 -1h10a1 1 0 0 1 1 1v17h-8" />
+                  <path d="M13 7l0 .01" />
+                  <path d="M17 7l0 .01" />
+                  <path d="M17 11l0 .01" />
+                  <path d="M17 15l0 .01" />
+                </svg>
+              </span>
+              <small class="mb-0"><span class="fw-bold">Multi-branch</span> management</small>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-address-book text-primary">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M20 6v12a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2z" />
+                  <path d="M10 16h6" />
+                  <path d="M13 11m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                  <path d="M4 8h3" />
+                  <path d="M4 12h3" />
+                  <path d="M4 16h3" />
+                </svg>
+              </span>
+              <small class="mb-0"><span class="fw-bold">Integrated</span> CRM</small>
+            </div>
           </div>
         </div>
         <div class="col-lg-6 order-1 order-lg-2 animate">
-          <div class="card p-3 rounded-5  shadow-sm">
-            <div class="position-relative">
-              <div class="position-relative">
-                <img src="./assets/images-optimized/Home/Video-Cover-image/Video%20cover%20image.webp" alt="Vashq car wash management dashboard preview"
-                  class="rounded-5 img-fluid" />
+          <div class="card p-2 p-lg-3 rounded-5 shadow-sm h-100 hero-media">
+            <div class="position-relative h-100 hero-media__frame">
+              <img src="./assets/images-optimized/Home/Hero/hero-banner.webp"
+                alt="Vashq — Exclusive to Car Care, Designed by Operators, Powered by AI"
+                class="rounded-5 hero-media__img" width="1024" height="612" loading="eager" />
 
-                <a href="https://youtu.be/a5uIY_nT3Hk?si=f4u2r08h9hXX18lB"
-                  class="play-btn glightbox position-absolute top-50 start-50 translate-middle icon-shape icon-xl rounded-circle text-white"
-                  aria-label="Play Vashq demo video">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
-                    class="icon icon-tabler icons-tabler-filled icon-tabler-player-play">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <path d="M6 4v16a1 1 0 0 0 1.524 .852l13 -8a1 1 0 0 0 0 -1.704l-13 -8a1 1 0 0 0 -1.524 .852z" />
-                  </svg>
-                </a>
-
-                <div class="position-absolute bottom-0 start-0  ms-n8 mb-n8">
-                  <div class="bg-white shadow-sm rounded-pill d-flex align-items-center gap-2 px-3 py-2  mb-4 border"
-                    style="width: 170px;">
-                    <div
-                      class="icon-shape icon-md rounded-circle bg-primary bg-opacity-10 text-primary d-flex align-items-center justify-content-center">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="icon icon-tabler icons-tabler-outline icon-tabler-book text-primary">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0"></path>
-                        <path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0"></path>
-                        <path d="M3 6l0 13"></path>
-                        <path d="M12 6l0 13"></path>
-                        <path d="M21 6l0 13"></path>
-                      </svg>
-                    </div>
-                    <div class="d-flex flex-column text-xs lh-sm">
-                      <span class="fw-bold">Track jobs</span>
-                      <span>in real time</span>
-                    </div>
-
-                  </div>
-                </div>
-              </div>
+              <a href="https://youtu.be/a5uIY_nT3Hk?si=f4u2r08h9hXX18lB"
+                class="play-btn glightbox position-absolute top-50 start-50 translate-middle icon-shape icon-xl rounded-circle text-white"
+                aria-label="Play Vashq demo video">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
+                  class="icon icon-tabler icons-tabler-filled icon-tabler-player-play">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M6 4v16a1 1 0 0 0 1.524 .852l13 -8a1 1 0 0 0 0 -1.704l-13 -8a1 1 0 0 0 -1.524 .852z" />
+                </svg>
+              </a>
             </div>
-
           </div>
         </div>
       </div>
@@ -305,12 +400,10 @@
       <div class="row text-center">
         <div class="col-lg-6 mx-auto">
           <div class="mb-10">
-            <span class="text-primary text-uppercase small fw-semibold" style="letter-spacing: .125rem;">Problem</span>
-            <h2 class="fw-bold mt-4 mb-4">Running a Car Wash Business Shouldn’t Feel This <span
-                class="text-primary">Messy</span></h2>
-            <p class="mb-0">Managing a car wash or detailing center with manual systems, scattered tools, and no clear
-              visibility leads to confusion, delays, and lost revenue. These everyday problems silently slow down your
-              business growth.</p>
+            <h2 class="fw-bold mb-4">Your Business Shouldn’t Depend on You Being There Every <span
+                class="text-primary">Minute</span>.</h2>
+            <p class="mb-0">Every missed update, delayed vehicle, confused employee, and unanswered customer call pulls
+              you back into the day-to-day. It’s exhausting—and it keeps your business from growing.</p>
           </div>
         </div>
       </div>
@@ -321,111 +414,216 @@
             <div class="problem-marquee__item">
               <div class="card shadow-sm h-100 rounded-5 card-lift">
                 <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
-                  <img src="./assets/images-optimized/Home/Problems-Scroll-images/Manual%20Job%20Tracking.webp" alt="Manual job tracking problem illustration"
+                  <img src="./assets/images-optimized/Home/Problems-Scroll-images/No%20Job%20Status%20Visibility.webp" alt="No Real-Time Business Visibility problem illustration"
+                    class="w-100 h-100" style="object-fit: cover;" loading="lazy" />
+                </div>
+                <div class="card-body p-6">
+                  <h3 class="mb-1 fs-6">No Real-Time Business Visibility</h3>
+                  <p class="mb-0 small mt-4">You don’t know what’s happening across your business until someone tells you.</p>
+                </div>
+              </div>
+            </div>
+            <div class="problem-marquee__item">
+              <div class="card shadow-sm h-100 rounded-5 card-lift">
+                <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
+                  <img src="./assets/images-optimized/Home/Problems-Scroll-images/Manual%20Job%20Tracking.webp" alt="Manual Job Tracking problem illustration"
                     class="w-100 h-100" style="object-fit: cover;" loading="lazy" />
                 </div>
                 <div class="card-body p-6">
                   <h3 class="mb-1 fs-6">Manual Job Tracking</h3>
-                  <p class="mb-0 small mt-4">Jobs get missed or duplicated when everything lives in chats, calls, or paper
-                    notes.</p>
+                  <p class="mb-0 small mt-4">Jobs get delayed, forgotten, or duplicated when managed manually.</p>
                 </div>
               </div>
             </div>
-
             <div class="problem-marquee__item">
               <div class="card shadow-sm h-100 rounded-5 card-lift">
                 <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
-                  <img src="./assets/images-optimized/Home/Problems-Scroll-images/Billing%20Confusions.webp" alt="Billing confusion problem illustration"
-                    class="w-100 h-100" style="object-fit: cover;" loading="lazy" />
-                </div>
-                <div class="card-body p-6">
-                  <h3 class="mb-1 fs-6">Billing Confusion</h3>
-                  <p class="mb-0 small mt-4">Invoices, payments, and expenses don’t match at the end of the day — and no
-                    one knows where the gap is.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="problem-marquee__item">
-              <div class="card shadow-sm h-100 rounded-5 card-lift">
-                <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
-                  <img src="./assets/images-optimized/Home/Problems-Scroll-images/Staff%20Mismanagement.webp" alt="Staff mismanagement problem illustration"
-                    class="w-100 h-100" style="object-fit: cover;" loading="lazy" />
-                </div>
-                <div class="card-body p-6">
-                  <h3 class="mb-1 fs-6">Staff Mismanagement</h3>
-                  <p class="mb-0 small mt-4">Without clear job assignments and updates, work slows down and accountability
-                    becomes unclear.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="problem-marquee__item">
-              <div class="card shadow-sm h-100 rounded-5 card-lift">
-                <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
-                  <img src="./assets/images-optimized/Home/Problems-Scroll-images/No%20Customer%20Follow-up.webp" alt="No customer follow-up problem illustration"
-                    class="w-100 h-100" style="object-fit: cover;" loading="lazy" />
-                </div>
-                <div class="card-body p-6">
-                  <h3 class="mb-1 fs-6">No Customer Follow-up</h3>
-                  <p class="mb-0 small mt-4">Customers don’t get updates or reminders, so trust drops and repeat visits
-                    become harder to win.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="problem-marquee__item">
-              <div class="card shadow-sm h-100 rounded-5 card-lift">
-                <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
-                  <img src="./assets/images-optimized/Home/Problems-Scroll-images/No%20Job%20Status%20Visibility.webp" alt="No job status visibility problem illustration"
-                    class="w-100 h-100" style="object-fit: cover;" loading="lazy" />
-                </div>
-                <div class="card-body p-6">
-                  <h3 class="mb-1 fs-6">No Job Status Visibility</h3>
-                  <p class="mb-0 small mt-4">You don’t know which jobs are pending, in progress, or completed — leading to
-                    delays and confusion.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="problem-marquee__item">
-              <div class="card shadow-sm h-100 rounded-5 card-lift">
-                <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
-                  <img src="./assets/images-optimized/Home/Problems-Scroll-images/No%20Business%20Insights.webp" alt="No business insights problem illustration"
-                    class="w-100 h-100" style="object-fit: cover;" loading="lazy" />
-                </div>
-                <div class="card-body p-6">
-                  <h3 class="mb-1 fs-6">No Business Insights</h3>
-                  <p class="mb-0 small mt-4">You can’t clearly see daily sales, performance, or growth trends — decisions
-                    are based on guesswork.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="problem-marquee__item">
-              <div class="card shadow-sm h-100 rounded-5 card-lift">
-                <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
-                  <img src="./assets/images-optimized/Home/Problems-Scroll-images/Customer%20Data%20is%20Scattered.webp" alt="Customer data is scattered problem illustration"
-                    class="w-100 h-100" style="object-fit: cover;" loading="lazy" />
-                </div>
-                <div class="card-body p-6">
-                  <h3 class="mb-1 fs-6">Customer Data is Scattered</h3>
-                  <p class="mb-0 small mt-4">Customer and vehicle details are not stored properly, making it hard to track
-                    history or offer better service.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="problem-marquee__item">
-              <div class="card shadow-sm h-100 rounded-5 card-lift">
-                <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
-                  <img src="./assets/images-optimized/Home/Problems-Scroll-images/No%20Proper%20Customer%20Communication.webp" alt="No proper customer communication problem illustration"
+                  <img src="./assets/images-optimized/Home/Problems-Scroll-images/No%20Proper%20Customer%20Communication.webp" alt="No Proper Customer Communication problem illustration"
                     class="w-100 h-100" style="object-fit: cover;" loading="lazy" />
                 </div>
                 <div class="card-body p-6">
                   <h3 class="mb-1 fs-6">No Proper Customer Communication</h3>
-                  <p class="mb-0 small mt-4">Manually updating every customer takes time, so communication becomes
-                    inconsistent or ignored.</p>
+                  <p class="mb-0 small mt-4">Customers keep calling for updates because there’s no automated communication.</p>
+                </div>
+              </div>
+            </div>
+            <div class="problem-marquee__item">
+              <div class="card shadow-sm h-100 rounded-5 card-lift">
+                <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
+                  <img src="./assets/images-optimized/Home/Problems-Scroll-images/Billing%20Confusions.webp" alt="Billing Confusion problem illustration"
+                    class="w-100 h-100" style="object-fit: cover;" loading="lazy" />
+                </div>
+                <div class="card-body p-6">
+                  <h3 class="mb-1 fs-6">Billing Confusion</h3>
+                  <p class="mb-0 small mt-4">Invoices, payments, and expenses don’t always match, causing revenue leakage.</p>
+                </div>
+              </div>
+            </div>
+            <div class="problem-marquee__item">
+              <div class="card shadow-sm h-100 rounded-5 card-lift">
+                <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
+                  <img src="./assets/images-optimized/Home/Problems-Scroll-images/Customer%20Data%20is%20Scattered.webp" alt="Customer Data Is Scattered problem illustration"
+                    class="w-100 h-100" style="object-fit: cover;" loading="lazy" />
+                </div>
+                <div class="card-body p-6">
+                  <h3 class="mb-1 fs-6">Customer Data Is Scattered</h3>
+                  <p class="mb-0 small mt-4">Customer and vehicle history is spread across chats, papers, and spreadsheets.</p>
+                </div>
+              </div>
+            </div>
+            <div class="problem-marquee__item">
+              <div class="card shadow-sm h-100 rounded-5 card-lift">
+                <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
+                  <img src="./assets/images-optimized/Home/Problems-Scroll-images/No%20Business%20Insights.webp" alt="No Business Insights problem illustration"
+                    class="w-100 h-100" style="object-fit: cover;" loading="lazy" />
+                </div>
+                <div class="card-body p-6">
+                  <h3 class="mb-1 fs-6">No Business Insights</h3>
+                  <p class="mb-0 small mt-4">Manual reports make it difficult to understand business performance and profitability.</p>
+                </div>
+              </div>
+            </div>
+            <div class="problem-marquee__item">
+              <div class="card shadow-sm h-100 rounded-5 card-lift">
+                <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
+                  <img src="./assets/images-optimized/Home/Problems-Scroll-images/No%20Job%20Status%20Visibility.webp" alt="No Job Status Visibility problem illustration"
+                    class="w-100 h-100" style="object-fit: cover;" loading="lazy" />
+                </div>
+                <div class="card-body p-6">
+                  <h3 class="mb-1 fs-6">No Job Status Visibility</h3>
+                  <p class="mb-0 small mt-4">You can’t instantly see which vehicles are pending, in progress, or completed.</p>
+                </div>
+              </div>
+            </div>
+            <div class="problem-marquee__item">
+              <div class="card shadow-sm h-100 rounded-5 card-lift">
+                <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
+                  <img src="./assets/images-optimized/Home/Problems-Scroll-images/Staff%20Mismanagement.webp" alt="Staff Mismanagement problem illustration"
+                    class="w-100 h-100" style="object-fit: cover;" loading="lazy" />
+                </div>
+                <div class="card-body p-6">
+                  <h3 class="mb-1 fs-6">Staff Mismanagement</h3>
+                  <p class="mb-0 small mt-4">Assignments, productivity, and accountability become difficult to manage as your team grows.</p>
+                </div>
+              </div>
+            </div>
+            <div class="problem-marquee__item">
+              <div class="card shadow-sm h-100 rounded-5 card-lift">
+                <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
+                  <img src="./assets/images-optimized/Home/Problems-Scroll-images/No%20Customer%20Follow-up.webp" alt="No Customer Follow-up problem illustration"
+                    class="w-100 h-100" style="object-fit: cover;" loading="lazy" />
+                </div>
+                <div class="card-body p-6">
+                  <h3 class="mb-1 fs-6">No Customer Follow-up</h3>
+                  <p class="mb-0 small mt-4">Missed reminders and follow-ups reduce repeat customers and customer loyalty.</p>
+                </div>
+              </div>
+            </div>
+            <div class="problem-marquee__item">
+              <div class="card shadow-sm h-100 rounded-5 card-lift">
+                <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
+                  <img src="./assets/images-optimized/Home/Problems-Scroll-images/No%20Customer%20Follow-up.webp" alt="Poor Customer Retention problem illustration"
+                    class="w-100 h-100" style="object-fit: cover;" loading="lazy" />
+                </div>
+                <div class="card-body p-6">
+                  <h3 class="mb-1 fs-6">Poor Customer Retention</h3>
+                  <p class="mb-0 small mt-4">Without service history and engagement, customers don’t keep coming back.</p>
+                </div>
+              </div>
+            </div>
+            <div class="problem-marquee__item">
+              <div class="card shadow-sm h-100 rounded-5 card-lift">
+                <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
+                  <img src="./assets/images-optimized/Home/Problems-Scroll-images/Staff%20Mismanagement.webp" alt="No Quality Control problem illustration"
+                    class="w-100 h-100" style="object-fit: cover;" loading="lazy" />
+                </div>
+                <div class="card-body p-6">
+                  <h3 class="mb-1 fs-6">No Quality Control</h3>
+                  <p class="mb-0 small mt-4">It’s difficult to maintain consistent service quality across every vehicle and employee.</p>
+                </div>
+              </div>
+            </div>
+            <div class="problem-marquee__item">
+              <div class="card shadow-sm h-100 rounded-5 card-lift">
+                <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
+                  <img src="./assets/images-optimized/Home/Problems-Scroll-images/No%20Business%20Insights.webp" alt="Manual Report Analysis problem illustration"
+                    class="w-100 h-100" style="object-fit: cover;" loading="lazy" />
+                </div>
+                <div class="card-body p-6">
+                  <h3 class="mb-1 fs-6">Manual Report Analysis</h3>
+                  <p class="mb-0 small mt-4">Analyzing sales, expenses, and performance manually wastes time and delays decisions.</p>
+                </div>
+              </div>
+            </div>
+            <div class="problem-marquee__item">
+              <div class="card shadow-sm h-100 rounded-5 card-lift">
+                <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
+                  <img src="./assets/images-optimized/Home/Problems-Scroll-images/Manual%20Job%20Tracking.webp" alt="Booking Management Issues problem illustration"
+                    class="w-100 h-100" style="object-fit: cover;" loading="lazy" />
+                </div>
+                <div class="card-body p-6">
+                  <h3 class="mb-1 fs-6">Booking Management Issues</h3>
+                  <p class="mb-0 small mt-4">Managing bookings through calls, WhatsApp, or notebooks leads to missed appointments.</p>
+                </div>
+              </div>
+            </div>
+            <div class="problem-marquee__item">
+              <div class="card shadow-sm h-100 rounded-5 card-lift">
+                <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
+                  <img src="./assets/images-optimized/Home/Problems-Scroll-images/No%20Job%20Status%20Visibility.webp" alt="No Multi-Branch Visibility problem illustration"
+                    class="w-100 h-100" style="object-fit: cover;" loading="lazy" />
+                </div>
+                <div class="card-body p-6">
+                  <h3 class="mb-1 fs-6">No Multi-Branch Visibility</h3>
+                  <p class="mb-0 small mt-4">Managing multiple branches without centralized software becomes confusing and inefficient.</p>
+                </div>
+              </div>
+            </div>
+            <div class="problem-marquee__item">
+              <div class="card shadow-sm h-100 rounded-5 card-lift">
+                <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
+                  <img src="./assets/images-optimized/Home/Problems-Scroll-images/Billing%20Confusions.webp" alt="No Inventory Control problem illustration"
+                    class="w-100 h-100" style="object-fit: cover;" loading="lazy" />
+                </div>
+                <div class="card-body p-6">
+                  <h3 class="mb-1 fs-6">No Inventory Control</h3>
+                  <p class="mb-0 small mt-4">Chemicals and consumables get wasted because inventory isn’t tracked properly.</p>
+                </div>
+              </div>
+            </div>
+            <div class="problem-marquee__item">
+              <div class="card shadow-sm h-100 rounded-5 card-lift">
+                <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
+                  <img src="./assets/images-optimized/Home/Problems-Scroll-images/No%20Proper%20Customer%20Communication.webp" alt="Owner Dependency problem illustration"
+                    class="w-100 h-100" style="object-fit: cover;" loading="lazy" />
+                </div>
+                <div class="card-body p-6">
+                  <h3 class="mb-1 fs-6">Owner Dependency</h3>
+                  <p class="mb-0 small mt-4">Your business slows down whenever you’re not physically present.</p>
+                </div>
+              </div>
+            </div>
+            <div class="problem-marquee__item">
+              <div class="card shadow-sm h-100 rounded-5 card-lift">
+                <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
+                  <img src="./assets/images-optimized/Home/Problems-Scroll-images/Staff%20Mismanagement.webp" alt="Employee Accountability Issues problem illustration"
+                    class="w-100 h-100" style="object-fit: cover;" loading="lazy" />
+                </div>
+                <div class="card-body p-6">
+                  <h3 class="mb-1 fs-6">Employee Accountability Issues</h3>
+                  <p class="mb-0 small mt-4">It’s hard to know who handled a vehicle or where mistakes happened.</p>
+                </div>
+              </div>
+            </div>
+            <div class="problem-marquee__item">
+              <div class="card shadow-sm h-100 rounded-5 card-lift">
+                <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
+                  <img src="./assets/images-optimized/Home/Problems-Scroll-images/Customer%20Data%20is%20Scattered.webp" alt="Customer Dispute Management problem illustration"
+                    class="w-100 h-100" style="object-fit: cover;" loading="lazy" />
+                </div>
+                <div class="card-body p-6">
+                  <h3 class="mb-1 fs-6">Customer Dispute Management</h3>
+                  <p class="mb-0 small mt-4">Without proper job records and photos, resolving customer complaints becomes difficult.</p>
                 </div>
               </div>
             </div>
@@ -434,101 +632,27 @@
             <div class="problem-marquee__item" aria-hidden="true">
               <div class="card shadow-sm h-100 rounded-5 card-lift">
                 <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
+                  <img src="./assets/images-optimized/Home/Problems-Scroll-images/No%20Job%20Status%20Visibility.webp" alt=""
+                    class="w-100 h-100" style="object-fit: cover;" loading="lazy" />
+                </div>
+                <div class="card-body p-6">
+                  <h3 class="mb-1 fs-6">No Real-Time Business Visibility</h3>
+                  <p class="mb-0 small mt-4">You don’t know what’s happening across your business until someone tells you.</p>
+                </div>
+              </div>
+            </div>
+            <div class="problem-marquee__item" aria-hidden="true">
+              <div class="card shadow-sm h-100 rounded-5 card-lift">
+                <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
                   <img src="./assets/images-optimized/Home/Problems-Scroll-images/Manual%20Job%20Tracking.webp" alt=""
                     class="w-100 h-100" style="object-fit: cover;" loading="lazy" />
                 </div>
                 <div class="card-body p-6">
                   <h3 class="mb-1 fs-6">Manual Job Tracking</h3>
-                  <p class="mb-0 small mt-4">Jobs get missed or duplicated when everything lives in chats, calls, or paper
-                    notes.</p>
+                  <p class="mb-0 small mt-4">Jobs get delayed, forgotten, or duplicated when managed manually.</p>
                 </div>
               </div>
             </div>
-
-            <div class="problem-marquee__item" aria-hidden="true">
-              <div class="card shadow-sm h-100 rounded-5 card-lift">
-                <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
-                  <img src="./assets/images-optimized/Home/Problems-Scroll-images/Billing%20Confusions.webp" alt=""
-                    class="w-100 h-100" style="object-fit: cover;" loading="lazy" />
-                </div>
-                <div class="card-body p-6">
-                  <h3 class="mb-1 fs-6">Billing Confusion</h3>
-                  <p class="mb-0 small mt-4">Invoices, payments, and expenses don’t match at the end of the day — and no
-                    one knows where the gap is.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="problem-marquee__item" aria-hidden="true">
-              <div class="card shadow-sm h-100 rounded-5 card-lift">
-                <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
-                  <img src="./assets/images-optimized/Home/Problems-Scroll-images/Staff%20Mismanagement.webp" alt=""
-                    class="w-100 h-100" style="object-fit: cover;" loading="lazy" />
-                </div>
-                <div class="card-body p-6">
-                  <h3 class="mb-1 fs-6">Staff Mismanagement</h3>
-                  <p class="mb-0 small mt-4">Without clear job assignments and updates, work slows down and accountability
-                    becomes unclear.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="problem-marquee__item" aria-hidden="true">
-              <div class="card shadow-sm h-100 rounded-5 card-lift">
-                <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
-                  <img src="./assets/images-optimized/Home/Problems-Scroll-images/No%20Customer%20Follow-up.webp" alt=""
-                    class="w-100 h-100" style="object-fit: cover;" loading="lazy" />
-                </div>
-                <div class="card-body p-6">
-                  <h3 class="mb-1 fs-6">No Customer Follow-up</h3>
-                  <p class="mb-0 small mt-4">Customers don’t get updates or reminders, so trust drops and repeat visits
-                    become harder to win.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="problem-marquee__item" aria-hidden="true">
-              <div class="card shadow-sm h-100 rounded-5 card-lift">
-                <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
-                  <img src="./assets/images-optimized/Home/Problems-Scroll-images/No%20Job%20Status%20Visibility.webp" alt=""
-                    class="w-100 h-100" style="object-fit: cover;" loading="lazy" />
-                </div>
-                <div class="card-body p-6">
-                  <h3 class="mb-1 fs-6">No Job Status Visibility</h3>
-                  <p class="mb-0 small mt-4">You don’t know which jobs are pending, in progress, or completed — leading to
-                    delays and confusion.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="problem-marquee__item" aria-hidden="true">
-              <div class="card shadow-sm h-100 rounded-5 card-lift">
-                <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
-                  <img src="./assets/images-optimized/Home/Problems-Scroll-images/No%20Business%20Insights.webp" alt=""
-                    class="w-100 h-100" style="object-fit: cover;" loading="lazy" />
-                </div>
-                <div class="card-body p-6">
-                  <h3 class="mb-1 fs-6">No Business Insights</h3>
-                  <p class="mb-0 small mt-4">You can’t clearly see daily sales, performance, or growth trends — decisions
-                    are based on guesswork.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="problem-marquee__item" aria-hidden="true">
-              <div class="card shadow-sm h-100 rounded-5 card-lift">
-                <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
-                  <img src="./assets/images-optimized/Home/Problems-Scroll-images/Customer%20Data%20is%20Scattered.webp" alt=""
-                    class="w-100 h-100" style="object-fit: cover;" loading="lazy" />
-                </div>
-                <div class="card-body p-6">
-                  <h3 class="mb-1 fs-6">Customer Data is Scattered</h3>
-                  <p class="mb-0 small mt-4">Customer and vehicle details are not stored properly, making it hard to track
-                    history or offer better service.</p>
-                </div>
-              </div>
-            </div>
-
             <div class="problem-marquee__item" aria-hidden="true">
               <div class="card shadow-sm h-100 rounded-5 card-lift">
                 <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
@@ -537,8 +661,187 @@
                 </div>
                 <div class="card-body p-6">
                   <h3 class="mb-1 fs-6">No Proper Customer Communication</h3>
-                  <p class="mb-0 small mt-4">Manually updating every customer takes time, so communication becomes
-                    inconsistent or ignored.</p>
+                  <p class="mb-0 small mt-4">Customers keep calling for updates because there’s no automated communication.</p>
+                </div>
+              </div>
+            </div>
+            <div class="problem-marquee__item" aria-hidden="true">
+              <div class="card shadow-sm h-100 rounded-5 card-lift">
+                <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
+                  <img src="./assets/images-optimized/Home/Problems-Scroll-images/Billing%20Confusions.webp" alt=""
+                    class="w-100 h-100" style="object-fit: cover;" loading="lazy" />
+                </div>
+                <div class="card-body p-6">
+                  <h3 class="mb-1 fs-6">Billing Confusion</h3>
+                  <p class="mb-0 small mt-4">Invoices, payments, and expenses don’t always match, causing revenue leakage.</p>
+                </div>
+              </div>
+            </div>
+            <div class="problem-marquee__item" aria-hidden="true">
+              <div class="card shadow-sm h-100 rounded-5 card-lift">
+                <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
+                  <img src="./assets/images-optimized/Home/Problems-Scroll-images/Customer%20Data%20is%20Scattered.webp" alt=""
+                    class="w-100 h-100" style="object-fit: cover;" loading="lazy" />
+                </div>
+                <div class="card-body p-6">
+                  <h3 class="mb-1 fs-6">Customer Data Is Scattered</h3>
+                  <p class="mb-0 small mt-4">Customer and vehicle history is spread across chats, papers, and spreadsheets.</p>
+                </div>
+              </div>
+            </div>
+            <div class="problem-marquee__item" aria-hidden="true">
+              <div class="card shadow-sm h-100 rounded-5 card-lift">
+                <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
+                  <img src="./assets/images-optimized/Home/Problems-Scroll-images/No%20Business%20Insights.webp" alt=""
+                    class="w-100 h-100" style="object-fit: cover;" loading="lazy" />
+                </div>
+                <div class="card-body p-6">
+                  <h3 class="mb-1 fs-6">No Business Insights</h3>
+                  <p class="mb-0 small mt-4">Manual reports make it difficult to understand business performance and profitability.</p>
+                </div>
+              </div>
+            </div>
+            <div class="problem-marquee__item" aria-hidden="true">
+              <div class="card shadow-sm h-100 rounded-5 card-lift">
+                <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
+                  <img src="./assets/images-optimized/Home/Problems-Scroll-images/No%20Job%20Status%20Visibility.webp" alt=""
+                    class="w-100 h-100" style="object-fit: cover;" loading="lazy" />
+                </div>
+                <div class="card-body p-6">
+                  <h3 class="mb-1 fs-6">No Job Status Visibility</h3>
+                  <p class="mb-0 small mt-4">You can’t instantly see which vehicles are pending, in progress, or completed.</p>
+                </div>
+              </div>
+            </div>
+            <div class="problem-marquee__item" aria-hidden="true">
+              <div class="card shadow-sm h-100 rounded-5 card-lift">
+                <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
+                  <img src="./assets/images-optimized/Home/Problems-Scroll-images/Staff%20Mismanagement.webp" alt=""
+                    class="w-100 h-100" style="object-fit: cover;" loading="lazy" />
+                </div>
+                <div class="card-body p-6">
+                  <h3 class="mb-1 fs-6">Staff Mismanagement</h3>
+                  <p class="mb-0 small mt-4">Assignments, productivity, and accountability become difficult to manage as your team grows.</p>
+                </div>
+              </div>
+            </div>
+            <div class="problem-marquee__item" aria-hidden="true">
+              <div class="card shadow-sm h-100 rounded-5 card-lift">
+                <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
+                  <img src="./assets/images-optimized/Home/Problems-Scroll-images/No%20Customer%20Follow-up.webp" alt=""
+                    class="w-100 h-100" style="object-fit: cover;" loading="lazy" />
+                </div>
+                <div class="card-body p-6">
+                  <h3 class="mb-1 fs-6">No Customer Follow-up</h3>
+                  <p class="mb-0 small mt-4">Missed reminders and follow-ups reduce repeat customers and customer loyalty.</p>
+                </div>
+              </div>
+            </div>
+            <div class="problem-marquee__item" aria-hidden="true">
+              <div class="card shadow-sm h-100 rounded-5 card-lift">
+                <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
+                  <img src="./assets/images-optimized/Home/Problems-Scroll-images/No%20Customer%20Follow-up.webp" alt=""
+                    class="w-100 h-100" style="object-fit: cover;" loading="lazy" />
+                </div>
+                <div class="card-body p-6">
+                  <h3 class="mb-1 fs-6">Poor Customer Retention</h3>
+                  <p class="mb-0 small mt-4">Without service history and engagement, customers don’t keep coming back.</p>
+                </div>
+              </div>
+            </div>
+            <div class="problem-marquee__item" aria-hidden="true">
+              <div class="card shadow-sm h-100 rounded-5 card-lift">
+                <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
+                  <img src="./assets/images-optimized/Home/Problems-Scroll-images/Staff%20Mismanagement.webp" alt=""
+                    class="w-100 h-100" style="object-fit: cover;" loading="lazy" />
+                </div>
+                <div class="card-body p-6">
+                  <h3 class="mb-1 fs-6">No Quality Control</h3>
+                  <p class="mb-0 small mt-4">It’s difficult to maintain consistent service quality across every vehicle and employee.</p>
+                </div>
+              </div>
+            </div>
+            <div class="problem-marquee__item" aria-hidden="true">
+              <div class="card shadow-sm h-100 rounded-5 card-lift">
+                <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
+                  <img src="./assets/images-optimized/Home/Problems-Scroll-images/No%20Business%20Insights.webp" alt=""
+                    class="w-100 h-100" style="object-fit: cover;" loading="lazy" />
+                </div>
+                <div class="card-body p-6">
+                  <h3 class="mb-1 fs-6">Manual Report Analysis</h3>
+                  <p class="mb-0 small mt-4">Analyzing sales, expenses, and performance manually wastes time and delays decisions.</p>
+                </div>
+              </div>
+            </div>
+            <div class="problem-marquee__item" aria-hidden="true">
+              <div class="card shadow-sm h-100 rounded-5 card-lift">
+                <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
+                  <img src="./assets/images-optimized/Home/Problems-Scroll-images/Manual%20Job%20Tracking.webp" alt=""
+                    class="w-100 h-100" style="object-fit: cover;" loading="lazy" />
+                </div>
+                <div class="card-body p-6">
+                  <h3 class="mb-1 fs-6">Booking Management Issues</h3>
+                  <p class="mb-0 small mt-4">Managing bookings through calls, WhatsApp, or notebooks leads to missed appointments.</p>
+                </div>
+              </div>
+            </div>
+            <div class="problem-marquee__item" aria-hidden="true">
+              <div class="card shadow-sm h-100 rounded-5 card-lift">
+                <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
+                  <img src="./assets/images-optimized/Home/Problems-Scroll-images/No%20Job%20Status%20Visibility.webp" alt=""
+                    class="w-100 h-100" style="object-fit: cover;" loading="lazy" />
+                </div>
+                <div class="card-body p-6">
+                  <h3 class="mb-1 fs-6">No Multi-Branch Visibility</h3>
+                  <p class="mb-0 small mt-4">Managing multiple branches without centralized software becomes confusing and inefficient.</p>
+                </div>
+              </div>
+            </div>
+            <div class="problem-marquee__item" aria-hidden="true">
+              <div class="card shadow-sm h-100 rounded-5 card-lift">
+                <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
+                  <img src="./assets/images-optimized/Home/Problems-Scroll-images/Billing%20Confusions.webp" alt=""
+                    class="w-100 h-100" style="object-fit: cover;" loading="lazy" />
+                </div>
+                <div class="card-body p-6">
+                  <h3 class="mb-1 fs-6">No Inventory Control</h3>
+                  <p class="mb-0 small mt-4">Chemicals and consumables get wasted because inventory isn’t tracked properly.</p>
+                </div>
+              </div>
+            </div>
+            <div class="problem-marquee__item" aria-hidden="true">
+              <div class="card shadow-sm h-100 rounded-5 card-lift">
+                <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
+                  <img src="./assets/images-optimized/Home/Problems-Scroll-images/No%20Proper%20Customer%20Communication.webp" alt=""
+                    class="w-100 h-100" style="object-fit: cover;" loading="lazy" />
+                </div>
+                <div class="card-body p-6">
+                  <h3 class="mb-1 fs-6">Owner Dependency</h3>
+                  <p class="mb-0 small mt-4">Your business slows down whenever you’re not physically present.</p>
+                </div>
+              </div>
+            </div>
+            <div class="problem-marquee__item" aria-hidden="true">
+              <div class="card shadow-sm h-100 rounded-5 card-lift">
+                <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
+                  <img src="./assets/images-optimized/Home/Problems-Scroll-images/Staff%20Mismanagement.webp" alt=""
+                    class="w-100 h-100" style="object-fit: cover;" loading="lazy" />
+                </div>
+                <div class="card-body p-6">
+                  <h3 class="mb-1 fs-6">Employee Accountability Issues</h3>
+                  <p class="mb-0 small mt-4">It’s hard to know who handled a vehicle or where mistakes happened.</p>
+                </div>
+              </div>
+            </div>
+            <div class="problem-marquee__item" aria-hidden="true">
+              <div class="card shadow-sm h-100 rounded-5 card-lift">
+                <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
+                  <img src="./assets/images-optimized/Home/Problems-Scroll-images/Customer%20Data%20is%20Scattered.webp" alt=""
+                    class="w-100 h-100" style="object-fit: cover;" loading="lazy" />
+                </div>
+                <div class="card-body p-6">
+                  <h3 class="mb-1 fs-6">Customer Dispute Management</h3>
+                  <p class="mb-0 small mt-4">Without proper job records and photos, resolving customer complaints becomes difficult.</p>
                 </div>
               </div>
             </div>
@@ -547,8 +850,8 @@
 
         <div class="row">
           <div class="col-12 text-center mt-10">
-            <a href="#" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal"> <span>
-                Start Free Trial
+            <a href="#" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#bookDemoModal"> <span>
+                Book Demo
               </span>
               <span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
@@ -564,13 +867,6 @@
 
         </div>
 
-
-
-
-
-
-
-
   </section>
 
   <section class="py-lg-13 py-8 bg-light bg-opacity-25" id="features">
@@ -578,12 +874,11 @@
       <div class="row text-center">
         <div class="col-lg-7 mx-auto">
           <div class="mb-10">
-            <span class="text-primary text-uppercase small fw-semibold" style="letter-spacing: .125rem;">Features</span>
-            <h2 class="fw-bold mt-4 mb-4">Everything You Need to Run Your Car Wash — <span class="text-primary">In One
-                Place</span></h2>
-            <p class="mb-4">Vashq replaces manual tracking, scattered tools, and daily confusion with one powerful system
-              built specifically for car wash and detailing businesses. From managing jobs and staff to tracking
-              customers, payments, and performance — everything works together in one simple, connected platform.</p>
+            <h2 class="fw-bold mb-4">Complete Car Wash &amp; Auto Detailing Management <span
+                class="text-primary">Software</span></h2>
+            <p class="mb-4">Everything you need to manage jobs, customers, employees, billing, inventory, bookings,
+              reports, and business operations in one AI-powered platform built exclusively for car wash and detailing
+              businesses.</p>
 
           </div>
         </div>
@@ -591,10 +886,10 @@
 
       <div class="row g-4 animate-stagger">
         <div class="col-lg-4 col-md-6 mb-4">
-          <div class="card shadow-sm h-100 rounded-5 text-center p-6 card-lift animate">
+          <div class="card shadow-sm h-100 rounded-5 text-center p-6 card-lift animate feature-card feature-card--1">
             <div class="mb-4 d-flex justify-content-center">
-              <img src="./assets/images-optimized/Home/Features-Icons/Dashboard.webp" class="feature-card-icon" alt="Smart business dashboard"
-                loading="lazy" />
+              <span class="feature-icon-wrap"><img src="./assets/images-optimized/Home/Features-Icons/Dashboard.webp" class="feature-card-icon" alt="Smart business dashboard"
+                loading="lazy" /></span>
             </div>
             <h3 class="h6 fw-bold mb-1">Smart Business Dashboard</h3>
             <span class="text-muted mb-3 d-block text-xs">Know exactly what’s happening</span>
@@ -607,10 +902,10 @@
         </div>
 
         <div class="col-lg-4 col-md-6 mb-4">
-          <div class="card shadow-sm h-100 rounded-5 text-center p-6 card-lift animate">
+          <div class="card shadow-sm h-100 rounded-5 text-center p-6 card-lift animate feature-card feature-card--2">
             <div class="mb-4 d-flex justify-content-center">
-              <img src="./assets/images-optimized/Home/Features-Icons/Job%20creation%20and%20tracking.webp" class="feature-card-icon"
-                alt="Job creation and tracking" loading="lazy" />
+              <span class="feature-icon-wrap"><img src="./assets/images-optimized/Home/Features-Icons/Job%20creation%20and%20tracking.webp" class="feature-card-icon" alt="Job creation and tracking"
+                loading="lazy" /></span>
             </div>
             <h3 class="h6 fw-bold mb-1">Job Creation &amp; Tracking</h3>
             <span class="text-muted mb-3 d-block text-xs">No missed or duplicate jobs</span>
@@ -623,42 +918,74 @@
         </div>
 
         <div class="col-lg-4 col-md-6 mb-4">
-          <div class="card shadow-sm h-100 rounded-5 text-center p-6 card-lift animate">
+          <div class="card shadow-sm h-100 rounded-5 text-center p-6 card-lift animate feature-card feature-card--3">
             <div class="mb-4 d-flex justify-content-center">
-              <img src="./assets/images-optimized/Home/Features-Icons/Employee%20management%20system.webp" class="feature-card-icon"
-                alt="Employee management system" loading="lazy" />
+              <span class="feature-icon-wrap"><img src="./assets/images-optimized/Home/Features-Icons/Report%20and%20analytics.webp" class="feature-card-icon" alt="AI insights and report analysis"
+                loading="lazy" /></span>
             </div>
-            <h3 class="h6 fw-bold mb-1">Employee Management System</h3>
-            <span class="text-muted mb-3 d-block text-xs">Full control and accountability</span>
+            <h3 class="h6 fw-bold mb-1">AI Insights</h3>
+            <span class="text-muted mb-3 d-block text-xs">Turn data into clear decisions</span>
             <ul class="list-unstyled lh-lg small mb-0">
-              <li>Separate login for employees</li>
-              <li>Clear job assignments and updates</li>
-              <li>Performance tracking and leaderboard</li>
+              <li>AI-powered report analysis</li>
+              <li>Spot trends, gaps, and growth opportunities</li>
+              <li>Actionable recommendations for owners</li>
             </ul>
           </div>
         </div>
 
         <div class="col-lg-4 col-md-6 mb-4">
-          <div class="card shadow-sm h-100 rounded-5 text-center p-6 card-lift animate">
+          <div class="card shadow-sm h-100 rounded-5 text-center p-6 card-lift animate feature-card feature-card--4">
             <div class="mb-4 d-flex justify-content-center">
-              <img src="./assets/images-optimized/Home/Features-Icons/Vehicle%20management.webp" class="feature-card-icon"
-                alt="Customer and vehicle management" loading="lazy" />
+              <span class="feature-icon-wrap"><img src="./assets/images-optimized/Home/Features-Icons/Vehicle%20management.webp" class="feature-card-icon" alt="Integrated CRM feature"
+                loading="lazy" /></span>
             </div>
-            <h3 class="h6 fw-bold mb-1">Customer &amp; Vehicle Management</h3>
-            <span class="text-muted mb-3 d-block text-xs">Build retention with history</span>
+            <h3 class="h6 fw-bold mb-1">CRM Feature</h3>
+            <span class="text-muted mb-3 d-block text-xs">Manage every customer relationship</span>
             <ul class="list-unstyled lh-lg small mb-0">
-              <li>Store complete customer data</li>
-              <li>Track vehicle history and visits</li>
-              <li>Identify repeat customers</li>
+              <li>Centralized customer profiles and history</li>
+              <li>Follow-ups, notes, and engagement tracking</li>
+              <li>Improve retention and repeat visits</li>
             </ul>
           </div>
         </div>
 
         <div class="col-lg-4 col-md-6 mb-4">
-          <div class="card shadow-sm h-100 rounded-5 text-center p-6 card-lift animate">
+          <div class="card shadow-sm h-100 rounded-5 text-center p-6 card-lift animate feature-card feature-card--5">
             <div class="mb-4 d-flex justify-content-center">
-              <img src="./assets/images-optimized/Home/Features-Icons/Whatsapp%20communication.webp" class="feature-card-icon"
-                alt="WhatsApp communication and automation" loading="lazy" />
+              <span class="feature-icon-wrap"><img src="./assets/images-optimized/Home/Features-Icons/Dashboard.webp" class="feature-card-icon" alt="Multi branch functionality"
+                loading="lazy" /></span>
+            </div>
+            <h3 class="h6 fw-bold mb-1">Multi Branch Functionality</h3>
+            <span class="text-muted mb-3 d-block text-xs">Run every location from one place</span>
+            <ul class="list-unstyled lh-lg small mb-0">
+              <li>Manage all branches in a single dashboard</li>
+              <li>Compare performance across locations</li>
+              <li>Centralized control with branch-level visibility</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card shadow-sm h-100 rounded-5 text-center p-6 card-lift animate feature-card feature-card--6">
+            <div class="mb-4 d-flex justify-content-center">
+              <span class="feature-icon-wrap"><img src="./assets/images-optimized/Home/Features-Icons/Job%20creation%20and%20tracking.webp" class="feature-card-icon" alt="Customer booking and slot management"
+                loading="lazy" /></span>
+            </div>
+            <h3 class="h6 fw-bold mb-1">Customer Booking &amp; Slot Management</h3>
+            <span class="text-muted mb-3 d-block text-xs">Fill your bay without overbooking</span>
+            <ul class="list-unstyled lh-lg small mb-0">
+              <li>Let customers book available time slots</li>
+              <li>Manage capacity and avoid clashes</li>
+              <li>Confirm, reschedule, and track appointments</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card shadow-sm h-100 rounded-5 text-center p-6 card-lift animate feature-card feature-card--7">
+            <div class="mb-4 d-flex justify-content-center">
+              <span class="feature-icon-wrap"><img src="./assets/images-optimized/Home/Features-Icons/Whatsapp%20communication.webp" class="feature-card-icon" alt="WhatsApp communication and automation"
+                loading="lazy" /></span>
             </div>
             <h3 class="h6 fw-bold mb-1">WhatsApp Communication &amp; Automation</h3>
             <span class="text-muted mb-3 d-block text-xs">Stay connected without manual effort</span>
@@ -671,10 +998,26 @@
         </div>
 
         <div class="col-lg-4 col-md-6 mb-4">
-          <div class="card shadow-sm h-100 rounded-5 text-center p-6 card-lift animate">
+          <div class="card shadow-sm h-100 rounded-5 text-center p-6 card-lift animate feature-card feature-card--8">
             <div class="mb-4 d-flex justify-content-center">
-              <img src="./assets/images-optimized/Home/Features-Icons/Billing%20and%20invoice.webp" class="feature-card-icon"
-                alt="Billing and invoice generation" loading="lazy" />
+              <span class="feature-icon-wrap"><img src="./assets/images-optimized/Home/Features-Icons/Vehicle%20management.webp" class="feature-card-icon" alt="Customer and vehicle management"
+                loading="lazy" /></span>
+            </div>
+            <h3 class="h6 fw-bold mb-1">Customer &amp; Vehicle Management</h3>
+            <span class="text-muted mb-3 d-block text-xs">Build retention with history</span>
+            <ul class="list-unstyled lh-lg small mb-0">
+              <li>Store complete customer data</li>
+              <li>Track vehicle history and visits</li>
+              <li>Identify repeat customers</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card shadow-sm h-100 rounded-5 text-center p-6 card-lift animate feature-card feature-card--9">
+            <div class="mb-4 d-flex justify-content-center">
+              <span class="feature-icon-wrap"><img src="./assets/images-optimized/Home/Features-Icons/Billing%20and%20invoice.webp" class="feature-card-icon" alt="Billing and invoice generation"
+                loading="lazy" /></span>
             </div>
             <h3 class="h6 fw-bold mb-1">Billing &amp; Invoice Generation</h3>
             <span class="text-muted mb-3 d-block text-xs">No more billing confusion</span>
@@ -687,10 +1030,10 @@
         </div>
 
         <div class="col-lg-4 col-md-6 mb-4">
-          <div class="card shadow-sm h-100 rounded-5 text-center p-6 card-lift animate">
+          <div class="card shadow-sm h-100 rounded-5 text-center p-6 card-lift animate feature-card feature-card--10">
             <div class="mb-4 d-flex justify-content-center">
-              <img src="./assets/images-optimized/Home/Features-Icons/Payment%20tracking.webp" class="feature-card-icon" alt="Payment tracking"
-                loading="lazy" />
+              <span class="feature-icon-wrap"><img src="./assets/images-optimized/Home/Features-Icons/Payment%20tracking.webp" class="feature-card-icon" alt="Payment tracking"
+                loading="lazy" /></span>
             </div>
             <h3 class="h6 fw-bold mb-1">Payment Tracking</h3>
             <span class="text-muted mb-3 d-block text-xs">Know exactly where your money is</span>
@@ -703,10 +1046,90 @@
         </div>
 
         <div class="col-lg-4 col-md-6 mb-4">
-          <div class="card shadow-sm h-100 rounded-5 text-center p-6 card-lift animate">
+          <div class="card shadow-sm h-100 rounded-5 text-center p-6 card-lift animate feature-card feature-card--1">
             <div class="mb-4 d-flex justify-content-center">
-              <img src="./assets/images-optimized/Home/Features-Icons/Expense%20management.webp" class="feature-card-icon"
-                alt="Expense management" loading="lazy" />
+              <span class="feature-icon-wrap"><img src="./assets/images-optimized/Home/Features-Icons/Payment%20tracking.webp" class="feature-card-icon" alt="Credit marking and collection"
+                loading="lazy" /></span>
+            </div>
+            <h3 class="h6 fw-bold mb-1">Credit Marking &amp; Collection</h3>
+            <span class="text-muted mb-3 d-block text-xs">Control dues and recover payments</span>
+            <ul class="list-unstyled lh-lg small mb-0">
+              <li>Mark credit sales against customers</li>
+              <li>Track outstanding balances clearly</li>
+              <li>Follow up and collect dues faster</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card shadow-sm h-100 rounded-5 text-center p-6 card-lift animate feature-card feature-card--2">
+            <div class="mb-4 d-flex justify-content-center">
+              <span class="feature-icon-wrap"><img src="./assets/images-optimized/Home/Features-Icons/Services%20and%20pricing.webp" class="feature-card-icon" alt="Variable pricing"
+                loading="lazy" /></span>
+            </div>
+            <h3 class="h6 fw-bold mb-1">Variable Pricing</h3>
+            <span class="text-muted mb-3 d-block text-xs">Price flexibly by service and vehicle</span>
+            <ul class="list-unstyled lh-lg small mb-0">
+              <li>Set prices by vehicle type or package</li>
+              <li>Adjust rates for seasons and offers</li>
+              <li>Keep pricing consistent across staff</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card shadow-sm h-100 rounded-5 text-center p-6 card-lift animate feature-card feature-card--3">
+            <div class="mb-4 d-flex justify-content-center">
+              <span class="feature-icon-wrap"><img src="./assets/images-optimized/Home/Features-Icons/Billing%20and%20invoice.webp" class="feature-card-icon" alt="Product sales"
+                loading="lazy" /></span>
+            </div>
+            <h3 class="h6 fw-bold mb-1">Product Sales</h3>
+            <span class="text-muted mb-3 d-block text-xs">Sell products with every job</span>
+            <ul class="list-unstyled lh-lg small mb-0">
+              <li>Add products to jobs and invoices</li>
+              <li>Track product sales and revenue</li>
+              <li>Grow income beyond service jobs</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card shadow-sm h-100 rounded-5 text-center p-6 card-lift animate feature-card feature-card--4">
+            <div class="mb-4 d-flex justify-content-center">
+              <span class="feature-icon-wrap"><img src="./assets/images-optimized/Home/Features-Icons/Employee%20management%20system.webp" class="feature-card-icon" alt="Employee management system"
+                loading="lazy" /></span>
+            </div>
+            <h3 class="h6 fw-bold mb-1">Employee Management System</h3>
+            <span class="text-muted mb-3 d-block text-xs">Full control and accountability</span>
+            <ul class="list-unstyled lh-lg small mb-0">
+              <li>Separate login for employees</li>
+              <li>Clear job assignments and updates</li>
+              <li>Performance tracking and leaderboard</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card shadow-sm h-100 rounded-5 text-center p-6 card-lift animate feature-card feature-card--5">
+            <div class="mb-4 d-flex justify-content-center">
+              <span class="feature-icon-wrap"><img src="./assets/images-optimized/Home/Features-Icons/Services%20and%20pricing.webp" class="feature-card-icon" alt="Service and pricing management"
+                loading="lazy" /></span>
+            </div>
+            <h3 class="h6 fw-bold mb-1">Service &amp; Pricing Management</h3>
+            <span class="text-muted mb-3 d-block text-xs">Deliver consistent service quality</span>
+            <ul class="list-unstyled lh-lg small mb-0">
+              <li>Create service listings</li>
+              <li>Set pricing and estimated time</li>
+              <li>Standardize your operations</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card shadow-sm h-100 rounded-5 text-center p-6 card-lift animate feature-card feature-card--6">
+            <div class="mb-4 d-flex justify-content-center">
+              <span class="feature-icon-wrap"><img src="./assets/images-optimized/Home/Features-Icons/Expense%20management.webp" class="feature-card-icon" alt="Expense management"
+                loading="lazy" /></span>
             </div>
             <h3 class="h6 fw-bold mb-1">Expense Management</h3>
             <span class="text-muted mb-3 d-block text-xs">Stop money leakage</span>
@@ -719,10 +1142,10 @@
         </div>
 
         <div class="col-lg-4 col-md-6 mb-4">
-          <div class="card shadow-sm h-100 rounded-5 text-center p-6 card-lift animate">
+          <div class="card shadow-sm h-100 rounded-5 text-center p-6 card-lift animate feature-card feature-card--7">
             <div class="mb-4 d-flex justify-content-center">
-              <img src="./assets/images-optimized/Home/Features-Icons/Report%20and%20analytics.webp" class="feature-card-icon"
-                alt="Reports and analytics" loading="lazy" />
+              <span class="feature-icon-wrap"><img src="./assets/images-optimized/Home/Features-Icons/Report%20and%20analytics.webp" class="feature-card-icon" alt="Reports and analytics"
+                loading="lazy" /></span>
             </div>
             <h3 class="h6 fw-bold mb-1">Reports &amp; Analytics</h3>
             <span class="text-muted mb-3 d-block text-xs">Make smarter business decisions</span>
@@ -733,23 +1156,8 @@
             </ul>
           </div>
         </div>
-
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="card shadow-sm h-100 rounded-5 text-center p-6 card-lift animate">
-            <div class="mb-4 d-flex justify-content-center">
-              <img src="./assets/images-optimized/Home/Features-Icons/Services%20and%20pricing.webp" class="feature-card-icon"
-                alt="Service and pricing management" loading="lazy" />
-            </div>
-            <h3 class="h6 fw-bold mb-1">Service &amp; Pricing Management</h3>
-            <span class="text-muted mb-3 d-block text-xs">Deliver consistent service quality</span>
-            <ul class="list-unstyled lh-lg small mb-0">
-              <li>Create service listings</li>
-              <li>Set pricing and estimated time</li>
-              <li>Standardize your operations</li>
-            </ul>
-          </div>
-        </div>
       </div>
+    </div>
   </section>
 
   <section class="py-lg-13 py-8 position-relative" id="how-it-works">
@@ -805,7 +1213,6 @@
 
               </div>
             </div>
-
 
             <div class="col-md-6 mt-6">
               <div class="d-flex gap-4">
@@ -924,134 +1331,116 @@
       </div>
   </section>
 
-  <section class="py-8 bg-white" id="free-trial">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-9">
-          <div class="card rounded-5 shadow-sm border">
-            <div class="card-body p-6 text-center">
-              <h3 class="h5 fw-bold mb-3">Start with a 14-day free trial.</h3>
-              <p class="mb-0">Experience full control of your business — then upgrade to a paid plan when you're ready.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <section class="py-lg-13 py-8 bg-light bg-opacity-50" id="target-users">
 
     <div class="container">
       <div class="row">
         <div class="col-12">
           <div class="text-center mb-10">
-            <span class="text-primary text-uppercase small fw-semibold"
-              style="letter-spacing: .125rem;">Target users</span>
-            <h2 class="fw-bold mt-4 mb-4">Built for <span class="text-primary">wash businesses</span> of every size</h2>
-            <p>Whether you’re running a single bay or multiple locations, Vashq helps you stay fast, consistent, and
-              accountable.</p>
+            <h2 class="fw-bold mb-4">Built for <span class="text-primary">Every Car Care Business</span></h2>
+            <p>Whether you operate a single wash bay, run a premium detailing studio, offer mobile services, or manage
+              multiple branches, Vashq adapts to the way your business works.</p>
           </div>
-
         </div>
-
       </div>
+
       <div class="row gx-4 gy-6 animate-stagger">
-        <div class="col-lg-4 col-12">
+        <div class="col-lg-4 col-md-6 col-12">
           <div class="card rounded-5 shadow-sm h-100 border animate">
             <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
-              <img
-                src="./assets/images-optimized/Home/Target-users/Car%20wash.webp"
-                alt="Car wash center" class="w-100 h-100" style="object-fit: cover;" loading="lazy"
-                referrerpolicy="no-referrer" />
+              <img src="./assets/images-optimized/Home/Target-users/Car%20wash.webp" alt="Car wash centers"
+                class="w-100 h-100" style="object-fit: cover;" loading="lazy" referrerpolicy="no-referrer" />
             </div>
             <div class="card-body p-6">
-              <div class="mt-4 mb-2">
-                <span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="icon icon-tabler icons-tabler-outline icon-tabler-quote text-primary">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <path d="M10 11h-4a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1h3a1 1 0 0 1 1 1v6c0 2.667 -1.333 4.333 -4 5" />
-                    <path d="M19 11h-4a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1h3a1 1 0 0 1 1 1v6c0 2.667 -1.333 4.333 -4 5" />
-                  </svg>
-                </span>
-              </div>
-              <div>
-                <h3 class="h6 fw-bold mb-3">Car wash centers</h3>
-                <ul class="list-unstyled lh-lg small mb-0">
-                  <li>Track every job from intake to delivery</li>
-                  <li>Keep invoices and payments aligned</li>
-                  <li>Send WhatsApp updates automatically</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-12">
-          <div class="card rounded-5 shadow-sm h-100 border animate">
-            <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
-              <img
-                src="./assets/images-optimized/Home/Target-users/Car%20detailing.webp"
-                alt="Car detailing studio" class="w-100 h-100" style="object-fit: cover;" loading="lazy"
-                referrerpolicy="no-referrer" />
-            </div>
-            <div class="card-body p-6">
-              <div class="mt-4 mb-2">
-                <span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="icon icon-tabler icons-tabler-outline icon-tabler-quote text-primary">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <path d="M10 11h-4a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1h3a1 1 0 0 1 1 1v6c0 2.667 -1.333 4.333 -4 5" />
-                    <path d="M19 11h-4a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1h3a1 1 0 0 1 1 1v6c0 2.667 -1.333 4.333 -4 5" />
-                  </svg>
-                </span>
-              </div>
-              <div>
-                <h3 class="h6 fw-bold mb-3">Car detailing studios</h3>
-                <ul class="list-unstyled lh-lg small mb-0">
-                  <li>Before/after photos for premium jobs</li>
-                  <li>Service list with time estimates</li>
-                  <li>Track staff performance and quality</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-12">
-          <div class="card rounded-5 shadow-sm h-100 border animate">
-            <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
-              <img
-                src="./assets/images-optimized/Home/Target-users/Bike%20wash.webp"
-                alt="Bike wash shop" class="w-100 h-100" style="object-fit: cover;" loading="lazy"
-                referrerpolicy="no-referrer" />
-            </div>
-            <div class="card-body p-6">
-              <div class="mt-4 mb-2">
-                <span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="icon icon-tabler icons-tabler-outline icon-tabler-quote text-primary">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <path d="M10 11h-4a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1h3a1 1 0 0 1 1 1v6c0 2.667 -1.333 4.333 -4 5" />
-                    <path d="M19 11h-4a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1h3a1 1 0 0 1 1 1v6c0 2.667 -1.333 4.333 -4 5" />
-                  </svg>
-                </span>
-              </div>
-              <div>
-                <h3 class="h6 fw-bold mb-3">Bike wash shops</h3>
-                <ul class="list-unstyled lh-lg small mb-0">
-                  <li>Fast job creation and assignment</li>
-                  <li>Customer and vehicle history</li>
-                  <li>Simple payment tracking</li>
-                </ul>
-              </div>
+              <h3 class="h6 fw-bold mb-3">Car Wash Centers</h3>
+              <ul class="list-unstyled lh-lg small mb-0">
+                <li>Fast vehicle check-in</li>
+                <li>Live job tracking</li>
+                <li>Automated billing &amp; invoicing</li>
+                <li>WhatsApp customer updates</li>
+                <li>Daily revenue dashboard</li>
+              </ul>
             </div>
           </div>
         </div>
 
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="card rounded-5 shadow-sm h-100 border animate">
+            <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
+              <img src="./assets/images-optimized/Home/Target-users/Car%20detailing.webp" alt="Premium detailing studios"
+                class="w-100 h-100" style="object-fit: cover;" loading="lazy" referrerpolicy="no-referrer" />
+            </div>
+            <div class="card-body p-6">
+              <h3 class="h6 fw-bold mb-3">Premium Detailing Studios</h3>
+              <ul class="list-unstyled lh-lg small mb-0">
+                <li>Before &amp; after vehicle inspections</li>
+                <li>Multi-day job management</li>
+                <li>Service packages &amp; pricing</li>
+                <li>Quality control tracking</li>
+                <li>Complete customer &amp; vehicle history</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="card rounded-5 shadow-sm h-100 border animate">
+            <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
+              <img src="./assets/images-optimized/Home/Target-users/Bike%20wash.webp" alt="Mobile detailing services"
+                class="w-100 h-100" style="object-fit: cover;" loading="lazy" referrerpolicy="no-referrer" />
+            </div>
+            <div class="card-body p-6">
+              <h3 class="h6 fw-bold mb-3">Mobile Detailing Services</h3>
+              <ul class="list-unstyled lh-lg small mb-0">
+                <li>Create jobs from anywhere</li>
+                <li>Manage doorstep appointments</li>
+                <li>Digital invoices &amp; online payments</li>
+                <li>Customer location &amp; service history</li>
+                <li>Real-time team tracking</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="card rounded-5 shadow-sm h-100 border animate">
+            <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
+              <img src="./assets/images-optimized/Home/Hero/hero-banner.webp" alt="Mobile car wash businesses"
+                class="w-100 h-100" style="object-fit: cover;" loading="lazy" referrerpolicy="no-referrer" />
+            </div>
+            <div class="card-body p-6">
+              <h3 class="h6 fw-bold mb-3">Mobile Car Wash Businesses</h3>
+              <ul class="list-unstyled lh-lg small mb-0">
+                <li>On-site job management</li>
+                <li>Route &amp; booking management</li>
+                <li>Instant billing &amp; payment collection</li>
+                <li>Customer communication via WhatsApp</li>
+                <li>Daily earnings and performance reports</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="card rounded-5 shadow-sm h-100 border animate">
+            <div class="ratio ratio-16x9 rounded-top-5 overflow-hidden">
+              <img src="./assets/images-optimized/Home/How-it-works%20sqaure-images/Track%2C%20communicate%2C%20and%20grow.webp"
+                alt="Multi-branch car wash operators" class="w-100 h-100" style="object-fit: cover;" loading="lazy"
+                referrerpolicy="no-referrer" />
+            </div>
+            <div class="card-body p-6">
+              <h3 class="h6 fw-bold mb-3">Multi-Branch Car Wash Operators</h3>
+              <ul class="list-unstyled lh-lg small mb-0">
+                <li>Centralized business dashboard</li>
+                <li>Branch-wise revenue &amp; reports</li>
+                <li>Staff performance tracking</li>
+                <li>Compare branch performance</li>
+                <li>Monitor every location from anywhere</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
-
     </div>
 
   </section>
@@ -1061,8 +1450,7 @@
       <div class="row">
         <div class="col-12">
           <div class="text-center mb-10">
-            <span class="text-primary text-uppercase small fw-semibold" style="letter-spacing: .125rem;">Testimonials</span>
-            <h2 class="fw-bold mt-4 mb-4">What our <span class="text-primary">customers</span> say</h2>
+            <h2 class="fw-bold mb-4">What our <span class="text-primary">customers</span> say</h2>
             <p class="mb-0">Car wash owners and detailing teams use Vashq to keep jobs moving, billing clean, and customers
               updated.</p>
           </div>
@@ -1072,7 +1460,7 @@
       <div class="row gx-4 gy-6 animate-stagger">
         <div class="col-lg-4 col-12">
           <div class="card rounded-5 shadow-sm h-100 border animate">
-            <div class="card-body p-6">
+            <div class="card-body p-6 d-flex flex-column">
               <div class="d-flex gap-0 align-items-center">
 
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
@@ -1120,33 +1508,27 @@
                     <path d="M19 11h-4a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1h3a1 1 0 0 1 1 1v6c0 2.667 -1.333 4.333 -4 5" />
                   </svg>
                 </span>
-
               </div>
-              <div>
-                <p class=" fw-semibold">"Vashq made our counter faster. Jobs, photos, and payments are all in one place —
-                  and customers love the WhatsApp updates."</p>
+              <div class="flex-grow-1">
+                <p class="fw-semibold small mb-3">"Before Vashq, everything was manual. We maintained registers, wrote receipts by hand, and I had to call my managers several times a day just to know what was happening. Now I can see every job, payment, and daily operation without making those calls. We’ve also eliminated the cost of registers and paperwork, and the entire business runs much more smoothly.</p>
+                <p class="fw-semibold small mb-0">The first couple of weeks took some getting used to because we were changing years of old habits. But once the team adapted, it completely changed how we operate. The system has given us the confidence to open our second branch because it’s much easier to manage and scale."</p>
               </div>
               <div class="mt-7 pt-5 border-top">
                 <div class="d-flex gap-3 align-items-center">
-                  <img src="./assets/images-optimized/Home/Review-customers-images/avatar-female.svg" alt="Customer avatar"
+                  <img src="./assets/images-optimized/Home/Review-customers-images/avatar-male-1.svg" alt="Shon Saji"
                     class="avatar avatar-md rounded-circle" loading="lazy" referrerpolicy="no-referrer">
                   <div>
-                    <h6 class="mb-0">Shon Saji
-                    </h6>
-                    <small>Owner, Nexus Car Wash Kochi</small>
+                    <h6 class="mb-0">Shon Saji</h6>
+                    <small>Owner, Nexus Clean, Kochi</small>
                   </div>
-
                 </div>
               </div>
-
             </div>
-
           </div>
-
         </div>
         <div class="col-lg-4 col-12">
           <div class="card rounded-5 shadow-sm h-100 border animate">
-            <div class="card-body p-6">
+            <div class="card-body p-6 d-flex flex-column">
               <div class="d-flex gap-0 align-items-center">
 
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
@@ -1194,33 +1576,27 @@
                     <path d="M19 11h-4a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1h3a1 1 0 0 1 1 1v6c0 2.667 -1.333 4.333 -4 5" />
                   </svg>
                 </span>
-
               </div>
-              <div>
-                <p class=" fw-semibold">"We run detailing packages with add-ons. Vashq keeps the team aligned and the
-                  billing accurate — no more missed items."</p>
+              <div class="flex-grow-1">
+                <p class="fw-semibold small mb-3">"We were already using another software, and it handled the basics. But as our business grew, we needed workflows that matched the way we operate. Like many generic software providers, they couldn’t adapt or add the features we required.</p>
+                <p class="fw-semibold small mb-0">That’s when we switched to Vashq. The technical support team took the time to understand our requirements, worked closely with us, and quickly delivered the features we needed. Having a team that listens, responds, and continuously improves the platform gives us the confidence to look towards our operational and total business growth."</p>
               </div>
               <div class="mt-7 pt-5 border-top">
                 <div class="d-flex gap-3 align-items-center">
-                  <img src="./assets/images-optimized/Home/Review-customers-images/avatar-male-1.svg" alt="Customer avatar"
+                  <img src="./assets/images-optimized/Home/Review-customers-images/avatar-male-2.svg" alt="Arshad Shadusha"
                     class="avatar avatar-md rounded-circle" loading="lazy" referrerpolicy="no-referrer">
                   <div>
-                    <h6 class="mb-0">Arjun Menon
-                    </h6>
-                    <small>Manager, Detailing Studio</small>
+                    <h6 class="mb-0">Arshad Shadusha</h6>
+                    <small>Owner, Cochin Wash Club, Kochi</small>
                   </div>
-
                 </div>
               </div>
-
             </div>
-
           </div>
-
         </div>
         <div class="col-lg-4 col-12">
           <div class="card rounded-5 shadow-sm h-100 border animate">
-            <div class="card-body p-6">
+            <div class="card-body p-6 d-flex flex-column">
               <div class="d-flex gap-0 align-items-center">
 
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
@@ -1268,36 +1644,30 @@
                     <path d="M19 11h-4a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1h3a1 1 0 0 1 1 1v6c0 2.667 -1.333 4.333 -4 5" />
                   </svg>
                 </span>
-
               </div>
-              <div>
-                <p class=" fw-semibold">"The dashboard shows what’s pending and who’s working on what. We finish more
-                  jobs on time, and it’s easier to track performance."</p>
+              <div class="flex-grow-1">
+                <p class="fw-semibold small mb-3">"We had been using another software for years, and it worked well for our first branch. But when we planned to open our second branch, we realized it didn’t support multi-branch operations, and we would have had to pay double for a separate subscription for the new location.</p>
+                <p class="fw-semibold small mb-0">That’s when I came across Vashq through a fellow association member. The Vashq technical team handled the entire migration of our existing data, helped us onboard our staff, and made the transition smooth with continuous support. Today, we’re managing both branches from one platform, saving on software costs, and running our operations much more efficiently."</p>
               </div>
               <div class="mt-7 pt-5 border-top">
                 <div class="d-flex gap-3 align-items-center">
-                  <img src="./assets/images-optimized/Home/Review-customers-images/avatar-male-2.svg" alt="Customer avatar"
+                  <img src="./assets/images-optimized/Home/Review-customers-images/Amal.webp" alt="Renish P"
                     class="avatar avatar-md rounded-circle" loading="lazy" referrerpolicy="no-referrer">
                   <div>
-                    <h6 class="mb-0">Fahad K.
-                    </h6>
-                    <small>Supervisor, Multi-bay Wash</small>
+                    <h6 class="mb-0">Renish P</h6>
+                    <small>Owner, Magic Touch Car Wash &amp; Detailing, Kozhikode</small>
                   </div>
-
                 </div>
               </div>
-
             </div>
-
           </div>
-
         </div>
-
       </div>
 
     </div>
 
   </section>
+  <!-- Pricing section temporarily hidden
   <section class="py-lg-13 py-8 " id="pricing">
 
     <div class="container">
@@ -1359,10 +1729,10 @@
                 </ul>
               </div>
               <div class="mt-auto">
-                <p class="mb-4 small text-muted">Perfect to experience Vashq risk-free.</p>
+                <p class="mb-4 small text-muted">Book a demo to experience Vashq risk-free.</p>
                 <div class="d-grid">
-                  <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    Start Free Trial
+                  <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookDemoModal">
+                    Book Demo
                   </a>
                 </div>
               </div>
@@ -1444,13 +1814,13 @@
     </div>
   </section>
 
+  -->
   <section class="py-lg-13 py-8 bg-white" id="faq">
     <div class="container">
       <div class="row text-center">
         <div class="col-lg-7 mx-auto">
           <div class="mb-10">
-            <span class="text-primary text-uppercase small fw-semibold" style="letter-spacing: .125rem;">FAQ</span>
-            <h2 class="fw-bold mt-4 mb-4">Common questions</h2>
+            <h2 class="fw-bold mb-4">Common questions</h2>
             <p class="mb-0">Everything you need to know before you start.</p>
           </div>
         </div>
@@ -1460,82 +1830,82 @@
         <div class="col-lg-10">
           <div class="accordion" id="faqAccordion">
             <div class="accordion-item rounded-4 mb-3 border">
-              <h3 class="accordion-header" id="faqHeadingOne">
+              <h3 class="accordion-header" id="faqHeading1">
                 <button class="accordion-button rounded-4" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#faqCollapseOne" aria-expanded="true" aria-controls="faqCollapseOne">
-                  Is Vashq easy to use?
+                  data-bs-target="#faqCollapse1" aria-expanded="true" aria-controls="faqCollapse1">
+                  How is Vashq different from generic billing or business management software?
                 </button>
               </h3>
-              <div id="faqCollapseOne" class="accordion-collapse collapse show" aria-labelledby="faqHeadingOne"
+              <div id="faqCollapse1" class="accordion-collapse collapse show" aria-labelledby="faqHeading1"
                 data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
-                  Yes — Vashq is designed for busy teams. No technical skills required. Most shops are ready the same
-                  day.
+                  Most generic software focuses on invoicing and accounting. Vashq is built exclusively for the car care industry, helping you manage the entire operation—from job tracking and customer communication to employee performance, vehicle condition reports, expenses, inventory, and business insights—all from one platform.
                 </div>
               </div>
             </div>
 
             <div class="accordion-item rounded-4 mb-3 border">
-              <h3 class="accordion-header" id="faqHeadingTwo">
+              <h3 class="accordion-header" id="faqHeading2">
                 <button class="accordion-button collapsed rounded-4" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#faqCollapseTwo" aria-expanded="false" aria-controls="faqCollapseTwo">
-                  Does it work on mobile?
+                  data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
+                  We already use another software. Why should we switch to Vashq?
                 </button>
               </h3>
-              <div id="faqCollapseTwo" class="accordion-collapse collapse" aria-labelledby="faqHeadingTwo"
+              <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faqHeading2"
                 data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
-                  Yes — you can manage jobs, customers, and updates on mobile and desktop.
+                  Many businesses switch to Vashq because they outgrow generic software. As operations become more complex, owners need better visibility, industry-specific workflows, multi-branch management, and responsive technical support. Vashq is designed to solve these operational challenges while making the transition smooth with data migration and onboarding assistance.
                 </div>
               </div>
             </div>
 
             <div class="accordion-item rounded-4 mb-3 border">
-              <h3 class="accordion-header" id="faqHeadingThree">
+              <h3 class="accordion-header" id="faqHeading3">
                 <button class="accordion-button collapsed rounded-4" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#faqCollapseThree" aria-expanded="false" aria-controls="faqCollapseThree">
-                  Can employees have their own login?
+                  data-bs-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
+                  Will you migrate my existing customer and vehicle data?
                 </button>
               </h3>
-              <div id="faqCollapseThree" class="accordion-collapse collapse" aria-labelledby="faqHeadingThree"
+              <div id="faqCollapse3" class="accordion-collapse collapse" aria-labelledby="faqHeading3"
                 data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
-                  Yes — Vashq includes a separate employee login portal for job updates, assignment, and performance
-                  tracking.
+                  Yes. Our technical team helps migrate your customer records, vehicle history, services, and other important business data from your existing software or spreadsheets. We also assist with onboarding so your team can transition with minimal disruption.
                 </div>
               </div>
             </div>
 
             <div class="accordion-item rounded-4 mb-3 border">
-              <h3 class="accordion-header" id="faqHeadingFour">
+              <h3 class="accordion-header" id="faqHeading4">
                 <button class="accordion-button collapsed rounded-4" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#faqCollapseFour" aria-expanded="false" aria-controls="faqCollapseFour">
-                  Does Vashq support WhatsApp notifications?
+                  data-bs-target="#faqCollapse4" aria-expanded="false" aria-controls="faqCollapse4">
+                  How long does it take to start using Vashq?
                 </button>
               </h3>
-              <div id="faqCollapseFour" class="accordion-collapse collapse" aria-labelledby="faqHeadingFour"
+              <div id="faqCollapse4" class="accordion-collapse collapse" aria-labelledby="faqHeading4"
                 data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
-                  Yes — send WhatsApp notifications to customers and edit message templates to match your brand voice.
+                  Most businesses can get started within a few days, depending on the amount of data to be migrated. Our team handles setup, onboarding, and staff training to ensure your operations continue smoothly.
                 </div>
               </div>
             </div>
 
             <div class="accordion-item rounded-4 border">
-              <h3 class="accordion-header" id="faqHeadingFive">
+              <h3 class="accordion-header" id="faqHeading5">
                 <button class="accordion-button collapsed rounded-4" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#faqCollapseFive" aria-expanded="false" aria-controls="faqCollapseFive">
-                  Can I track payments and expenses?
+                  data-bs-target="#faqCollapse5" aria-expanded="false" aria-controls="faqCollapse5">
+                  What if my employees are not comfortable using software?
                 </button>
               </h3>
-              <div id="faqCollapseFive" class="accordion-collapse collapse" aria-labelledby="faqHeadingFive"
+              <div id="faqCollapse5" class="accordion-collapse collapse" aria-labelledby="faqHeading5"
                 data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
-                  Yes — generate invoices, track payments, log expenses, and view reports and analytics from one
-                  dashboard.
+                  Vashq is designed to be simple and easy to learn. During onboarding, we train your staff and provide ongoing support whenever they need assistance. Most teams become comfortable using the platform within a short time.
                 </div>
               </div>
             </div>
+          </div>
+          <div class="text-center mt-8">
+            <a href="faq.html" class="btn btn-outline-primary">View all FAQs</a>
           </div>
         </div>
       </div>
@@ -1548,14 +1918,13 @@
         <div class="col-lg-7">
           <span class="text-primary text-uppercase small fw-semibold" style="letter-spacing: .125rem;">Ready?</span>
           <h2 class="fw-bold mt-4 mb-4">Run your entire car wash business from one dashboard</h2>
-          <p class="mb-0">Start free, set up in minutes, and keep jobs, staff, customers, billing, and WhatsApp updates
-            under control.</p>
+          <p class="mb-0">Book a demo and see how Vashq helps you manage jobs, staff, customers, billing, and WhatsApp updates
+            from one dashboard.</p>
         </div>
         <div class="col-lg-5">
           <div class="d-flex flex-md-row flex-column justify-content-lg-end gap-3">
-            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Start Free
-              Trial</a>
-            <a href="#!" class="btn btn-light">Contact Us</a>
+            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookDemoModal">Book Demo</a>
+            <a href="contact.html" class="btn btn-light">Contact Us</a>
           </div>
         </div>
       </div>
@@ -1585,7 +1954,7 @@
                   </svg>
 
                 </span>
-                <a class="text-decoration-none" href="mailto:vashq12@gmail.com">vashq12@gmail.com</a>
+                <a class="text-decoration-none" href="mailto:vashqofficial@gmail.com">vashqofficial@gmail.com</a>
 
               </span>
               <span class="d-flex align-items-center gap-2">
@@ -1599,7 +1968,7 @@
                   </svg>
 
                 </span>
-                <a class="text-decoration-none" href="tel:9072509994">9072509994</a>
+                <a class="text-decoration-none" href="tel:7994466421">7994466421</a>
               </span>
               <span class="d-flex align-items-center gap-2">
                 <span class="text-primary">
@@ -1616,11 +1985,6 @@
               </span>
             </div>
 
-
-
-
-
-
           </div>
 
         </div>
@@ -1632,11 +1996,8 @@
                 <ul class="list-unstyled lh-lg small">
                   <li><a href="features.html">Features</a>
 
-
                   </li>
-                  <li><a href="pricing.html">Pricing</a></li>
                   <li><a href="use-cases.html">Use Cases</a></li>
-                  <li><a href="demo.html">Book Demo</a></li>
                 </ul>
               </div>
 
@@ -1646,7 +2007,6 @@
                 <h4 class="fs-5 mb-4">Company</h4>
                 <ul class="list-unstyled lh-lg small">
                   <li><a href="#">About Us</a>
-
 
                   </li>
                   <li><a href="#">Careers</a></li>
@@ -1662,8 +2022,8 @@
                 <ul class="list-unstyled lh-lg small">
                   <li><a href="contact.html">Contact Us</a>
 
-
                   </li>
+                  <li><a href="faq.html">FAQ</a></li>
                   <li><a href="privacy-policy.html">Privacy Policy</a></li>
                   <li><a href="terms-and-conditions.html">Terms &amp; Conditions</a></li>
                   <li><a href="refund-policy.html">Refund Policy</a></li>
@@ -1676,7 +2036,6 @@
                 <h4 class="fs-5 mb-4">Use cases</h4>
                 <ul class="list-unstyled lh-lg small">
                   <li><a href="use-cases.html">Car wash centers</a>
-
 
                   </li>
                   <li><a href="use-cases.html">Detailing studios</a></li>
@@ -1744,86 +2103,80 @@
     </div>
   </footer>
 
-
-
-
-
-
-
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <!-- Book Demo Modal -->
+  <div class="modal fade" id="bookDemoModal" tabindex="-1" aria-labelledby="bookDemoModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content rounded-5">
-
         <div class="modal-body p-6">
           <button type="button" class="modal-x" data-bs-dismiss="modal" aria-label="Close">X</button>
-          <div class=" mb-3">
-            <div class="d-flex justify-content-between">
-              <h1 class="card-title mb-5 h5" id="exampleModalLabel">Start your free trial</h1>
+
+          <div id="bookDemoFormView">
+            <div class="mb-3">
+              <h2 class="card-title mb-2 h5" id="bookDemoModalLabel">Book a Demo</h2>
+              <p class="small text-muted mb-0">Share your details and we’ll reach out to schedule a walkthrough.</p>
             </div>
+
+            <form id="bookDemoForm" class="mt-4 needs-validation" novalidate>
+              <div class="mb-3">
+                <label for="demoFullName" class="form-label">Full name</label>
+                <input id="demoFullName" name="fullName" type="text" class="form-control" placeholder="Your full name"
+                  required minlength="2" autocomplete="name">
+                <div class="invalid-feedback">Please enter your full name.</div>
+              </div>
+
+              <div class="mb-3">
+                <label for="demoBusinessName" class="form-label">Business name</label>
+                <input id="demoBusinessName" name="businessName" type="text" class="form-control"
+                  placeholder="Your car wash / detailing business" required minlength="2" autocomplete="organization">
+                <div class="invalid-feedback">Please enter your business name.</div>
+              </div>
+
+              <div class="mb-3">
+                <label for="demoMobile" class="form-label">Mobile number</label>
+                <input id="demoMobile" name="mobile" type="tel" class="form-control" placeholder="10-digit mobile number"
+                  required inputmode="numeric" autocomplete="tel" pattern="^[6-9][0-9]{9}$">
+                <div class="invalid-feedback">Please enter a valid 10-digit Indian mobile number.</div>
+              </div>
+
+              <div class="mb-4">
+                <label for="demoLocationSearch" class="form-label">Location</label>
+                <div class="location-combobox" id="demoLocationCombobox">
+                  <input type="hidden" id="demoLocation" name="location" required>
+                  <input id="demoLocationSearch" type="text" class="form-control" role="combobox"
+                    placeholder="Search state or city" autocomplete="off" aria-autocomplete="list"
+                    aria-expanded="false" aria-controls="demoLocationList" required>
+                  <ul id="demoLocationList" class="location-combobox__list" role="listbox" hidden></ul>
+                </div>
+                <div class="invalid-feedback">Please search and select a state or city in India.</div>
+              </div>
+
+              <div class="d-grid">
+                <button class="btn btn-primary" type="submit">Submit</button>
+              </div>
+              <p id="bookDemoError" class="small text-danger mt-3 mb-0 d-none" role="alert"></p>
+            </form>
           </div>
 
-          <form class="mt-3">
-            <div class="mb-3">
-              <label for="fullName" class="form-label">Business name</label>
-              <input id="fullName" type="text" class="form-control" placeholder="Vashq Car Wash" required>
-              <div class="invalid-feedback">Please enter your business name.</div>
+          <div id="bookDemoSuccessView" class="book-demo-success d-none" hidden aria-live="polite">
+            <div class="book-demo-success__mark" aria-hidden="true">
+              <svg class="book-demo-success__svg" viewBox="0 0 52 52">
+                <circle class="book-demo-success__circle" cx="26" cy="26" r="24" fill="none" />
+                <path class="book-demo-success__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+              </svg>
             </div>
-
-            <div class="mb-3">
-              <label for="email" class="form-label">Work email</label>
-              <input id="email" type="email" class="form-control" placeholder="name@example.com" required>
-              <div class="invalid-feedback">Please enter a valid email.</div>
-            </div>
-
-            <div class="mb-3">
-              <label for="trialPhone" class="form-label">Phone</label>
-              <input id="trialPhone" type="tel" class="form-control" placeholder="9072509994" required>
-              <div class="invalid-feedback">Please enter a valid phone number.</div>
-            </div>
-
-            <div class="mb-3">
-              <label for="password" class="form-label">Create password</label>
-              <input id="password" type="password" class="form-control" placeholder="Create a password" required
-                minlength="6">
-              <div class="invalid-feedback">Please provide a password (min 6 characters).</div>
-            </div>
-
-            <div class="mb-3">
-              <label for="confirmPassword" class="form-label">Confirm password</label>
-              <input id="confirmPassword" type="password" class="form-control" placeholder="Repeat password" required>
-              <div class="invalid-feedback">Passwords must match.</div>
-            </div>
-
-            <div class="mb-3 form-check">
-              <input id="terms" class="form-check-input" type="checkbox" required>
-              <label class="form-check-label small" for="terms">I agree to the <a href="#!"
-                  class="text-decoration-none">terms and privacy</a></label>
-              <div class="invalid-feedback">You must agree before continuing.</div>
-            </div>
-            <div>
-
-              <button class="btn btn-primary" type="submit">Start Free Trial</button>
-            </div>
-          </form>
+            <h2 class="book-demo-success__title h4 fw-bold mb-2">Thank you!</h2>
+            <p class="book-demo-success__text mb-5">Your demo request was submitted. We’ll be in touch soon.</p>
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Done</button>
+          </div>
         </div>
-
       </div>
     </div>
   </div>
-
-
-
-
-
-
 
   <!-- Navbar End -->
 
   <!-- Bootstrap JS -->
   <script src="./assets/js/main.js" type="module"></script>
-
-
 
 </body>
 

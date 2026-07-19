@@ -4,9 +4,21 @@
 <head>
   <meta charset="UTF-8" />
   <title>Blog — Vashq</title>
-  <link rel="canonical" href="https://home.vashq.com/blog">
+  <link rel="canonical" href="https://home.vashq.com/blog.html">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#007bff">
   <meta name="description" content="Vashq blog. Updates, tips, and insights for car wash operations." />
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Blog — Vashq">
+  <meta property="og:description" content="Vashq blog. Updates, tips, and insights for car wash operations.">
+  <meta property="og:image" content="https://home.vashq.com/og-image.webp">
+  <meta property="og:url" content="https://home.vashq.com/blog.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Vashq">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Blog — Vashq">
+  <meta name="twitter:description" content="Vashq blog. Updates, tips, and insights for car wash operations.">
+  <meta name="twitter:image" content="https://home.vashq.com/og-image.webp">
   <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/brand/logo-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/brand/logo-icon.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/brand/logo-icon.png">
@@ -103,10 +115,7 @@
         <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
           <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
           <li class="nav-item"><a href="features.html" class="nav-link">Features</a></li>
-          <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
           <li class="nav-item"><a href="use-cases.html" class="nav-link">Use Cases</a></li>
-          <li class="nav-item"><a href="tutorials.html" class="nav-link">Tutorials</a></li>
-          <li class="nav-item"><a href="demo.html" class="nav-link">Demo</a></li>
           <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
         <div class="d-flex gap-3 align-items-center">
@@ -125,16 +134,13 @@
       <ul class="navbar-nav mb-4">
         <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
         <li class="nav-item"><a href="features.html" class="nav-link">Features</a></li>
-        <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
         <li class="nav-item"><a href="use-cases.html" class="nav-link">Use Cases</a></li>
-        <li class="nav-item"><a href="tutorials.html" class="nav-link">Tutorials</a></li>
-        <li class="nav-item"><a href="demo.html" class="nav-link">Demo</a></li>
         <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
       </ul>
       <div class="d-grid gap-2">
         <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
           data-bs-dismiss="offcanvas">Start Free Trial</a>
-        <a href="demo.html" class="btn btn-light">Book Demo</a>
+        <a href="/?bookDemo=1" class="btn btn-light">Book Demo</a>
       </div>
     </div>
   </div>
@@ -231,7 +237,7 @@
         <div class="modal-body p-6">
           <button type="button" class="modal-x" data-bs-dismiss="modal" aria-label="Close">X</button>
           <div class="mb-3">
-            <h1 class="card-title mb-5 h5" id="exampleModalLabel">Start your free trial</h1>
+            <h2 class="card-title mb-5 h5" id="exampleModalLabel">Start your free trial</h2>
           </div>
           <form class="mt-3">
             <div class="mb-3">
@@ -244,7 +250,7 @@
             </div>
             <div class="mb-3">
               <label for="trialPhone" class="form-label">Phone</label>
-              <input id="trialPhone" type="tel" class="form-control" placeholder="9072509994" required>
+              <input id="trialPhone" type="tel" class="form-control" placeholder="7994466421" required>
             </div>
             <div class="mb-3">
               <label for="password" class="form-label">Create password</label>

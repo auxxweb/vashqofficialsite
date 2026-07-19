@@ -16,8 +16,126 @@
 }
 
 .feature-card-icon {
-  width: 56px;
-  height: 56px;
+  width: 72px;
+  height: 72px;
   object-fit: contain;
   display: block;
+}
+
+.feature-icon-wrap {
+  width: 6.5rem;
+  height: 6.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-icon-wrap .feature-card-icon {
+  width: 72px;
+  height: 72px;
+}
+
+/* Full-card accent backgrounds */
+.feature-card--1 {
+  background-color: rgba(0, 123, 255, 0.14) !important;
+  border-color: rgba(0, 123, 255, 0.22) !important;
+}
+
+.feature-card--2 {
+  background-color: rgba(16, 185, 129, 0.16) !important;
+  border-color: rgba(16, 185, 129, 0.24) !important;
+}
+
+.feature-card--3 {
+  background-color: rgba(245, 158, 11, 0.18) !important;
+  border-color: rgba(245, 158, 11, 0.28) !important;
+}
+
+.feature-card--4 {
+  background-color: rgba(139, 92, 246, 0.16) !important;
+  border-color: rgba(139, 92, 246, 0.24) !important;
+}
+
+.feature-card--5 {
+  background-color: rgba(37, 211, 102, 0.16) !important;
+  border-color: rgba(37, 211, 102, 0.24) !important;
+}
+
+.feature-card--6 {
+  background-color: rgba(236, 72, 153, 0.14) !important;
+  border-color: rgba(236, 72, 153, 0.22) !important;
+}
+
+.feature-card--7 {
+  background-color: rgba(14, 165, 233, 0.16) !important;
+  border-color: rgba(14, 165, 233, 0.24) !important;
+}
+
+.feature-card--8 {
+  background-color: rgba(249, 115, 22, 0.16) !important;
+  border-color: rgba(249, 115, 22, 0.24) !important;
+}
+
+.feature-card--9 {
+  background-color: rgba(99, 102, 241, 0.16) !important;
+  border-color: rgba(99, 102, 241, 0.24) !important;
+}
+
+.feature-card--10 {
+  background-color: rgba(20, 184, 166, 0.16) !important;
+  border-color: rgba(20, 184, 166, 0.24) !important;
+}
+
+/* Tint raster icons toward each card's accent */
+.feature-card--1 .feature-card-icon {
+  filter: brightness(0) saturate(100%) invert(32%) sepia(98%) saturate(2476%) hue-rotate(201deg) brightness(101%) contrast(104%);
+}
+
+.feature-card--2 .feature-card-icon {
+  filter: brightness(0) saturate(100%) invert(58%) sepia(52%) saturate(520%) hue-rotate(110deg) brightness(95%) contrast(92%);
+}
+
+.feature-card--3 .feature-card-icon {
+  filter: brightness(0) saturate(100%) invert(70%) sepia(78%) saturate(1200%) hue-rotate(360deg) brightness(98%) contrast(96%);
+}
+
+.feature-card--4 .feature-card-icon {
+  filter: brightness(0) saturate(100%) invert(42%) sepia(79%) saturate(1800%) hue-rotate(238deg) brightness(95%) contrast(95%);
+}
+
+.feature-card--5 .feature-card-icon {
+  filter: brightness(0) saturate(100%) invert(62%) sepia(62%) saturate(500%) hue-rotate(85deg) brightness(95%) contrast(90%);
+}
+
+.feature-card--6 .feature-card-icon {
+  filter: brightness(0) saturate(100%) invert(42%) sepia(80%) saturate(2000%) hue-rotate(310deg) brightness(98%) contrast(95%);
+}
+
+.feature-card--7 .feature-card-icon {
+  filter: brightness(0) saturate(100%) invert(48%) sepia(90%) saturate(1500%) hue-rotate(170deg) brightness(98%) contrast(95%);
+}
+
+.feature-card--8 .feature-card-icon {
+  filter: brightness(0) saturate(100%) invert(55%) sepia(90%) saturate(1800%) hue-rotate(350deg) brightness(100%) contrast(95%);
+}
+
+.feature-card--9 .feature-card-icon {
+  filter: brightness(0) saturate(100%) invert(40%) sepia(70%) saturate(2000%) hue-rotate(220deg) brightness(95%) contrast(95%);
+}
+
+.feature-card--10 .feature-card-icon {
+  filter: brightness(0) saturate(100%) invert(55%) sepia(70%) saturate(500%) hue-rotate(130deg) brightness(95%) contrast(90%);
+}
+
+@media (min-width: 992px) {
+  .feature-card-icon,
+  .feature-icon-wrap .feature-card-icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .feature-icon-wrap {
+    width: 7.25rem;
+    height: 7.25rem;
+  }
 }
