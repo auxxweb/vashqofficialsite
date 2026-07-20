@@ -217,12 +217,42 @@ document.querySelectorAll('.nav-link[href^="#"]').forEach(link => {
   let filtered = allLocations.slice(0, 80);
   let activeIndex = -1;
   let isSubmitting = false;
+  let listPortalActive = false;
 
   if (mobile) {
     mobile.addEventListener("input", () => {
       mobile.value = mobile.value.replace(/\D/g, "").slice(0, 10);
     });
   }
+
+  const positionPortaledList = () => {
+    if (!locationList || !locationSearch || locationList.hidden) return;
+    const rect = locationSearch.getBoundingClientRect();
+    const gutter = 8;
+    const spaceBelow = window.innerHeight - rect.bottom - gutter;
+    const spaceAbove = rect.top - gutter;
+    const openDown = spaceBelow >= 140 || spaceBelow >= spaceAbove;
+    const maxHeight = Math.max(120, Math.min(240, openDown ? spaceBelow : spaceAbove));
+
+    locationList.style.left = `${Math.max(gutter, rect.left)}px`;
+    locationList.style.width = `${Math.min(rect.width, window.innerWidth - gutter * 2)}px`;
+    locationList.style.maxHeight = `${maxHeight}px`;
+
+    if (openDown) {
+      locationList.style.top = `${rect.bottom + 4}px`;
+      locationList.style.bottom = "auto";
+    } else {
+      locationList.style.top = "auto";
+      locationList.style.bottom = `${window.innerHeight - rect.top + 4}px`;
+    }
+  };
+
+  const portalListToBody = () => {
+    if (!locationList || listPortalActive) return;
+    document.body.appendChild(locationList);
+    locationList.classList.add("location-combobox__list--portal");
+    listPortalActive = true;
+  };
 
   const closeList = () => {
     if (!locationList || !locationSearch) return;
@@ -233,8 +263,10 @@ document.querySelectorAll('.nav-link[href^="#"]').forEach(link => {
 
   const openList = () => {
     if (!locationList || !locationSearch) return;
+    portalListToBody();
     locationList.hidden = false;
     locationSearch.setAttribute("aria-expanded", "true");
+    positionPortaledList();
   };
 
   const renderList = (items) => {
@@ -255,7 +287,7 @@ document.querySelectorAll('.nav-link[href^="#"]').forEach(link => {
       li.dataset.value = label;
       li.dataset.index = String(index);
       li.textContent = label;
-      li.addEventListener("mousedown", (e) => {
+      li.addEventListener("pointerdown", (e) => {
         e.preventDefault();
         selectLocation(label);
       });
@@ -332,8 +364,23 @@ document.querySelectorAll('.nav-link[href^="#"]').forEach(link => {
       }, 150);
     });
 
+    const repositionIfOpen = () => {
+      if (!locationList.hidden) positionPortaledList();
+    };
+
+    window.addEventListener("resize", repositionIfOpen);
+    window.visualViewport?.addEventListener("resize", repositionIfOpen);
+    window.visualViewport?.addEventListener("scroll", repositionIfOpen);
+
+    if (modalEl) {
+      modalEl.addEventListener("scroll", repositionIfOpen, true);
+    }
+
     document.addEventListener("click", (e) => {
-      if (locationWrap && !locationWrap.contains(e.target)) closeList();
+      if (!locationWrap) return;
+      const inWrap = locationWrap.contains(e.target);
+      const inList = locationList && locationList.contains(e.target);
+      if (!inWrap && !inList) closeList();
     });
   }
 
@@ -437,6 +484,9 @@ document.querySelectorAll('.nav-link[href^="#"]').forEach(link => {
   });
 
   if (modalEl) {
+    modalEl.addEventListener("shown.bs.modal", () => {
+      closeList();
+    });
     modalEl.addEventListener("hidden.bs.modal", resetModalViews);
   }
 })();

@@ -119,6 +119,15 @@
   }
 }
 
+// Prevent accidental horizontal page scroll on phones (common after deploy)
+@media (max-width: 991.98px) {
+  html,
+  body {
+    overflow-x: clip;
+    max-width: 100%;
+  }
+}
+
 .animate {
   opacity: 0;
   transform: translateY(40px) scale(0.98);
@@ -349,6 +358,7 @@
   top: calc(100% + 4px);
   max-height: 220px;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   margin: 0;
   padding: 0.35rem 0;
   list-style: none;
@@ -358,10 +368,17 @@
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
 }
 
+// Portaled to <body> so Bootstrap modal transform doesn't clip it
+.location-combobox__list--portal {
+  position: fixed !important;
+  right: auto !important;
+  z-index: 2000 !important;
+}
+
 .location-combobox__option,
 .location-combobox__empty {
-  padding: 0.55rem 1rem;
-  font-size: 0.925rem;
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
   color: $gray-700;
   cursor: pointer;
 }
@@ -379,6 +396,62 @@
 
 .was-validated .location-combobox input:invalid {
   border-color: $danger;
+}
+
+// Book Demo modal: mobile-safe layout (works the same in local + GitHub Pages build)
+#bookDemoModal .modal-content {
+  overflow: visible;
+}
+
+#bookDemoModal .modal-body {
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+#bookDemoModal .form-control {
+  font-size: 16px; // prevents iOS zoom on focus
+  min-height: 2.75rem;
+}
+
+#bookDemoModal .modal-x {
+  z-index: 2;
+}
+
+@media (max-width: 575.98px) {
+  #bookDemoModal .modal-content {
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    min-height: 100%;
+  }
+
+  #bookDemoModal .modal-body {
+    padding-top: 2.75rem !important;
+  }
+
+  #bookDemoModal .modal-x {
+    top: max(10px, env(safe-area-inset-top));
+    right: max(10px, env(safe-area-inset-right));
+  }
+}
+
+// Soften heavy clay modal shadows that can overflow small screens
+@media (max-width: 767.98px) {
+  .modal-content {
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.16) !important;
+    margin: 0;
+  }
+
+  .modal-dialog:not(.modal-fullscreen-sm-down) {
+    margin: 0.75rem;
+    max-width: calc(100% - 1.5rem);
+  }
+}
+
+// Hide floating WhatsApp/Call while any modal is open (they sit under modal but steal taps on some phones)
+body.modal-open .floating-actions {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none !important;
 }
 
 // Book Demo success (payment-style tick)
