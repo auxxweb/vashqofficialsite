@@ -78,7 +78,29 @@
 
 .how-it-works-carousel__img {
   height: 100%;
-  object-fit: cover;
+  width: 100%;
+  object-fit: contain;
+  background: #f8fafc;
+}
+
+#features-hero .card {
+  overflow: hidden;
+  background: #f8fafc;
+}
+
+#features-hero .card img {
+  display: block;
+  width: 100%;
+  max-height: min(380px, 48vh);
+  margin-inline: auto;
+  object-fit: contain;
+  object-position: center top;
+}
+
+@media (min-width: 992px) {
+  #features-hero .card img {
+    max-height: min(440px, 62vh);
+  }
 }
 
 .problem-marquee__track {
@@ -101,6 +123,18 @@
   flex: 0 0 auto;
   width: min(360px, 86vw);
   scroll-snap-align: start;
+}
+
+.problem-marquee__item .ratio {
+  background: #f8fafc;
+}
+
+.problem-marquee__item .ratio > img {
+  inset: 1.25rem 1rem 0.75rem;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center top;
 }
 
 @keyframes problem-marquee-scroll {
@@ -176,6 +210,13 @@
   background-color: rgba($primary, 0.05);
   border-radius: 9999px;
   filter: blur(48px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+section.position-relative > .container {
+  position: relative;
+  z-index: 1;
 }
 
 // pulse wave
