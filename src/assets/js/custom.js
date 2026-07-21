@@ -194,23 +194,47 @@ document.querySelectorAll('.nav-link[href^="#"]').forEach(link => {
   });
 })();
 
-// Book Demo modal form validation + India location combobox
-(() => {
-  const form = document.getElementById("bookDemoForm");
+const LEAD_FORM_SCRIPT_URL =
+  "https://script.google.com/macros/s/AKfycbwFTQthKFlFc2QMod_j6I8BgKIyAL3kYuFnFE1EqZ4m2sOIsdVPH8eTNal-b8ZUbWoT/exec";
+
+const postLeadFormToGoogleSheet = async (payload) => {
+  await fetch(LEAD_FORM_SCRIPT_URL, {
+    method: "POST",
+    mode: "no-cors",
+    redirect: "follow",
+    headers: {
+      "Content-Type": "text/plain;charset=utf-8",
+    },
+    body: JSON.stringify(payload),
+  });
+};
+
+function initLeadForm({
+  formId,
+  errorId,
+  formViewId,
+  successViewId,
+  mobileId,
+  locationHiddenId,
+  locationSearchId,
+  locationListId,
+  locationWrapId,
+  modalId,
+  successResetBtnId,
+}) {
+  const form = document.getElementById(formId);
   if (!form) return;
 
-  const BOOK_DEMO_SCRIPT_URL =
-    "https://script.google.com/macros/s/AKfycbwFTQthKFlFc2QMod_j6I8BgKIyAL3kYuFnFE1EqZ4m2sOIsdVPH8eTNal-b8ZUbWoT/exec";
-
-  const mobile = document.getElementById("demoMobile");
-  const errorEl = document.getElementById("bookDemoError");
-  const modalEl = document.getElementById("bookDemoModal");
-  const formView = document.getElementById("bookDemoFormView");
-  const successView = document.getElementById("bookDemoSuccessView");
-  const locationHidden = document.getElementById("demoLocation");
-  const locationSearch = document.getElementById("demoLocationSearch");
-  const locationList = document.getElementById("demoLocationList");
-  const locationWrap = document.getElementById("demoLocationCombobox");
+  const mobile = document.getElementById(mobileId);
+  const errorEl = document.getElementById(errorId);
+  const modalEl = modalId ? document.getElementById(modalId) : null;
+  const formView = formViewId ? document.getElementById(formViewId) : null;
+  const successView = successViewId ? document.getElementById(successViewId) : null;
+  const successResetBtn = successResetBtnId ? document.getElementById(successResetBtnId) : null;
+  const locationHidden = document.getElementById(locationHiddenId);
+  const locationSearch = document.getElementById(locationSearchId);
+  const locationList = document.getElementById(locationListId);
+  const locationWrap = document.getElementById(locationWrapId);
   const submitBtn = form.querySelector('button[type="submit"]');
 
   const allLocations = getIndiaLocationOptions();
@@ -401,7 +425,6 @@ document.querySelectorAll('.nav-link[href^="#"]').forEach(link => {
     if (successView) {
       successView.hidden = false;
       successView.classList.remove("d-none");
-      // Restart tick animation
       const svg = successView.querySelector(".book-demo-success__svg");
       if (svg) {
         const clone = svg.cloneNode(true);
@@ -410,9 +433,10 @@ document.querySelectorAll('.nav-link[href^="#"]').forEach(link => {
     }
   };
 
-  const resetModalViews = () => {
+  const resetViews = () => {
     form.reset();
     if (locationHidden) locationHidden.value = "";
+    if (locationSearch) locationSearch.value = "";
     form.classList.remove("was-validated");
     hideError();
     closeList();
@@ -428,18 +452,6 @@ document.querySelectorAll('.nav-link[href^="#"]').forEach(link => {
     isSubmitting = false;
   };
 
-  // Google Apps Script: text/plain JSON + no-cors avoids iframe echo 403
-  const postToGoogleSheet = async (payload) => {
-    await fetch(BOOK_DEMO_SCRIPT_URL, {
-      method: "POST",
-      mode: "no-cors",
-      redirect: "follow",
-      headers: {
-        "Content-Type": "text/plain;charset=utf-8",
-      },
-      body: JSON.stringify(payload),
-    });
-  };
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
     event.stopPropagation();
@@ -471,7 +483,7 @@ document.querySelectorAll('.nav-link[href^="#"]').forEach(link => {
     }
 
     try {
-      await postToGoogleSheet(payload);
+      await postLeadFormToGoogleSheet(payload);
       showSuccess();
     } catch (err) {
       showError("Something went wrong. Please try again or WhatsApp us.");
@@ -487,9 +499,40 @@ document.querySelectorAll('.nav-link[href^="#"]').forEach(link => {
     modalEl.addEventListener("shown.bs.modal", () => {
       closeList();
     });
-    modalEl.addEventListener("hidden.bs.modal", resetModalViews);
+    modalEl.addEventListener("hidden.bs.modal", resetViews);
   }
-})();
+
+  if (successResetBtn) {
+    successResetBtn.addEventListener("click", resetViews);
+  }
+}
+
+// Book Demo modal + Contact page forms (same fields, same Google Sheet)
+initLeadForm({
+  formId: "bookDemoForm",
+  errorId: "bookDemoError",
+  formViewId: "bookDemoFormView",
+  successViewId: "bookDemoSuccessView",
+  mobileId: "demoMobile",
+  locationHiddenId: "demoLocation",
+  locationSearchId: "demoLocationSearch",
+  locationListId: "demoLocationList",
+  locationWrapId: "demoLocationCombobox",
+  modalId: "bookDemoModal",
+});
+
+initLeadForm({
+  formId: "contactForm",
+  errorId: "contactError",
+  formViewId: "contactFormView",
+  successViewId: "contactSuccessView",
+  mobileId: "contactMobile",
+  locationHiddenId: "contactLocation",
+  locationSearchId: "contactLocationSearch",
+  locationListId: "contactLocationList",
+  locationWrapId: "contactLocationCombobox",
+  successResetBtnId: "contactSuccessReset",
+});
 
 // Open Book Demo modal from /?bookDemo=1 deep link
 (() => {

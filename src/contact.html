@@ -172,28 +172,65 @@
         </div>
         <div class="col-lg-6">
           <div class="card shadow-sm rounded-5">
-            <div class="card-body p-6">
-              <h2 class="h5 fw-bold mb-4">Send a message</h2>
-              <form>
-                <div class="mb-3">
-                  <label for="name" class="form-label">Full name</label>
-                  <input id="name" type="text" class="form-control" placeholder="Your name" required>
+            <div class="card-body p-4 p-sm-6">
+              <div id="contactFormView">
+                <h2 class="h5 fw-bold mb-2">Contact us</h2>
+                <p class="small text-muted mb-4">Share your details and we’ll get back to you.</p>
+
+                <form id="contactForm" class="needs-validation" novalidate>
+                  <div class="mb-3">
+                    <label for="contactFullName" class="form-label">Full name</label>
+                    <input id="contactFullName" name="fullName" type="text" class="form-control"
+                      placeholder="Your full name" required minlength="2" autocomplete="name">
+                    <div class="invalid-feedback">Please enter your full name.</div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="contactBusinessName" class="form-label">Business name</label>
+                    <input id="contactBusinessName" name="businessName" type="text" class="form-control"
+                      placeholder="Your car wash / detailing business" required minlength="2"
+                      autocomplete="organization">
+                    <div class="invalid-feedback">Please enter your business name.</div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="contactMobile" class="form-label">Mobile number</label>
+                    <input id="contactMobile" name="mobile" type="tel" class="form-control"
+                      placeholder="10-digit mobile number" required inputmode="numeric" autocomplete="tel"
+                      pattern="^[6-9][0-9]{9}$">
+                    <div class="invalid-feedback">Please enter a valid 10-digit Indian mobile number.</div>
+                  </div>
+
+                  <div class="mb-4">
+                    <label for="contactLocationSearch" class="form-label">Location</label>
+                    <div class="location-combobox" id="contactLocationCombobox">
+                      <input type="hidden" id="contactLocation" name="location" required>
+                      <input id="contactLocationSearch" type="text" class="form-control" role="combobox"
+                        placeholder="Search state or city" autocomplete="off" aria-autocomplete="list"
+                        aria-expanded="false" aria-controls="contactLocationList" required>
+                      <ul id="contactLocationList" class="location-combobox__list" role="listbox" hidden></ul>
+                    </div>
+                    <div class="invalid-feedback">Please search and select a state or city in India.</div>
+                  </div>
+
+                  <div class="d-grid">
+                    <button class="btn btn-primary" type="submit">Submit</button>
+                  </div>
+                  <p id="contactError" class="small text-danger mt-3 mb-0 d-none" role="alert"></p>
+                </form>
+              </div>
+
+              <div id="contactSuccessView" class="book-demo-success d-none" hidden aria-live="polite">
+                <div class="book-demo-success__mark" aria-hidden="true">
+                  <svg class="book-demo-success__svg" viewBox="0 0 52 52">
+                    <circle class="book-demo-success__circle" cx="26" cy="26" r="24" fill="none" />
+                    <path class="book-demo-success__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                  </svg>
                 </div>
-                <div class="mb-3">
-                  <label for="phone" class="form-label">Phone</label>
-                  <input id="phone" type="tel" class="form-control" placeholder="7994466421" required>
-                </div>
-                <div class="mb-3">
-                  <label for="email" class="form-label">Email</label>
-                  <input id="email" type="email" class="form-control" placeholder="name@example.com" required>
-                </div>
-                <div class="mb-3">
-                  <label for="message" class="form-label">Message</label>
-                  <textarea id="message" class="form-control" rows="4" placeholder="Tell us about your business..."
-                    required></textarea>
-                </div>
-                <button class="btn btn-primary" type="submit">Send</button>
-              </form>
+                <h2 class="book-demo-success__title h4 fw-bold mb-2">Thank you!</h2>
+                <p class="book-demo-success__text mb-5">Your message was submitted. We’ll be in touch soon.</p>
+                <button type="button" class="btn btn-primary" id="contactSuccessReset">Send another message</button>
+              </div>
             </div>
           </div>
         </div>
