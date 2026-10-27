@@ -42,6 +42,12 @@
   </url>
 
   <url>
+    <loc>https://home.vashq.com/blog/car-wash-management-software.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
     <loc>https://home.vashq.com/privacy-policy.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
