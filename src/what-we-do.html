@@ -1,0 +1,1124 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Vashq Use Cases — Car Wash Management App</title>
+    <link rel="canonical" href="https://home.vashq.com/what-we-do.html">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#007bff">
+    <meta name="description"
+        content="Use cases for Vashq: car wash centers, premium detailing studios, mobile detailing, mobile car wash businesses, and multi-branch operators." />
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Vashq Use Cases — Car Wash Management App">
+    <meta property="og:description"
+        content="How car wash centers, detailing studios, mobile services, and multi-branch operators use Vashq.">
+    <meta property="og:image" content="https://home.vashq.com/og-image.webp">
+    <meta property="og:url" content="https://home.vashq.com/what-we-do.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Vashq">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Vashq Use Cases — Car Wash Management App">
+    <meta name="twitter:description"
+        content="How car wash centers, detailing studios, mobile services, and multi-branch operators use Vashq.">
+    <meta name="twitter:image" content="https://home.vashq.com/og-image.webp">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/brand/logo-icon.webp">
+    <link rel="icon" type="image/webp" sizes="32x32" href="./assets/images/brand/logo-icon.webp">
+    <link rel="icon" type="image/webp" sizes="16x16" href="./assets/images/brand/logo-icon.webp">
+    <link rel="manifest" href="./assets/images/favicon_io/site.webmanifest">
+    <link rel="stylesheet" href="./assets/scss/style.scss">
+    <style>
+        #page-loader {
+            position: fixed;
+            inset: 0;
+            z-index: 99999;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 100%;
+            min-height: 100vh;
+
+            background:
+                radial-gradient(circle at 50% 42%,
+                    rgba(23, 105, 255, 0.07),
+                    transparent 35%),
+                #ffffff;
+
+            opacity: 1;
+            visibility: visible;
+
+            transition:
+                opacity 0.7s ease,
+                visibility 0.7s ease;
+        }
+
+
+        #page-loader.is-hidden {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+
+        .vashq-loader-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            width: 100%;
+            max-width: 340px;
+            padding: 30px 24px;
+
+            text-align: center;
+        }
+
+
+        .vashq-loader-logo {
+            position: relative;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            margin-bottom: 38px;
+
+            animation: vashqLogoReveal 1s ease both;
+        }
+
+        .vashq-loader-logo img {
+            width: 255px;
+            height: 150px;
+
+            object-fit: contain;
+
+            animation: vashqLogoFloat 3s ease-in-out infinite;
+        }
+
+
+        .vashq-loader-caption {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+
+            margin-bottom: 17px;
+
+            color: #687386;
+
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 2.2px;
+        }
+
+
+        .vashq-loader-dot {
+            width: 7px;
+            height: 7px;
+
+            border-radius: 50%;
+
+            background: #1769ff;
+
+            box-shadow: 0 0 12px rgba(23, 105, 255, 0.5);
+
+            animation: vashqDotPulse 1.2s ease-in-out infinite;
+        }
+
+
+        .vashq-loader-progress {
+            position: relative;
+
+            width: 180px;
+            height: 3px;
+
+            overflow: hidden;
+
+            border-radius: 20px;
+
+            background: #eaf0fa;
+        }
+
+
+        .vashq-loader-progress-bar {
+            position: absolute;
+            top: 0;
+            left: -40%;
+
+            width: 40%;
+            height: 100%;
+
+            border-radius: 20px;
+
+            background: linear-gradient(90deg,
+                    #1769ff,
+                    #64a0ff,
+                    #1769ff);
+
+            animation: vashqLoading 1.5s ease-in-out infinite;
+        }
+
+
+
+        .vashq-loader-footer {
+            margin: 22px 0 0;
+
+            color: #a0aabb;
+
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+
+
+        @keyframes vashqLogoReveal {
+            from {
+                opacity: 0;
+                transform: translateY(15px) scale(0.95);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        @keyframes vashqLogoFloat {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-5px);
+            }
+        }
+
+        @keyframes vashqDotPulse {
+
+            0%,
+            100% {
+                opacity: 0.4;
+                transform: scale(0.8);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1.2);
+            }
+        }
+
+        @keyframes vashqLoading {
+            0% {
+                left: -40%;
+            }
+
+            100% {
+                left: 110%;
+            }
+        }
+
+
+        @media (max-width: 576px) {
+
+            .vashq-loader-logo img {
+                width: 135px;
+            }
+
+            .vashq-loader-content {
+                max-width: 290px;
+            }
+
+        }
+
+
+        @media (prefers-reduced-motion: reduce) {
+
+            #page-loader *,
+            #page-loader *::before,
+            #page-loader *::after {
+                animation: none !important;
+                transition: none !important;
+            }
+
+        }
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+    <div id="page-loader" aria-hidden="true">
+
+        <div class="vashq-loader-content">
+
+            
+            <div class="vashq-loader-logo">
+                <img src="./assets/images/brand/logo-full.webp" alt="VASHQ" />
+            </div>
+
+
+            <div class="vashq-loader-progress">
+                <div class="vashq-loader-progress-bar"></div>
+            </div>
+
+            <p class="vashq-loader-footer">
+                Exclusive to Car Care, Designed by Operators, Powered by AI
+            </p>
+
+
+
+        </div>
+
+    </div>
+    <script>
+        (() => {
+            const hide = () => {
+                const el = document.getElementById('page-loader');
+                if (!el) return;
+                el.style.opacity = '0';
+                el.style.pointerEvents = 'none';
+                window.setTimeout(() => el.remove(), 240);
+            };
+            window.addEventListener('load', hide, { once: true });
+            window.addEventListener('pageshow', (e) => { if (e.persisted) hide(); });
+        })();
+    </script>
+
+    <nav class="navbar navbar-expand-lg px-3">
+
+        <a class="navbar-brand d-inline-flex align-items-center lh-1" href="/">
+            <img src="./assets/images/brand/logo-full.webp" alt="VASHQ logo" height="32" loading="eager"
+                style="object-fit: contain;" />
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNav"
+            aria-controls="mobileNav" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="d-none d-lg-flex flex-grow-1 align-items-center">
+
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+
+                <li class="nav-item">
+                    <a href="/" class="nav-link">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="features.html" class="nav-link">Features</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="what-we-do.html" class="nav-link">What We Do</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="blog.html" class="nav-link">Blogs</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="watch-their-story.html" class="nav-link">Watch Their Story →</a>
+                </li>
+
+            </ul>
+
+            <div class="d-flex gap-3 align-items-center">
+
+                <a href="" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookDemoModal">
+                    Book Demo
+                </a>
+
+                <a href="https://www.vashq.com/login" class="btn btn-primary">
+                    Log In
+                </a>
+
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileNav" aria-labelledby="mobileNavLabel">
+
+        <div class="offcanvas-header">
+
+            <h2 class="offcanvas-title h5 mb-0" id="mobileNavLabel">
+                Menu
+            </h2>
+
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
+            </button>
+
+        </div>
+
+        <div class="offcanvas-body">
+
+            <ul class="navbar-nav mb-4">
+
+                <li class="nav-item">
+                    <a href="/" class="nav-link">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="features.html" class="nav-link">Features</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="what-we-do.html" class="nav-link">What We Do</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="blog.html" class="nav-link">Blogs</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="watch-their-story.html" class="nav-link">Watch Their Story →</a>
+                </li>
+
+            </ul>
+
+            <div class="d-grid gap-2">
+
+                <a href="" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookDemoModal"
+                    data-bs-dismiss="offcanvas">
+                    Book Demo
+                </a>
+
+            </div>
+
+            <div class="d-grid gap-2 mt-3">
+
+                <a href="https://www.vashq.com/login" class="btn btn-primary">
+                    Log In
+                </a>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <section class="what-we-do-hero">
+
+        <div class="what-we-do-image-wrapper">
+
+            <img src="./assets/images/web.png" alt="What We Do" class="what-we-do-image">
+
+        </div>
+
+        <div class="what-we-do-content">
+
+            <div class="what-we-do-text">
+
+                <h1>
+                    Transforming the Way
+                    <span>Businesses Work.</span>
+                </h1>
+
+                <p>
+                    Discover smarter ways to manage your business,
+                    simplify operations and create better experiences
+                    with VASHQ.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section class="vashq-video-features" id="vashqVideoFeatures">
+
+        <div class="vvf-container">
+
+            <div class="vvf-grid" id="vvfGrid">
+
+                <button class="vvf-card" data-video="https://www.youtube.com/shorts/VIDEO_ID_1">
+                    <span class="vvf-card-title">Command Center Dashboard</span>
+                    <span class="vvf-play">
+                        <span class="vvf-play-icon"></span>
+                    </span>
+                </button>
+
+                <button class="vvf-card" data-video="https://www.youtube.com/shorts/VIDEO_ID_2">
+                    <span class="vvf-card-title">Smart Plate Recognition</span>
+                    <span class="vvf-play">
+                        <span class="vvf-play-icon"></span>
+                    </span>
+                </button>
+
+               <button class="vvf-card" data-video="https://www.youtube.com/shorts/VIDEO_ID_3">
+                    <span class="vvf-card-title">AI Business Assistant</span>
+                    <span class="vvf-play">
+                        <span class="vvf-play-icon"></span>
+                    </span>
+                </button>
+
+                <button class="vvf-card" data-video="https://www.youtube.com/shorts/VIDEO_ID_4">
+                    <span class="vvf-card-title">Intelligent Inventory Control</span>
+                    <span class="vvf-play">
+                        <span class="vvf-play-icon"></span>
+                    </span>
+                </button>
+
+                <button class="vvf-card" data-video="https://www.youtube.com/shorts/VIDEO_ID_5">
+                    <span class="vvf-card-title">Customer Relationship Hub</span>
+                    <span class="vvf-play">
+                        <span class="vvf-play-icon"></span>
+                    </span>
+                </button>
+
+                <button class="vvf-card" data-video="https://www.youtube.com/shorts/VIDEO_ID_6">
+                    <span class="vvf-card-title">Workforce Attendance Tracking</span>
+                    <span class="vvf-play">
+                        <span class="vvf-play-icon"></span>
+                    </span>
+                </button>
+
+                <button class="vvf-card" data-video="https://www.youtube.com/shorts/VIDEO_ID_7">
+                    <span class="vvf-card-title">Service Package Builder</span>
+                    <span class="vvf-play">
+                        <span class="vvf-play-icon"></span>
+                    </span>
+                </button>
+
+                <button class="vvf-card" data-video="https://www.youtube.com/shorts/VIDEO_ID_8">
+                    <span class="vvf-card-title">Service Catalog Manager</span>
+                    <span class="vvf-play">
+                        <span class="vvf-play-icon"></span>
+                    </span>
+                </button>
+
+                <button class="vvf-card" data-video="https://www.youtube.com/shorts/VIDEO_ID_9">
+                    <span class="vvf-card-title">Quality Assurance Checkpoint</span>
+                    <span class="vvf-play">
+                        <span class="vvf-play-icon"></span>
+                    </span>
+                </button>
+
+                <button class="vvf-card" data-video="https://www.youtube.com/shorts/VIDEO_ID_10">
+                    <span class="vvf-card-title">Smart Job Creation & Assignment</span>
+                    <span class="vvf-play">
+                        <span class="vvf-play-icon"></span>
+                    </span>
+                </button>
+
+                <button class="vvf-card" data-video="https://www.youtube.com/shorts/VIDEO_ID_11">
+                    <span class="vvf-card-title">Finance & Expense Ledger</span>
+                    <span class="vvf-play">
+                        <span class="vvf-play-icon"></span>
+                    </span>
+                </button>
+
+                <button class="vvf-card" data-video="https://www.youtube.com/shorts/VIDEO_ID_12">
+                    <span class="vvf-card-title">Business Insights & Reports</span>
+                    <span class="vvf-play">
+                        <span class="vvf-play-icon"></span>
+                    </span>
+                </button>
+
+                <button class="vvf-card" data-video="https://www.youtube.com/shorts/VIDEO_ID_13">
+                    <span class="vvf-card-title">Multi-Branch Management</span>
+                    <span class="vvf-play">
+                        <span class="vvf-play-icon"></span>
+                    </span>
+                </button>
+
+                <button class="vvf-card" data-video="https://www.youtube.com/shorts/VIDEO_ID_14">
+                    <span class="vvf-card-title">Online Booking Portal</span>
+                    <span class="vvf-play">
+                        <span class="vvf-play-icon"></span>
+                    </span>
+                </button>
+
+                <button class="vvf-card" data-video="https://www.youtube.com/shorts/VIDEO_ID_15">
+                    <span class="vvf-card-title">Complete Customer Timeline</span>
+                    <span class="vvf-play">
+                        <span class="vvf-play-icon"></span>
+                    </span>
+                </button>
+
+            </div>
+
+
+            <div class="vvf-more-wrapper">
+
+                <button class="vvf-more-btn" id="vvfMoreBtn">
+                    <span>View More</span>
+                    <span class="vvf-more-arrow">↓</span>
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="vvf-modal" id="vvfModal">
+
+            <div class="vvf-modal-content">
+
+                <button class="vvf-close" id="vvfClose" aria-label="Close video">
+                    &times;
+                </button>
+
+                <div class="vvf-video-frame">
+                    <iframe id="vvfIframe" src="" title="VASHQ Feature Video"
+                        allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen>
+                    </iframe>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="vashq-important-features" id="importantFeatures">
+
+        <div class="vif-container">
+
+            <div class="vif-header vif-reveal">
+
+                <h2>
+                    Everything You Need to
+                    <span>Run Smarter</span>
+                </h2>
+
+                <p>
+                    Powerful tools designed to simplify your daily operations,
+                    improve efficiency, and help your business grow.
+                </p>
+            </div>
+
+
+            <div class="vif-row vif-reveal">
+
+                <div class="vif-image-side">
+
+                    <div class="vif-image-card" data-video="https://www.youtube.com/shorts/VIDEO_ID_1">
+
+                        <img src="./assets/images-optimized/features/command-center.jpg" alt="Command Center Dashboard"
+                            loading="lazy">
+
+                        <button class="vif-play-btn" aria-label="Play Command Center Dashboard video">
+                            <span class="vif-play-icon"></span>
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="vif-content-side">
+
+                    <h3>Command Center Dashboard</h3>
+
+                    <p>
+                        Get a complete overview of your business from one
+                        powerful dashboard. Monitor bookings, revenue,
+                        services, and daily operations with ease.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="vif-row vif-reverse vif-reveal">
+
+                <div class="vif-image-side">
+
+                    <div class="vif-image-card" data-video="https://www.youtube.com/shorts/VIDEO_ID_2">
+
+                        <img src="./assets/images-optimized/features/smart-plate-recognition.jpg"
+                            alt="Smart Plate Recognition" loading="lazy">
+
+                        <button class="vif-play-btn" aria-label="Play Smart Plate Recognition video">
+                            <span class="vif-play-icon"></span>
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="vif-content-side">
+
+                    <h3>Smart Plate Recognition</h3>
+
+                    <p>
+                        Identify vehicles quickly with intelligent number
+                        plate recognition. Reduce manual entry and make
+                        customer check-ins faster and more accurate.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="vif-row vif-reveal">
+
+                <div class="vif-image-side">
+
+                    <div class="vif-image-card" data-video="https://www.youtube.com/shorts/VIDEO_ID_3">
+
+                        <img src="./assets/images-optimized/features/ai-business-assistant.jpg"
+                            alt="AI Business Assistant" loading="lazy">
+
+                        <button class="vif-play-btn" aria-label="Play AI Business Assistant video">
+                            <span class="vif-play-icon"></span>
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="vif-content-side">
+
+                    <h3>AI Business Assistant</h3>
+
+                    <p>
+                        Make smarter business decisions with AI-powered
+                        assistance. Get useful insights, simplify tasks,
+                        and manage your business more efficiently.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="vif-row vif-reverse vif-reveal">
+
+                <div class="vif-image-side">
+
+                    <div class="vif-image-card" data-video="https://www.youtube.com/shorts/VIDEO_ID_4">
+
+                        <img src="./assets/images-optimized/features/intelligent-inventory.jpg"
+                            alt="Intelligent Inventory Control" loading="lazy">
+
+                        <button class="vif-play-btn" aria-label="Play Intelligent Inventory Control video">
+                            <span class="vif-play-icon"></span>
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="vif-content-side">
+
+                    <h3>Intelligent Inventory Control</h3>
+
+                    <p>
+                        Keep track of products, stock levels, and inventory
+                        movements in one place. Stay organised and maintain
+                        better control over your business resources.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <div class="vif-video-modal" id="vifVideoModal">
+
+        <div class="vif-modal-content">
+
+            <button class="vif-modal-close" id="vifModalClose" aria-label="Close video">
+                &times;
+            </button>
+
+            <div class="vif-video-frame">
+                <iframe id="vifVideoIframe" src="" title="VASHQ Feature Video"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+    <footer class="vashq-small-footer">
+
+    <div class="vashq-small-footer-container">
+
+        <div class="vashq-footer-main">
+
+            <div class="vashq-footer-brand">
+
+                <a href="index.html" class="vashq-footer-logo">
+                    <img src="./assets/images/brand/logo-icon.webp"
+                         alt="VASHQ">
+                </a>
+
+                <p>
+                    Exclusive to Car Care, Designed by Operators,
+                    Powered by AI.
+                </p>
+
+                <div class="vashq-footer-socials">
+
+                    <a href="https://www.instagram.com/vashqofficial/"
+                       target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="https://www.facebook.com/people/Vashq/61591704035022/"
+                       target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="https://www.linkedin.com/company/wisemove-consultancy-pvt-ltd/"
+                       target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="vashq-footer-navigation">
+
+                <div class="vashq-footer-nav-group">
+                    <h4>Explore</h4>
+                    <a href="index.html">Home</a>
+                    <a href="features.html">Features</a>
+                    <a href="blog.html">Blog</a>
+                </div>
+
+
+                <div class="vashq-footer-nav-group">
+                    <h4>Company</h4>
+                    <a href="contact.html">Contact Us</a>
+                    <a href="faq.html">FAQ</a>
+                </div>
+
+
+                <div class="vashq-footer-nav-group">
+                    <h4>Legal</h4>
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-and-conditions.html">Terms & Conditions</a>
+                    <a href="refund-policy.html">Refund Policy</a>
+                </div>
+
+
+                <div class="vashq-footer-nav-group">
+                    <h4>Get in Touch</h4>
+
+                    <a href="mailto:vashqofficial@gmail.com">
+                        vashqofficial@gmail.com
+                    </a>
+
+                    <a href="tel:+918891207778">
+                        +91 8891207778
+                    </a>
+
+                    <span class="vashq-footer-location">
+                        <i class="fa-solid fa-location-dot"></i>
+                        India
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="vashq-footer-bottom">
+
+            <p>© 2026 VASHQ. All rights reserved.</p>
+
+            <p>Built for Car Care. Powered by Intelligence.</p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+
+
+    <div class="modal fade vashq-demo-modal" id="bookDemoModal" tabindex="-1" aria-labelledby="bookDemoModalLabel"
+    aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down">
+
+      <div class="modal-content">
+
+        <div class="modal-body">
+
+          <button type="button" class="vashq-demo-close" data-bs-dismiss="modal" aria-label="Close">
+            <i class="bi bi-x-lg"></i>
+          </button>
+
+          <div id="bookDemoFormView">
+
+            <div class="vashq-demo-header">
+
+              <div class="vashq-demo-icon">
+                <i class="bi bi-calendar2-check"></i>
+              </div>
+
+              <h2 id="bookDemoModalLabel">
+                Book Your <span>Free Demo</span>
+              </h2>
+
+              <p>
+                Discover how VASHQ simplifies your car wash business.
+                Share your details and our team will get in touch.
+              </p>
+
+            </div>
+
+
+            <form id="bookDemoForm" class="vashq-demo-form needs-validation" novalidate>
+
+              <div class="vashq-demo-field">
+
+                <label for="demoFullName">Full Name</label>
+
+                <div class="vashq-demo-input-wrap">
+                  <i class="bi bi-person"></i>
+
+                  <input id="demoFullName" name="fullName" type="text" placeholder="Enter your full name" required
+                    minlength="2" autocomplete="name">
+                </div>
+
+                <div class="invalid-feedback">
+                  Please enter your full name.
+                </div>
+
+              </div>
+
+
+              <div class="vashq-demo-field">
+
+                <label for="demoBusinessName"> Business Name </label>
+
+                <div class="vashq-demo-input-wrap">
+                  <i class="bi bi-building"></i>
+
+                  <input id="demoBusinessName" name="businessName" type="text" placeholder="Enter your business name"
+                    autocomplete="organization">
+                </div>
+
+              </div>
+
+
+              
+<div class="vashq-demo-field">
+
+    <label for="demoCarCare">Type of Car Care</label>
+
+    <div class="vashq-demo-input-wrap vashq-select-wrap">
+
+        <i class="bi bi-car-front"></i>
+
+        <select
+            id="demoCarCare"
+            name="carCareType"
+            class="vashq-car-care-select"
+            required
+        >
+
+            <option value="" selected disabled>
+                Select type of car care
+            </option>
+
+            <option value="Hand Car Wash">
+                Hand car wash
+            </option>
+
+            <option value="Automatic/Tunnel Car Wash">
+                Automatic/tunnel car wash
+            </option>
+
+            <option value="Touchless/In-Bay Automatic Wash">
+                Touchless/in-bay automatic wash
+            </option>
+
+            <option value="Waterless and Rinseless Wash">
+                Waterless and rinseless wash
+            </option>
+
+            <option value="Mobile/Doorstep Car Wash">
+                Mobile/doorstep car wash
+            </option>
+
+            <option value="Steam Wash">
+                Steam wash
+            </option>
+
+            <option value="Bike and Commercial Vehicle Wash">
+                Bike and commercial vehicle wash (buses, trucks, fleets)
+            </option>
+
+            <option value="Other">
+                Other
+            </option>
+
+        </select>
+
+    </div>
+
+    <div class="invalid-feedback">
+        Please select your type of car care.
+    </div>
+
+</div>
+
+
+              <div class="vashq-demo-field">
+
+                <label for="demoMobile">Mobile Number</label>
+
+                <div class="vashq-demo-input-wrap">
+                  <i class="bi bi-telephone"></i>
+
+                  <input id="demoMobile" name="mobile" type="tel" placeholder="Enter 10-digit mobile number" required
+                    inputmode="numeric" autocomplete="tel" pattern="^[6-9][0-9]{9}$">
+                </div>
+
+                <div class="invalid-feedback">
+                  Please enter a valid 10-digit Indian mobile number.
+                </div>
+
+              </div>
+
+
+              <div class="vashq-demo-field">
+
+                <label for="demoLocationSearch">
+                  Business Location
+                  <span class="vashq-optional-label"></span>
+                </label>
+
+                <div class="location-combobox vashq-demo-location" id="demoLocationCombobox">
+
+                  <input type="hidden" id="demoLocation" name="location" required>
+
+                  <div class="vashq-demo-input-wrap">
+
+                    <i class="bi bi-geo-alt"></i>
+
+                    <input id="demoLocationSearch" type="text" placeholder="Search your state or city" role="combobox"
+                      autocomplete="off" aria-autocomplete="list" aria-expanded="false" aria-controls="demoLocationList"
+                      required>
+
+                  </div>
+
+                  <ul id="demoLocationList" class="location-combobox__list" role="listbox" hidden>
+                  </ul>
+
+                </div>
+
+                <div class="invalid-feedback">
+                  Please search and select a state or city in India.
+                </div>
+
+              </div>
+
+
+              <button class="vashq-demo-submit" type="submit">
+
+                <span>Request a Demo</span>
+
+                <i class="bi bi-arrow-right"></i>
+
+              </button>
+
+
+              <p class="vashq-demo-privacy">
+                <i class="bi bi-shield-check"></i>
+                Your information is safe with us.
+              </p>
+
+
+              <p id="bookDemoError" class="small text-danger mt-3 mb-0 d-none" role="alert">
+              </p>
+
+            </form>
+
+          </div>
+
+
+          <div id="bookDemoSuccessView" class="book-demo-success d-none" hidden aria-live="polite">
+
+            <div class="vashq-success-icon">
+
+              <svg viewBox="0 0 52 52">
+
+                <circle cx="26" cy="26" r="24" fill="none" class="success-circle" />
+
+                <path d="M14 27l8 8 16-17" fill="none" class="success-check" />
+
+              </svg>
+
+            </div>
+
+            <span class="vashq-demo-eyebrow">
+              REQUEST RECEIVED
+            </span>
+
+            <h2>Thank You!</h2>
+
+            <p>
+              Your demo request has been submitted successfully.
+              Our team will connect with you soon.
+            </p>
+
+            <button type="button" class="vashq-demo-submit" data-bs-dismiss="modal">
+
+              Done
+              <i class="bi bi-check-lg"></i>
+
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+    <script src="./assets/js/main.js" type="module"></script>
+    <script src="./assets/js/WhatWeDo.js" defer></script>
+    <script src="./assets/js/pageload.js" defer></script>
+</body>
+
+</html> -->

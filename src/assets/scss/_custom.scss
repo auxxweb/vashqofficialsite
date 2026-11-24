@@ -617,7 +617,7 @@ body.modal-open .floating-actions {
   border-radius: 999px;
   border: 0;
   text-decoration: none;
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+  // box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
   transition: transform 180ms ease, box-shadow 180ms ease, filter 180ms ease;
 }
 
@@ -806,3 +806,1495 @@ body.modal-open .floating-actions {
 @import "./icon-shape";
 @import "./utilities";
 @import "./card";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================
+   WHAT WE DO – 3D IMAGE + TEXT REVEAL
+========================================== */
+
+.what-we-do-hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    height: 100svh;
+    min-height: 600px;
+
+    overflow: hidden;
+    background: #ffff;
+
+    perspective: 1400px;
+}
+
+/* ==========================================
+   BACKGROUND IMAGE
+========================================== */
+
+.what-we-do-image-wrapper {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    transform-origin: center;
+
+    animation: whatWeDo3DReveal 1.8s
+        cubic-bezier(.16, 1, .3, 1) both;
+
+    will-change: transform, opacity;
+}
+
+.what-we-do-image {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    transform: scale(1.15);
+
+    animation: whatWeDoImageZoom 2.2s
+        cubic-bezier(.16, 1, .3, 1) both;
+}
+
+/* ==========================================
+   IMAGE 3D ANIMATION
+========================================== */
+
+@keyframes whatWeDo3DReveal {
+
+    0% {
+        opacity: 0;
+
+        transform:
+            perspective(1400px)
+            translate3d(28%, 12%, 0)
+            rotateY(-32deg)
+            rotateX(12deg)
+            rotateZ(-5deg)
+            scale(.68);
+    }
+
+    45% {
+        opacity: 1;
+
+        transform:
+            perspective(1400px)
+            translate3d(8%, 3%, 0)
+            rotateY(-16deg)
+            rotateX(6deg)
+            rotateZ(-2deg)
+            scale(.85);
+    }
+
+    75% {
+        transform:
+            perspective(1400px)
+            translate3d(-1%, 0, 0)
+            rotateY(4deg)
+            rotateX(-2deg)
+            scale(.98);
+    }
+
+    100% {
+        opacity: 1;
+
+        transform:
+            perspective(1400px)
+            translate3d(0, 0, 0)
+            rotateY(0)
+            rotateX(0)
+            rotateZ(0)
+            scale(1);
+    }
+}
+
+@keyframes whatWeDoImageZoom {
+
+    from {
+        transform: scale(1.15);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+/* ==========================================
+   TEXT CONTENT POSITION
+========================================== */
+
+.what-we-do-content {
+    position: absolute;
+    inset: 0;
+
+    z-index: 3;
+
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    padding: 0 8%;
+
+    pointer-events: none;
+}
+
+.what-we-do-text {
+    max-width: 760px;
+
+    color: #000;
+
+    transform-origin: left center;
+
+    opacity: 0;
+
+    animation: whatWeDoTextReveal 1.5s
+        cubic-bezier(.16, 1, .3, 1) 0.65s forwards;
+}
+
+/* ==========================================
+   TEXT 3D REVEAL
+========================================== */
+
+@keyframes whatWeDoTextReveal {
+
+    0% {
+        opacity: 0;
+
+        transform:
+            perspective(1200px)
+            translate3d(100px, 50px, -150px)
+            rotateY(-28deg)
+            rotateX(10deg)
+            rotateZ(-4deg)
+            scale(.82);
+    }
+
+    60% {
+        opacity: 1;
+
+        transform:
+            perspective(1200px)
+            translate3d(15px, 5px, 0)
+            rotateY(-8deg)
+            rotateX(3deg)
+            rotateZ(-1deg)
+            scale(.96);
+    }
+
+    100% {
+        opacity: 1;
+
+        transform:
+            perspective(1200px)
+            translate3d(0, 0, 0)
+            rotateY(0)
+            rotateX(0)
+            rotateZ(0)
+            scale(1);
+    }
+}
+
+/* ==========================================
+   SMALL LABEL
+========================================== */
+
+.what-we-do-label {
+    display: inline-block;
+
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 4px;
+
+    color: #1065ed;
+
+    margin-bottom: 22px;
+}
+
+/* ==========================================
+   HEADING
+========================================== */
+
+.what-we-do-text h1 {
+    font-size: clamp(42px, 6vw, 82px);
+
+    line-height: 1.08;
+    font-weight: 750;
+
+    letter-spacing: -2px;
+
+    color:#000;
+
+    margin: 0 0 25px;
+}
+
+.what-we-do-text h1 span {
+    display: block;
+    color: #0051d2;
+}
+
+/* ==========================================
+   DESCRIPTION
+========================================== */
+
+.what-we-do-text p {
+    max-width: 570px;
+
+    font-size: 17px;
+    line-height: 1.8;
+
+    font-weight: 400;
+
+    color: rgba(5, 5, 5, 0.85);
+
+    margin: 0;
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 991px) {
+
+    .what-we-do-content {
+        padding: 0 6%;
+    }
+
+    .what-we-do-text h1 {
+        font-size: clamp(40px, 7vw, 65px);
+    }
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 575px) {
+
+    .what-we-do-hero {
+        min-height: 550px;
+    }
+
+    .what-we-do-content {
+        padding: 0 25px;
+    }
+
+    .what-we-do-text h1 {
+        font-size: 42px;
+        letter-spacing: -1px;
+    }
+
+    .what-we-do-text p {
+        font-size: 15px;
+    }
+
+    .what-we-do-label {
+        font-size: 11px;
+        letter-spacing: 3px;
+    }
+
+}
+
+/* ==========================================
+   REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .what-we-do-image-wrapper,
+    .what-we-do-image,
+    .what-we-do-text {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================================
+   VASHQ VIDEO FEATURES SECTION
+   15 VIDEO BUTTONS + CORNER BLUE REVEAL
+===================================================== */
+
+.vashq-video-features {
+    --vvf-blue: #1769ff;
+    --vvf-dark-blue: #0b3fad;
+    --vvf-text: #172033;
+    --vvf-border: #dce4ef;
+
+    position: relative;
+    width: 100%;
+    padding: 75px 0;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.vvf-container {
+    width: min(1180px, 90%);
+    margin: 0 auto;
+}
+
+
+/* =====================================================
+   BUTTON GRID
+===================================================== */
+
+.vvf-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+
+/* =====================================================
+   VIDEO CARD
+===================================================== */
+
+.vvf-card {
+    position: relative;
+    isolation: isolate;
+
+    width: 100%;
+    min-height: 145px;
+    padding: 27px 25px;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    text-align: left;
+
+    background: #ffffff;
+    border: 1px solid var(--vvf-border);
+    border-radius: 14px;
+
+    cursor: pointer;
+    overflow: hidden;
+
+    color: var(--vvf-text);
+    outline: none;
+
+    -webkit-tap-highlight-color: transparent;
+
+    transition:
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+
+/* =====================================================
+   CORNER-TO-CORNER BLUE REVEAL
+===================================================== */
+
+.vvf-card::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background: var(--vvf-blue);
+
+    border-radius: inherit;
+
+    z-index: 0;
+
+    transform: scale(0);
+    transform-origin: var(--vvf-origin, top left);
+
+    transition:
+        transform 0.65s cubic-bezier(.22, 1, .36, 1);
+
+    pointer-events: none;
+}
+
+
+/* Blue reveal active */
+
+.vvf-card.vvf-wipe-active::before {
+    transform: scale(1);
+}
+
+
+/* Card hover */
+
+.vvf-card:hover {
+    border-color: var(--vvf-blue);
+    box-shadow: none;
+}
+
+
+/* =====================================================
+   CARD TITLE
+===================================================== */
+
+.vvf-card-title {
+    position: relative;
+    z-index: 2;
+
+    display: block;
+
+    max-width: 90%;
+
+    font-size: 18px;
+    font-weight: 750;
+    line-height: 1.5;
+
+    color: var(--vvf-text);
+
+    transition: color 0.35s ease;
+}
+
+
+/* Title white on hover */
+
+.vvf-card:hover .vvf-card-title {
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   PLAY INDICATOR
+===================================================== */
+
+.vvf-play {
+    position: absolute;
+    z-index: 2;
+
+    right: 20px;
+    bottom: 17px;
+
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #cbd5e1;
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    transition:
+        background 0.35s ease,
+        border-color 0.35s ease,
+        transform 0.35s ease;
+}
+
+
+/* Play triangle */
+
+.vvf-play-icon {
+    width: 0;
+    height: 0;
+
+    margin-left: 3px;
+
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 7px solid #172033;
+
+    transition: border-color 0.35s ease;
+}
+
+
+/* Play indicator hover */
+
+.vvf-card:hover .vvf-play {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.7);
+    transform: scale(1.08);
+}
+
+.vvf-card:hover .vvf-play-icon {
+    border-left-color: #ffffff;
+}
+
+
+/* =====================================================
+   VIEW MORE BUTTON
+===================================================== */
+
+.vvf-more-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 38px;
+}
+
+
+.vvf-more-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    padding: 13px 25px;
+
+    background: #ffffff;
+    color: var(--vvf-blue);
+
+    border: 1px solid var(--vvf-blue);
+    border-radius: 7px;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+.vvf-more-btn:hover {
+    background: var(--vvf-blue);
+    color: #ffffff;
+    border-color: var(--vvf-blue);
+}
+
+
+.vvf-more-arrow {
+    display: inline-block;
+    font-size: 17px;
+
+    transition: transform 0.35s ease;
+}
+
+
+.vvf-more-btn.active .vvf-more-arrow {
+    transform: rotate(180deg);
+}
+
+
+/* =====================================================
+   HIDDEN CARDS
+===================================================== */
+
+.vvf-card.vvf-hidden {
+    display: none;
+}
+
+
+/* =====================================================
+   VIDEO POPUP MODAL
+===================================================== */
+
+.vvf-modal {
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background: rgba(0, 0, 0, 0.88);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+
+    z-index: 999999;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.35s ease,
+        visibility 0.35s ease;
+}
+
+
+.vvf-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* =====================================================
+   MODAL CONTENT - 9:16 VIDEO
+===================================================== */
+
+.vvf-modal-content {
+    position: relative;
+
+    width: min(390px, 90vw);
+    max-height: 88vh;
+
+    aspect-ratio: 9 / 16;
+
+    background: #000000;
+    border-radius: 15px;
+
+    overflow: visible;
+
+    transform: scale(0.85) translateY(20px);
+
+    transition:
+        transform 0.4s cubic-bezier(.22, 1, .36, 1);
+}
+
+
+.vvf-modal.active .vvf-modal-content {
+    transform: scale(1) translateY(0);
+}
+
+
+/* =====================================================
+   VIDEO FRAME
+===================================================== */
+
+.vvf-video-frame {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    border-radius: 15px;
+    background: #000000;
+}
+
+
+.vvf-video-frame iframe {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    border: none;
+}
+
+
+/* =====================================================
+   CLOSE BUTTON
+===================================================== */
+
+.vvf-close {
+    position: absolute;
+
+    top: -48px;
+    right: 0;
+
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(255, 255, 255, 0.15);
+
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+
+    color: #ffffff;
+
+    font-size: 28px;
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.vvf-close:hover {
+    background: var(--vvf-blue);
+    transform: rotate(90deg);
+}
+
+
+/* =====================================================
+   TABLET RESPONSIVE
+===================================================== */
+
+@media (max-width: 991px) {
+
+    .vvf-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .vvf-card {
+        min-height: 135px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE RESPONSIVE
+===================================================== */
+
+@media (max-width: 575px) {
+
+    .vashq-video-features {
+        padding: 50px 0;
+    }
+
+    .vvf-container {
+        width: 90%;
+    }
+
+    .vvf-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .vvf-card {
+        min-height: 125px;
+        padding: 17px 13px;
+        border-radius: 11px;
+    }
+
+    .vvf-card-title {
+        font-size: 14px;
+        line-height: 1.45;
+    }
+
+    .vvf-play {
+        width: 25px;
+        height: 25px;
+
+        right: 11px;
+        bottom: 10px;
+    }
+
+    .vvf-play-icon {
+        border-top-width: 4px;
+        border-bottom-width: 4px;
+        border-left-width: 6px;
+    }
+
+    .vvf-more-wrapper {
+        margin-top: 25px;
+    }
+
+    .vvf-modal-content {
+        width: min(340px, 86vw);
+        max-height: 78vh;
+    }
+
+    .vvf-close {
+        top: -45px;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 360px) {
+
+    .vvf-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .vvf-card {
+        min-height: 110px;
+    }
+
+}
+
+
+/* =====================================================
+   TOUCH DEVICE SUPPORT
+===================================================== */
+
+@media (hover: none) {
+
+    .vvf-card:active .vvf-card-title {
+        color: #ffffff;
+    }
+
+    .vvf-card:active .vvf-play {
+        background: rgba(255, 255, 255, 0.15);
+        border-color: rgba(255, 255, 255, 0.7);
+    }
+
+    .vvf-card:active .vvf-play-icon {
+        border-left-color: #ffffff;
+    }
+
+}
+
+
+
+/* ==========================================
+   VASHQ IMPORTANT FEATURES
+========================================== */
+
+.vashq-important-features {
+    --vif-blue: #1769ff;
+    --vif-dark-blue: #0b3fad;
+    --vif-heading: #172033;
+    --vif-text: #687386;
+    --vif-border: #e1e8f2;
+
+    position: relative;
+    width: 100%;
+    padding: 100px 0;
+    background: #f8faff;
+    overflow: hidden;
+}
+
+
+/* ==========================================
+   CONTAINER
+========================================== */
+
+.vif-container {
+    width: min(1180px, 90%);
+    margin: 0 auto;
+}
+
+
+/* ==========================================
+   SECTION HEADER
+========================================== */
+
+.vif-header {
+    max-width: 720px;
+    margin: 0 auto 85px;
+    text-align: center;
+}
+
+.vif-eyebrow {
+    display: inline-block;
+    margin-bottom: 16px;
+
+    color: var(--vif-blue);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.vif-header h2 {
+    margin: 0 0 18px;
+
+    color: var(--vif-heading);
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.vif-header h2 span {
+    color: var(--vif-blue);
+}
+
+.vif-header p {
+    max-width: 600px;
+    margin: 0 auto;
+
+    color: var(--vif-text);
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* ==========================================
+   FEATURE ROW
+========================================== */
+
+.vif-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+
+    gap: 75px;
+
+    margin-bottom: 105px;
+}
+
+.vif-row:last-child {
+    margin-bottom: 0;
+}
+
+
+/* Reverse layout */
+
+.vif-row.vif-reverse .vif-image-side {
+    order: 2;
+}
+
+.vif-row.vif-reverse .vif-content-side {
+    order: 1;
+}
+
+
+/* ==========================================
+   IMAGE SIDE
+========================================== */
+
+.vif-image-side {
+    width: 100%;
+    min-width: 0;
+}
+
+.vif-image-card {
+    position: relative;
+
+    width: 100%;
+    aspect-ratio: 16 / 10;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+    background: #e8effa;
+
+    cursor: pointer;
+
+    box-shadow: 0 15px 40px rgba(20, 50, 100, 0.09);
+
+    transition:
+        box-shadow 0.4s ease,
+        transform 0.4s ease;
+}
+
+.vif-image-card img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.65s cubic-bezier(.22, 1, .36, 1);
+}
+
+
+/* Slight image lift on hover */
+
+.vif-image-card:hover {
+    box-shadow: 0 22px 50px rgba(23, 105, 255, 0.17);
+}
+
+.vif-image-card:hover img {
+    transform: scale(1.055);
+}
+
+
+/* ==========================================
+   PLAY BUTTON
+========================================== */
+
+.vif-play-btn {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(255,255,255,0.8);
+    border-radius: 50%;
+
+    background: rgba(23, 105, 255, 0.92);
+    backdrop-filter: blur(8px);
+
+    cursor: pointer;
+    z-index: 2;
+
+    transition:
+        transform 0.35s ease,
+        background 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.vif-play-icon {
+    width: 0;
+    height: 0;
+
+    margin-left: 4px;
+
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 12px solid #ffffff;
+}
+
+.vif-image-card:hover .vif-play-btn {
+    transform: scale(1.12);
+
+    background: var(--vif-dark-blue);
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+
+/* ==========================================
+   CONTENT SIDE
+========================================== */
+
+.vif-content-side {
+    max-width: 480px;
+}
+
+.vif-number {
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    color: var(--vif-blue);
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+}
+
+.vif-content-side h3 {
+    margin: 0 0 20px;
+
+    color: var(--vif-heading);
+
+    font-size: clamp(26px, 3vw, 36px);
+    font-weight: 800;
+    line-height: 1.25;
+}
+
+.vif-content-side p {
+    margin: 0;
+
+    color: var(--vif-text);
+
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+
+/* ==========================================
+   SCROLL REVEAL ANIMATION
+========================================== */
+
+.vif-reveal {
+    opacity: 0;
+
+    transform: translateY(45px);
+
+    transition:
+        opacity 0.85s ease,
+        transform 0.85s cubic-bezier(.22, 1, .36, 1);
+}
+
+.vif-reveal.vif-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ==========================================
+   VIDEO MODAL
+========================================== */
+
+.vif-video-modal {
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background: rgba(0, 0, 0, 0.92);
+    backdrop-filter: blur(8px);
+
+    z-index: 999999;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.35s ease,
+        visibility 0.35s ease;
+}
+
+.vif-video-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* ==========================================
+   MODAL CONTENT
+========================================== */
+
+.vif-modal-content {
+    position: relative;
+
+    width: min(390px, 90vw);
+    max-height: 88vh;
+
+    aspect-ratio: 9 / 16;
+
+    background: #000;
+
+    border-radius: 16px;
+    overflow: visible;
+
+    transform: scale(0.85) translateY(20px);
+
+    transition: transform 0.4s ease;
+}
+
+.vif-video-modal.active .vif-modal-content {
+    transform: scale(1) translateY(0);
+}
+
+
+/* ==========================================
+   VIDEO FRAME
+========================================== */
+
+.vif-video-frame {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    border-radius: 16px;
+    background: #000;
+}
+
+.vif-video-frame iframe {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    border: none;
+}
+
+
+/* ==========================================
+   MODAL CLOSE
+========================================== */
+
+.vif-modal-close {
+    position: absolute;
+
+    top: -48px;
+    right: 0;
+
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(255,255,255,0.5);
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.15);
+
+    color: #fff;
+    font-size: 28px;
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.vif-modal-close:hover {
+    background: var(--vif-blue);
+    transform: rotate(90deg);
+}
+
+
+/* ==========================================
+   TABLET RESPONSIVE
+========================================== */
+
+@media (max-width: 991px) {
+
+    .vashq-important-features {
+        padding: 80px 0;
+    }
+
+    .vif-row {
+        gap: 40px;
+        margin-bottom: 80px;
+    }
+
+    .vif-content-side h3 {
+        font-size: 28px;
+    }
+
+    .vif-content-side p {
+        font-size: 15px;
+    }
+
+}
+
+
+/* ==========================================
+   MOBILE RESPONSIVE
+========================================== */
+
+@media (max-width: 767px) {
+
+    .vashq-important-features {
+        padding: 60px 0;
+    }
+
+    .vif-container {
+        width: 90%;
+    }
+
+    .vif-header {
+        margin-bottom: 55px;
+    }
+
+    .vif-header h2 {
+        font-size: 32px;
+    }
+
+    .vif-header p {
+        font-size: 14px;
+    }
+
+    .vif-row {
+        grid-template-columns: 1fr;
+        gap: 25px;
+
+        margin-bottom: 65px;
+    }
+
+    /* Keep image first on mobile */
+
+    .vif-row.vif-reverse .vif-image-side {
+        order: 1;
+    }
+
+    .vif-row.vif-reverse .vif-content-side {
+        order: 2;
+    }
+
+    .vif-image-card {
+        aspect-ratio: 16 / 10;
+        border-radius: 13px;
+    }
+
+    .vif-play-btn {
+        width: 44px;
+        height: 44px;
+
+        right: 14px;
+        bottom: 14px;
+    }
+
+    .vif-play-icon {
+        border-top-width: 7px;
+        border-bottom-width: 7px;
+        border-left-width: 10px;
+    }
+
+    .vif-content-side {
+        max-width: 100%;
+    }
+
+    .vif-number {
+        margin-bottom: 12px;
+        font-size: 11px;
+    }
+
+    .vif-content-side h3 {
+        font-size: 25px;
+        margin-bottom: 13px;
+    }
+
+    .vif-content-side p {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    .vif-modal-content {
+        width: min(340px, 86vw);
+        max-height: 78vh;
+    }
+
+}
+
+
+/* ==========================================
+   REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .vif-reveal,
+    .vif-image-card,
+    .vif-image-card img,
+    .vif-play-btn {
+        transition: none;
+    }
+
+    .vif-reveal {
+        opacity: 1;
+        transform: none;
+    }
+
+}

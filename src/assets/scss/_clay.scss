@@ -10,7 +10,7 @@
 
   /* Soft, diffused depth like screenshot */
   --clay-shadow-outer: 10px 10px 24px rgba(0, 0, 0, 0.12), -10px -10px 24px rgba(255, 255, 255, 0.92);
-  --clay-shadow-outer-sm: 7px 7px 16px rgba(0, 0, 0, 0.10), -7px -7px 16px rgba(255, 255, 255, 0.9);
+  --clay-shadow-outer-sm:  4px 4px 10px rgba(0, 0, 0, 0.08), -4px -4px 10px rgba(255, 255, 255, 0.7);
   --clay-shadow-inner: inset 7px 7px 14px rgba(0, 0, 0, 0.10), inset -7px -7px 14px rgba(255, 255, 255, 0.9);
   --clay-shadow-inner-sm: inset 5px 5px 10px rgba(0, 0, 0, 0.10), inset -5px -5px 10px rgba(255, 255, 255, 0.88);
 
@@ -24,12 +24,27 @@ body {
   background: linear-gradient(180deg, var(--clay-bg-0) 0%, var(--clay-bg-1) 100%);
 }
 
+
+
+
 /* Sticky navbar: glass + clay hybrid */
 .navbar {
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  background: rgba(238, 238, 238, 0.72) !important;
-  border-bottom: 1px solid rgba(17, 24, 39, 0.04);
+    position: fixed !important;
+    top: 15px;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    border-radius: 50px;
+    margin: 0 25px;
+    padding: 10px 25px;
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
 }
 
 .navbar .container {
@@ -39,6 +54,49 @@ body {
   padding: 0.7rem 1rem;
   box-shadow: var(--clay-shadow-outer-sm), var(--clay-shadow-inner-sm);
 }
+
+
+/* Dropdown menu */
+.navbar-nav .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+    background-color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 0;
+    margin-top: 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    z-index: 1050;
+}
+
+/* Dropdown parent */
+.navbar-nav .dropdown {
+    position: relative;
+}
+
+/* Show dropdown on hover */
+.navbar-nav .dropdown:hover > .dropdown-menu {
+    display: block;
+}
+
+/* Dropdown items */
+.navbar-nav .dropdown-item {
+    padding: 10px 20px;
+    font-size: 15px;
+    color: #333;
+    transition: background-color 0.2s ease;
+}
+
+/* Hover effect */
+.navbar-nav .dropdown-item:hover {
+    background-color: #f5f5f5;
+    color: #000;
+}
+
+
 
 .navbar .navbar-brand {
   padding-left: 0.25rem;
@@ -53,8 +111,8 @@ body {
 }
 
 footer a img {
-  height: 28px;
-  max-height: 28px;
+  height: 200px;
+  max-height: 120px;
   width: auto;
   object-fit: contain;
 }
@@ -65,53 +123,737 @@ footer a img {
   object-fit: contain;
 }
 
-/* Modals: centered, blurred backdrop, no shadow */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================================
+   VASHQ PREMIUM BOOK DEMO MODAL
+   BLUE + WHITE GLASS DESIGN
+===================================================== */
+
+.vashq-demo-modal {
+    --demo-blue: #1769FF;
+    --demo-blue-dark: #0D55D9;
+    --demo-dark: #172033;
+    --demo-muted: #718096;
+    --demo-border: rgba(219, 231, 248, 0.85);
+}
+
+
+/* =====================================================
+   MODAL WIDTH & POSITION
+===================================================== */
+
+.vashq-demo-modal .modal-dialog {
+    max-width: 570px;
+    margin: 1rem auto;
+}
+
+
+/* =====================================================
+   GLASS MODAL BACKGROUND
+===================================================== */
+
+.vashq-demo-modal .modal-content {
+    position: relative;
+
+    background: rgba(255, 255, 255, 0.88) !important;
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    border: 1px solid rgba(255, 255, 255, 0.85) !important;
+
+    border-radius: 25px !important;
+
+    box-shadow:
+        0 20px 65px rgba(23, 75, 150, 0.12),
+        0 3px 12px rgba(23, 105, 255, 0.04) !important;
+
+    overflow: visible;
+}
+
+
+/* =====================================================
+   MODAL BODY
+===================================================== */
+
+.vashq-demo-modal .modal-body {
+    position: relative;
+    padding: 25px 42px 22px;
+}
+
+
+/* =====================================================
+   CLOSE BUTTON
+===================================================== */
+
+.vashq-demo-modal .vashq-demo-close {
+    position: absolute;
+    top: 13px;
+    right: 15px;
+    z-index: 10;
+
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #E5EDF8;
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.8);
+
+    color: #526079;
+    font-size: 12px;
+
+    cursor: pointer;
+
+    transition: all .25s ease;
+}
+
+.vashq-demo-modal .vashq-demo-close:hover {
+    background: var(--demo-blue);
+    border-color: var(--demo-blue);
+    color: #fff;
+    transform: rotate(90deg);
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.vashq-demo-header {
+    text-align: center;
+    padding: 0 5px 15px;
+}
+
+
+/* Icon */
+.vashq-demo-icon {
+    width: 46px;
+    height: 46px;
+
+    margin: 0 auto 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background: linear-gradient(
+        135deg,
+        #1769FF,
+        #4B91FF
+    );
+
+    color: #fff;
+    font-size: 20px;
+
+    box-shadow: 0 6px 18px rgba(23, 105, 255, .19);
+}
+
+
+/* Eyebrow */
+.vashq-demo-eyebrow {
+    display: block;
+
+    color: var(--demo-blue);
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 5px;
+}
+
+
+/* Heading */
+.vashq-demo-header h2 {
+    color: var(--demo-dark);
+
+    font-size: 26px;
+    font-weight: 800;
+
+    letter-spacing: -1px;
+
+    margin-bottom: 6px;
+}
+
+.vashq-demo-header h2 span {
+    color: var(--demo-blue);
+}
+
+
+/* Description */
+.vashq-demo-header p {
+    max-width: 355px;
+
+    margin: 0 auto;
+
+    color: var(--demo-muted);
+
+    font-size: 12px;
+    line-height: 1.55;
+}
+
+
+/* =====================================================
+   FORM
+===================================================== */
+
+.vashq-demo-form {
+    margin-top: 0;
+}
+
+
+/* Field */
+.vashq-demo-field {
+    margin-bottom: 12px;
+}
+
+
+/* Label */
+.vashq-demo-field label {
+    display: block;
+
+    color: #26344A;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    margin-bottom: 5px;
+}
+
+.vashq-optional-label {
+    color: #94A3B8;
+    font-size: 10px;
+    font-weight: 400;
+    margin-left: 4px;
+}
+
+
+/* Input Wrapper */
+.vashq-demo-input-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+
+/* Input Icon */
+.vashq-demo-input-wrap > i {
+    position: absolute;
+
+    left: 15px;
+
+    color: #8A9AB1;
+    font-size: 15px;
+
+    pointer-events: none;
+
+    transition: color .25s ease;
+}
+
+
+/* Input */
+.vashq-demo-input-wrap input {
+    width: 100%;
+    height: 43px;
+
+    padding: 0 15px 0 44px;
+
+    border: 1px solid var(--demo-border);
+    border-radius: 9px;
+
+    background: rgba(248, 251, 255, 0.85);
+
+    color: var(--demo-dark);
+
+    font-size: 12px;
+
+    outline: none;
+
+    transition: all .25s ease;
+}
+
+
+/* Placeholder */
+.vashq-demo-input-wrap input::placeholder {
+    color: #A0AEC0;
+    font-size: 11px;
+}
+
+
+/* Focus */
+.vashq-demo-input-wrap:focus-within input {
+    background: rgba(255, 255, 255, 0.98);
+
+    border-color: var(--demo-blue);
+
+    box-shadow: 0 0 0 3px rgba(23, 105, 255, .09);
+}
+
+.vashq-demo-input-wrap:focus-within > i {
+    color: var(--demo-blue);
+}
+
+
+/* =====================================================
+   VALIDATION
+===================================================== */
+
+.vashq-demo-form .invalid-feedback {
+    font-size: 11px;
+    margin-top: 4px;
+}
+
+.vashq-demo-form .was-validated
+.vashq-demo-input-wrap input:invalid {
+    border-color: #dc3545;
+}
+
+
+/* =====================================================
+   LOCATION DROPDOWN
+===================================================== */
+
+.vashq-demo-location {
+    position: relative;
+}
+
+.vashq-demo-location .location-combobox__list {
+    position: absolute;
+
+    top: calc(100% + 6px);
+    left: 0;
+    right: 0;
+
+    z-index: 30;
+
+    max-height: 180px;
+    overflow-y: auto;
+
+    padding: 6px;
+    margin: 0;
+
+    list-style: none;
+
+    background: rgba(255, 255, 255, .98);
+
+    border: 1px solid #E1E9F4;
+    border-radius: 11px;
+
+    box-shadow: 0 12px 30px rgba(20, 45, 85, .12);
+}
+
+
+/* =====================================================
+   SUBMIT BUTTON
+===================================================== */
+
+.vashq-demo-submit {
+    width: 100%;
+    min-height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-top: 2px;
+
+    border: none;
+    border-radius: 9px;
+
+    background: linear-gradient(
+        110deg,
+        #1769FF,
+        #0D55D9
+    );
+
+    color: #fff;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow: 0 7px 18px rgba(23, 105, 255, .18);
+
+    transition: all .3s ease;
+}
+
+.vashq-demo-submit i {
+    font-size: 16px;
+    transition: transform .25s ease;
+}
+
+.vashq-demo-submit:hover {
+    background: linear-gradient(
+        110deg,
+        #0D55D9,
+        #0845BC
+    );
+
+    box-shadow: 0 10px 24px rgba(23, 105, 255, .25);
+
+    transform: translateY(-2px);
+}
+
+.vashq-demo-submit:hover i {
+    transform: translateX(4px);
+}
+
+
+/* =====================================================
+   PRIVACY TEXT
+===================================================== */
+
+.vashq-demo-privacy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    margin: 10px 0 0;
+
+    color: #8996A9;
+    font-size: 10px;
+}
+
+.vashq-demo-privacy i {
+    color: var(--demo-blue);
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   SUCCESS VIEW
+===================================================== */
+
+.book-demo-success {
+    text-align: center;
+    padding: 35px 5px 20px;
+}
+
+.vashq-success-icon {
+    width: 85px;
+    height: 85px;
+
+    margin: 0 auto 22px;
+
+    border-radius: 50%;
+
+    background: #EAF2FF;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vashq-success-icon svg {
+    width: 55px;
+    height: 55px;
+}
+
+.success-circle {
+    stroke: #1769FF;
+    stroke-width: 2;
+
+    stroke-dasharray: 151;
+    stroke-dashoffset: 151;
+
+    animation: vashqCircle .7s ease forwards;
+}
+
+.success-check {
+    stroke: #1769FF;
+    stroke-width: 3;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+
+    stroke-dasharray: 40;
+    stroke-dashoffset: 40;
+
+    animation: vashqCheck .5s .6s ease forwards;
+}
+
+.book-demo-success h2 {
+    color: var(--demo-dark);
+
+    font-size: 30px;
+    font-weight: 800;
+
+    margin-bottom: 12px;
+}
+
+.book-demo-success p {
+    max-width: 330px;
+
+    margin: 0 auto 25px;
+
+    color: var(--demo-muted);
+
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+/* Success Animation */
+@keyframes vashqCircle {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes vashqCheck {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+
+/* =====================================================
+   BACKDROP
+===================================================== */
+
 .modal-backdrop.show {
-  background-color: rgba(15, 23, 42, 0.02);
-  opacity: 1;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+    background: rgba(16, 43, 85, 0.16);
+
+    opacity: 1;
+
+    backdrop-filter: blur(9px);
+    -webkit-backdrop-filter: blur(9px);
 }
 
-.modal-content {
-  box-shadow: none !important;
-  border: 0 !important;
-  background: #ffffff !important;
+
+/* =====================================================
+   DESKTOP - NO MODAL SCROLLBAR
+===================================================== */
+
+@media (min-width: 576px) {
+
+    .vashq-demo-modal .modal-dialog {
+        max-height: calc(100vh - 32px);
+    }
+
+    .vashq-demo-modal .modal-content {
+        overflow: visible;
+    }
+
+    .vashq-demo-modal .modal-body {
+        overflow: visible;
+    }
+
 }
 
-.modal .modal-x {
-  position: absolute;
-  top: 14px;
-  right: 14px;
-  border: 0;
-  background: transparent;
-  font-size: 20px;
-  line-height: 1;
-  padding: 6px 8px;
-  color: #111827;
-  border-radius: 10px;
+
+/* =====================================================
+   MOBILE RESPONSIVE
+===================================================== */
+
+@media (max-width: 575.98px) {
+
+    .vashq-demo-modal .modal-dialog {
+        margin: 0;
+        max-width: 100%;
+    }
+
+    .vashq-demo-modal .modal-content {
+        min-height: 100%;
+        border-radius: 0 !important;
+    }
+
+    .vashq-demo-modal .modal-body {
+        padding: 45px 24px 25px;
+    }
+
+    .vashq-demo-header {
+        padding-bottom: 20px;
+    }
+
+    .vashq-demo-header h2 {
+        font-size: 25px;
+    }
+
+    .vashq-demo-field {
+        margin-bottom: 15px;
+    }
+
+    .vashq-demo-input-wrap input {
+        height: 45px;
+    }
+
 }
 
-.modal .modal-x:hover,
-.modal .modal-x:focus {
-  background: rgba(17, 24, 39, 0.06);
-  outline: none;
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .vashq-demo-modal *,
+    .vashq-demo-modal *::before,
+    .vashq-demo-modal *::after {
+
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+
+    }
+
 }
+
+
+/* =====================================================
+   TYPE OF CAR CARE - PREMIUM SELECT DROPDOWN
+===================================================== */
+
+.vashq-demo-field select,
+.vashq-demo-field .vashq-car-care-select {
+    width: 100%;
+    height: 43px;
+
+    padding: 0 42px 0 44px;
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    border: 1px solid var(--demo-border);
+    border-radius: 9px;
+
+    background-color: rgba(248, 251, 255, 0.85);
+
+    color: var(--demo-dark);
+
+    font-size: 12px;
+    font-weight: 500;
+
+    outline: none;
+    cursor: pointer;
+
+    transition: all .25s ease;
+}
+
+/* Placeholder option */
+.vashq-demo-field select:invalid {
+    color: #A0AEC0;
+}
+
+/* Dropdown options */
+.vashq-demo-field select option {
+    background: #ffffff;
+    color: #172033;
+    font-size: 13px;
+    padding: 10px;
+}
+
+/* Custom dropdown arrow */
+.vashq-demo-field .vashq-select-wrap {
+    position: relative;
+}
+
+.vashq-demo-field .vashq-select-wrap::after {
+    content: "\F282";
+    font-family: "bootstrap-icons";
+
+    position: absolute;
+    right: 16px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #8A9AB1;
+    font-size: 12px;
+
+    pointer-events: none;
+    transition: color .25s ease;
+}
+
+/* Focus */
+.vashq-demo-field .vashq-select-wrap:focus-within select {
+    background: #ffffff;
+    border-color: var(--demo-blue);
+    box-shadow: 0 0 0 3px rgba(23, 105, 255, .09);
+}
+
+.vashq-demo-field .vashq-select-wrap:focus-within::after {
+    color: var(--demo-blue);
+}
+
+/* Hover */
+.vashq-demo-field select:hover {
+    border-color: #B7CCED;
+}
+
+/* Validation */
+.vashq-demo-form.was-validated
+.vashq-select-wrap select:invalid {
+    border-color: #dc3545;
+}
+
+/* Mobile */
+@media (max-width: 575.98px) {
+    .vashq-demo-field select,
+    .vashq-demo-field .vashq-car-care-select {
+        height: 45px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
 
 .navbar .nav-link {
+  color:#000 ;
   border-radius: 999px;
   transition: transform var(--clay-transition), box-shadow var(--clay-transition), background-color var(--clay-transition);
 }
 
 .navbar .nav-link:hover,
 .navbar .nav-link:focus {
-  background-color: rgba($primary, 0.08);
+  background-color: rgba(12, 73, 141, 0.08);
   box-shadow: var(--clay-shadow-inner-sm);
+  color: #051091 !important;
 }
 
 .navbar .nav-link.active,
 .navbar .nav-link[aria-current="page"] {
-  background-color: rgba($primary, 0.14);
+  color: rgb(19, 62, 108) !important;
+  background-color: rgba(rgb(56, 149, 248), 0.14);
   box-shadow: var(--clay-shadow-inner);
   font-weight: 600;
 }
@@ -127,6 +869,15 @@ footer a img {
     height: 22px;
     max-height: 22px;
   }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        top: 10px;
+        margin: 0 10px;
+        padding: 10px 15px;
+        border-radius: 30px;
+    }
 }
 
 /* Offcanvas: clay surface */
@@ -170,10 +921,10 @@ section {
   border-radius: var(--clay-radius-lg) !important;
 }
 
-.card.shadow-sm,
-.shadow-sm {
-  box-shadow: var(--clay-shadow-outer-sm), var(--clay-shadow-inner-sm) !important;
-}
+// .card.shadow-sm,
+// .shadow-sm {
+//   box-shadow: var(--clay-shadow-outer-sm), var(--clay-shadow-inner-sm) !important;
+// }
 
 .card-lift,
 .card.card-lift,
@@ -193,10 +944,10 @@ section {
   transition: transform var(--clay-transition), box-shadow var(--clay-transition), filter var(--clay-transition);
 }
 
-.btn-primary {
-  box-shadow: 10px 10px 22px rgba(0, 0, 0, 0.14), -10px -10px 22px rgba(255, 255, 255, 0.85),
-    inset 8px 8px 14px rgba(255, 255, 255, 0.16) !important;
-}
+// .btn-primary {
+//   box-shadow: 10px 10px 22px rgba(0, 0, 0, 0.14), -10px -10px 22px rgba(255, 255, 255, 0.85),
+//     inset 8px 8px 14px rgba(255, 255, 255, 0.16) !important;
+// }
 
 .btn-light,
 .btn-outline-dark,
@@ -254,7 +1005,7 @@ textarea.form-control {
 }
 
 .accordion-button {
-  border-radius: var(--clay-radius) !important;
+  // border-radius: var(--clay-radius) !important;
   background: transparent !important;
   box-shadow: none !important;
 }
@@ -283,3 +1034,242 @@ textarea.form-control {
   }
 }
 
+/* ===================================
+   VASHQ SCROLLABLE FEATURES
+=================================== */
+
+.vashq-scroll-section {
+    padding: 90px 24px;
+    background: #ffffff;
+}
+
+.vashq-scroll-container {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 55px;
+
+    max-width: 1280px;
+    height: 600px;
+    margin: 0 auto;
+    padding: 55px 65px;
+
+    background: #10182d;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* LEFT SIDE SCROLL */
+
+.vashq-scroll-content {
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 0 20px 0 5px;
+
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: #55b8ed #202a40;
+}
+
+.vashq-scroll-content::-webkit-scrollbar {
+    width: 7px;
+}
+
+.vashq-scroll-content::-webkit-scrollbar-track {
+    background: #202a40;
+    border-radius: 10px;
+}
+
+.vashq-scroll-content::-webkit-scrollbar-thumb {
+    background: #55b8ed;
+    border-radius: 10px;
+}
+
+/* INDIVIDUAL FEATURE */
+
+.vashq-scroll-feature {
+    position: relative;
+    padding: 45px 15px 55px 0;
+    margin-bottom: 15px;
+
+    opacity: 0.4;
+    transition: opacity 0.4s ease;
+}
+
+.vashq-scroll-feature.active {
+    opacity: 1;
+}
+
+
+.vashq-scroll-feature h3 {
+    margin-bottom: 20px;
+
+    color: #ffffff;
+    font-size: clamp(24px, 2.2vw, 32px);
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.vashq-scroll-feature p {
+    margin-bottom: 0;
+
+    color: #c6d2e5;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+/* RIGHT SIDE IMAGE */
+
+.vashq-scroll-visual {
+    position: relative;
+    height: 100%;
+    min-width: 0;
+}
+
+.vashq-visual-image-wrapper {
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+    overflow: hidden;
+    border-radius: 8px;
+    background: #1b3553;
+}
+
+.vashq-visual-image-wrapper > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition: opacity 0.3s ease;
+}
+
+.vashq-visual-overlay {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+    text-align: center;
+
+    background: linear-gradient(
+        180deg,
+        rgba(12, 31, 55, 0.35),
+        rgba(12, 31, 55, 0.80)
+    );
+}
+
+.vashq-visual-tag {
+    margin-bottom: 15px;
+    padding: 8px 13px;
+
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 30px;
+
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.vashq-visual-overlay h3 {
+    margin-bottom: 10px;
+
+    color: #ffffff;
+    font-size: 27px;
+    font-weight: 800;
+}
+
+.vashq-visual-overlay p {
+    margin: 0;
+
+    color: #e0efff;
+    font-size: 15px;
+}
+
+/* IMAGE TRANSITION */
+
+.vashq-visual-image-wrapper.image-changing > img {
+    opacity: 0.25;
+}
+
+/* TABLET */
+
+@media (max-width: 991px) {
+
+    .vashq-scroll-section {
+        padding: 60px 20px;
+    }
+
+    .vashq-scroll-container {
+        grid-template-columns: 1fr 0.85fr;
+        gap: 25px;
+
+        height: 540px;
+        padding: 35px 30px;
+    }
+
+    .vashq-scroll-feature {
+        padding-top: 30px;
+        padding-bottom: 35px;
+    }
+
+    .vashq-scroll-feature p {
+        font-size: 14px;
+    }
+
+    .vashq-visual-overlay h3 {
+        font-size: 22px;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 767px) {
+
+    .vashq-scroll-section {
+        padding: 40px 15px;
+    }
+
+    .vashq-scroll-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+
+        height: auto;
+        padding: 25px 20px;
+    }
+
+    .vashq-scroll-content {
+        height: 330px;
+        padding-right: 12px;
+    }
+
+    .vashq-scroll-feature {
+        padding-top: 25px;
+        padding-bottom: 30px;
+    }
+
+    .vashq-scroll-feature h3 {
+        font-size: 24px;
+    }
+
+    .vashq-scroll-feature p {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    .vashq-scroll-visual {
+        height: 300px;
+    }
+
+    .vashq-visual-overlay h3 {
+        font-size: 23px;
+    }
+}

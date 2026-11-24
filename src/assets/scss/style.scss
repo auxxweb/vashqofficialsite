@@ -18,3 +18,5302 @@
 
 // Claymorphism overrides (keep last)
 @import "./clay";
+
+
+/* ==============================
+   CAR WASH HERO SECTION
+============================== */
+
+/* ==============================
+   CAR WASH HERO SECTION
+============================== */
+
+.carwash-hero {
+    position: relative;
+    height: 680px;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+    isolation: isolate;
+
+    margin-top: 0;
+    padding-top: 100px;
+
+    /* Fallback image */
+    background-image: url("../images/pressure-of-water.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: #ffffff;
+}
+
+
+/* ==============================
+   VIDEO BACKGROUND
+============================== */
+
+.carwash-hero-media {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    z-index: 0;
+    pointer-events: none;
+}
+
+
+/* Both videos occupy exactly the same space */
+
+.carwash-hero-video {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    display: block;
+
+    opacity: 0;
+
+    transition: opacity 0.8s ease;
+
+    pointer-events: none;
+}
+
+
+/* Active video */
+
+.carwash-hero-video.is-active {
+    opacity: 1;
+}
+
+
+/* Intro and loop video */
+
+.carwash-intro-video,
+.carwash-loop-video {
+    z-index: 1;
+}
+
+
+/* ==============================
+   BOTTOM IMAGE FADE
+============================== */
+
+.carwash-hero::after {
+    content: "";
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 180px;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(245, 245, 245, 0) 0%,
+        rgba(245, 245, 245, 0.5) 55%,
+        rgb(233, 233, 233) 100%
+    );
+
+    pointer-events: none;
+
+    z-index: 2;
+}
+
+
+/* ==============================
+   DARK OVERLAY
+============================== */
+
+.carwash-hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    z-index: 2;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(103, 161, 236, 0.94) 0%,
+            rgba(79, 124, 188, 0.82) 38%,
+            rgba(47, 77, 118, 0.42) 70%,
+            rgba(5, 12, 22, 0.30) 100%
+        );
+}
+
+
+/* ==============================
+   MAIN CONTENT
+============================== */
+
+.carwash-hero-content {
+    position: relative;
+
+    z-index: 3;
+
+    padding-top: 100px;
+    padding-bottom: 80px;
+}
+
+
+/* ==============================
+   TEXT AREA
+============================== */
+
+.carwash-hero-text {
+    max-width: 1000px;
+}
+
+
+/* ==============================
+   SMALL BADGE
+============================== */
+
+.carwash-hero-badge {
+    display: inline-block;
+
+    padding: 10px 17px;
+    margin-bottom: 26px;
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 50px;
+
+    background: rgba(255, 255, 255, 0.09);
+
+    color: #ffffff;
+
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+
+/* ==============================
+   MAIN HEADING
+============================== */
+
+.carwash-hero h1 {
+    margin: 0;
+
+    font-family: Michroma;
+
+    color: #ffffff;
+
+    font-size: 56px;
+    font-weight: bolder;
+
+    line-height: 1.12;
+    letter-spacing: -2px;
+}
+
+.carwash-hero h1 span {
+    display: block;
+    color: #62d9ff;
+}
+
+
+/* ==============================
+   DESCRIPTION
+============================== */
+
+.carwash-hero-text > p {
+    max-width: 870px;
+
+    margin-top: 25px;
+    margin-bottom: 32px;
+
+    font-family: Michroma;
+
+    color: rgba(255, 255, 255, 0.82);
+
+    font-size: 17px;
+    line-height: 1.9;
+}
+
+
+/* ==============================
+   BUTTONS
+============================== */
+
+.carwash-hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.carwash-btn {
+    min-height: 54px;
+
+    padding: 15px 24px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 18px;
+
+    border-radius: 7px;
+
+    text-decoration: none;
+
+    font-size: 18px;
+    font-weight: 700;
+
+    font-family: Xmind;
+
+    transition: all 0.3s ease;
+}
+
+
+/* Primary button */
+
+.carwash-btn-primary {
+    background: #087fba;
+    border: 1px solid #087fba;
+    color: #ffffff;
+}
+
+.carwash-btn-primary:hover {
+    background: #056594;
+    border-color: #056594;
+    color: #ffffff;
+
+    transform: translateY(-3px);
+}
+
+
+/* Outline button */
+
+.carwash-btn-outline {
+    background: rgba(255, 255, 255, 0.07);
+
+    border: 1px solid rgba(255, 255, 255, 0.65);
+
+    color: #ffffff;
+}
+
+.carwash-btn-outline:hover {
+    background: #ffffff;
+    border-color: #ffffff;
+
+    color: #101820;
+
+    transform: translateY(-3px);
+}
+
+
+/* ==============================
+   FEATURE POINTS
+============================== */
+
+.carwash-hero-features {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 24px;
+
+    margin-top: 35px;
+}
+
+.hero-feature {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    color: rgba(255, 255, 255, 0.9);
+
+    font-size: 13px;
+}
+
+.feature-check {
+    width: 21px;
+    height: 21px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(98, 217, 255, 0.16);
+
+    color: #62d9ff;
+
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+/* ==============================
+   BOTTOM TAGLINE
+============================== */
+
+.carwash-hero-bottom {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 65px;
+
+    color: rgba(255, 255, 255, 0.75);
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+.hero-bottom-line {
+    width: 55px;
+    height: 1px;
+
+    background: #62d9ff;
+}
+
+
+/* ==============================
+   MOBILE RESPONSIVE
+============================== */
+
+@media (max-width: 767px) {
+
+    .carwash-hero {
+        min-height: 100vh;
+        height: 680px;
+
+        background-position: center;
+    }
+
+    .carwash-hero-video {
+        object-position: center;
+    }
+
+    .carwash-hero-content {
+        padding-top: 80px;
+        padding-bottom: 60px;
+    }
+
+    .carwash-hero h1 {
+        font-size: 36px;
+        line-height: 1.2;
+        letter-spacing: -1px;
+    }
+
+    .carwash-hero-text > p {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    .carwash-btn {
+        font-size: 15px;
+    }
+
+    .carwash-hero::after {
+        height: 120px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .carwash-hero h1 {
+        font-size: 29px;
+    }
+
+    .carwash-hero-buttons {
+        width: 100%;
+    }
+
+    .carwash-btn-primary {
+        width: 100%;
+    }
+
+}
+
+
+
+/* ===================================
+   SMART CAR WASH SECTION
+=================================== */
+
+.smart-wash-section {
+    position: relative;
+    overflow: hidden;
+    padding: 20px 50px;
+
+}
+
+.smart-wash-container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 50px;
+}
+
+
+/* Left content */
+
+.smart-wash-content {
+    position: relative;
+    z-index: 2;
+    animation: smartWashTextIn 0.9s ease both;
+}
+
+/* Small label */
+
+.smart-wash-label {
+    display: inline-block;
+    margin-bottom: 22px;
+    padding: 10px 16px;
+
+    border-radius: 50px;
+    background: #eaf6ff;
+    border: 1px solid #c9e7ff;
+
+    color: #087fba;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+}
+
+/* Heading */
+
+.smart-wash-content h2 {
+    max-width: 550px;
+    margin-bottom: 24px;
+    color: #142c46;
+    font-size: clamp(36px, 4vw, 54px);
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -1.5px;
+}
+
+.smart-wash-content h2 span {
+    display: block;
+    color: #087fba;
+}
+
+/* Description */
+
+.smart-wash-description {
+    max-width: 520px;
+    margin-bottom: 32px;
+    color: #64748b;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+/* Features - 2 items per row */
+
+.smart-wash-features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px 30px;
+    margin-bottom: 34px;
+}
+
+/* Individual Feature */
+
+.smart-wash-feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.smart-wash-check {
+    flex-shrink: 0;
+
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #e7f5ff;
+    color: #087fba;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.smart-wash-feature h3 {
+    margin-bottom: 5px;
+    color: #18334e;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.smart-wash-feature p {
+    margin-bottom: 0;
+    color: #718096;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* CTA button */
+
+.smart-wash-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    padding: 16px 24px;
+
+    border: 1px solid #087fba;
+    border-radius: 7px;
+
+    background: #087fba;
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+
+    transition: all 0.3s ease;
+}
+
+.smart-wash-btn:hover {
+    background: #075f91;
+    border-color: #075f91;
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+.smart-wash-btn span {
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+.smart-wash-btn:hover span {
+    transform: translateX(5px);
+}
+
+/* Right Side Image */
+
+.smart-wash-image-wrapper {
+    position: relative;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Image floating animation */
+
+.smart-wash-image {
+    display: block;
+    width: 100%;
+    max-width: 620px;
+    height: auto;
+    object-fit: contain;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    animation: imageFloat 3s ease-in-out infinite;
+}
+
+.smart-wash-image:hover {
+    transform: translateY(-5px);
+}
+
+
+/* ==========================
+   VASHQ FAQ SECTION
+========================== */
+
+#faq {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Small FAQ Label */
+#faq .faq-label {
+  padding: 8px 16px;
+  border-radius: 50px;
+  background: #edf3ff;
+  color: #2455c4;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+/* Main Heading */
+#faq .faq-main-title {
+  color: #101b35;
+  font-size: clamp(32px, 4vw, 46px);
+  line-height: 1.2;
+  letter-spacing: -1.5px;
+}
+
+#faq .faq-title-dot {
+  color: #3568e8;
+}
+
+/* Subtitle */
+#faq .faq-subtitle {
+  max-width: 620px;
+  margin: 0 auto;
+  color: #697386;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* Accordion Item */
+#faq .accordion-item {
+  background: #fff !important;
+  border: 1px solid #e8edf5 !important;
+  border-radius: 16px !important;
+  overflow: hidden;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* Hover Effect */
+#faq .accordion-item:hover {
+  border-color: #cbd9fb !important;
+  box-shadow: 0 8px 24px rgba(30, 64, 140, 0.07);
+}
+
+/* Accordion Question */
+#faq .accordion-button {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 23px 26px;
+  background: #ffffff;
+  color: #17233f;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.6;
+  box-shadow: none;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+/* Remove Bootstrap default focus shadow */
+#faq .accordion-button:focus {
+  border-color: transparent;
+  box-shadow: none;
+}
+
+/* Open Question */
+#faq .accordion-button:not(.collapsed) {
+  color: #2455c4;
+  background: #f8faff;
+  box-shadow: none;
+}
+
+/* Question Number */
+#faq .faq-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: #f0f4fb;
+  color: #63718a;
+  font-size: 12px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+#faq .accordion-button:not(.collapsed) .faq-number {
+  background: #e5edff;
+  color: #2455c4;
+}
+
+/* Custom Accordion Icon */
+#faq .accordion-button::after {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  background-color: #f0f4fb;
+  background-image: none;
+  border-radius: 50%;
+  content: "+";
+  color: #304568;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 28px;
+  text-align: center;
+  transform: none;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+#faq .accordion-button:not(.collapsed)::after {
+  content: "−";
+  background-color: #2455c4;
+  color: #ffffff;
+  transform: none;
+}
+
+/* Answer Content */
+#faq .accordion-body {
+  padding: 0 76px 26px 82px;
+  color: #697386;
+  font-size: 15px;
+  line-height: 1.9;
+  background: #f8faff;
+}
+
+/* View All Button */
+#faq .faq-view-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 24px;
+  border: 1px solid #d5deee;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #17233f;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+#faq .faq-view-btn:hover {
+  border-color: #2455c4;
+  background: #2455c4;
+  color: #ffffff;
+  box-shadow: 0 8px 20px rgba(36, 85, 196, 0.18);
+  transform: translateY(-2px);
+}
+
+#faq .faq-arrow {
+  font-size: 19px;
+  transition: transform 0.3s ease;
+}
+
+#faq .faq-view-btn:hover .faq-arrow {
+  transform: translateX(4px);
+}
+
+/* ========================================
+   VASHQ COMPARISON SECTION
+======================================== */
+
+.vashq-comparison {
+  --vashq-primary: #007bff;
+  --vashq-text: #172033;
+  --vashq-muted: #697386;
+  --vashq-border: #e5eaf1;
+  --vashq-surface: #ffffff;
+  --vashq-background: #f7f9fc;
+
+  padding: 100px 24px;
+  background: var(--vashq-background);
+  color: var(--vashq-text);
+  font-family: inherit;
+  overflow: hidden;
+}
+
+.vashq-comparison *,
+.vashq-comparison *::before,
+.vashq-comparison *::after {
+  box-sizing: border-box;
+}
+
+.vashq-comparison__container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* ========================================
+   SECTION HEADER
+======================================== */
+
+.vashq-comparison__header {
+  max-width: 760px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+
+.vashq-comparison__eyebrow {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: var(--vashq-primary);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+
+.vashq-comparison__title {
+  margin: 0 0 18px;
+  color: var(--vashq-text);
+  font-size: clamp(30px, 4vw, 48px);
+  font-weight: 750;
+  line-height: 1.2;
+  letter-spacing: -1.5px;
+}
+
+.vashq-comparison__title span {
+  color: var(--vashq-primary);
+}
+
+.vashq-comparison__description {
+  max-width: 620px;
+  margin: 0 auto;
+  color: var(--vashq-muted);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* ========================================
+   TOGGLE WRAPPER
+======================================== */
+
+.vashq-toggle-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+/* CENTER RIPPLE EFFECT */
+
+.vashq-section[data-state="true"] 
+.vashq-toggle-wrapper::before,
+.vashq-section[data-state="true"] 
+.vashq-toggle-wrapper::after {
+    border-color: rgba(48, 112, 249, 0.7);
+}
+
+
+
+.vashq-toggle-wrapper::before,
+.vashq-toggle-wrapper::after {
+    content: "";
+    position: absolute;
+
+    width: 190px;
+    height: 190px;
+
+    border: 2px solid rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+
+    animation: vashqRipple 3s ease-out infinite;
+
+    pointer-events: none;
+    z-index: 0;
+}
+
+.vashq-toggle-wrapper::after {
+    animation-delay: 1.5s;
+}
+
+/* Large Toggle Button */
+
+.vashq-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 116px;
+  height: 64px;
+  padding: 0;
+  border: 0;
+  border-radius: 50px;
+  background: #dfe4ec;
+  cursor: pointer;
+  transition: background-color 0.3s ease,
+  box-shadow 0.3s ease,
+  transform 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.vashq-toggle:hover {
+  transform: translateY(-2px);
+}
+
+.vashq-toggle:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.4);
+  outline-offset: 5px;
+}
+
+.vashq-toggle__track {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 7px;
+  border-radius: inherit;
+}
+
+.vashq-toggle__thumb {
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 3px 12px rgba(15, 23, 42, 0.18);
+  transition: left 0.3s ease,
+  background-color 0.3s ease,
+  box-shadow 0.3s ease;
+}
+
+/* ON State */
+
+.vashq-comparison.is-on .vashq-toggle {
+  background: #16a34a;
+}
+
+.vashq-comparison.is-on .vashq-toggle__thumb {
+  left: calc(100% - 57px);
+}
+
+/* Toggle Status */
+
+.vashq-toggle__status {
+  margin: 22px 0 8px;
+  color: var(--vashq-text);
+  font-size: 24px;
+  font-weight: 750;
+  line-height: 1.3;
+  transition: color 0.3s ease;
+}
+
+
+/* ========================================
+   CONTENT PANEL
+======================================== */
+
+.vashq-comparison__content {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.vashq-panel {
+  padding: 32px;
+  border: 1px solid var(--vashq-border);
+  border-radius: 24px;
+  background: var(--vashq-surface);
+  box-shadow: 0 12px 40px rgba(15, 23, 42, 0.045);
+  animation: vashqPanelEnter 0.35s ease both;
+}
+
+/* Respect HTML hidden attribute */
+
+.vashq-panel[hidden] {
+  display: none !important;
+}
+
+/* ========================================
+   PANEL HEADER
+======================================== */
+
+.vashq-panel__header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 28px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--vashq-border);
+}
+
+.vashq-panel__icon {
+  display: flex;
+  flex: 0 0 52px;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  font-size: 25px;
+}
+
+.vashq-panel__icon--problem {
+  color: #dc2626;
+  background: #fef2f2;
+}
+
+.vashq-panel__icon--benefit {
+  color: #15803d;
+  background: #f0fdf4;
+}
+
+.vashq-panel__header > div:nth-child(2) {
+  min-width: 0;
+  flex: 1;
+}
+
+.vashq-panel__header h3 {
+  margin: 0 0 5px;
+  color: var(--vashq-text);
+  font-size: 21px;
+  font-weight: 750;
+}
+
+.vashq-panel__header p {
+  margin: 0;
+  color: var(--vashq-muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.vashq-panel__count {
+  flex-shrink: 0;
+  padding: 8px 12px;
+  border: 1px solid var(--vashq-border);
+  border-radius: 30px;
+  color: var(--vashq-muted);
+  background: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* ========================================
+   FEATURE LIST
+======================================== */
+
+.vashq-feature-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 28px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.vashq-feature-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  min-width: 0;
+  padding: 16px 0;
+  border-bottom: 1px solid #f0f2f6;
+  color: #344054;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.65;
+  transition: color 0.2s ease,
+              transform 0.2s ease;
+}
+
+.vashq-feature-list li:hover {
+  color: var(--vashq-text);
+  transform: translateX(3px);
+}
+
+.vashq-feature-list li:last-child {
+  border-bottom-color: transparent;
+}
+
+.vashq-feature-list li i {
+  flex: 0 0 17px;
+  margin-top: 3px;
+  font-size: 16px;
+}
+
+.vashq-panel--problems .vashq-feature-list li i {
+  color: #dc6262;
+}
+
+.vashq-panel--benefits .vashq-feature-list li i {
+  color: #16a34a;
+}
+
+
+/* ==========================================
+   VASHQ COMPARISON SECTION
+========================================== */
+
+.vashq-section {
+    --vashq-primary: #111827;
+    --vashq-secondary: #4B5563;
+    --vashq-orbit: #D1D5DB;
+    --vashq-light: #F3F4F6;
+    --vashq-accent-light: #E5E7EB;
+
+    --vashq-animation: 1000ms;
+
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    color: var(--vashq-primary);
+    font-family: 'Inter', sans-serif;
+    isolation: isolate;
+
+    transition:
+        color 700ms ease,
+        background-color 700ms ease;
+}
+
+/* ==========================================
+   CONTAINER
+========================================== */
+
+.vashq-section *,
+.vashq-section *::before,
+.vashq-section *::after {
+    box-sizing: border-box;
+}
+
+.vashq-container {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 50px;
+}
+
+.vashq-comparison-container {
+    position: relative;
+    width: 100%;
+    padding: 70px 100px;
+    overflow: hidden;
+    border-radius: 40px;
+    background: #FFFFFF;
+
+}
+
+/* ==========================================
+   TRUE STATE - PREMIUM BLUE THEME
+========================================== */
+
+.vashq-section[data-state="true"] {
+    --vashq-primary: #123D78;
+    --vashq-secondary: #345B91;
+    --vashq-orbit: #93C5FD;
+    --vashq-light: #EFF6FF;
+    --vashq-accent-light: #BFDBFE;
+}
+
+/* ==========================================
+   SECTION INTRO
+========================================== */
+
+.vashq-intro {
+    position: relative;
+    z-index: 5;
+    max-width: 960px;
+    margin: 0 auto 65px;
+    text-align: center;
+}
+
+.vashq-intro h2 {
+    margin: 0 0 18px;
+    color: #111827;
+    font-size: clamp(30px, 4vw, 48px);
+    font-weight: 800;
+    letter-spacing: -1.8px;
+    line-height: 1.2;
+}
+
+.vashq-intro h2 span {
+    color: #2563EB;
+    transition: color 700ms ease;
+}
+
+.vashq-section[data-state="true"] .vashq-intro h2 span {
+    background: linear-gradient(
+        100deg,
+        #0756C9 0%,
+        #2684FF 55%,
+        #60A5FA 100%
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* ==========================================
+   MAIN ORBIT STAGE
+========================================== */
+
+.vashq-stage {
+    position: relative;
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        280px
+        minmax(0, 1fr);
+
+    align-items: center;
+    gap: 25px;
+
+    width: 100%;
+    min-height: 610px;
+
+    isolation: isolate;
+}
+
+/* ==========================================
+   ORBIT LAYER
+========================================== */
+
+.vashq-orbit-layer {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.vashq-orbit-rotor {
+    position: absolute;
+
+    width: 790px;
+    height: 790px;
+
+    border: 1px solid var(--vashq-orbit);
+    border-radius: 50%;
+
+    transition:
+        transform var(--vashq-animation)
+        cubic-bezier(0.22, 1, 0.36, 1),
+        border-color 700ms ease;
+
+    will-change: transform;
+}
+
+.vashq-orbit-rotor::before {
+    content: "";
+    position: absolute;
+    inset: 70px;
+
+    border: 1px solid var(--vashq-accent-light);
+    border-radius: 50%;
+}
+
+.vashq-orbit-rotor::after {
+    content: "";
+    position: absolute;
+    inset: 135px;
+
+    border: 1px dashed var(--vashq-orbit);
+    border-radius: 50%;
+
+    opacity: 0.7;
+}
+
+.vashq-orbit-secondary {
+    position: absolute;
+
+    width: 560px;
+    height: 560px;
+
+    border: 1px solid var(--vashq-accent-light);
+    border-radius: 50%;
+
+    transition: border-color 700ms ease;
+}
+
+.vashq-orbit-dot {
+    position: absolute;
+
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+    background: var(--vashq-primary);
+
+    box-shadow: 0 0 0 5px var(--vashq-light);
+
+    display: none !important;
+
+    transition:
+        background-color 700ms ease,
+        box-shadow 700ms ease;
+}
+
+/* TRUE STATE ORBIT */
+
+.vashq-section[data-state="true"] .vashq-orbit-rotor {
+    border-color: #93C5FD;
+}
+
+.vashq-section[data-state="true"] .vashq-orbit-secondary {
+    border-color: #BFDBFE;
+}
+
+/* ==========================================
+   LEFT AND RIGHT LISTS
+========================================== */
+
+.vashq-list {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 540px;
+    min-width: 0;
+
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+}
+
+.vashq-list-left {
+    padding-right: 10px;
+}
+
+.vashq-list-right {
+    padding-left: 10px;
+}
+
+/* ==========================================
+   FEATURE ITEMS
+========================================== */
+
+.vashq-item {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    width: 100%;
+    min-width: 0;
+    min-height: 78px;
+
+    opacity: 1;
+
+    transition:
+        opacity 300ms ease,
+        transform 450ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.vashq-list-left .vashq-item {
+    justify-content: flex-end;
+    text-align: right;
+}
+
+.vashq-list-right .vashq-item {
+    justify-content: flex-start;
+    text-align: left;
+}
+
+/* ==========================================
+   ITEM TEXT
+========================================== */
+
+.vashq-item-content {
+    flex: 0 1 auto;
+    min-width: 0;
+}
+
+.vashq-item h3 {
+    margin: 0;
+
+    color: var(--vashq-primary);
+
+    font-size: clamp(12px, 1.1vw, 15px);
+    font-weight: 750;
+    line-height: 1.55;
+    letter-spacing: -0.3px;
+
+    overflow-wrap: anywhere;
+
+    transition: color 650ms ease;
+}
+
+.vashq-item p {
+    margin: 5px 0 0;
+
+    color: var(--vashq-secondary);
+
+    font-size: 11px;
+    line-height: 1.65;
+
+    transition: color 650ms ease;
+}
+
+/* TRUE STATE TEXT */
+
+.vashq-section[data-state="true"] .vashq-item h3 {
+    color: #123D78;
+}
+
+.vashq-section[data-state="true"] .vashq-item p {
+    color: #475F80;
+}
+
+/* ==========================================
+   ITEM ICONS
+========================================== */
+
+.vashq-item-icon {
+    flex: 0 0 43px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 43px;
+    height: 43px;
+
+    border-radius: 50%;
+
+    color: var(--vashq-primary);
+    background: #FFFFFF;
+
+    font-size: 15px;
+
+    box-shadow:
+        0 0 0 5px #FFFFFF,
+        0 0 0 6px var(--vashq-orbit),
+        0 6px 18px rgba(17, 24, 39, 0.08);
+
+    transition:
+        background-color 650ms ease,
+        color 650ms ease,
+        box-shadow 650ms ease,
+        transform 350ms ease;
+}
+
+.vashq-item:hover .vashq-item-icon {
+    transform: scale(1.08);
+}
+
+/* TRUE STATE ICONS */
+
+.vashq-section[data-state="true"] .vashq-item-icon {
+    color: #0756C9;
+
+    background: linear-gradient(
+        145deg,
+        #FFFFFF,
+        #EFF6FF
+    );
+
+    box-shadow:
+        0 0 0 5px #FFFFFF,
+        0 0 0 6px #93C5FD,
+        0 6px 20px rgba(37, 99, 235, 0.13);
+}
+
+/* ==========================================
+   CENTRAL TOGGLE
+========================================== */
+
+.vashq-center {
+    position: relative;
+    z-index: 4;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-width: 0;
+
+    text-align: center;
+}
+
+.vashq-toggle-wrapper {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 260px;
+    height: 260px;
+
+    margin-bottom: 26px;
+}
+
+/* CENTER RINGS */
+
+.vashq-center-ring {
+    position: absolute;
+    inset: 0;
+
+    border: 1px solid var(--vashq-orbit);
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    transition:
+        border-color 700ms ease,
+        transform 800ms ease;
+}
+
+.vashq-center-ring:nth-child(2) {
+    inset: 12px;
+    border-style: dashed;
+    opacity: 0.8;
+}
+
+.vashq-center-ring:nth-child(3) {
+    inset: 24px;
+    border-color: var(--vashq-accent-light);
+}
+
+.vashq-section[data-state="true"] .vashq-center-ring:nth-child(2) {
+    transform: rotate(-30deg);
+}
+
+/* ==========================================
+   ACCESSIBLE CHECKBOX
+========================================== */
+
+.vashq-toggle-input {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    padding: 0;
+    margin: -1px;
+
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+
+    border: 0;
+}
+
+/* ==========================================
+   CENTRAL CIRCULAR BUTTON
+========================================== */
+
+.vashq-toggle-label {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 190px;
+    height: 190px;
+
+    border: 5px solid #FFFFFF;
+    border-radius: 50%;
+
+    color: #FFFFFF;
+    background: linear-gradient(
+        145deg,
+        #111827,
+        #292F3A
+    );
+
+    cursor: pointer;
+    user-select: none;
+
+    box-shadow:
+        0 0 0 1px var(--vashq-orbit),
+        0 15px 40px rgba(0, 0, 0, 0.13);
+
+    transition:
+        background 700ms ease,
+        color 700ms ease,
+        box-shadow 700ms ease,
+        transform 450ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.vashq-toggle-label:hover {
+    transform: scale(1.035);
+}
+
+.vashq-toggle-input:focus-visible + .vashq-toggle-label {
+    outline: 3px solid #60A5FA;
+    outline-offset: 8px;
+}
+
+/* ==========================================
+   TRUE STATE CENTRAL BUTTON
+========================================== */
+
+.vashq-section[data-state="true"] .vashq-toggle-label {
+    background: linear-gradient(
+        145deg,
+        #FFFFFF 0%,
+        #EFF6FF 100%
+    );
+
+    color: #0756C9;
+
+    border-color: #FFFFFF;
+
+    box-shadow:
+        0 0 0 1px #60A5FA,
+        0 0 20px rgba(37, 99, 235, 0.16),
+        0 15px 45px rgba(37, 99, 235, 0.18);
+}
+
+/* ==========================================
+   TOGGLE BRAND
+========================================== */
+
+.vashq-toggle-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 65px;
+    height: 65px;
+
+    margin-bottom: 8px;
+
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 50%;
+
+    font-size: 29px;
+
+    transition:
+        color 650ms ease,
+        border-color 650ms ease;
+}
+
+.vashq-toggle-brand {
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    line-height: 1.1;
+
+    transition: color 650ms ease;
+}
+
+.vashq-toggle-subtitle {
+    margin-top: 7px;
+
+    color: rgba(255, 255, 255, 0.85);
+
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+
+    transition: color 650ms ease;
+}
+
+/* TRUE STATE BRAND */
+
+.vashq-section[data-state="true"] .vashq-toggle-logo {
+    color: #0756C9;
+    border-color: #BFDBFE;
+}
+
+.vashq-section[data-state="true"] .vashq-toggle-brand {
+    color: #0756C9;
+}
+
+.vashq-section[data-state="true"] .vashq-toggle-subtitle {
+    color: #5276A5;
+}
+
+/* ==========================================
+   CENTER RIPPLE EFFECT
+========================================== */
+
+.vashq-toggle-wrapper::before,
+.vashq-toggle-wrapper::after {
+    content: "";
+    position: absolute;
+
+    width: 190px;
+    height: 190px;
+
+    border: 2px solid rgba(17, 24, 39, 0.35);
+    border-radius: 50%;
+
+    animation: vashqRipple 3s ease-out infinite;
+
+    pointer-events: none;
+    z-index: 0;
+}
+
+.vashq-toggle-wrapper::after {
+    animation-delay: 1.5s;
+}
+
+/* TRUE STATE RIPPLE */
+
+.vashq-section[data-state="true"] .vashq-toggle-wrapper::before,
+.vashq-section[data-state="true"] .vashq-toggle-wrapper::after {
+    border-color: rgba(37, 99, 235, 0.45);
+}
+
+/* ==========================================
+   STATUS AND CLICK HINT
+========================================== */
+
+.vashq-status {
+    margin: 0;
+    color: #ffff;
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 1px;
+
+    transition: color 650ms ease;
+}
+
+.vashq-section[data-state="true"] .vashq-status {
+    color: #0756C9;
+}
+
+.vashq-click-hint {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    margin-top: 9px;
+
+    color: #9CA3AF;
+
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.vashq-section[data-state="true"] .vashq-click-hint {
+    color: #5276A5;
+}
+
+.vashq-click-hint i {
+    font-size: 10px;
+    animation: vashq-point 1.6s ease-in-out infinite;
+}
+
+/* ==========================================
+   OUTGOING CONTENT ANIMATION
+========================================== */
+
+.vashq-stage.vashq-is-transitioning .vashq-item {
+    opacity: 0;
+}
+
+.vashq-stage.vashq-is-transitioning .vashq-list-left .vashq-item {
+    transform: translateX(-24px);
+}
+
+.vashq-stage.vashq-is-transitioning .vashq-list-right .vashq-item {
+    transform: translateX(24px);
+}
+
+.vashq-stage.vashq-is-transitioning .vashq-toggle-label {
+    transform: scale(0.94);
+}
+
+/* ==========================================
+   INCOMING CONTENT ANIMATION
+========================================== */
+
+.vashq-stage.vashq-content-entering .vashq-list-left .vashq-item {
+    animation: vashq-content-in-left 450ms both;
+}
+
+.vashq-stage.vashq-content-entering .vashq-list-right .vashq-item {
+    animation: vashq-content-in-right 450ms both;
+}
+
+
+
+.vashq-carousels-container {
+    background-color: #fff;
+    // box-shadow: 0 10px 24px rgba(0,0,0,0.18);
+    padding: 70px;
+    padding-left: 150px;
+    padding-right: 150px;
+    border-radius: 50px;
+}
+
+
+.vashq-customers-container {
+    background-color: #fff;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.18);
+    padding: 70px;
+    width: 1420px;
+    padding-left: 150px;
+    padding-right: 150px;
+    border-radius: 50px;
+}
+
+
+
+/* =========================================
+   VASHQ TESTIMONIALS SECTION
+========================================= */
+
+.vashq-testimonials {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+/* =========================================
+   SECTION HEADING
+========================================= */
+
+.vashq-testimonials-heading {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto 50px;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.vashq-testimonials-label {
+    display: inline-block;
+    margin-bottom: 18px;
+    padding: 8px 15px;
+
+    background: #eaf1ff;
+    border: 1px solid #dce7ff;
+    border-radius: 50px;
+
+    color: #2864e8;
+    font-size: 11px;
+    font-weight: 750;
+    letter-spacing: 2px;
+}
+
+.vashq-testimonials-heading h2 {
+    margin: 0 0 18px;
+
+    color: #101828;
+    font-size: clamp(30px, 4vw, 48px);
+    font-weight: 750;
+    line-height: 1.2;
+    letter-spacing: -1.5px;
+}
+
+.vashq-testimonials-heading h2 span {
+    color: #2864e8;
+}
+
+.vashq-testimonials-heading > p {
+    max-width: 570px;
+    margin: 0 auto;
+
+    color: #667085;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   INFINITE MARQUEE CONTAINER
+========================================= */
+
+.vashq-testimonial-marquee {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 15px 0 25px;
+
+    -webkit-mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        #000 5%,
+        #000 95%,
+        transparent 100%
+    );
+
+    mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        #000 5%,
+        #000 95%,
+        transparent 100%
+    );
+}
+
+
+/* =========================================
+   MOVING TRACK
+========================================= */
+
+.vashq-testimonial-track {
+    display: flex;
+    width: max-content;
+
+    transform: translateX(0);
+    will-change: transform;
+
+    animation: vashq-testimonial-scroll 45s linear infinite;
+}
+
+
+/* =========================================
+   REVIEW GROUP
+========================================= */
+
+.vashq-testimonial-group {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: stretch;
+
+    gap: 24px;
+    padding-right: 24px;
+}
+
+
+/* =========================================
+   INDIVIDUAL REVIEW CARD
+========================================= */
+
+.vashq-review-card {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 360px;
+
+    width: 360px;
+    min-height: 300px;
+
+    padding: 28px;
+
+    background: #ffffff;
+    border: 1px solid #e7ecf4;
+    border-radius: 20px;
+
+    box-shadow:
+        0 4px 10px rgba(16, 24, 40, 0.02),
+        0 12px 30px rgba(16, 24, 40, 0.035);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+/* Card hover */
+
+.vashq-review-card:hover {
+    transform: translateY(-6px);
+
+    border-color: #c9d9ff;
+
+    box-shadow:
+        0 8px 18px rgba(37, 99, 235, 0.04),
+        0 20px 45px rgba(37, 99, 235, 0.10);
+}
+
+
+/* =========================================
+   CARD TOP
+========================================= */
+
+.vashq-review-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 17px;
+}
+
+.vashq-review-quote {
+    display: block;
+
+    height: 42px;
+
+    color: #2864e8;
+
+    font-family: Georgia, serif;
+    font-size: 65px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+
+/* =========================================
+   STAR RATING
+========================================= */
+
+.vashq-review-stars {
+    color: #f5a623;
+
+    font-size: 17px;
+    line-height: 1;
+    letter-spacing: 2px;
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   REVIEW CONTENT
+========================================= */
+
+.vashq-review-text {
+    flex-grow: 1;
+
+    margin: 0 0 25px;
+
+    color: #475467;
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.9;
+}
+
+
+/* =========================================
+   CUSTOMER INFORMATION
+========================================= */
+
+.vashq-review-author {
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    margin-top: auto;
+    padding-top: 19px;
+
+    border-top: 1px solid #edf0f5;
+}
+
+
+/* Customer initials avatar */
+
+.vashq-review-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 75px;
+    height: 75px;
+    flex: 0 0 75px;
+
+    background: #eaf1ff;
+    border: 1px solid #dce7ff;
+
+    /* Square with slightly rounded corners */
+    border-radius: 10px;
+
+    color: #2864e8;
+
+    font-size: 19px;
+    font-weight: 750;
+    letter-spacing: 0.3px;
+
+    overflow: hidden;
+}
+
+/* If customer image is added */
+
+.vashq-review-avatar img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 9px;
+    display: block;
+}
+
+
+
+/* Customer name and role */
+
+.vashq-review-author-info {
+    min-width: 0;
+}
+
+.vashq-review-author-info h3 {
+    margin: 0 0 5px;
+
+    color: #101828;
+
+    font-size: 14px;
+    font-weight: 750;
+    line-height: 1.4;
+}
+
+.vashq-review-author-info p {
+    margin: 0;
+
+    color: #667085;
+
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.vashq-review-author-info p span {
+    display: inline-block;
+    margin-left: 3px;
+}
+
+
+/* Demo review label */
+
+.vashq-demo-label {
+    display: inline-block;
+
+    margin-top: 6px;
+    padding: 3px 7px;
+
+    background: #eef4ff;
+    border-radius: 4px;
+
+    color: #2864e8;
+
+    font-size: 10px;
+    font-weight: 600;
+}
+
+
+/* Pause animation on hover */
+
+.vashq-testimonial-marquee:hover
+.vashq-testimonial-track {
+    animation-play-state: paused;
+}
+
+
+/* =========================================
+   SECTION FOOTER
+========================================= */
+
+.vashq-testimonials-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 18px;
+
+    margin-top: 30px;
+    padding: 0 20px;
+}
+
+.vashq-testimonials-footer p {
+    margin: 0;
+
+    color: #667085;
+
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.vashq-footer-line {
+    display: block;
+
+    width: 35px;
+    height: 1px;
+    flex-shrink: 0;
+
+    background: #d5dce8;
+}
+
+
+
+/* =========================================
+   VASHQ BUSINESS GALLERY
+========================================= */
+
+
+/* Heading */
+
+.vashq-target-heading {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.vashq-target-label {
+    display: inline-block;
+    margin-bottom: 16px;
+
+    color: #2864e8;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+}
+
+.vashq-target-heading h2 {
+    color: #171b25;
+    font-size: clamp(30px, 4vw, 46px);
+    line-height: 1.2;
+    letter-spacing: -1.2px;
+}
+
+.vashq-target-heading p {
+    max-width: 680px;
+    margin: 0 auto;
+
+    color: #667085;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+
+/* =========================================
+   GALLERY GRID
+========================================= */
+
+.vashq-business-gallery {
+    display: grid;
+
+    grid-template-columns: 1.25fr 0.9fr 1.2fr;
+    grid-template-rows: 350px 350px;
+
+    gap: 12px;
+
+    width: 100%;
+}
+
+
+/* Gallery item positioning */
+
+.vashq-business-item {
+    position: relative;
+    min-width: 0;
+    min-height: 0;
+    overflow: hidden;
+    background: #e8e8e3;
+}
+
+
+/* First image: wide top-left */
+
+.vashq-business-one {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+
+/* Second image: smaller top-middle */
+
+.vashq-business-two {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+
+/* Third image: tall right side */
+
+.vashq-business-three {
+    grid-column: 3;
+    grid-row: 1 / 3;
+}
+
+
+/* Fourth image: bottom-left */
+
+.vashq-business-four {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+
+/* Fifth image: bottom-middle */
+
+.vashq-business-five {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+
+/* =========================================
+   IMAGE AREA
+========================================= */
+
+.vashq-business-image {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+    min-height: 250px;
+
+    overflow: hidden;
+
+    background: linear-gradient(
+        135deg,
+        #e5e7e2,
+        #cfd4cd
+    );
+}
+
+
+/* Image itself */
+
+.vashq-business-image img {
+    position: absolute;
+    inset: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    opacity: 0;
+
+    transition:
+        transform 0.7s ease,
+        opacity 0.4s ease;
+}
+
+
+/* Show image only when src is provided */
+
+.vashq-business-image img[src]:not([src=""]) {
+    opacity: 1;
+}
+
+
+/* Hide placeholder when a valid image is added */
+
+.vashq-business-image:has(
+    img[src]:not([src=""])
+) .vashq-image-placeholder {
+    display: none;
+}
+
+
+/* Image placeholder */
+
+.vashq-image-placeholder {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    background: linear-gradient(
+        135deg,
+        #e8e9e4,
+        #d9ddd6
+    );
+
+    color: #6b7469;
+}
+
+.vashq-placeholder-number {
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: -2px;
+    opacity: 0.6;
+}
+
+.vashq-placeholder-text {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   IMAGE OVERLAY
+========================================= */
+
+.vashq-business-overlay {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    padding: 28px;
+
+    background: linear-gradient(
+        to top,
+        rgba(13, 18, 16, 0.88) 0%,
+        rgba(13, 18, 16, 0.42) 38%,
+        rgba(13, 18, 16, 0.03) 75%
+    );
+
+    color: #ffffff;
+
+    transition: background 0.4s ease;
+}
+
+
+/* Item number */
+
+.vashq-business-number {
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    color: rgba(255, 255, 255, 0.8);
+
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+
+/* Item heading */
+
+.vashq-business-overlay h3 {
+    margin: 0 0 10px;
+
+    color: #ffffff;
+
+    font-size: clamp(19px, 1.8vw, 26px);
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -0.4px;
+}
+
+
+/* Item description */
+
+.vashq-business-overlay p {
+    max-width: 340px;
+
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.85);
+
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   HOVER EFFECT
+========================================= */
+
+.vashq-business-item:hover img {
+    transform: scale(1.06);
+}
+
+.vashq-business-item:hover .vashq-business-overlay {
+    background: linear-gradient(
+        to top,
+        rgba(13, 18, 16, 0.92) 0%,
+        rgba(13, 18, 16, 0.48) 48%,
+        rgba(13, 18, 16, 0.08) 100%
+    );
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.vashq-target-button .btn {
+    padding: 13px 26px;
+
+    border-radius: 50px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.vashq-target-button .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(40, 100, 232, 0.12);
+}
+
+
+
+
+
+
+
+
+
+/* =====================================================
+   VASHQ WHY CHOOSE US SECTION
+===================================================== */
+
+.vashq-why-choose {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.vashq-why-choose .company-side {
+    position: relative;
+    overflow: hidden;
+
+    background: #fff;
+
+    padding: 40px;
+
+    border-radius: 45px;
+}
+
+
+/* =====================================================
+   DECORATIVE BACKGROUND
+===================================================== */
+
+.vashq-why-choose .company-side::after {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 250px;
+
+    right: 10%;
+    bottom: -160px;
+
+    transform: translateX(-50%);
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 0 35px rgba(40, 100, 232, 0.025),
+        0 0 0 70px rgba(40, 100, 232, 0.02);
+
+    pointer-events: none;
+    z-index: 0;
+}
+
+.vashq-why-choose .company-side > * {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* =====================================================
+   SECTION INTRO - CENTERED
+===================================================== */
+
+.vashq-why-intro {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 18px;
+
+    width: 100%;
+
+    margin: 0 auto 65px;
+
+    text-align: center;
+}
+
+
+/* =====================================================
+   SECTION HEADING
+===================================================== */
+
+.vashq-why-title {
+    width: 100%;
+    text-align: center;
+}
+
+.vashq-why-label {
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    color: #2864e8;
+
+    font-size: 11px;
+    font-weight: 750;
+
+    letter-spacing: 2.5px;
+}
+
+.vashq-why-title h2 {
+    margin: 0;
+
+    color: #151b28;
+
+    font-size: clamp(36px, 4vw, 52px);
+
+    font-weight: 800;
+
+    line-height: 1.15;
+
+    letter-spacing: -1.8px;
+}
+
+.vashq-why-title h2 span {
+    color: #2864e8;
+}
+
+
+/* =====================================================
+   SUBHEADING / DESCRIPTION
+===================================================== */
+
+.vashq-why-description {
+    width: 100%;
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+.vashq-why-description p {
+    margin: 0;
+
+    color: #667085;
+
+    font-size: 16px;
+
+    line-height: 1.9;
+}
+
+
+/* =====================================================
+   THREE SUPPORT POINTS
+===================================================== */
+
+.vashq-why-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    column-gap: 38px;
+    row-gap: 35px;
+
+    padding-bottom: 55px;
+}
+
+
+/* =====================================================
+   FEATURE ITEM
+===================================================== */
+
+.vashq-why-item {
+    position: relative;
+
+    min-width: 0;
+
+    transition: transform 0.3s ease;
+}
+
+.vashq-why-item:hover {
+    transform: translateY(-4px);
+}
+
+
+/* FEATURE HEADING ROW */
+
+.vashq-why-item-heading {
+    display: grid;
+
+    grid-template-columns: auto 38px minmax(0, 1fr);
+
+    align-items: start;
+
+    column-gap: 10px;
+
+    margin-bottom: 18px;
+}
+
+
+/* FEATURE NUMBER */
+
+.vashq-why-number {
+    padding-top: 3px;
+
+    color: #2864e8;
+
+    font-size: 13px;
+    font-weight: 750;
+}
+
+
+/* HORIZONTAL LINE */
+
+.vashq-why-line {
+    display: block;
+
+    width: 100%;
+    height: 1px;
+
+    margin-top: 12px;
+
+    background: linear-gradient(
+        120deg,
+        #e5efff,
+        #a9c9f1
+    );
+
+    transition:
+        background 0.3s ease,
+        height 0.3s ease;
+}
+
+.vashq-why-item:hover .vashq-why-line {
+    height: 2px;
+    background: #2864e8;
+}
+
+
+/* FEATURE TITLE */
+
+.vashq-why-item-heading h3 {
+    margin: 0;
+
+    color: #19202d;
+
+    font-size: 18px;
+    font-weight: 750;
+
+    line-height: 1.45;
+
+    letter-spacing: -0.3px;
+}
+
+
+/* FEATURE DESCRIPTION */
+
+.vashq-why-item > p {
+    margin: 0;
+
+    color: #667085;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+}
+
+
+/* =====================================================
+   BUSINESS STATISTICS
+   LARGE NUMBER BLOCK DESIGN
+===================================================== */
+
+.vashq-why-stats {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    max-width: 850px;
+    margin: 0 auto;
+
+    padding-top: 40px;
+    gap: 25px;
+}
+
+
+/* =====================================================
+   STAT ITEM
+===================================================== */
+
+
+.vashq-stat-item {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    min-width: 0;
+    min-height: 300px;
+
+    padding: 30px 28px;
+
+    overflow: hidden;
+
+    border: none;
+    border-radius: 0;
+
+    outline: none;
+    box-shadow: none;
+
+    text-align: left;
+
+    /* CLEAN DIAGONAL CORNER */
+    clip-path: polygon(
+        0 0,
+        calc(100% - 56px) 0,
+        100% 56px,
+        100% 100%,
+        0 100%
+    );
+
+    transition:
+        transform 0.4s ease,
+        opacity 0.8s ease;
+}
+
+/* REMOVE OLD CORNER */
+.vashq-stat-item::after {
+    display: none !important;
+}
+
+
+
+/* =====================================================
+   STAT BLOCK COLORS
+===================================================== */
+
+/* PROFIT GROWTH */
+
+.vashq-stat-item.stat-profit {
+    background: #196bab;
+    color: #ffffff;
+}
+
+/* COMPLETED JOBS */
+
+.vashq-stat-item.stat-jobs {
+    background: #66ade2;
+    color: #052f2c;
+}
+
+
+/* =====================================================
+   DIAGONAL CORNER DESIGN
+===================================================== */
+
+.vashq-stat-item::after {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    width: 45px;
+    height: 45px;
+
+    // background: #cde1fc;
+    background: #fff;
+
+    clip-path: polygon(
+        0 0,
+        100% 100%,
+        100% 0
+    );
+
+    pointer-events: none;
+}
+
+
+/* =====================================================
+   NUMBER AREA
+===================================================== */
+
+.vashq-stat-top {
+    position: relative;
+
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 5px;
+}
+
+
+/* LARGE NUMBER */
+
+.vashq-stat-number {
+    display: block;
+
+    font-size: clamp(65px, 8vw, 115px);
+
+    font-weight: 400;
+
+    line-height: 0.95;
+
+    letter-spacing: -6px;
+
+    font-variant-numeric: tabular-nums;
+
+    white-space: nowrap;
+}
+
+
+/* PROFIT NUMBER */
+
+.stat-profit .vashq-stat-number {
+    color: #ffffff;
+}
+
+/* JOBS NUMBER */
+
+.stat-jobs .vashq-stat-number {
+    color: #052f2c;
+}
+
+
+/* PERCENTAGE SYMBOL */
+
+.vashq-stat-symbol {
+    font-size: 17px;
+
+    font-weight: 600;
+
+    padding: 8px 12px 0 0;
+
+    flex-shrink: 0;
+}
+
+
+/* =====================================================
+   STAT BOTTOM CONTENT
+===================================================== */
+
+.vashq-stat-bottom {
+    display: grid;
+
+    grid-template-columns: auto minmax(0, 1fr);
+
+    align-items: start;
+
+    gap: 25px;
+
+    margin-top: 30px;
+}
+
+
+/* RANK NUMBER */
+
+.vashq-stat-rank {
+    font-size: 13px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+/* STAT INFORMATION */
+
+.vashq-stat-info {
+    max-width: 240px;
+    min-width: 0;
+}
+
+
+/* STAT LABEL */
+
+.vashq-stat-label {
+    display: block;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 10px;
+}
+
+
+/* STAT DESCRIPTION */
+
+.vashq-stat-info p {
+    margin: 0;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    opacity: 0.85;
+}
+
+
+/* =====================================================
+   STAT HOVER EFFECT
+===================================================== */
+
+.vashq-stat-item:hover {
+    transform: translateY(-5px);
+}
+
+
+/* =====================================================
+   SCROLL REVEAL ANIMATION
+===================================================== */
+
+.vashq-why-intro,
+.vashq-why-item,
+.vashq-stat-item {
+    opacity: 0;
+
+    transform: translateY(30px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+/* VISIBLE STATE */
+
+.vashq-why-intro.show,
+.vashq-why-item.show,
+.vashq-stat-item.show {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* FEATURE STAGGER */
+
+.vashq-why-item:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.vashq-why-item:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.vashq-why-item:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+
+/* STATISTICS STAGGER */
+
+.vashq-stat-item:nth-child(1) {
+    transition-delay: 0.15s;
+
+}
+
+.vashq-stat-item:nth-child(2) {
+    transition-delay: 0.3s;
+}
+
+
+/* =====================================================
+   TABLET RESPONSIVE
+===================================================== */
+
+@media (max-width: 991px) {
+
+    .vashq-why-choose .company-side {
+        padding: 65px 45px;
+
+        border-radius: 35px;
+    }
+
+    .vashq-why-intro {
+        margin-bottom: 55px;
+    }
+
+    .vashq-why-title h2 {
+        font-size: 42px;
+    }
+
+    .vashq-why-grid {
+        column-gap: 22px;
+    }
+
+    .vashq-why-item-heading {
+        grid-template-columns: auto 25px minmax(0, 1fr);
+
+        column-gap: 8px;
+    }
+
+    .vashq-why-item-heading h3 {
+        font-size: 16px;
+    }
+
+
+    /* STATISTICS */
+
+    .vashq-why-stats {
+        max-width: 750px;
+    }
+
+    .vashq-stat-item {
+        min-height: 260px;
+
+        padding: 25px 20px;
+    }
+
+    .vashq-stat-number {
+        font-size: clamp(65px, 8vw, 85px);
+
+        letter-spacing: -4px;
+    }
+
+    .vashq-stat-bottom {
+        gap: 15px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE RESPONSIVE
+===================================================== */
+
+@media (max-width: 767px) {
+
+    .vashq-why-choose {
+        padding-bottom: 45px;
+    }
+
+    .vashq-why-choose .company-side {
+        padding: 45px 25px;
+
+        border-radius: 28px;
+    }
+
+
+    /* HEADING */
+
+    .vashq-why-intro {
+        gap: 15px;
+
+        margin-bottom: 45px;
+    }
+
+    .vashq-why-title h2 {
+        font-size: 36px;
+
+        letter-spacing: -1.2px;
+    }
+
+    .vashq-why-label {
+        font-size: 10px;
+
+        margin-bottom: 14px;
+    }
+
+    .vashq-why-description p {
+        font-size: 14px;
+
+        line-height: 1.8;
+    }
+
+
+    /* FEATURES */
+
+    .vashq-why-grid {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+
+        padding-bottom: 35px;
+    }
+
+    .vashq-why-item-heading h3 {
+        font-size: 17px;
+    }
+
+    .vashq-why-item > p {
+        font-size: 13px;
+    }
+
+
+    /* STATISTICS */
+
+    .vashq-why-stats {
+        grid-template-columns: 1fr;
+
+        max-width: 450px;
+
+        padding-top: 20px;
+
+        gap: 0;
+    }
+
+    .vashq-stat-item {
+        min-height: 230px;
+
+        padding: 28px 25px;
+    }
+
+    .vashq-stat-number {
+        font-size: 85px;
+
+        letter-spacing: -4px;
+    }
+
+    .vashq-stat-bottom {
+        margin-top: 25px;
+
+        gap: 20px;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 400px) {
+
+    .vashq-why-choose .company-side {
+        padding: 38px 20px;
+    }
+
+    .vashq-why-title h2 {
+        font-size: 33px;
+    }
+
+
+    /* STATISTICS */
+
+    .vashq-stat-item {
+        min-height: 210px;
+
+        padding: 23px 18px;
+    }
+
+    .vashq-stat-number {
+        font-size: 68px;
+
+        letter-spacing: -3px;
+    }
+
+    .vashq-stat-symbol {
+        font-size: 14px;
+
+        padding-right: 8px;
+    }
+
+    .vashq-stat-bottom {
+        gap: 14px;
+    }
+
+    .vashq-stat-info p {
+        font-size: 12px;
+    }
+
+}
+
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .vashq-why-intro,
+    .vashq-why-item,
+    .vashq-stat-item {
+        transition: none;
+
+        transform: none;
+
+        opacity: 1;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   VASHQ COMPACT PREMIUM FOOTER
+========================================= */
+
+.vashq-small-footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    padding: 38px 0 16px;
+    color: #ffffff;
+
+    /* Premium greyish-blue oxidised finish */
+    background:
+        radial-gradient(
+            ellipse at 15% 20%,
+            rgba(190, 207, 220, 0.16),
+            transparent 40%
+        ),
+        radial-gradient(
+            ellipse at 85% 80%,
+            rgba(9, 24, 39, 0.30),
+            transparent 45%
+        ),
+        linear-gradient(
+            135deg,
+            #526778 0%,
+            #40586b 45%,
+            #30485b 100%
+        );
+}
+
+.vashq-small-footer-container {
+    width: min(1180px, 92%);
+    margin: 0 auto;
+}
+
+/* Main footer layout */
+.vashq-footer-main {
+    display: grid;
+    grid-template-columns: 0.8fr 2.2fr;
+    gap: 45px;
+    align-items: center;
+    padding-bottom: 28px;
+}
+
+/* Brand section */
+.vashq-footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 230px;
+    margin: 0 auto;
+}
+
+/* Small logo */
+.vashq-footer-logo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 9px;
+}
+
+.vashq-footer-logo img {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+}
+
+/* Centered tagline */
+.vashq-footer-brand p {
+    max-width: 220px;
+    margin: 0 auto 15px;
+    color: rgba(255, 255, 255, 0.76);
+    font-size: 14px;
+    line-height: 1.7;
+    text-align: center;
+}
+
+/* Social icons */
+.vashq-footer-socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+}
+
+.vashq-footer-socials a {
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 15px;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.06);
+    transition: all 0.3s ease;
+}
+
+.vashq-footer-socials a:hover {
+    color: #ffffff;
+    background: #1769ff;
+    border-color: #1769ff;
+    transform: translateY(-3px);
+}
+
+/* Navigation */
+.vashq-footer-navigation {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.vashq-footer-nav-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 9px;
+}
+
+.vashq-footer-nav-group h4 {
+    margin: 0 0 7px;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.vashq-footer-nav-group a,
+.vashq-footer-location {
+    color: rgba(255, 255, 255, 0.68);
+    font-size: 13px;
+    line-height: 1.8;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.vashq-footer-nav-group a:hover {
+    color: #ffffff;
+}
+
+.vashq-footer-location {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.vashq-footer-location i {
+    color: #fefefe;
+}
+
+/* Bottom copyright section */
+.vashq-footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding-top: 14px;
+    // border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.vashq-footer-bottom p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.58);
+    font-size: 10px;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 991px) {
+    .vashq-footer-main {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .vashq-footer-brand {
+        max-width: 260px;
+    }
+
+    .vashq-footer-navigation {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 18px;
+    }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+    .vashq-small-footer {
+        padding: 32px 0 15px;
+    }
+
+    .vashq-footer-navigation {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 25px 18px;
+    }
+
+    .vashq-footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 7px;
+    }
+     .vashq-footer-brand p {
+        font-size: 13px;
+    }
+
+    .vashq-footer-nav-group h4 {
+        font-size: 14px;
+    }
+
+    .vashq-footer-nav-group a,
+    .vashq-footer-location {
+        font-size: 12px;
+    }
+
+    .vashq-footer-bottom p {
+        font-size: 11px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* ========================================
+   KEYFRAMES
+======================================== */
+
+@keyframes imageFloat {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(12px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes vashqRipple {
+    0% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: scale(1.8);
+        opacity: 0;
+    }
+}
+
+@keyframes vashqPanelEnter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes vashq-point {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(3px);
+    }
+}
+
+@keyframes vashq-content-in-left {
+    from {
+        opacity: 0;
+        transform: translateX(-22px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes vashq-content-in-right {
+    from {
+        opacity: 0;
+        transform: translateX(22px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes vashq-testimonial-scroll {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+
+}
+
+@keyframes vashq-mobile-content-in {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+
+
+
+
+
+
+
+/* ========================================
+   RESPONSIVE CSS
+   VASHQ WEBSITE
+======================================== */
+
+/* ========================================
+   LARGE DESKTOP - 1400px
+======================================== */
+
+@media (max-width: 1400px) {
+
+    .vashq-container {
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+
+    .vashq-comparison-container {
+        padding: 65px 65px;
+    }
+
+    .company-side,
+    .vashq-carousels-container,
+    .vashq-customers-container {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
+    .vashq-customers-container {
+        width: 100%;
+    }
+
+    .vashq-stage {
+        grid-template-columns: minmax(0, 1fr) 240px minmax(0, 1fr);
+        gap: 18px;
+    }
+
+    .vashq-orbit-rotor {
+        width: 700px;
+        height: 700px;
+    }
+
+    .vashq-review-card {
+        flex-basis: 340px;
+        width: 340px;
+    }
+
+}
+
+
+/* ========================================
+   LAPTOP - 1200px
+======================================== */
+
+@media (max-width: 1200px) {
+
+    /* HERO */
+
+    .carwash-hero h1 {
+        font-size: 48px;
+    }
+
+    .carwash-hero-text {
+        max-width: 800px;
+    }
+
+    /* SMART WASH */
+
+    .smart-wash-section {
+        padding: 20px 30px;
+    }
+
+    .smart-wash-container {
+        padding: 35px;
+        border-radius: 35px;
+    }
+
+    .smart-wash-content h2 {
+        font-size: 42px;
+    }
+
+    .smart-wash-features {
+        gap: 22px 18px;
+    }
+
+    /* COMPARISON */
+
+    .vashq-comparison-container {
+        padding: 55px 40px;
+    }
+
+    .vashq-stage {
+        grid-template-columns: minmax(0, 1fr) 210px minmax(0, 1fr);
+        gap: 12px;
+        min-height: 570px;
+    }
+
+    .vashq-list {
+        height: 500px;
+    }
+
+    .vashq-item {
+        gap: 9px;
+        min-height: 72px;
+    }
+
+    .vashq-item-icon {
+        flex-basis: 38px;
+        width: 38px;
+        height: 38px;
+    }
+
+    .vashq-item h3 {
+        font-size: 12px;
+    }
+
+    .vashq-item p {
+        font-size: 10px;
+    }
+
+    .vashq-toggle-wrapper {
+        width: 210px;
+        height: 210px;
+    }
+
+    .vashq-toggle-label {
+        width: 155px;
+        height: 155px;
+    }
+
+    .vashq-toggle-logo {
+        width: 55px;
+        height: 55px;
+        font-size: 25px;
+    }
+
+    .vashq-toggle-brand {
+        font-size: 22px;
+    }
+
+    .vashq-toggle-wrapper::before,
+    .vashq-toggle-wrapper::after {
+        width: 155px;
+        height: 155px;
+    }
+
+    /* WHY CHOOSE US */
+
+    .vashq-why-grid {
+        column-gap: 28px;
+        row-gap: 42px;
+    }
+
+    /* FINAL CTA */
+
+    .vashq-final-cta {
+        padding: 60px 55px;
+        gap: 35px;
+    }
+
+    /* FOOTER */
+
+    .vashq-footer-main {
+        gap: 35px;
+    }
+
+}
+
+
+/* ========================================
+   TABLET - 991px
+======================================== */
+
+@media (max-width: 991px) {
+
+    /* HERO */
+
+    .carwash-hero {
+        height: auto;
+        min-height: 650px;
+        background-position: 60% center;
+    }
+
+    .carwash-hero-overlay {
+        background: linear-gradient(
+            90deg,
+            rgba(5, 12, 22, 0.90) 0%,
+            rgba(5, 12, 22, 0.72) 65%,
+            rgba(5, 12, 22, 0.50) 100%
+        );
+    }
+
+    .carwash-hero-content {
+        padding-top: 85px;
+        padding-bottom: 65px;
+    }
+
+    .carwash-hero h1 {
+        font-size: clamp(38px, 5.5vw, 48px);
+    }
+
+    .carwash-hero-text > p {
+        max-width: 650px;
+        font-size: 15px;
+    }
+
+    .carwash-hero-bottom {
+        margin-top: 45px;
+    }
+
+    /* SMART WASH */
+
+    .smart-wash-section {
+        padding: 20px 25px;
+    }
+
+    .smart-wash-container {
+        padding: 35px;
+    }
+
+    .smart-wash-content h2 {
+        font-size: 38px;
+    }
+
+    .smart-wash-description {
+        font-size: 14px;
+    }
+
+    .smart-wash-features {
+        gap: 20px 15px;
+    }
+
+    .smart-wash-feature h3 {
+        font-size: 14px;
+    }
+
+    .smart-wash-feature p {
+        font-size: 12px;
+    }
+
+    .smart-wash-image {
+        max-width: 480px;
+    }
+
+    /* COMPARISON SWITCH */
+
+    .vashq-comparison {
+        padding: 75px 20px;
+    }
+
+    .vashq-panel {
+        padding: 25px;
+    }
+
+    .vashq-feature-list {
+        gap: 0 18px;
+    }
+
+    /* CIRCUIT COMPARISON */
+
+    .vashq-container {
+        padding: 20px 25px;
+    }
+
+    .vashq-comparison-container {
+        padding: 50px 25px;
+        border-radius: 30px;
+    }
+
+    .vashq-stage {
+        grid-template-columns: minmax(0, 1fr) 180px minmax(0, 1fr);
+        gap: 8px;
+        min-height: 530px;
+    }
+
+    .vashq-list {
+        height: 470px;
+    }
+
+    .vashq-item {
+        gap: 7px;
+        min-height: 68px;
+    }
+
+    .vashq-item-icon {
+        flex-basis: 32px;
+        width: 32px;
+        height: 32px;
+        font-size: 12px;
+    }
+
+    .vashq-item h3 {
+        font-size: 11px;
+    }
+
+    .vashq-item p {
+        font-size: 9px;
+    }
+
+    .vashq-toggle-wrapper {
+        width: 180px;
+        height: 180px;
+    }
+
+    .vashq-toggle-label {
+        width: 140px;
+        height: 140px;
+    }
+
+    .vashq-toggle-logo {
+        width: 45px;
+        height: 45px;
+        font-size: 22px;
+    }
+
+    .vashq-toggle-brand {
+        font-size: 19px;
+    }
+
+    .vashq-toggle-wrapper::before,
+    .vashq-toggle-wrapper::after {
+        width: 140px;
+        height: 140px;
+    }
+
+    .vashq-orbit-rotor {
+        width: 550px;
+        height: 550px;
+    }
+
+    .vashq-orbit-secondary {
+        width: 400px;
+        height: 400px;
+    }
+
+    /* CAROUSELS AND CUSTOMERS */
+
+    .vashq-carousels-container,
+    .vashq-customers-container,
+    .company-side {
+        padding: 45px 35px;
+        border-radius: 30px;
+    }
+
+    /* TESTIMONIALS */
+
+    .vashq-testimonials {
+        padding-top: 65px;
+        padding-bottom: 55px;
+    }
+
+    .vashq-review-card {
+        width: 310px;
+        flex-basis: 310px;
+        min-height: 290px;
+        padding: 23px;
+    }
+
+    .vashq-testimonial-group {
+        gap: 18px;
+        padding-right: 18px;
+    }
+
+    /* BUSINESS GALLERY */
+
+    .vashq-business-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: 280px 280px 280px;
+        gap: 12px;
+    }
+
+    .vashq-business-one {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .vashq-business-two {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .vashq-business-three {
+        grid-column: 2;
+        grid-row: 2 / 4;
+    }
+
+    .vashq-business-four {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .vashq-business-five {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    /* WHY CHOOSE US */
+
+    .vashq-why-choose {
+        padding: 65px 0;
+    }
+
+    .vashq-why-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 25px;
+        row-gap: 38px;
+    }
+
+    .vashq-why-item-heading {
+        grid-template-columns: auto 30px minmax(0, 1fr);
+        column-gap: 8px;
+    }
+
+    .vashq-why-item-heading h3 {
+        font-size: 16px;
+    }
+
+    /* FINAL CTA */
+
+    .vashq-final-cta {
+        padding: 50px 35px;
+        gap: 25px;
+    }
+
+    .vashq-cta-content h2 {
+        font-size: 33px;
+    }
+
+    .vashq-cta-primary {
+        min-width: 210px;
+        gap: 15px;
+        padding: 17px 20px;
+    }
+
+    /* FOOTER */
+
+    .vashq-footer-main {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .vashq-footer-link-groups {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+}
+
+
+/* ========================================
+   MOBILE LANDSCAPE / SMALL TABLET - 768px
+======================================== */
+
+@media (max-width: 768px) {
+
+    /* HERO */
+
+    .carwash-hero {
+        min-height: 620px;
+        background-position: 62% center;
+    }
+
+    .carwash-hero-content {
+        padding: 80px 25px 55px;
+    }
+
+    .carwash-hero h1 {
+        font-size: clamp(36px, 6vw, 44px);
+    }
+
+    .carwash-hero-text > p {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    .carwash-hero-bottom {
+        margin-top: 35px;
+    }
+
+    /* SMART WASH */
+
+    .smart-wash-section {
+        padding: 20px;
+    }
+
+    .smart-wash-container {
+        padding: 30px;
+        border-radius: 28px;
+    }
+
+    .smart-wash-content h2 {
+        max-width: 100%;
+        font-size: clamp(32px, 5vw, 40px);
+    }
+
+    .smart-wash-description {
+        max-width: 100%;
+    }
+
+    .smart-wash-image-wrapper {
+        margin-top: 25px;
+    }
+
+    .smart-wash-image {
+        max-width: 430px;
+    }
+
+    /* FAQ */
+
+    #faq .faq-main-title {
+        letter-spacing: -0.8px;
+    }
+
+    #faq .faq-subtitle {
+        font-size: 14px;
+    }
+
+    #faq .accordion-button {
+        gap: 12px;
+        padding: 18px 16px;
+        font-size: 14px;
+    }
+
+    #faq .faq-number {
+        width: 32px;
+        height: 32px;
+    }
+
+    #faq .accordion-body {
+        padding: 0 18px 22px 60px;
+        font-size: 13px;
+    }
+
+    /* COMPARISON SWITCH */
+
+    .vashq-comparison {
+        padding: 65px 16px;
+    }
+
+    .vashq-comparison__header {
+        margin-bottom: 35px;
+    }
+
+    .vashq-comparison__title {
+        font-size: clamp(28px, 5vw, 38px);
+    }
+
+    .vashq-panel {
+        padding: 22px;
+    }
+
+    .vashq-panel__header {
+        flex-wrap: wrap;
+    }
+
+    /* CIRCUIT COMPARISON */
+
+    .vashq-container {
+        padding: 15px;
+    }
+
+    .vashq-comparison-container {
+        padding: 40px 20px;
+        border-radius: 25px;
+    }
+
+    .vashq-intro {
+        margin-bottom: 35px;
+    }
+
+    .vashq-intro h2 {
+        font-size: clamp(28px, 5vw, 36px);
+    }
+
+    .vashq-stage {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 25px;
+        min-height: auto;
+    }
+
+    .vashq-orbit-layer {
+        display: none;
+    }
+
+    .vashq-center {
+        order: 0;
+    }
+
+    .vashq-toggle-wrapper {
+        width: 190px;
+        height: 190px;
+        margin-bottom: 18px;
+    }
+
+    .vashq-toggle-label {
+        width: 140px;
+        height: 140px;
+    }
+
+    .vashq-toggle-wrapper::before,
+    .vashq-toggle-wrapper::after {
+        width: 140px;
+        height: 140px;
+    }
+
+    .vashq-status {
+        font-size: 14px;
+    }
+
+    .vashq-list {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        align-content: start;
+        gap: 12px;
+        height: auto;
+    }
+
+    .vashq-list-left {
+        order: 1;
+    }
+
+    .vashq-list-right {
+        order: 2;
+    }
+
+    .vashq-list-left,
+    .vashq-list-right {
+        padding: 0;
+    }
+
+    .vashq-list-left .vashq-item,
+    .vashq-list-right .vashq-item {
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 8px;
+        min-height: 105px;
+        padding: 12px 10px;
+        text-align: left;
+        border: 1px solid #E5E7EB;
+        border-radius: 12px;
+        background: #FFFFFF;
+        box-shadow: 0 3px 12px rgba(0, 0, 0, 0.025);
+    }
+
+    .vashq-section[data-state="true"] .vashq-list-left .vashq-item,
+    .vashq-section[data-state="true"] .vashq-list-right .vashq-item {
+        border-color: #DBEAFE;
+    }
+
+    .vashq-item-icon {
+        flex-basis: 30px;
+        width: 30px;
+        height: 30px;
+        margin-top: 2px;
+        font-size: 11px;
+        box-shadow: none;
+    }
+
+    .vashq-item-content {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .vashq-item h3 {
+        font-size: 11px;
+        line-height: 1.5;
+    }
+
+    .vashq-item p {
+        font-size: 10px;
+        line-height: 1.55;
+    }
+
+    /* TESTIMONIALS */
+
+    .vashq-testimonials {
+        padding: 55px 0;
+    }
+
+    .vashq-testimonials-heading {
+        margin-bottom: 30px;
+    }
+
+    .vashq-review-card {
+        width: 290px;
+        flex-basis: 290px;
+        min-height: 290px;
+    }
+
+    /* BUSINESS GALLERY */
+
+    .vashq-business-overlay {
+        padding: 20px;
+    }
+
+    /* WHY CHOOSE US */
+
+    .company-side {
+        padding: 40px 25px;
+        border-radius: 28px;
+    }
+
+    .vashq-why-heading {
+        margin-bottom: 40px;
+    }
+
+    .vashq-why-grid {
+        column-gap: 20px;
+        row-gap: 32px;
+    }
+
+    .vashq-why-item-heading h3 {
+        font-size: 15px;
+    }
+
+    .vashq-why-item > p {
+        font-size: 13px;
+    }
+
+    /* FINAL CTA */
+
+    .vashq-final-cta {
+        gap: 25px;
+        padding: 40px 30px;
+    }
+
+    .vashq-cta-content h2 {
+        font-size: 30px;
+    }
+
+    .vashq-cta-content p {
+        font-size: 14px;
+    }
+
+    .vashq-cta-primary {
+        min-width: 190px;
+        font-size: 14px;
+    }
+
+    /* FOOTER */
+
+    .vashq-footer-link-groups {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 25px;
+    }
+
+}
+
+
+/* ========================================
+   MOBILE - 576px
+======================================== */
+
+@media (max-width: 576px) {
+
+    /* HERO */
+
+    .carwash-hero {
+        min-height: 620px;
+        background-position: 65% center;
+    }
+
+    .carwash-hero::after {
+        height: 110px;
+    }
+
+    .carwash-hero-overlay {
+        background: rgba(5, 12, 22, 0.76);
+    }
+
+    .carwash-hero-content {
+        padding: 75px 20px 45px;
+    }
+
+    .carwash-hero-badge {
+        padding: 8px 12px;
+        margin-bottom: 20px;
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
+    .carwash-hero h1 {
+        font-size: clamp(32px, 9vw, 42px);
+        letter-spacing: -1.2px;
+        line-height: 1.2;
+    }
+
+    .carwash-hero-text > p {
+        margin-top: 18px;
+        margin-bottom: 25px;
+        font-size: 13px;
+        line-height: 1.8;
+    }
+
+    .carwash-hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .carwash-btn {
+        width: 100%;
+        min-height: 49px;
+        padding: 13px 18px;
+        font-size: 15px;
+    }
+
+    .carwash-hero-features {
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 25px;
+    }
+
+    .hero-feature {
+        font-size: 12px;
+    }
+
+    .carwash-hero-bottom {
+        gap: 9px;
+        margin-top: 30px;
+        font-size: 8px;
+        letter-spacing: 1.5px;
+    }
+
+    .hero-bottom-line {
+        width: 25px;
+    }
+
+    /* SMART WASH */
+
+    .smart-wash-section {
+        padding: 15px;
+    }
+
+    .smart-wash-container {
+        padding: 25px 20px;
+        border-radius: 22px;
+    }
+
+    .smart-wash-label {
+        margin-bottom: 17px;
+        padding: 8px 12px;
+        font-size: 9px;
+    }
+
+    .smart-wash-content h2 {
+        margin-bottom: 17px;
+        font-size: 31px;
+        letter-spacing: -1px;
+    }
+
+    .smart-wash-description {
+        margin-bottom: 23px;
+        font-size: 13px;
+        line-height: 1.8;
+    }
+
+    .smart-wash-features {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        margin-bottom: 25px;
+    }
+
+    .smart-wash-feature {
+        gap: 10px;
+    }
+
+    .smart-wash-check {
+        width: 29px;
+        height: 29px;
+        font-size: 14px;
+    }
+
+    .smart-wash-feature h3 {
+        font-size: 14px;
+    }
+
+    .smart-wash-feature p {
+        font-size: 12px;
+    }
+
+    .smart-wash-btn {
+        width: 100%;
+        padding: 14px 18px;
+        font-size: 13px;
+    }
+
+    .smart-wash-image-wrapper {
+        margin-top: 20px;
+    }
+
+    .smart-wash-image {
+        max-width: 100%;
+    }
+
+    /* FAQ */
+
+    #faq .faq-main-title {
+        font-size: 30px;
+    }
+
+    #faq .accordion-button {
+        gap: 10px;
+        padding: 15px 12px;
+        font-size: 13px;
+    }
+
+    #faq .faq-number {
+        width: 29px;
+        height: 29px;
+        font-size: 10px;
+    }
+
+    #faq .accordion-button::after {
+        width: 25px;
+        height: 25px;
+        font-size: 17px;
+        line-height: 23px;
+    }
+
+    #faq .accordion-body {
+        padding: 0 15px 18px 51px;
+        font-size: 12px;
+    }
+
+    /* COMPARISON SWITCH */
+
+    .vashq-comparison {
+        padding: 55px 12px;
+    }
+
+    .vashq-comparison__header {
+        margin-bottom: 28px;
+    }
+
+    .vashq-comparison__eyebrow {
+        font-size: 10px;
+        letter-spacing: 1.8px;
+    }
+
+    .vashq-comparison__title {
+        font-size: 28px;
+        letter-spacing: -0.8px;
+    }
+
+    .vashq-comparison__description {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .vashq-toggle {
+        width: 100px;
+        height: 56px;
+    }
+
+    .vashq-toggle__thumb {
+        width: 42px;
+        height: 42px;
+    }
+
+    .vashq-comparison.is-on .vashq-toggle__thumb {
+        left: calc(100% - 49px);
+    }
+
+    .vashq-toggle__status {
+        font-size: 20px;
+    }
+
+    .vashq-panel {
+        padding: 18px 15px;
+        border-radius: 16px;
+    }
+
+    .vashq-panel__header {
+        gap: 10px;
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+    }
+
+    .vashq-panel__icon {
+        flex-basis: 40px;
+        width: 40px;
+        height: 40px;
+        font-size: 19px;
+    }
+
+    .vashq-panel__header h3 {
+        font-size: 16px;
+    }
+
+    .vashq-panel__header p {
+        font-size: 11px;
+    }
+
+    .vashq-panel__count {
+        padding: 6px 9px;
+        font-size: 10px;
+    }
+
+    .vashq-feature-list {
+        grid-template-columns: 1fr;
+    }
+
+    .vashq-feature-list li {
+        padding: 12px 0;
+        font-size: 12px;
+    }
+
+    /* CIRCUIT COMPARISON */
+
+    .vashq-container {
+        padding: 10px;
+    }
+
+    .vashq-comparison-container {
+        padding: 35px 14px;
+        border-radius: 20px;
+    }
+
+    .vashq-intro {
+        margin-bottom: 30px;
+    }
+
+    .vashq-intro h2 {
+        font-size: 28px;
+        letter-spacing: -0.8px;
+    }
+
+    .vashq-intro p {
+        font-size: 13px;
+    }
+
+    .vashq-stage {
+        gap: 22px;
+    }
+
+    .vashq-toggle-wrapper {
+        width: 175px;
+        height: 175px;
+    }
+
+    .vashq-toggle-label {
+        width: 130px;
+        height: 130px;
+    }
+
+    .vashq-toggle-wrapper::before,
+    .vashq-toggle-wrapper::after {
+        width: 130px;
+        height: 130px;
+    }
+
+    .vashq-toggle-logo {
+        width: 43px;
+        height: 43px;
+        font-size: 20px;
+    }
+
+    .vashq-toggle-brand {
+        font-size: 17px;
+    }
+
+    .vashq-toggle-subtitle {
+        font-size: 8px;
+    }
+
+    .vashq-list {
+        gap: 9px;
+    }
+
+    .vashq-list-left .vashq-item,
+    .vashq-list-right .vashq-item {
+        gap: 6px;
+        min-height: 100px;
+        padding: 10px 7px;
+        border-radius: 9px;
+    }
+
+    .vashq-item-icon {
+        flex-basis: 26px;
+        width: 26px;
+        height: 26px;
+        font-size: 10px;
+    }
+
+    .vashq-item h3 {
+        font-size: 10px;
+        line-height: 1.45;
+    }
+
+    .vashq-item p {
+        font-size: 9px;
+        line-height: 1.5;
+    }
+
+    /* CAROUSELS AND CUSTOMERS */
+
+    .vashq-carousels-container,
+    .vashq-customers-container,
+    .company-side {
+        padding: 30px 18px;
+        border-radius: 20px;
+    }
+
+    /* TESTIMONIALS */
+
+    .vashq-testimonials {
+        padding: 45px 0;
+    }
+
+    .vashq-testimonials-heading {
+        padding: 0 18px;
+        margin-bottom: 25px;
+    }
+
+    .vashq-testimonials-label {
+        font-size: 9px;
+        letter-spacing: 1.5px;
+    }
+
+    .vashq-testimonials-heading h2 {
+        font-size: 28px;
+        letter-spacing: -0.8px;
+    }
+
+    .vashq-testimonials-heading > p {
+        font-size: 12px;
+    }
+
+    .vashq-review-card {
+        width: 270px;
+        flex-basis: 270px;
+        min-height: 290px;
+        padding: 20px;
+        border-radius: 16px;
+    }
+
+    .vashq-review-text {
+        font-size: 12px;
+        line-height: 1.8;
+    }
+
+    .vashq-review-author-info h3 {
+        font-size: 12px;
+    }
+
+    .vashq-review-author-info p {
+        font-size: 10px;
+    }
+
+    .vashq-review-avatar {
+        width: 40px;
+        height: 40px;
+        flex-basis: 40px;
+    }
+
+    .vashq-testimonial-group {
+        gap: 12px;
+        padding-right: 12px;
+    }
+
+    .vashq-testimonial-track {
+        animation-duration: 32s;
+    }
+
+    .vashq-testimonials-footer {
+        gap: 8px;
+        margin-top: 18px;
+    }
+
+    .vashq-testimonials-footer p {
+        font-size: 9px;
+    }
+
+    .vashq-footer-line {
+        width: 15px;
+    }
+
+    /* BUSINESS GALLERY */
+
+    .vashq-target-heading {
+        padding: 0 10px;
+    }
+
+    .vashq-target-heading h2 {
+        font-size: 28px;
+    }
+
+    .vashq-target-heading p {
+        font-size: 12px;
+    }
+
+    .vashq-business-gallery {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 240px);
+        gap: 10px;
+    }
+
+    .vashq-business-one {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .vashq-business-two {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .vashq-business-three {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    .vashq-business-four {
+        grid-column: 1;
+        grid-row: 4;
+    }
+
+    .vashq-business-five {
+        grid-column: 1;
+        grid-row: 5;
+    }
+
+    .vashq-business-overlay {
+        padding: 18px;
+    }
+
+    .vashq-business-overlay h3 {
+        font-size: 20px;
+    }
+
+    .vashq-business-overlay p {
+        font-size: 12px;
+    }
+
+    /* WHY CHOOSE US */
+
+    .vashq-why-choose {
+        padding: 45px 0;
+    }
+
+    .company-side {
+        padding: 30px 18px;
+    }
+
+    .vashq-why-heading {
+        margin-bottom: 32px;
+    }
+
+    .vashq-why-heading h2 {
+        font-size: 29px;
+        letter-spacing: -0.8px;
+    }
+
+    .vashq-why-heading > p {
+        font-size: 12px;
+    }
+
+    .vashq-why-grid {
+        grid-template-columns: 1fr;
+        row-gap: 25px;
+    }
+
+    .vashq-why-item {
+        padding-bottom: 20px;
+        border-bottom: 1px solid #dbe5ed;
+    }
+
+    .vashq-why-item:last-child {
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+
+    .vashq-why-item-heading {
+        grid-template-columns: auto 25px minmax(0, 1fr);
+        column-gap: 9px;
+        margin-bottom: 10px;
+    }
+
+    .vashq-why-number {
+        font-size: 11px;
+    }
+
+    .vashq-why-item-heading h3 {
+        font-size: 15px;
+    }
+
+    .vashq-why-item > p {
+        font-size: 12px;
+        line-height: 1.8;
+    }
+
+    /* TEAM */
+
+    .vashq-our-team {
+        margin-top: 25px;
+        padding-top: 20px;
+    }
+
+    .vashq-our-team > h2 {
+        font-size: 22px;
+        margin-bottom: 18px;
+    }
+
+    .vashq-team-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .vashq-team-card {
+        padding: 12px 5px;
+    }
+
+    .vashq-team-photo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .vashq-team-photo span {
+        font-size: 17px;
+    }
+
+    .vashq-team-card h3 {
+        font-size: 11px;
+        overflow-wrap: anywhere;
+    }
+
+    .vashq-team-card p {
+        font-size: 10px;
+    }
+
+    /* FINAL CTA */
+
+    #final-cta {
+        padding: 30px 0;
+    }
+
+    .vashq-final-cta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+        padding: 32px 22px;
+        border-radius: 22px;
+    }
+
+    .vashq-cta-label {
+        margin-bottom: 15px;
+        font-size: 28px;
+    }
+
+    .vashq-cta-content h2 {
+        font-size: 28px;
+        line-height: 1.2;
+        letter-spacing: -0.8px;
+        margin-bottom: 14px;
+    }
+
+    .vashq-cta-content p {
+        font-size: 13px;
+    }
+
+    .vashq-cta-action {
+        width: 100%;
+    }
+
+    .vashq-cta-primary {
+        width: 100%;
+        min-width: 0;
+        padding: 15px 17px;
+        font-size: 14px;
+    }
+
+    .vashq-cta-note {
+        font-size: 10px;
+    }
+
+    /* FOOTER */
+
+    .vashq-footer {
+        margin-top: 65px;
+        padding: 1px 15px 18px;
+        border-radius: 28px 28px 0 0;
+    }
+
+    .vashq-footer-brand-center {
+        margin-top: -45px;
+        margin-bottom: 35px;
+    }
+
+    .vashq-footer-logo {
+        width: 90px;
+        height: 90px;
+    }
+
+    .vashq-footer-logo img {
+        width: auto;
+        max-width: 150px;
+        height: 65px;
+    }
+
+    .vashq-footer-brand-center p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .vashq-footer-booking {
+        max-width: 100%;
+        gap: 5px;
+        padding: 5px;
+    }
+
+    .vashq-footer-booking input {
+        height: 42px;
+        padding: 0 9px;
+        font-size: 12px;
+    }
+
+    .vashq-footer-booking input::placeholder {
+        font-size: 12px;
+    }
+
+    .vashq-footer-booking button {
+        min-width: 85px;
+        height: 42px;
+        padding: 0 12px;
+        font-size: 12px;
+    }
+
+    .vashq-footer-main {
+        padding: 0 5px 25px;
+        gap: 28px;
+    }
+
+    .vashq-footer-contact h4,
+    .vashq-footer-links h4 {
+        font-size: 15px;
+        margin-bottom: 15px;
+    }
+
+    .vashq-contact-details {
+        gap: 12px;
+    }
+
+    .vashq-contact-details a,
+    .vashq-contact-details div {
+        gap: 8px;
+        font-size: 12px;
+        overflow-wrap: anywhere;
+    }
+
+    .vashq-footer-link-groups {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px 12px;
+    }
+
+    .vashq-footer-links a {
+        font-size: 12px;
+    }
+
+    .vashq-footer-links li {
+        margin-bottom: 9px;
+    }
+
+    .vashq-footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+        padding: 18px 5px 0;
+        text-align: center;
+    }
+
+    .vashq-footer-bottom p {
+        font-size: 11px;
+    }
+
+    .vashq-social-icons {
+        gap: 10px;
+    }
+
+    .vashq-social-icons a {
+        width: 32px;
+        height: 32px;
+        font-size: 15px;
+    }
+
+}
+
+
+/* ========================================
+   SMALL MOBILE - 380px
+======================================== */
+
+@media (max-width: 380px) {
+
+    .carwash-hero {
+        min-height: 600px;
+    }
+
+    .carwash-hero-content {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .carwash-hero h1 {
+        font-size: 31px;
+    }
+
+    .smart-wash-container {
+        padding: 23px 15px;
+    }
+
+    .smart-wash-content h2 {
+        font-size: 27px;
+    }
+
+    .vashq-container {
+        padding: 8px;
+    }
+
+    .vashq-comparison-container {
+        padding: 30px 10px;
+    }
+
+    .vashq-list {
+        gap: 7px;
+    }
+
+    .vashq-list-left .vashq-item,
+    .vashq-list-right .vashq-item {
+        gap: 5px;
+        min-height: 100px;
+        padding: 9px 5px;
+    }
+
+    .vashq-item-icon {
+        flex-basis: 23px;
+        width: 23px;
+        height: 23px;
+        font-size: 9px;
+    }
+
+    .vashq-item h3 {
+        font-size: 9px;
+    }
+
+    .vashq-item p {
+        font-size: 8px;
+    }
+
+    .vashq-team-grid {
+        gap: 5px;
+    }
+
+    .vashq-team-card {
+        padding: 10px 3px;
+    }
+
+    .vashq-team-card h3 {
+        font-size: 10px;
+    }
+
+    .vashq-footer {
+        padding-right: 12px;
+        padding-left: 12px;
+    }
+
+    .vashq-footer-booking button {
+        min-width: 75px;
+        padding: 0 8px;
+    }
+
+}
+
+
+/* ========================================
+   ACCESSIBILITY - REDUCED MOTION
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .vashq-why-heading,
+    .vashq-why-item,
+    .vashq-our-team > h2,
+    .vashq-team-card {
+        opacity: 1;
+        transform: none;
+    }
+
+    .vashq-testimonial-track {
+        animation: none !important;
+        transform: none !important;
+    }
+
+}
+

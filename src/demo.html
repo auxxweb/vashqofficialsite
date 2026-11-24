@@ -82,15 +82,28 @@
     window.location.replace("/");
   </script>
   <div id="page-loader" aria-hidden="true">
-    <div class="loader-card">
-      <div class="stack">
-        <div class="d-flex justify-content-center">
-          <img src="./assets/images/brand/logo-icon.webp" width="64" height="64" alt="Vashq"
-            style="object-fit: contain;" />
-        </div>
-        <div class="shimmer" style="width: 62%; margin: 6px auto 0;"></div>
+
+    <div class="vashq-loader-content">
+
+      <!-- Logo -->
+      <div class="vashq-loader-logo">
+        <img src="./assets/images/brand/logo-full.webp" alt="VASHQ" />
       </div>
+
+
+      <!-- Loading Progress -->
+      <div class="vashq-loader-progress">
+        <div class="vashq-loader-progress-bar"></div>
+      </div>
+
+      <p class="vashq-loader-footer">
+        Exclusive to Car Care, Designed by Operators, Powered by AI
+      </p>
+
+
+
     </div>
+
   </div>
   <script>
     (() => {
@@ -105,49 +118,129 @@
       window.addEventListener('pageshow', (e) => { if (e.persisted) hide(); });
     })();
   </script>
-  <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
-    <div class="container">
-      <a class="navbar-brand d-inline-flex align-items-center lh-1" href="/">
-        <img src="./assets/images/brand/logo-full.webp" alt="Vashq" height="32" loading="eager"
-          style="object-fit: contain;" />
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNav"
-        aria-controls="mobileNav" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="d-none d-lg-flex flex-grow-1 align-items-center">
-        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
-          <li class="nav-item"><a href="features.html" class="nav-link">Features</a></li>
-          <li class="nav-item"><a href="use-cases.html" class="nav-link">Use Cases</a></li>
-          <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-        </ul>
-        <div class="d-flex gap-3 align-items-center">
-          <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Start Free Trial</a>
-        </div>
+
+
+
+  <nav class="navbar navbar-expand-lg px-3">
+
+    <a class="navbar-brand d-inline-flex align-items-center lh-1" href="/">
+      <img src="./assets/images/brand/logo-full.webp" alt="VASHQ logo" height="32" loading="eager"
+        style="object-fit: contain;" />
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNav"
+      aria-controls="mobileNav" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- DESKTOP NAVBAR -->
+    <div class="d-none d-lg-flex flex-grow-1 align-items-center">
+
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+
+        <li class="nav-item">
+          <a href="/" class="nav-link">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a href="features.html" class="nav-link">Features</a>
+        </li>
+
+        <li class="nav-item">
+          <a href="what-we-do.html" class="nav-link">What We Do</a>
+        </li>
+
+        <li class="nav-item">
+          <a href="blog.html" class="nav-link">Blogs</a>
+        </li>
+
+        <li class="nav-item">
+          <a href="contact.html" class="nav-link">Contact</a>
+        </li>
+
+        <li class="nav-item">
+          <a href="" class="nav-link">Watch Their Story →</a>
+        </li>
+
+      </ul>
+
+      <div class="d-flex gap-3 align-items-center">
+
+        <a href="" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookDemoModal">
+          Book Demo
+        </a>
+
+        <a href="" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookDemoModal">
+          Log In
+        </a>
+
       </div>
     </div>
   </nav>
 
+
+  <!-- MOBILE OFFCANVAS NAVBAR -->
   <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileNav" aria-labelledby="mobileNavLabel">
+
     <div class="offcanvas-header">
-      <h2 class="offcanvas-title h5 mb-0" id="mobileNavLabel">Menu</h2>
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+
+      <h2 class="offcanvas-title h5 mb-0" id="mobileNavLabel">
+        Menu
+      </h2>
+
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
+      </button>
+
     </div>
+
     <div class="offcanvas-body">
+
       <ul class="navbar-nav mb-4">
-        <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
-        <li class="nav-item"><a href="features.html" class="nav-link">Features</a></li>
-        <li class="nav-item"><a href="use-cases.html" class="nav-link">Use Cases</a></li>
-          <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+
+        <li class="nav-item">
+          <a href="/" class="nav-link">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a href="features.html" class="nav-link">Features</a>
+        </li>
+
+        <li class="nav-item">
+          <a href="what-we-do.html" class="nav-link">What We Do</a>
+        </li>
+
+        <li class="nav-item">
+          <a href="blog.html" class="nav-link">Blogs</a>
+        </li>
+
+        <li class="nav-item">
+          <a href="contact.html" class="nav-link">Contact</a>
+        </li>
+
+        <li class="nav-item">
+          <a href="" class="nav-link">Watch Their Story →</a>
+        </li>
+
       </ul>
+
       <div class="d-grid gap-2">
-        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
-          data-bs-dismiss="offcanvas">Start Free Trial</a>
-        <a href="demo.html" class="btn btn-light">Book Demo</a>
+
+        <a href="" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookDemoModal"
+          data-bs-dismiss="offcanvas">
+          Book Demo
+        </a>
+
       </div>
+
+      <div class="d-grid gap-2 mt-3">
+
+        <a href="" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookDemoModal"
+          data-bs-dismiss="offcanvas">
+          Log In
+        </a>
+
+      </div>
+
     </div>
   </div>
 
@@ -164,7 +257,8 @@
           <p class="my-6 lead fw-normal">Get a quick walkthrough of the dashboard, job tracking, billing, and WhatsApp
             automation. No technical skills required.</p>
           <div class="d-flex gap-3">
-            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Start Free Trial</a>
+            <a href="" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Start Free
+              Trial</a>
             <a href="features.html" class="btn btn-light">Explore Features</a>
           </div>
         </div>
@@ -179,7 +273,7 @@
                 </div>
                 <div class="mb-3">
                   <label for="phone" class="form-label">Phone</label>
-                  <input id="phone" type="tel" class="form-control" placeholder="7994466421" required>
+                  <input id="phone" type="tel" class="form-control" placeholder="8891207778" required>
                 </div>
                 <div class="mb-3">
                   <label for="business" class="form-label">Business name</label>
@@ -195,63 +289,303 @@
     </div>
   </section>
 
-  <footer class="pt-lg-13 bg-light py-8">
-    <div class="container">
-      <div class="border-top pt-6 row small">
-        <div class="col-12 d-flex flex-column flex-md-row justify-content-between">
-          <div>
-            <p>© 2026 Vashq. All rights reserved.</p>
-          </div>
-          <div class="d-flex gap-3">
-            <a href="privacy-policy.html" class="link-primary">Privacy Policy</a>
-            <a href="terms-and-conditions.html" class="link-primary">Terms &amp; Conditions</a>
-            <a href="refund-policy.html" class="link-primary">Refund Policy</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
+  <footer class="vashq-small-footer">
 
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content rounded-5">
-        <div class="modal-body p-6">
-          <button type="button" class="modal-x" data-bs-dismiss="modal" aria-label="Close">X</button>
-          <div class="mb-3">
-            <h2 class="card-title mb-5 h5" id="exampleModalLabel">Start your free trial</h2>
-          </div>
-          <form class="mt-3">
-            <div class="mb-3">
-              <label for="fullName" class="form-label">Business name</label>
-              <input id="fullName" type="text" class="form-control" placeholder="Vashq Car Wash" required>
+    <div class="vashq-small-footer-container">
+
+        <!-- TOP FOOTER -->
+        <div class="vashq-footer-main">
+
+            <!-- LEFT BRAND -->
+            <div class="vashq-footer-brand">
+
+                <a href="index.html" class="vashq-footer-logo">
+                    <img src="./assets/images/brand/logo-icon.webp"
+                         alt="VASHQ">
+                </a>
+
+                <p>
+                    Exclusive to Car Care, Designed by Operators,
+                    Powered by AI.
+                </p>
+
+                <div class="vashq-footer-socials">
+
+                    <a href="https://www.instagram.com/vashqofficial/"
+                       target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="https://www.facebook.com/people/Vashq/61591704035022/"
+                       target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="https://www.linkedin.com/company/wisemove-consultancy-pvt-ltd/"
+                       target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+
+                </div>
+
             </div>
-            <div class="mb-3">
-              <label for="email" class="form-label">Work email</label>
-              <input id="email" type="email" class="form-control" placeholder="name@example.com" required>
+
+
+            <!-- RIGHT LINKS -->
+            <div class="vashq-footer-navigation">
+
+                <div class="vashq-footer-nav-group">
+                    <h4>Explore</h4>
+                    <a href="index.html">Home</a>
+                    <a href="features.html">Features</a>
+                    <a href="blog.html">Blog</a>
+                </div>
+
+
+                <div class="vashq-footer-nav-group">
+                    <h4>Company</h4>
+                    <a href="contact.html">Contact Us</a>
+                    <a href="faq.html">FAQ</a>
+                </div>
+
+
+                <div class="vashq-footer-nav-group">
+                    <h4>Legal</h4>
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-and-conditions.html">Terms & Conditions</a>
+                    <a href="refund-policy.html">Refund Policy</a>
+                </div>
+
+
+                <div class="vashq-footer-nav-group">
+                    <h4>Get in Touch</h4>
+
+                    <a href="mailto:vashqofficial@gmail.com">
+                        vashqofficial@gmail.com
+                    </a>
+
+                    <a href="tel:+918891207778">
+                        +91 8891207778
+                    </a>
+
+                    <span class="vashq-footer-location">
+                        <i class="fa-solid fa-location-dot"></i>
+                        India
+                    </span>
+                </div>
+
             </div>
-            <div class="mb-3">
-              <label for="trialPhone" class="form-label">Phone</label>
-              <input id="trialPhone" type="tel" class="form-control" placeholder="7994466421" required>
-            </div>
-            <div class="mb-3">
-              <label for="password" class="form-label">Create password</label>
-              <input id="password" type="password" class="form-control" placeholder="Create a password" required
-                minlength="6">
-            </div>
-            <div class="mb-3 form-check">
-              <input id="terms" class="form-check-input" type="checkbox" required>
-              <label class="form-check-label small" for="terms">I agree to the <a href="terms-and-conditions.html"
-                  class="text-decoration-none">terms</a> and <a href="privacy-policy.html"
-                  class="text-decoration-none">privacy policy</a></label>
-            </div>
-            <div>
-              <button class="btn btn-primary" type="submit">Start Free Trial</button>
-            </div>
-          </form>
+
         </div>
-      </div>
+
+
+        <!-- FOOTER BOTTOM -->
+        <div class="vashq-footer-bottom">
+
+            <p>© 2026 VASHQ. All rights reserved.</p>
+
+            <p>Built for Car Care. Powered by Intelligence.</p>
+
+        </div>
+
     </div>
+
+</footer>
+
+  <!-- Book Demo Modal -->
+  <div class="modal fade vashq-demo-modal" id="bookDemoModal" tabindex="-1" aria-labelledby="bookDemoModalLabel"
+    aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down">
+
+      <div class="modal-content">
+
+        <div class="modal-body">
+
+          <!-- Close Button -->
+          <button type="button" class="vashq-demo-close" data-bs-dismiss="modal" aria-label="Close">
+            <i class="bi bi-x-lg"></i>
+          </button>
+
+          <!-- FORM VIEW -->
+          <div id="bookDemoFormView">
+
+            <!-- Header -->
+            <div class="vashq-demo-header">
+
+              <div class="vashq-demo-icon">
+                <i class="bi bi-calendar2-check"></i>
+              </div>
+
+              <h2 id="bookDemoModalLabel">
+                Book Your <span>Free Demo</span>
+              </h2>
+
+              <p>
+                Discover how VASHQ simplifies your car wash business.
+                Share your details and our team will get in touch.
+              </p>
+
+            </div>
+
+
+            <!-- Demo Form -->
+            <form id="bookDemoForm" class="vashq-demo-form needs-validation" novalidate>
+
+              <!-- Full Name -->
+              <div class="vashq-demo-field">
+
+                <label for="demoFullName">Full Name</label>
+
+                <div class="vashq-demo-input-wrap">
+                  <i class="bi bi-person"></i>
+
+                  <input id="demoFullName" name="fullName" type="text" placeholder="Enter your full name" required
+                    minlength="2" autocomplete="name">
+                </div>
+
+                <div class="invalid-feedback">
+                  Please enter your full name.
+                </div>
+
+              </div>
+
+
+              <!-- Business Name -->
+              <div class="vashq-demo-field">
+
+                <label for="demoBusinessName"> Business Name </label>
+
+                <div class="vashq-demo-input-wrap">
+                  <i class="bi bi-building"></i>
+
+                  <input id="demoBusinessName" name="businessName" type="text" placeholder="Enter your business name"
+                    autocomplete="organization">
+                </div>
+
+              </div>
+
+
+              <!-- Mobile Number -->
+              <div class="vashq-demo-field">
+
+                <label for="demoMobile">Mobile Number</label>
+
+                <div class="vashq-demo-input-wrap">
+                  <i class="bi bi-telephone"></i>
+
+                  <input id="demoMobile" name="mobile" type="tel" placeholder="Enter 10-digit mobile number" required
+                    inputmode="numeric" autocomplete="tel" pattern="^[6-9][0-9]{9}$">
+                </div>
+
+                <div class="invalid-feedback">
+                  Please enter a valid 10-digit Indian mobile number.
+                </div>
+
+              </div>
+
+
+              <!-- Location -->
+              <div class="vashq-demo-field">
+
+                <label for="demoLocationSearch">
+                  Business Location
+                  <span class="vashq-optional-label"></span>
+                </label>
+
+                <div class="location-combobox vashq-demo-location" id="demoLocationCombobox">
+
+                  <input type="hidden" id="demoLocation" name="location" required>
+
+                  <div class="vashq-demo-input-wrap">
+
+                    <i class="bi bi-geo-alt"></i>
+
+                    <input id="demoLocationSearch" type="text" placeholder="Search your state or city" role="combobox"
+                      autocomplete="off" aria-autocomplete="list" aria-expanded="false" aria-controls="demoLocationList"
+                      required>
+
+                  </div>
+
+                  <ul id="demoLocationList" class="location-combobox__list" role="listbox" hidden>
+                  </ul>
+
+                </div>
+
+                <div class="invalid-feedback">
+                  Please search and select a state or city in India.
+                </div>
+
+              </div>
+
+
+              <!-- Submit Button -->
+              <button class="vashq-demo-submit" type="submit">
+
+                <span>Request a Demo</span>
+
+                <i class="bi bi-arrow-right"></i>
+
+              </button>
+
+
+              <!-- Privacy -->
+              <p class="vashq-demo-privacy">
+                <i class="bi bi-shield-check"></i>
+                Your information is safe with us.
+              </p>
+
+
+              <!-- Error -->
+              <p id="bookDemoError" class="small text-danger mt-3 mb-0 d-none" role="alert">
+              </p>
+
+            </form>
+
+          </div>
+
+
+          <!-- SUCCESS VIEW -->
+          <div id="bookDemoSuccessView" class="book-demo-success d-none" hidden aria-live="polite">
+
+            <div class="vashq-success-icon">
+
+              <svg viewBox="0 0 52 52">
+
+                <circle cx="26" cy="26" r="24" fill="none" class="success-circle" />
+
+                <path d="M14 27l8 8 16-17" fill="none" class="success-check" />
+
+              </svg>
+
+            </div>
+
+            <span class="vashq-demo-eyebrow">
+              REQUEST RECEIVED
+            </span>
+
+            <h2>Thank You!</h2>
+
+            <p>
+              Your demo request has been submitted successfully.
+              Our team will connect with you soon.
+            </p>
+
+            <button type="button" class="vashq-demo-submit" data-bs-dismiss="modal">
+
+              Done
+              <i class="bi bi-check-lg"></i>
+
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
   </div>
 
   <script src="./assets/js/main.js" type="module"></script>
