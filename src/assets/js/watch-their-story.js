@@ -35,60 +35,87 @@ document.addEventListener("DOMContentLoaded", function () {
         "(prefers-reduced-motion: reduce)"
     ).matches;
 
+    const revealCard = function (card) {
+        card.classList.add("story-visible");
+    };
+
+    const isInView = function (card) {
+        const rect = card.getBoundingClientRect();
+        return rect.bottom > 0 && rect.top < window.innerHeight;
+    };
+
+    document.documentElement.classList.add("js-animate");
 
     if (reduceMotion) {
 
-        storyCards.forEach(function (card) {
-
-            card.classList.add("story-visible");
-
-        });
-
-    }
-
-    else if ("IntersectionObserver" in window) {
-
-        const storyObserver = new IntersectionObserver(
-
-            function (entries, observer) {
-
-                entries.forEach(function (entry) {
-
-                    if (entry.isIntersecting) {
-
-                        entry.target.classList.add("story-visible");
-
-                        observer.unobserve(entry.target);
-
-                    }
-
-                });
-
-            },
-
-            {
-                threshold: 0.12,
-                rootMargin: "0px 0px -40px 0px"
-            }
-
-        );
-
-
-        storyCards.forEach(function (card) {
-
-            storyObserver.observe(card);
-
-        });
+        storyCards.forEach(revealCard);
 
     }
 
     else {
 
         storyCards.forEach(function (card) {
-
-            card.classList.add("story-visible");
-
+            if (isInView(card)) {
+                revealCard(card);
+            }
         });
+
+        if (!("IntersectionObserver" in window)) {
+
+            storyCards.forEach(revealCard);
+
+        }
+
+        else {
+
+            let storyObserver;
+
+            try {
+
+                storyObserver = new IntersectionObserver(
+
+                    function (entries, observer) {
+
+                        entries.forEach(function (entry) {
+
+                            if (entry.isIntersecting) {
+
+                                revealCard(entry.target);
+
+                                observer.unobserve(entry.target);
+
+                            }
+
+                        });
+
+                    },
+
+                    {
+                        threshold: 0
+                    }
+
+                );
+
+            } catch (error) {
+
+                storyCards.forEach(revealCard);
+                storyObserver = null;
+
+            }
+
+            if (storyObserver) {
+
+                storyCards.forEach(function (card) {
+
+                    if (!card.classList.contains("story-visible")) {
+                        storyObserver.observe(card);
+                    }
+
+                });
+
+            }
+
+        }
 
     }
 

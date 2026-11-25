@@ -5459,6 +5459,46 @@ function renderSideBlogs() {
    9. RENDER CENTER ARTICLE
 ========================================== */
 
+function renderBlogContent(content) {
+  const source = content || "";
+
+  try {
+    const markedLib = globalThis.marked;
+    const purifyLib = globalThis.DOMPurify;
+
+    if (typeof markedLib === "undefined" || typeof purifyLib === "undefined") {
+      throw new Error("Markdown renderer is unavailable");
+    }
+
+    const parse = typeof markedLib.parse === "function"
+      ? markedLib.parse.bind(markedLib)
+      : typeof markedLib === "function"
+        ? markedLib
+        : null;
+
+    if (!parse) {
+      throw new Error("Markdown renderer is unavailable");
+    }
+
+    const rendered = parse(source);
+
+    if (!rendered || typeof rendered.then === "function") {
+      throw new Error("Markdown renderer is unavailable");
+    }
+
+    return purifyLib.sanitize(rendered);
+  } catch (error) {
+    console.warn("Could not render blog markdown:", error);
+
+    const escaped = source
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;");
+
+    return `<p>${escaped.replace(/\n{2,}/g, "</p><p>").replace(/\n/g, "<br>")}</p>`;
+  }
+}
+
 function renderActiveBlog() {
   if (!activeBlog || !vebArticle) return;
 
@@ -5520,7 +5560,7 @@ function renderActiveBlog() {
             <!-- COMPLETE BLOG CONTENT -->
 
             <div class="veb-article-content">
-    ${DOMPurify.sanitize(marked.parse(activeBlog.content))}
+    ${renderBlogContent(activeBlog.content)}
 </div>
 
         </article>

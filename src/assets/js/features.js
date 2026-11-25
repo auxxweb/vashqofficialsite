@@ -9,20 +9,40 @@ document.addEventListener("DOMContentLoaded", () => {
         ".vashq-feature-row"
     );
 
-    // Check browser support
-    if ("IntersectionObserver" in window) {
+    const reveal = (row) => {
+        row.classList.add("is-visible");
+    };
 
-        const featureObserver = new IntersectionObserver(
+    const isInView = (row) => {
+        const rect = row.getBoundingClientRect();
+        return rect.bottom > 0 && rect.top < window.innerHeight;
+    };
+
+    document.documentElement.classList.add("js-animate");
+
+    featureRows.forEach((row) => {
+        if (isInView(row)) {
+            reveal(row);
+        }
+    });
+
+    if (!("IntersectionObserver" in window)) {
+        featureRows.forEach(reveal);
+        return;
+    }
+
+    let featureObserver;
+
+    try {
+        featureObserver = new IntersectionObserver(
             (entries, observer) => {
 
                 entries.forEach((entry) => {
 
                     if (entry.isIntersecting) {
 
-                        // Activate feature animation
-                        entry.target.classList.add("is-visible");
+                        reveal(entry.target);
 
-                        // Stop observing after animation
                         observer.unobserve(entry.target);
 
                     }
@@ -31,23 +51,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
             },
             {
-                threshold: 0.15
+                threshold: 0
             }
         );
-
-        // Observe all feature sections
-        featureRows.forEach((row) => {
-            featureObserver.observe(row);
-        });
-
-    } else {
-
-        // Fallback for unsupported browsers
-        featureRows.forEach((row) => {
-            row.classList.add("is-visible");
-        });
-
+    } catch (error) {
+        featureRows.forEach(reveal);
+        return;
     }
+
+    featureRows.forEach((row) => {
+        if (!row.classList.contains("is-visible")) {
+            featureObserver.observe(row);
+        }
+    });
 
 });
 

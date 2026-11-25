@@ -151,11 +151,13 @@ document.addEventListener("DOMContentLoaded", function () {
         const heading = document.createElement("h3");
         heading.textContent = item.title;
 
-        const description = document.createElement("p");
-        description.textContent = item.description;
-
         content.appendChild(heading);
-        content.appendChild(description);
+
+        if (item.description) {
+            const description = document.createElement("p");
+            description.textContent = item.description;
+            content.appendChild(description);
+        }
 
         // Left side: text then icon.
         // Right side: icon then text.
@@ -268,6 +270,13 @@ document.addEventListener("DOMContentLoaded", function () {
         clearTimeout(animationTimer);
         clearTimeout(unlockTimer);
 
+        function finishTransition() {
+            stage.classList.remove("vashq-is-transitioning");
+            stage.classList.remove("vashq-content-entering");
+            isAnimating = false;
+            toggle.checked = isVashqEnabled;
+        }
+
         stage.classList.remove("vashq-content-entering");
 
         // Start outgoing animation.
@@ -287,16 +296,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }, CONTENT_CHANGE_DELAY);
 
         // Finish animation and allow the next click.
-        unlockTimer = setTimeout(function () {
-
-            stage.classList.remove("vashq-is-transitioning");
-            stage.classList.remove("vashq-content-entering");
-
-            isAnimating = false;
-
-            toggle.checked = isVashqEnabled;
-
-        }, ANIMATION_DURATION);
+        unlockTimer = setTimeout(finishTransition, ANIMATION_DURATION);
     }
 
     // ==========================================

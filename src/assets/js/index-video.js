@@ -14,100 +14,116 @@ document.addEventListener("DOMContentLoaded", function () {
     let introReady = false;
     let loopReady = false;
     let introFinished = false;
+    let introFailed = false;
 
-    /* Activate a video */
+    function prepareVideo(video) {
+        video.muted = true;
+        video.defaultMuted = true;
+        video.playsInline = true;
+        video.setAttribute("muted", "");
+        video.setAttribute("playsinline", "");
+    }
+
+    /* Show a video only after playback has started */
 
     function activateVideo(video) {
 
-        video.play().then(() => {
+        const playPromise = video.play();
 
+        if (!playPromise || typeof playPromise.then !== "function") {
+            if (!video.paused) {
+                video.classList.add("is-active");
+            }
+            return;
+        }
+
+        playPromise.then(function () {
             video.classList.add("is-active");
-
-        }).catch(() => {
-
-            // Keep fallback image visible if playback fails
-
+        }).catch(function () {
+            video.classList.remove("is-active");
         });
 
     }
 
+    function startLoop() {
 
-    /* Check loop video availability */
+        if (!loopReady || !introFinished) return;
 
-    loopVideo.addEventListener("canplay", function () {
+        introVideo.classList.remove("is-active");
+        activateVideo(loopVideo);
 
-        loopReady = true;
+    }
 
-        // If intro has already finished, start loop
-        if (introFinished) {
-            activateVideo(loopVideo);
-        }
+    function onIntroReady() {
 
-    });
-
-
-    /* Intro video ready */
-
-    introVideo.addEventListener("canplay", function () {
-
-        if (introReady) return;
+        if (introReady || introFailed || introFinished) return;
 
         introReady = true;
-
-        // Start intro when ready
         activateVideo(introVideo);
 
+    }
+
+    function onLoopReady() {
+
+        if (loopReady) return;
+
+        loopReady = true;
+        startLoop();
+
+    }
+
+    prepareVideo(introVideo);
+    prepareVideo(loopVideo);
+
+    introVideo.addEventListener("playing", function () {
+        if (!introFinished) {
+            introVideo.classList.add("is-active");
+        }
     });
 
-
-    /* Intro video completed */
+    loopVideo.addEventListener("playing", function () {
+        if (introFinished) {
+            loopVideo.classList.add("is-active");
+        }
+    });
 
     introVideo.addEventListener("ended", function () {
 
         introFinished = true;
-
-        // Hide intro
         introVideo.classList.remove("is-active");
-
-        // Start loop if available
-        if (loopReady) {
-
-            activateVideo(loopVideo);
-
-        }
+        startLoop();
 
     });
-
-
-    /* Intro video loading failed */
 
     introVideo.addEventListener("error", function () {
 
+        introFailed = true;
         introFinished = true;
-
-        // Use loop video as fallback if intro fails
-        if (loopReady) {
-
-            activateVideo(loopVideo);
-
-        }
+        introVideo.classList.remove("is-active");
+        startLoop();
 
     });
 
-
-    /* Loop video error */
-
     loopVideo.addEventListener("error", function () {
 
-        // Existing background image remains visible
+        loopReady = false;
         loopVideo.classList.remove("is-active");
 
     });
 
+    function whenReady(video, callback) {
 
-    /* Start loading both videos */
+        if (video.readyState >= 2) {
+            callback();
+            return;
+        }
 
-    introVideo.load();
-    loopVideo.load();
+        video.addEventListener("loadeddata", callback, { once: true });
+        video.addEventListener("canplay", callback, { once: true });
+
+    }
+
+    whenReady(introVideo, onIntroReady);
+    whenReady(loopVideo, onLoopReady);
 
 });

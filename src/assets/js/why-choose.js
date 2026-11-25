@@ -18,32 +18,60 @@ document.addEventListener("DOMContentLoaded", () => {
 
     );
 
+    const reveal = (element) => {
+        element.classList.add("show");
+    };
 
-    const observer = new IntersectionObserver((entries) => {
+    const isInView = (element) => {
+        const rect = element.getBoundingClientRect();
+        return rect.bottom > 0 && rect.top < window.innerHeight;
+    };
 
-        entries.forEach(entry => {
+    document.documentElement.classList.add("js-animate");
 
-            if (entry.isIntersecting) {
-
-                entry.target.classList.add("show");
-
-                // Stop observing after animation
-                observer.unobserve(entry.target);
-
-            }
-
-        });
-
-    }, {
-
-        threshold: 0.15
-
+    revealElements.forEach(element => {
+        if (isInView(element)) {
+            reveal(element);
+        }
     });
 
+    if (!("IntersectionObserver" in window)) {
+        revealElements.forEach(reveal);
+        return;
+    }
+
+    let observer;
+
+    try {
+        observer = new IntersectionObserver((entries) => {
+
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+
+                    reveal(entry.target);
+
+                    observer.unobserve(entry.target);
+
+                }
+
+            });
+
+        }, {
+
+            threshold: 0
+
+        });
+    } catch (error) {
+        revealElements.forEach(reveal);
+        return;
+    }
 
     revealElements.forEach(element => {
 
-        observer.observe(element);
+        if (!element.classList.contains("show")) {
+            observer.observe(element);
+        }
 
     });
 

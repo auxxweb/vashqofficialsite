@@ -1,17 +1,32 @@
 import { defineConfig } from 'vite';
+import { cpSync, existsSync } from 'fs'
 import { resolve } from 'path'
 import glob from 'fast-glob'
 // Grab all HTML files inside src (including subfolders)
 const htmlFiles = glob.sync('./src/**/*.html')
 
+// blog.js references images as runtime strings (assets/blog/...), so Vite
+// never discovers them. Copy the folder into dist after the bundle.
+function copyBlogAssets() {
+  return {
+    name: 'copy-blog-assets',
+    closeBundle() {
+      const from = resolve(__dirname, 'src/assets/blog')
+      const to = resolve(__dirname, 'dist/assets/blog')
+      if (!existsSync(from)) return
+      cpSync(from, to, { recursive: true })
+    },
+  }
+}
 
 export default defineConfig({
    // Use relative base so the same build works on:
-   // - GitHub Pages project URL: https://auxxweb.github.io/vashqofficialsite/
-   // - Custom domain root: https://home.vashq.com/
+    // - GitHub Pages project URL: https://auxxweb.github.io/vashqofficialsite/
+    // - Custom domain root: https://home.vashq.com/
    base: './',
    root: resolve(__dirname, 'src'),   // ✅ keeps dev server working
    publicDir: resolve(__dirname, 'public'),
+   plugins: [copyBlogAssets()],
    server: {
     host: true,
     port: 3000,
